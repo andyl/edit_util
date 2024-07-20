@@ -42,13 +42,6 @@ local opts1 =   {
     { "\\iq", ":r !w_time_qhour<cr>kJA", desc = "Quarter-hour Time" },
     { "\\it", ":r !w_time_exact<cr>kJA", desc = "Exact Time"        },
 
-    { "\\l", group = "LLM / AI Coding Tools"                                     },
-    { "\\lo", ":lua AiderOpen()<cr>",             desc = "LLM Open Aider"        },
-
-    { "\\lr", group = "Run"                                                  },
-    { "\\lrr", ":ChatGPTRun code_readability<cr>", desc = "Code Readability" },
-    { "\\lrt", ":ChatGPTRun add_tests<cr>",        desc = "Generate Tests"   },
-
     { "\\o", group = "Obsidian"                 },
     { "\\oo", ":! obs %<cr><cr>", desc = "Open" },
 
