@@ -42,11 +42,8 @@ local opts1 =   {
     { "\\iq", ":r !w_time_qhour<cr>kJA", desc = "Quarter-hour Time" },
     { "\\it", ":r !w_time_exact<cr>kJA", desc = "Exact Time"        },
 
-    { "\\l", group = "LLM / ChatGPT"                                            },
-    { "\\la", ":ChatGPTActAs<cr>",                desc = "ChatGPT ActAs"        },
-    { "\\lc", ":ChatGPTCompleteCode<cr>",         desc = "ChatGPT CompleteCode" },
-    { "\\le", ":ChatGPTEditWithInstructions<cr>", desc = "ChatGPT Edit"         },
-    { "\\lg", ":ChatGPT<cr>",                     desc = "ChatGPT"              },
+    { "\\l", group = "LLM / AI Coding Tools"                                     },
+    { "\\lo", ":lua AiderOpen()<cr>",             desc = "LLM Open Aider"        },
 
     { "\\lr", group = "Run"                                                  },
     { "\\lrr", ":ChatGPTRun code_readability<cr>", desc = "Code Readability" },

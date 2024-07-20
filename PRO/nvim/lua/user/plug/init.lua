@@ -10,7 +10,11 @@ require("user.plug.tabline")
 require("user.plug.comment")
 require("user.plug.treesitter")
 require("user.plug.easypick")
-require("user.plug.nvim-tree") -- deprecated file explorer - replaced by neotree
-require("user.plug.neodev") -- dev utilities
+require("user.plug.nvim-tree")   -- deprecated file explorer - replaced by neotree
+require("user.plug.neodev")      -- dev utilities
 require("user.plug.speeddating") -- date increment/decrement with C-a and C-x
-require("user.plug.gpt") -- chatgpt
+
+require('aider').setup({
+  auto_manage_context = false,
+  default_bindings = false
+})

@@ -37,11 +37,11 @@ local opts = {
 	-- TELESCOPE
 	"nvim-telescope/telescope.nvim",      -- fuzzy finder
 	"axkirillov/easypick.nvim",           -- simple custom telescope pickers
-	-- GPT
-	"folke/trouble.nvim",                 -- GPT dependency
-	"jackMort/ChatGPT.nvim",              -- GPT
-	-- OLLAMA
-	"nomnivore/ollama.nvim",              -- ollama integration
+	-- GPT / OLLAMA / AIDER
+	-- "folke/trouble.nvim",                 -- GPT dependency
+	-- "jackMort/ChatGPT.nvim",              -- GPT
+	-- "nomnivore/ollama.nvim",              -- OLLAMA
+  "joshuavial/aider.nvim",              -- AIDER
 	-- NGINX
 	"chr4/nginx.vim",                     -- nginx config files
 	-- DEBUGGING
