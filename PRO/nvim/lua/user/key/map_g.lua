@@ -1,6 +1,7 @@
 -- key/map_g
 
 local opts1 =  {
+
     { "ga", ":lua AiderOpen()<cr>",          desc = "Open Aider"             },
 
     { "gf", group = "File"                                                   },
