@@ -23,16 +23,3 @@ require("user.lsp.mason")               -- run mason init
 require("user.lsp.handlers").setup()    -- run handlers
 require("user.lsp.none-ls")             -- none-ls
 
--- Configure marksman LSP
--- require('lspconfig').marksman.setup({
---   on_attach = require("user.lsp.handlers").on_attach,
---   capabilities = require("user.lsp.handlers").capabilities,
---   settings = {
---     markdown = {
---       wikilinks = {
---         -- Use PascalCase for wikilinks
---         format = "PascalCase"
---       }
---     }
---   }
--- })

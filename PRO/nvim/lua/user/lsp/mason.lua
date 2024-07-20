@@ -66,37 +66,9 @@ require('mason-lspconfig').setup_handlers {
   ["lua_ls"]      = function() server_config("lua_ls") end,
   ["elixirls"]    = function() server_config("elixirls") end,
   ["emmet_ls"]    = function() server_config("emmet_ls") end,
-  ["marksman"]    = function() server_config("marksman") end,
   ["tailwindcss"] = function() server_config("tailwindcss") end,
 }
 
------------------------------------------------------------------
+----------------------------------------------------------------
 
--- This is an experiment to add a development LSP server to Neovim.
--- Status: not working as of 2024 Jul 19 Fri
---
--- local lspconfig = require('lspconfig')
---
--- local custom_server = {
---   default_config = {
---     cmd = { "/home/aleak/zz/tkv/nls/nextls", "--port", "9999" }, -- Replace with your server command
---     filetypes = { "elixir" }, -- Replace with the filetypes your server supports
---     root_dir = function(fname)
---       return lspconfig.util.find_git_ancestor(fname) or lspconfig.util.path.dirname(fname)
---     end,
---   },
--- }
---
--- lspconfig['nextls'] = custom_server
---
--- lspconfig.nextls.setup {
---   on_attach = function(client, bufnr)
---     AppendLog("============================================")
---     AppendLog(ToString(client))
---     AppendLog("--------------------------------------------")
---     AppendLog(ToString(bufnr))
---     AppendLog("++++++++++++++++++++++++++++++++++++++++++++")
---   end,
---   capabilities = {}
--- }
 
