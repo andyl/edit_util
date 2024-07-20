@@ -36,7 +36,7 @@
 local servers = {
   "bashls",        -- bash
   "dockerls",      -- dockerfile
-  -- "elixirls",      -- elixir
+  "elixirls",      -- elixir
   "emmet_ls",      -- emmet
   "html",          -- html
   "jsonls",        -- json
@@ -66,6 +66,7 @@ require('mason-lspconfig').setup_handlers {
   ["lua_ls"]      = function() server_config("lua_ls") end,
   ["elixirls"]    = function() server_config("elixirls") end,
   ["emmet_ls"]    = function() server_config("emmet_ls") end,
+  ["marksman"]    = function() server_config("marksman") end,
   ["tailwindcss"] = function() server_config("tailwindcss") end,
 }
 

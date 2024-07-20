@@ -66,4 +66,8 @@ local opts = {
   capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 }
 
-return opts
+return {
+  setup = opts.setup,
+  on_attach = opts.on_attach,
+  capabilities = opts.capabilities
+}
