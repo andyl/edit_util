@@ -22,7 +22,8 @@ local opts = {
 	-- NOICE
 	require("user.lazy.msg_noice"),       -- command line & notifications
 	-- GIT
-	require("user.lazy.git_signs"),       -- git integration
+	require("user.lazy.git_signs"),       -- git change bars
+	require("user.lazy.git_blame"),       -- git blame
 	-- WHICH-KEY
 	require("user.lazy.key_mini"),        -- utility modules for which_key
 	require("user.lazy.key_which_key"),   -- key mapper and displayer

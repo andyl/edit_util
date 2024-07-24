@@ -65,7 +65,8 @@ local opts1 =  {
     { "<leader>fs", "<cmd>Telescope search_history<cr>",                    desc = "Search Hist." },
     { "<leader>fv", "<cmd>Telescope vim_options<cr>",                       desc = "Vim Opts"     },
 
-    { "<leader>g", group = "Gitsigns" },
+    { "<leader>g", group = "Git" },
+    { "<leader>gb", "<cmd>BlameToggle<cr>",                      desc = "toggle blame window" },
     { "<leader>gr", ":lua require('gitsigns').reset_hunk()<cr>", desc = "reset hunk" },
     { "<leader>gs", ":lua require('gitsigns').stage_hunk()<cr>", desc = "stage hunk" },
 
