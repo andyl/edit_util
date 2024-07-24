@@ -31,7 +31,7 @@
   "neo-tree.nvim": { "branch": "v3.x", "commit": "29f7c215332ba95e470811c380ddbce2cebe2af4" },
   "neodev.nvim": { "branch": "main", "commit": "46aa467dca16cf3dfe27098042402066d2ae242d" },
   "nginx.vim": { "branch": "master", "commit": "cffaec54f0c7f9518de053634413a20e90eac825" },
-  "noice.nvim": { "branch": "main", "commit": "c2ba96e09c7544e0ebba2120765fb2a081983d7f" },
+  "noice.nvim": { "branch": "main", "commit": "d9328ef903168b6f52385a751eb384ae7e906c6f" },
   "none-ls.nvim": { "branch": "main", "commit": "3f917e6008b82343552cf9d92ea4c73e04861180" },
   "nui.nvim": { "branch": "main", "commit": "61574ce6e60c815b0a0c4b5655b8486ba58089a1" },
   "nvim-autopairs": { "branch": "master", "commit": "e38c5d837e755ce186ae51d2c48e1b387c4425c6" },
@@ -82,5 +82,5 @@
   "vim-textobj-user": { "branch": "master", "commit": "41a675ddbeefd6a93664a4dc52f302fe3086a933" },
   "vim-visual-increment": { "branch": "master", "commit": "0e55bb4054cdd5eefc0bb870f3e3c249673817cb" },
   "vimux": { "branch": "master", "commit": "fa35410805b82ffabc29e3cb5cdf3ad0b8dc402d" },
-  "which-key.nvim": { "branch": "main", "commit": "711453bb945433362636e918a5238172ffd21e43" }
+  "which-key.nvim": { "branch": "main", "commit": "058486e5b001f11ef48f180dd57ae3088f5bb6dc" }
 }
