@@ -29,6 +29,8 @@ local opts1 =  {
     { "<leader>at", ":AT<cr>",                 desc = "Open in Tab"    },
     { "<leader>av", ":AV<cr>",                 desc = "Open in Vsplit" },
 
+    { "<leader>b", "<cmd>BlameToggle<cr>", desc = "toggle blame window" },
+
     { "<leader>c", group = "Commands"                                     },
     { "<leader>cd", ":lua TermCmd('lazydocker')<cr>", desc = "lazydocker" },
     { "<leader>cg", ":lua TermCmd('lazygit')<cr>",    desc = "lazygit"    },
