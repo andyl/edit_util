@@ -11,6 +11,7 @@ local opts = {
 	require("user.lazy.nvt_devicons"),    -- webfonts
 	require("user.lazy.nvt_nvim_tree"),   -- nvimtree file explorer (<leader>e)
 	require("user.lazy.nvt_neotree"),     -- neotree (<leader>E)
+	require("user.lazy.nvt_yazi"),        -- yazi (gy)
 	-- TREESITTER
 	require("user.lazy.ts_treesitter"),   -- syntax highlighter
 	require("user.lazy.ts_playground"),   -- display treesitter AST
