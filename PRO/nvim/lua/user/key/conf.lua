@@ -7,6 +7,18 @@
 WhichKeyOk, WhichKey = pcall(require, "which-key")
 if not WhichKeyOk then return end
 
+vim.keymap.del('n', 'yss')
+vim.keymap.del('n', 'ySs')
+vim.keymap.del('n', 'ySS')
+vim.keymap.del('n', '<Space><Space>b3')
+vim.keymap.del('n', 'm?')
+vim.keymap.del('n', 'm<BS>')
+vim.keymap.del('n', 'm/')
+vim.keymap.del('n', 'm.')
+vim.keymap.del('n', 'm,')
+vim.keymap.del('n', 'm-')
+vim.keymap.del('n', 'm<Space>')
+
 local setup = {
   plugins = {
     marks     = true, -- shows a list of your marks on ' and `
