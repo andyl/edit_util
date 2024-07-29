@@ -6,7 +6,6 @@
   "al-gtd": { "branch": "master", "commit": "3a09105d0161637d3d9463221b13712cc035313e" },
   "badwolf": { "branch": "master", "commit": "61d75affa51d40213d671edc9c8ff83992d7fd6f" },
   "blame.nvim": { "branch": "main", "commit": "dedbcdce857f708c63f261287ac7491a893912d0" },
-  "bufferline.nvim": { "branch": "main", "commit": "0b2fd861eee7595015b6561dade52fb060be10c4" },
   "bullets.vim": { "branch": "master", "commit": "448ad2a159c5f2540f6c9738f3bb9e6f15a41734" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-cmdline": { "branch": "main", "commit": "d250c63aa13ead745e3a40f61fdd3470efde3923" },
@@ -84,5 +83,5 @@
   "vim-visual-increment": { "branch": "master", "commit": "0e55bb4054cdd5eefc0bb870f3e3c249673817cb" },
   "vimux": { "branch": "master", "commit": "c4ffa0b992798f3362b27642088dccb251aaef1e" },
   "which-key.nvim": { "branch": "main", "commit": "6c1584eb76b55629702716995cca4ae2798a9cca" },
-  "yazi.nvim": { "branch": "main", "commit": "f675258e2a890f49a16bc045d7b7743154a22278" }
+  "yazi.nvim": { "branch": "main", "commit": "9c1504821d52cd73b020239c12bc629fd8370728" }
 }
