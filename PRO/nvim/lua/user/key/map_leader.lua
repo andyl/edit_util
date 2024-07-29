@@ -120,7 +120,7 @@ local opts2 =  {
     {
       mode = { "v" },
 
-      { "<leader>x", group = "CrossCopy"                                                      },
+      { "<leader>x", group = "CrossCopy", mode = { "v" },                                      },
       { "<leader>xd", 'd:call writefile(split(@1,"\\n"), "/tmp/vimtmp")<cr>', desc = "delete" },
       { "<leader>xy", 'y:call writefile(split(@0,"\\n"), "/tmp/vimtmp")<cr>', desc = "yank"   },
 
