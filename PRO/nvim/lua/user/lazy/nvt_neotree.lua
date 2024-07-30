@@ -4,6 +4,7 @@
 --
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
 -- https://www.lazyvim.org/plugins/editor#neo-treenvim
+-- https://github.com/s1n7ax/nvim-window-picker
 -- :help neo-tree
 -- :Telescope help_tags [neo-tree]
 
@@ -16,7 +17,14 @@ local opts = {
     "nvim-tree/nvim-web-devicons", -- icon fonts
     "MunifTanjim/nui.nvim",        -- ui component library
     "3rd/image.nvim",              -- preview image support: See `# Preview Mode`
-    "s1n7ax/nvim-window-picker",   -- window picker
+    {
+      "s1n7ax/nvim-window-picker", -- window picker
+      config = function()
+        require('window-picker').setup({
+          hint = 'floating-big-letter',
+        })
+      end,
+    },
   },
   deactivate = function()
     vim.cmd([[Neotree close]])
