@@ -4,6 +4,7 @@
 --
 -- https://github.com/folke/noice.nvim
 --
+--
 
 local function skip_notifications_with(term)
   return { filter = { event = "notify", find = term }, opts = { skip = true } }

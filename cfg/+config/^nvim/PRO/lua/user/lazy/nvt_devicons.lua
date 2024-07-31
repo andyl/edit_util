@@ -5,6 +5,7 @@
 -- https://github.com/nvim-tree/nvim-web-devicons
 --
 -- Run :NvimWebDeviconsHiTest to see all icons and their highlighting.
+--
 
 local config = {
   -- your personnal icons can go here (to override)
