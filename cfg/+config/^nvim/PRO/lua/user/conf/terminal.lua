@@ -41,8 +41,8 @@ function LazyGit()
 end
 
 vim.api.nvim_create_autocmd({ "BufLeave" }, {
-	pattern = { "*lazygit*" },
-	group = vim.api.nvim_create_augroup("git_refresh_neotree", {clear = true}),
+	group    = vim.api.nvim_create_augroup("git_refresh_neotree", {clear = true}),
+	pattern  = { "*lazygit*" },
 	callback = function()
     -- https://github.com/nvim-neo-tree/neo-tree.nvim/discussions/1253#discussioncomment-9971975
     local events = require("neo-tree.events")
