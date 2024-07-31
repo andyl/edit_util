@@ -74,8 +74,8 @@ local opts = {
       },
       git_status = {
         symbols = {
-          unstaged = "󰄱",
-          staged = "󰱒",
+          unstaged = "★",
+          staged   = "󰱒",
         },
       },
     },
