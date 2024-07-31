@@ -10,8 +10,8 @@ require "user.lazy_boot"     -- lazy installation
 require "user.lazy_list"     -- lazy plugin specifications
 
 require "user.plug"          -- plugin configuration
-require "user.lsp"             -- lsp configuration
-require "user.key"             -- keymap setup
-require "user.debug"           -- dap configuration
-require "user.conf"            -- filetype detection and customization
+require "user.lsp"           -- lsp configuration
+require "user.key"           -- keymap setup
+require "user.debug"         -- dap configuration
+require "user.conf"          -- filetype detection and customization
 
