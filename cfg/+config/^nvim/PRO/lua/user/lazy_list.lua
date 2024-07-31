@@ -51,14 +51,9 @@ local opts = {
 	-- STATUS LINES
 	"nvim-lualine/lualine.nvim",          -- status line
 	"crispgm/nvim-tabline",               -- tab line
-	-- TEST
-	{ dir = "~/src/Plugins/test1.nvim" },
 	-- INCREMENT/DECREMENT (C-a/C-x)
 	"tpope/vim-speeddating",              -- dates
 	"triglav/vim-visual-increment",       -- visual selection - block of numbers
-	-- UTILITY
-	"andyl/nvls",                         -- test plugin
-	"andyl/al-gtd",                       -- GTD
 	-- EDITING UTILS
 	require("user.lazy.edit_table_mode"), -- vim table mode
 	require("user.lazy.edit_easy_align"), -- column alignment
@@ -100,6 +95,11 @@ local opts = {
 	-- COMMENTS, AUTOPAIRS, LISTS
 	"windwp/nvim-autopairs",              -- integrates with cmp and treesitter
 	"terrortylor/nvim-comment",           -- commenting tool
+	-- UTILITY
+	"andyl/nvls",                         -- test plugin
+	"andyl/al-gtd",                       -- GTD
+	-- TEST
+	{ dir = "~/src/Plugins/test1.nvim" },
 }
 
 return Lazy.setup(opts)
