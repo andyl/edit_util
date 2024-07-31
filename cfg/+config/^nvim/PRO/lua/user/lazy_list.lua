@@ -9,8 +9,7 @@ local opts = {
 	require("user.lazy.base_plenary"),    -- common lua functions
 	-- NVIM-TREE
 	require("user.lazy.nvt_devicons"),    -- webfonts
-	require("user.lazy.nvt_nvim_tree"),   -- nvimtree file explorer (<leader>e)
-	require("user.lazy.nvt_neotree"),     -- neotree (<leader>E)
+	require("user.lazy.nvt_neotree"),     -- neotree (<leader>e)
 	require("user.lazy.nvt_yazi"),        -- yazi (gy)
 	-- TREESITTER
 	require("user.lazy.ts_treesitter"),   -- syntax highlighter

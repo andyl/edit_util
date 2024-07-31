@@ -20,8 +20,6 @@ local opts1 =  {
     { "<leader>4", ":tabnext4<cr>",                desc = "Goto Tab 4"           },
     { "<leader>5", ":tabnext5<cr>",                desc = "Goto Tab 5"           },
     { "<leader>6", ":tabnext6<cr>",                desc = "Goto Tab 6"           },
-    { "<leader>E", "<cmd>NvimTreeToggle<cr>",      desc = "Explorer NvimTree"    },
-    { "<leader>O", ":only<cr>:Neotree toggle<cr>", desc = "Pane Only w/Explorer" },
 
     { "<leader>a", group = "Alternate File"                            },
     { "<leader>ae", ":A<cr>",                  desc = "Open in Term"   },
@@ -84,6 +82,7 @@ local opts1 =  {
     { "<leader>mx", ":MarkdownPreviewStop<CR>", desc = "preview stop"  },
 
     { "<leader>o", ":only<cr>", desc = "Pane Only" },
+    { "<leader>O", ":only<cr>:Neotree toggle<cr>", desc = "Pane Only w/Explorer" },
 
     { "<leader>p", group = "Print"                                                                                                                                  },
     { "<leader>pl", ":! a2ps -c --highlight-level=none --sides=duplex -T 2 --line-numbers=1 --portrait --columns=1 --font-size=9 %<cr>",  desc = "Landscape"        },
