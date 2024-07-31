@@ -10,5 +10,4 @@ require "user.key.map_dash"
 require "user.key.map_a"
 require "user.key.map_g"
 require "user.key.map_z"
-require "user.key.dap_keys"
 
