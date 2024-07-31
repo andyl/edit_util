@@ -53,8 +53,8 @@ vim.cmd "nmap <F3> :lua require('notify').dismiss()<cr>"
 vim.cmd "imap <F3> <esc>:lua require('notify').dismiss()<cr>i<right>"
 
 -- TRANSITION FROM INSERT TO NORMAL MODE
-KmT("<esc>", "<C-\\><C-n>")         -- terminal mode
-KmT(",q",    "<C-\\><C-n>:q<cr>")   -- terminal model quit
+-- KmT("<esc>", "<C-\\><C-n>")         -- terminal mode
+-- KmT(",q",    "<C-\\><C-n>:q<cr>")   -- terminal model quit
 
 KmI("jk", "<esc>")
 KmI("kj", "<esc>")
