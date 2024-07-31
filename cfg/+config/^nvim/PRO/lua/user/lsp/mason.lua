@@ -48,6 +48,7 @@ local servers = {
   "terraformls",   -- hashicorp terraform/hcl
   "tailwindcss",   -- tailwind
   "tsserver",      -- javascript and typescript
+  "yamlls",        -- yaml
 }
 
 local function server_config(server)
@@ -62,11 +63,12 @@ require('mason-lspconfig').setup_handlers {
   function(server_name)  -- default handler sets up all servers
     require("lspconfig")[server_name].setup({})
   end,
-  ["jsonls"]      = function() server_config("jsonls") end,
-  ["lua_ls"]      = function() server_config("lua_ls") end,
   ["elixirls"]    = function() server_config("elixirls") end,
   ["emmet_ls"]    = function() server_config("emmet_ls") end,
+  ["jsonls"]      = function() server_config("jsonls") end,
+  ["lua_ls"]      = function() server_config("lua_ls") end,
   ["tailwindcss"] = function() server_config("tailwindcss") end,
+  ["yamlls"]      = function() server_config("yamlls") end,
 }
 
 ----------------------------------------------------------------
