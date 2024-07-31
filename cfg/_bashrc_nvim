@@ -2,11 +2,11 @@
 ###########################################################################
 # NEOVIM CONFIG
 
-# | Dir | Key | Prefix | Run | GoConf | GoData | Purpose                            |
-# |-----|-----|--------|-----|--------|--------|------------------------------------|
-# | PRO | p   | PRO    | nv  | gnc    | gnd    | Production                         |
-# | ast | a   | ast    | nva | gnca   | gnda   | Astrovim - https://astronvim.com   |
-# | lzy | l   | lzy    | nvl | gncl   | gndl   | Lazyvim  - https://www.lazyvim.org |
+# | Dir | Key | Run | GoCfg| Purpose                            |
+# |-----|-----|-----|------|------------------------------------|
+# | PRO | p   | nv  | gnc  | Production                         |
+# | ast | a   | nva | gnca | Astrovim - https://astronvim.com   |
+# | lzy | l   | nvl | gncl | Lazyvim  - https://www.lazyvim.org |
 
 ###########################################################################
 # VARIABLES

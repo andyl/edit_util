@@ -37,12 +37,8 @@ local opts = {
 	require("user.lazy.cmp.snippets"),    -- snippet configuration
 	require("user.lazy.cmp.core"),        -- plug config
 	-- TELESCOPE
-	"nvim-telescope/telescope.nvim",      -- fuzzy finder
+  "nvim-telescope/telescope.nvim",      -- fuzzy finder
 	"axkirillov/easypick.nvim",           -- simple custom telescope pickers
-	-- GPT / OLLAMA / AIDER
-	-- "folke/trouble.nvim",                 -- GPT dependency
-	-- "jackMort/ChatGPT.nvim",              -- GPT
-	-- "nomnivore/ollama.nvim",              -- OLLAMA
   "joshuavial/aider.nvim",              -- AIDER
 	-- NGINX
 	"chr4/nginx.vim",                     -- nginx config files

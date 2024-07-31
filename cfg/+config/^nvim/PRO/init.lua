@@ -9,7 +9,7 @@ require "user.boot.vimcmd"   -- vim commands (autocommands)
 require "user.lazy_boot"     -- lazy installation
 require "user.lazy_list"     -- lazy plugin specifications
 
-require "user.plug"            -- plugin configuration
+require "user.plug"          -- plugin configuration
 require "user.lsp"             -- lsp configuration
 require "user.key"             -- keymap setup
 require "user.debug"           -- dap configuration
