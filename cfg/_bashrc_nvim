@@ -1,0 +1,55 @@
+# Startup file for bash nvim - goes in the user home directory
+###########################################################################
+# NEOVIM CONFIG
+
+# | Dir | Key | Prefix | Run | GoConf | GoData | Purpose                            |
+# |-----|-----|--------|-----|--------|--------|------------------------------------|
+# | PRO | p   | PRO    | nv  | gnc    | gnd    | Production                         |
+# | ast | a   | ast    | nva | gnca   | gnda   | Astrovim - https://astronvim.com   |
+# | lzy | l   | lzy    | nvl | gncl   | gndl   | Lazyvim  - https://www.lazyvim.org |
+
+###########################################################################
+# VARIABLES
+
+export NV_BASE_CONF="~/.config/nvim"
+
+export NV_PRO=PRO
+export NV_AST=ast
+export NV_DEV=dev
+export NV_LZY=lzy
+
+###########################################################################
+# RUN
+
+pwd_short() {
+  pwd | sed "s|$HOME|~|"
+}
+
+nvrun() {
+  if [ $# -eq 0 ]; then
+    xterm_title "$(ssh_htag)$NV_CMD $(pwd_short)/"
+  else
+    xterm_title "$(ssh_htag)$NV_CMD $@"
+  fi
+  TERM=xterm-256color NVIM_APPNAME=$NV_APP nvim $@
+}
+
+alias  nv="NV_CMD=nv  NV_APP=nvim/$NV_PRO nvrun"
+alias nva="NV_CMD=nva NV_APP=nvim/$NV_ALT nvrun"
+alias nvd="NV_CMD=nvd NV_APP=nvim/$NV_DEV nvrun"
+alias nvl="NV_CMD=nvl NV_APP=nvim/$NV_LZY nvrun"
+
+nvw() {
+  NV_CMD=nv NV_APP=nvim/$NV_PRO nvrun $(which $1)
+}
+
+###########################################################################
+# GOTO
+
+alias  gun="pushdp ~/util/nvim_util"
+
+alias  gnc="pushdp $NV_BASE_CONF/$NV_PRO"
+alias gnca="pushdp $NV_BASE_CONF/$NV_AST"
+alias gncd="pushdp $NV_BASE_CONF/$NV_DEV"
+alias gncl="pushdp $NV_BASE_CONF/$NV_LZY"
+
