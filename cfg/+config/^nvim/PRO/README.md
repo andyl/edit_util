@@ -6,8 +6,8 @@
 | Roadmap | ~/util/org/notes/Infra/Edit/Neovim/NeovimRoadmap.md |
 | Worklog | ~/util/org/notes/Infra/Edit/Neovim/NeovimWorklog.md |
 
-| File          | Path                   |
-|---------------|------------------------|
-| Bashrc        | ~/.bashrc_nvim         |
-| Distributions | ~/.nvim_conf/README.md |
+| File          | Path                     |
+|---------------|--------------------------|
+| Bashrc        | ~/.bashrc_nvim           |
+| Distributions | ~/.config/nvim/README.md |
 
