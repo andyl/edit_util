@@ -32,7 +32,7 @@ local opts1 =  {
 
     { "<leader>c", group = "Commands"                                     },
     { "<leader>cd", ":lua TermCmd('lazydocker')<cr>", desc = "lazydocker" },
-    { "<leader>cg", ":lua LazyGit()<cr>",             desc = "lazygit"    },
+    { "<leader>cg", ":LazyGit<cr>",                   desc = "lazygit"    },
     { "<leader>ch", ":lua TermCmd('htop')<cr>",       desc = "htop"       },
     { "<leader>cn", ":lua TermCmd('ncdu')<cr>",       desc = "ncdu"       },
 
