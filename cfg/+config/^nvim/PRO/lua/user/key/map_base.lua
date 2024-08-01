@@ -39,14 +39,13 @@ KmT("<C-Left>",  "<C-\\><C-n>:call BarLeft(2)<cr>")
 KmT("<C-Right>", "<C-\\><C-n>:call BarRight(2)<cr>A")
 
 -- SEARCH HIGHLIGHT
+
 -- turn off hlsearch
 vim.cmd "nmap <F4> :set nohlsearch<cr>"
 vim.cmd "imap <F4> <esc>:set nohlsearch<cr>i<right>"
+
 -- turn on hlsearch when searching
 vim.cmd "nnoremap / :set hlsearch<cr>/"
--- disabled because of noisy noice notifications
--- vim.cmd "nmap <F4> :set hlsearch! hlsearch?<cr>"
--- vim.cmd "imap <F4> <esc>:set hlsearch! hlsearch?<cr>i<right>"
 
 -- Hide error and notification messages
 vim.cmd "nmap <F3> :lua require('notify').dismiss()<cr>"
@@ -54,7 +53,7 @@ vim.cmd "imap <F3> <esc>:lua require('notify').dismiss()<cr>i<right>"
 
 -- TRANSITION FROM INSERT TO NORMAL MODE
 -- KmT("<esc>", "<C-\\><C-n>")         -- terminal mode
--- KmT(",q",    "<C-\\><C-n>:q<cr>")   -- terminal model quit
+-- KmT(",q",    "<C-\\><C-n>:q<cr>")   -- terminal mode quit
 
 KmI("jk", "<esc>")
 KmI("kj", "<esc>")
