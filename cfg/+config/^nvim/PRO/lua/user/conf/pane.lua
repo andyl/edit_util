@@ -1,4 +1,4 @@
--- pane
+-- conf/pane
 
 vim.cmd [[
 " === PANE RESIZING (Up/Down)

@@ -1,4 +1,4 @@
--- term/base
+-- conf/terminal
 
 vim.cmd [[
 
