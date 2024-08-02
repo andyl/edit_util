@@ -66,8 +66,9 @@ local opts = {
 	"kana/vim-textobj-user",              -- customizable text objects
 	"tpope/vim-surround",                 -- edit containing objects
 	"tpope/vim-repeat",                   -- repeat support for plugins
-	-- LANG JSON
-	"tpope/vim-jdaddy",                   -- JSON text objects & formatting
+	-- LANG JSON/YAML
+	require("user.lazy.jy_jsonto"),       -- JSON text objects & formatting
+	require("user.lazy.jy_schema"),       -- SchemaStore for JSON and YAML
 	-- LANG ELIXIR
 	"mhinz/vim-mix-format",               -- wrapper to run mix format
 	"powerman/vim-plugin-AnsiEsc",        -- docco with ANSI colors

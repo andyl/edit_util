@@ -175,9 +175,10 @@
 
 local opts = {
   settings = {
-    -- json = {
-    --   schemas = extended_schemas,
-    -- },
+    json = {
+      schemas = require('schemastore').json.schemas(),
+      validate = { enable = true },
+    },
   },
   setup = {
     commands = {
