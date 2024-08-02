@@ -38,7 +38,7 @@ local opts = {
 	-- TELESCOPE
   "nvim-telescope/telescope.nvim",      -- fuzzy finder
 	"axkirillov/easypick.nvim",           -- simple custom telescope pickers
-  "joshuavial/aider.nvim",              -- AIDER
+  "joshuavial/aider.nvim",              -- aider
 	-- NGINX
 	"chr4/nginx.vim",                     -- nginx config files
 	-- DEBUGGING
@@ -69,6 +69,7 @@ local opts = {
 	-- LANG JSON/YAML
 	require("user.lazy.jy_jsonto"),       -- JSON text objects & formatting
 	require("user.lazy.jy_schema"),       -- SchemaStore for JSON and YAML
+  require("user.lazy.jy_ymlcom"),       -- yaml-companion.nvim
 	-- LANG ELIXIR
 	"mhinz/vim-mix-format",               -- wrapper to run mix format
 	"powerman/vim-plugin-AnsiEsc",        -- docco with ANSI colors
