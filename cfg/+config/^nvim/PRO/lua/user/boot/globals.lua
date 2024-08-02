@@ -46,8 +46,8 @@ AppendLog =  function(message)
   end
 end
 
-Timestamp = function()
-  return os.date("%Y-%m-%d_%H:%M:%S")
+AppendTbl = function(table)
+  AppendLog(ToString(table))
 end
 
 TblFilter = function(tbl, string)
@@ -85,3 +85,21 @@ ToString = function(tbl, indent)
   return toprint
 end
 
+Timestamp = function()
+  return os.date("%Y-%m-%d_%H:%M:%S")
+end
+
+-- YAML SCHEMA
+
+-- GetSchema = function()
+--   local schema = require("yaml-companion").get_buf_schema(0)
+--   if schema.result[1].name == "none" then
+--     return ""
+--   end
+--   return schema.result[1].name
+-- end
+
+-- LogSchema = function()
+--   local schema = require("yaml-companion").get_buf_schema(0)
+--   AppendLog(ToString(schema))
+-- end
