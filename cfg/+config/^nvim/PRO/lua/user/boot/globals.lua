@@ -50,6 +50,16 @@ Timestamp = function()
   return os.date("%Y-%m-%d_%H:%M:%S")
 end
 
+TblFilter = function(tbl, string)
+    local filtered = {}
+    for key, value in pairs(tbl) do
+        if string.find(key, string, 1, true) then
+            filtered[key] = value
+        end
+    end
+    return filtered
+end
+
 ToString = function(tbl, indent)
   indent = indent or 0
   local toprint = string.rep(" ", indent) .. "{\n"
