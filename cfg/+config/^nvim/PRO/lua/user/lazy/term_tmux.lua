@@ -7,3 +7,7 @@
 -- :help vimux.txt
 
 return 'preservim/vimux'
+
+-- future
+-- study alexghergh/nvim-tmux-navigation
+-- from https://www.youtube.com/watch?v=W4aLqTV4qkc
