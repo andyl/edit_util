@@ -79,9 +79,15 @@ local opts1 =  {
     { "<leader>lv", "<C-w>L",                              desc = "layout vertical" },
     { "<leader>lw", ":silent !kill -s SIGWINCH $PPID<cr>", desc = "window change"   },
 
-    { "<leader>m", group = "Markdown"                                  },
-    { "<leader>ms", ":MarkdownPreview<CR>",     desc = "preview start" },
-    { "<leader>mx", ":MarkdownPreviewStop<CR>", desc = "preview stop"  },
+    { "<leader>m", group = "Markdown"                                        },
+    { "<leader>mD", ":Markview disableAll<CR>", desc = "disableAll Markview" },
+    { "<leader>mE", ":Markview enableAll<CR>",  desc = "enableAll Markview"  },
+    { "<leader>mT", ":Markview toggleAll<CR>",  desc = "toggleAll Markview"  },
+    { "<leader>md", ":Markview disable<CR>",    desc = "disable Markview"    },
+    { "<leader>me", ":Markview enable<CR>",     desc = "enable Markview"     },
+    { "<leader>ms", ":MarkdownPreview<CR>",     desc = "preview start"       },
+    { "<leader>mt", ":Markview toggle<CR>",     desc = "toggle Markview"     },
+    { "<leader>mx", ":MarkdownPreviewStop<CR>", desc = "preview stop"        },
 
     { "<leader>o", ":only<cr>", desc = "Pane Only" },
     { "<leader>O", ":only<cr>:Neotree toggle<cr>", desc = "Pane Only w/Explorer" },

@@ -29,6 +29,7 @@ require('nvim-treesitter.configs').setup{
     "ledger",
     "lua",
     "markdown",
+    "markdown_inline",
     "query",
     "regex",
     "ruby",
