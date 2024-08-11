@@ -2,13 +2,23 @@
 -- https://github.com/OXY2DEV/markview.nvim
 
 local opts = {
-    "OXY2DEV/markview.nvim",
-    lazy = false,
+  "OXY2DEV/markview.nvim",
 
-    dependencies = {
-        "nvim-treesitter/nvim-treesitter",
-        "nvim-tree/nvim-web-devicons"
-    }
+  lazy = false,
+
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter",
+    "nvim-tree/nvim-web-devicons"
+  },
+
+  -- config = function()
+  --   require("markview").setup({
+  --     tables = {
+  --       enable = false,
+  --     }
+  --   })
+  -- end,
+
 }
 
 return opts
