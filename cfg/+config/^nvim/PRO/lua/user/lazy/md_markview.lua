@@ -11,13 +11,14 @@ local opts = {
     "nvim-tree/nvim-web-devicons"
   },
 
-  -- config = function()
-  --   require("markview").setup({
-  --     tables = {
-  --       enable = false,
-  --     }
-  --   })
-  -- end,
+  config = function()
+    -- vim.cmd("Markview disableAll<cr>")
+    -- require("markview").setup({
+    --   tables = {
+    --     enable = false,
+    --   }
+    -- })
+  end,
 
 }
 
