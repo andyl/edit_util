@@ -12,12 +12,17 @@ local opts = {
   },
 
   config = function()
-    -- vim.cmd("Markview disableAll<cr>")
-    -- require("markview").setup({
-    --   tables = {
-    --     enable = false,
-    --   }
-    -- })
+    require("markview").setup({
+      callbacks = {
+        on_enable = function(_, _)
+          -- vim.notify("ENABLE")
+        end,
+        on_disable = function(_, _)
+          -- vim.notify("DISABLE")
+        end,
+      },
+    })
+    vim.cmd("Markview disableAll")
   end,
 
 }
