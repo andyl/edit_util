@@ -13,12 +13,11 @@ local opts = {
 
   config = function()
     require("markview").setup({
+      tables = { enable = false },
       callbacks = {
         on_enable = function(_, _)
-          -- vim.notify("ENABLE")
         end,
         on_disable = function(_, _)
-          -- vim.notify("DISABLE")
         end,
       },
     })
