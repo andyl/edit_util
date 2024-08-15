@@ -38,7 +38,7 @@ local opts = {
 	-- TELESCOPE
   "nvim-telescope/telescope.nvim",      -- fuzzy finder
 	"axkirillov/easypick.nvim",           -- simple custom telescope pickers
-  "joshuavial/aider.nvim",              -- aider
+  "joshuavial/aider.nvim",              -- aider: ML / AI interface
 	-- NGINX
 	"chr4/nginx.vim",                     -- nginx config files
 	-- DEBUGGING
