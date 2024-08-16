@@ -75,6 +75,8 @@ local opts = {
 	"powerman/vim-plugin-AnsiEsc",        -- docco with ANSI colors
 	"elixir-editors/vim-elixir",          -- filetype detection
 	"andyl/vim-projectionist-elixir",     -- elixir file navigation
+  -- JUST / JUSTFILES
+  require("user.lazy.just_just"),       -- justfile syntax highlighting
 	-- COLORSCHEMES
 	"junegunn/seoul256.vim",              -- seoul256
 	"NLKNguyen/papercolor-theme",         -- PaperColor
