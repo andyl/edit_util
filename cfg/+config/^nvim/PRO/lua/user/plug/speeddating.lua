@@ -5,6 +5,3 @@
 
 vim.cmd "1SpeedDatingFormat %Y %h %d %i"
 
--- vim.cmd('SpeedDatingFormat')
--- vim.cmd "h"
-

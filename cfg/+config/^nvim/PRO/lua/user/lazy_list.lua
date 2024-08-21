@@ -52,7 +52,7 @@ local opts = {
 	"nvim-lualine/lualine.nvim",          -- status line
 	"crispgm/nvim-tabline",               -- tab line
 	-- INCREMENT/DECREMENT (C-a/C-x)
-	"tpope/vim-speeddating",              -- dates
+	"tpope/vim-speeddating",              -- increment/decrement dates
 	"triglav/vim-visual-increment",       -- visual selection - block of numbers
 	-- EDITING UTILS
 	require("user.lazy.edit_table_mode"), -- vim table mode

@@ -7,10 +7,13 @@ local keymap = vim.api.nvim_set_keymap
 local function km(mode, key, cmd) keymap(mode, key, cmd, opts) end
 
 -- Remap Functions
-function KmN(key, cmd) km("n", key, cmd) end  -- normal_mode
-function KmI(key, cmd) km("i", key, cmd) end  -- insert_mode
-function KmV(key, cmd) km("v", key, cmd) end  -- visual_mode
-function KmT(key, cmd) km("t", key, cmd) end  -- terminal_mode
+function KmN(key, cmd) km("n", key, cmd) end -- normal_mode
+
+function KmI(key, cmd) km("i", key, cmd) end -- insert_mode
+
+function KmV(key, cmd) km("v", key, cmd) end -- visual_mode
+
+function KmT(key, cmd) km("t", key, cmd) end -- terminal_mode
 
 -- LEADER KEY
 vim.g.mapleader      = ","
@@ -28,15 +31,27 @@ KmT("<C-k>", "<C-\\><C-n><C-w>k")
 KmT("<C-l>", "<C-\\><C-n><C-w>l")
 
 -- PANE RESIZING
-KmN("<C-Up>",    ":call BarUp(2)<cr>")
-KmN("<C-Down>",  ":call BarDown(2)<cr>")
-KmN("<C-Left>",  ":call BarLeft(2)<cr>")
+KmN("<C-Up>", ":call BarUp(2)<cr>")
+KmN("<C-Down>", ":call BarDown(2)<cr>")
+KmN("<C-Left>", ":call BarLeft(2)<cr>")
 KmN("<C-Right>", ":call BarRight(2)<cr>")
 
-KmT("<C-Up>",    "<C-\\><C-n>:call BarUp(2)<cr>")
-KmT("<C-Down>",  "<C-\\><C-n>:call BarDown(2)<cr>A")
-KmT("<C-Left>",  "<C-\\><C-n>:call BarLeft(2)<cr>")
+KmT("<C-Up>", "<C-\\><C-n>:call BarUp(2)<cr>")
+KmT("<C-Down>", "<C-\\><C-n>:call BarDown(2)<cr>A")
+KmT("<C-Left>", "<C-\\><C-n>:call BarLeft(2)<cr>")
 KmT("<C-Right>", "<C-\\><C-n>:call BarRight(2)<cr>A")
+
+-- DATE INCREMENT/DECREMENT (SPEEDDATING)
+
+local function zdir(direction)
+  local text = "Move to last non-blank and " .. direction
+  return { desc = text }
+end
+
+keymap("n", "<C-u>", "g_<C-x>",       zdir("decrement"))
+keymap("n", "<C-o>", "g_<C-a>",       zdir("increment"))
+keymap("i", "<C-u>", "<esc>g_<C-x>a", zdir("decrement"))
+keymap("i", "<C-o>", "<esc>g_<C-a>a", zdir("increment"))
 
 -- SEARCH HIGHLIGHT
 
