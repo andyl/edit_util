@@ -47,7 +47,7 @@ local servers = {
   "sqlls",         -- sql
   "terraformls",   -- hashicorp terraform/hcl
   "tailwindcss",   -- tailwind
-  "tsserver",      -- javascript and typescript
+  "ts_ls",         -- javascript and typescript
   "yamlls",        -- yaml
 }
 
