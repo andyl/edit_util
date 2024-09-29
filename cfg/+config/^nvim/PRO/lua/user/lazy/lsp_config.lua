@@ -23,6 +23,11 @@ return {
           RRGGBB      = true,
           tailwind    = true,
           virtualtext = "■",
+        },
+        filetypes = {
+          '*',
+          '!md',
+          '!markdown'
         }
       })
     end
