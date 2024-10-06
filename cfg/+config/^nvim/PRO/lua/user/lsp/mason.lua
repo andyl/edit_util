@@ -31,13 +31,14 @@
 -- https://github.com/megalithic/dotfiles/blob/94cce5036d8fc19c74b7a259f084560246194fe5/config/nvim/lua/mega/plugins/lsp/servers.lua#L477-L546
 
 -- server names
--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 
 local servers = {
   "bashls",        -- bash
   "dockerls",      -- dockerfile
   "elixirls",      -- elixir
   "emmet_ls",      -- emmet
+  "gopls",         -- golang
   "html",          -- html
   "jsonls",        -- json
   "lua_ls",        -- lua
@@ -47,8 +48,7 @@ local servers = {
   "sqlls",         -- sql
   "terraformls",   -- hashicorp terraform/hcl
   "tailwindcss",   -- tailwind
-  -- "tsserver",      -- javascript and typescript
-  -- "ts_ls",         -- javascript and typescript
+  "ts_ls",         -- javascript and typescript (does this work?)
   "yamlls",        -- yaml
 }
 
