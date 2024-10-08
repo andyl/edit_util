@@ -50,6 +50,7 @@ local servers = {
   "tailwindcss",   -- tailwind
   "ts_ls",         -- javascript and typescript (does this work?)
   "yamlls",        -- yaml
+  "zls",           -- zig
 }
 
 local function server_config(server)
