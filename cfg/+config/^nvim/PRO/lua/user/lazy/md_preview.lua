@@ -8,12 +8,12 @@
 --
 -- key definitions at `lua/user/key/map_leader.lua`
 
--- return {
---   "iamcco/markdown-preview.nvim",
---   ft = { "markdown" },
---   build = "cd app && yarn install",
---   config = function() vim.g.mkdp_filetypes = { "markdown" } end,
--- }
+return {
+  "iamcco/markdown-preview.nvim",
+  ft = { "markdown" },
+  build = "cd app && yarn install",
+  config = function() vim.g.mkdp_filetypes = { "markdown" } end,
+}
 
 -- install without yarn or npm
 
@@ -26,13 +26,13 @@
 
 -- install with yarn or npm
 
-return {
-  "iamcco/markdown-preview.nvim",
-  cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-  build = "cd app && yarn install",
-  init = function()
-    vim.g.mkdp_filetypes = { "markdown" }
-  end,
-  ft = { "markdown" },
-},
+-- return {
+--   "iamcco/markdown-preview.nvim",
+--   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+--   build = "cd app && yarn install",
+--   init = function()
+--     vim.g.mkdp_filetypes = { "markdown" }
+--   end,
+--   ft = { "markdown" },
+-- },
 
