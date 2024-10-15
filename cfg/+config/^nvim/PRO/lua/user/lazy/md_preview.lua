@@ -7,16 +7,15 @@
 -- :MarkdownPreviewStop
 --
 -- key definitions at `lua/user/key/map_leader.lua`
+--
 
--- return {
---   "iamcco/markdown-preview.nvim",
---   ft = { "markdown" },
---   build = "cd app && yarn install",
---   config = function() vim.g.mkdp_filetypes = { "markdown" } end,
--- }
-
+--------------------------------------------------------------------
 -- install without yarn or npm
-
+--
+-- BUG: https://github.com/iamcco/markdown-preview.nvim/issues/695
+-- cd ~/.local/share/nvim/PRO/lazy/markdown-preview.nvim
+-- npm install
+--
 return {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
@@ -24,8 +23,8 @@ return {
     build = function() vim.fn["mkdp#util#install"]() end,
 }
 
+--------------------------------------------------------------------
 -- install with yarn or npm
-
 -- return {
 --   "iamcco/markdown-preview.nvim",
 --   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },

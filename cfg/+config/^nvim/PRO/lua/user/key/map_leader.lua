@@ -80,13 +80,7 @@ local opts1 =  {
     { "<leader>lw", ":silent !kill -s SIGWINCH $PPID<cr>", desc = "window change"   },
 
     { "<leader>m", group = "Markdown"                                        },
-    { "<leader>mD", ":Markview disableAll<CR>", desc = "Markview disableAll" },
-    { "<leader>mE", ":Markview enableAll<CR>",  desc = "Markview enableAll"  },
-    { "<leader>mT", ":Markview toggleAll<CR>",  desc = "Markview toggleAll"  },
-    { "<leader>md", ":Markview disable<cr>",    desc = "Markview disable"    },
-    { "<leader>me", ":Markview enable<cr>",     desc = "Markview enable"     },
     { "<leader>ms", ":MarkdownPreview<CR>",     desc = "preview start"       },
-    { "<leader>mt", ":Markview toggle<CR>",     desc = "Markview toggle"     },
     { "<leader>mx", ":MarkdownPreviewStop<CR>", desc = "preview stop"        },
 
     { "<leader>o", ":only<cr>", desc = "Pane Only" },
