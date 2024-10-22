@@ -15,23 +15,23 @@
 -- BUG: https://github.com/iamcco/markdown-preview.nvim/issues/695
 -- cd ~/.local/share/nvim/PRO/lazy/markdown-preview.nvim
 -- npm install
---
-return {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    ft = { "markdown" },
-    build = function() vim.fn["mkdp#util#install"]() end,
-}
+
+-- return {
+--   "iamcco/markdown-preview.nvim",
+--   cmd   = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+--   ft    = { "markdown" },
+--   init  = function() vim.g.mkdp_filetypes = { "markdown" } end,
+--   build = function() vim.fn["mkdp#util#install"]() end,
+-- }
 
 --------------------------------------------------------------------
 -- install with yarn or npm
--- return {
---   "iamcco/markdown-preview.nvim",
---   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
---   build = "cd app && yarn install",
---   init = function()
---     vim.g.mkdp_filetypes = { "markdown" }
---   end,
---   ft = { "markdown" },
--- },
+
+return {
+  "iamcco/markdown-preview.nvim",
+  cmd   = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+  ft    = { "markdown" },
+  init  = function() vim.g.mkdp_filetypes = { "markdown" } end,
+  build = "cd app && npm install",
+}
 
