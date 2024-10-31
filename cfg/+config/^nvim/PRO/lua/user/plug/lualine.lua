@@ -40,6 +40,10 @@ local branch = {
   icon = "",
 }
 
+local function get_col()
+  return '%c'
+end
+
 lualine.setup({
   options = {
     icons_enabled = true,
@@ -53,7 +57,11 @@ lualine.setup({
     lualine_a = { branch, diagnostics },
     lualine_b = { proj_root },
     lualine_c = { "filename" },
-    lualine_x = {},
+    lualine_x = {
+      function()
+        return vim.fn.col('.')
+      end
+    },
     lualine_y = { mode },
     lualine_z = { filetype, "encoding" },
   },
