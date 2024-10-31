@@ -44,6 +44,12 @@ nvw() {
 }
 
 ###########################################################################
+# CLIENT / SERVER 
+
+alias nvserver="nv --listen /tmp/nvim-server"
+alias nvclient="nv --server /tmp/nvim-server"
+
+###########################################################################
 # GOTO
 
 alias   gun="pushdp ~/util/nvim_util"
