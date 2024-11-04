@@ -11,6 +11,7 @@
 local opts = {
   {
     "L3MON4D3/LuaSnip",
+    event = { "BufReadPost", "BufNewFile" },
     version = "v2.*",
     build = "make install_jsregexp", -- optional
     config = function()
@@ -36,10 +37,12 @@ local opts = {
     end
   },
   {
-    'saadparwaiz1/cmp_luasnip'
+    'saadparwaiz1/cmp_luasnip',
+    event = { "BufReadPost", "BufNewFile" },
   },
   {
     'hrsh7th/nvim-cmp',
+    event = { "BufReadPost", "BufNewFile" },
     config = function()
       require('cmp').setup {
         snippet = {
