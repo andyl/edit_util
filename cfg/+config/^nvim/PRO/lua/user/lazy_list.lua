@@ -35,6 +35,8 @@ local opts = {
 	-- CMP/COMPLETION
 	require("user.lazy.cmp.snippets"),    -- snippet configuration
 	require("user.lazy.cmp.core"),        -- plug config
+  -- SESSIONS
+  require("user.lazy.auto_session"),    -- automatic sessions
 	-- TELESCOPE
   "nvim-telescope/telescope.nvim",      -- fuzzy finder
 	"axkirillov/easypick.nvim",           -- simple custom telescope pickers
