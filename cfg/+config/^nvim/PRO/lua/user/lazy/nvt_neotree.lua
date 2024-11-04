@@ -16,7 +16,6 @@ local opts = {
     "nvim-lua/plenary.nvim",       -- utility functions
     "nvim-tree/nvim-web-devicons", -- icon fonts
     "MunifTanjim/nui.nvim",        -- ui component library
-    "3rd/image.nvim",              -- preview image support: See `# Preview Mode`
     {
       "s1n7ax/nvim-window-picker", -- window picker
       config = function()
