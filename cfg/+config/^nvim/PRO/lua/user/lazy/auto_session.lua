@@ -11,6 +11,7 @@ local lcl_opts = {
 
   opts = {
     suppressed_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
+    bypass_save_filetypes = { 'neo-tree' },
   }
 }
 
