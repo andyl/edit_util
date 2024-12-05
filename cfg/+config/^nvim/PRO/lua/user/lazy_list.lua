@@ -107,7 +107,7 @@ local opts = {
 	"andyl/nvls",                         -- test plugin
 	"andyl/al-gtd",                       -- GTD
 	-- TEST
-	{ dir = "~/src/Plugins/test1.nvim" },
+	-- { dir = "~/src/Plugins/test1.nvim" },
 }
 
 return Lazy.setup(opts)
