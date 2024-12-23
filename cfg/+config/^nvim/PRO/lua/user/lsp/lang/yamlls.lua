@@ -20,6 +20,7 @@ local opts = {
       customTags  = { '!shell mapping' },
       schemaStore = { enable = false, url = "" },
       schemas     = schemas,
+      ["site.yaml"] = {},
     }
   }
 }
