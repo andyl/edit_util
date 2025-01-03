@@ -53,3 +53,12 @@ function Load(module)
   require(module)
 end
 
+-- ----- OSC52
+
+-- vim.g.clipboard = {
+--   name = "OSC52",
+--   copy = {
+--     ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+--     ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+--   }
+-- }
