@@ -10,7 +10,6 @@ if not WhichKeyOk then return end
 vim.keymap.del('n', 'yss')
 vim.keymap.del('n', 'ySs')
 vim.keymap.del('n', 'ySS')
--- vim.keymap.del('n', '<Space><Space>b3')
 vim.keymap.del('n', 'm?')
 vim.keymap.del('n', 'm<BS>')
 vim.keymap.del('n', 'm/')
@@ -18,6 +17,7 @@ vim.keymap.del('n', 'm.')
 vim.keymap.del('n', 'm,')
 vim.keymap.del('n', 'm-')
 vim.keymap.del('n', 'm<Space>')
+-- vim.keymap.del('n', '<Space><Space>b3')
 
 local setup = {
   plugins = {
