@@ -30,10 +30,10 @@
 -- USE THIS
 
 return {
-  "iamcco/markdown-preview.nvim",
-  cmd   = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-  ft    = { "markdown" },
-  init  = function() vim.g.mkdp_filetypes = { "markdown" } end,
-  build = "cd app && npm install",
+  -- "iamcco/markdown-preview.nvim",
+  -- cmd   = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+  -- ft    = { "markdown" },
+  -- init  = function() vim.g.mkdp_filetypes = { "markdown" } end,
+  -- build = "cd app && npm install",
 }
 
