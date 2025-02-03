@@ -14,7 +14,3 @@ require("user.plug.nvim-tree")   -- deprecated file explorer - replaced by neotr
 require("user.plug.neodev")      -- dev utilities
 require("user.plug.speeddating") -- date increment/decrement with C-a and C-x
 
-require('aider').setup({
-  auto_manage_context = false,
-  default_bindings = false
-})

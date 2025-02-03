@@ -7,7 +7,14 @@
 -- https://github.com/joshuavial/aider.nvim
 
 local lcl_opts = {
-  "joshuavial/aider.nvim",              -- aider: ML / AI interface
+  "joshuavial/aider.nvim",
+  config = function()
+    require('aider').setup({
+      auto_manage_context = false,
+      default_bindings = false
+    })
+  end
 }
+
 
 return lcl_opts
