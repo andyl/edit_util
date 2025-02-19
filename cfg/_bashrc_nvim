@@ -43,11 +43,16 @@ nvw() {
   NV_CMD=nv NV_APP=nvim/$NV_PRO nvrun $(which $1)
 }
 
+catw() {
+  cat $(which $1)
+}
+
+
 ###########################################################################
 # CLIENT / SERVER 
 
 alias nvserver="nv --listen /tmp/nvim-server"
-alias nvclient="nv --server /tmp/nvim-server"
+alias nvclient="nv --remote-ui"
 
 ###########################################################################
 # GOTO
