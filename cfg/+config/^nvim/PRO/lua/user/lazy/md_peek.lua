@@ -1,46 +1,19 @@
--- md_preview
+-- md_peek
 --
--- Markdown preview plugin
+-- Markdown peek plugin
 --
--- https://github.com/iamcco/markdown-preview.nvim
--- :MarkdownPreview
--- :MarkdownPreviewStop
+-- https://github.com/toppair/peek.nvim
 --
 -- key definitions at `lua/user/key/map_leader.lua`
 --
-
 --------------------------------------------------------------------
--- install without yarn or npm
---
--- BUG: https://github.com/iamcco/markdown-preview.nvim/issues/695
--- cd ~/.local/share/nvim/PRO/lazy/markdown-preview.nvim
--- npm install
-
--- return {
---   "iamcco/markdown-preview.nvim",
---   cmd   = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
---   ft    = { "markdown" },
---   init  = function() vim.g.mkdp_filetypes = { "markdown" } end,
---   build = function() vim.fn["mkdp#util#install"]() end,
--- }
-
--- return {
---     "iamcco/markdown-preview.nvim",
---     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
---     ft = { "markdown" },
---     build = function() vim.fn["mkdp#util#install"]() end,
--- }
-
---------------------------------------------------------------------
--- install with yarn or npm
-
--- USE THIS
-
--- return {
---   "iamcco/markdown-preview.nvim",
---   cmd   = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
---   ft    = { "markdown" },
---   init  = function() vim.g.mkdp_filetypes = { "markdown" } end,
---   build = "cd app && npm install",
--- }
-
+return {
+    "toppair/peek.nvim",
+    event = { "VeryLazy" },
+    build = "deno task --quiet build:fast",
+    config = function()
+        require("peek").setup()
+        vim.api.nvim_create_user_command("MarkdownOpen", require("peek").open, {})
+        vim.api.nvim_create_user_command("MarkdownClose", require("peek").close, {})
+    end
+}

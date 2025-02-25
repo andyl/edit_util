@@ -79,9 +79,11 @@ local opts1 =  {
     { "<leader>lv", "<C-w>L",                              desc = "layout vertical" },
     { "<leader>lw", ":silent !kill -s SIGWINCH $PPID<cr>", desc = "window change"   },
 
-    { "<leader>m", group = "Markdown"                                        },
-    { "<leader>ms", ":MarkdownPreview<CR>",     desc = "preview start"       },
-    { "<leader>mx", ":MarkdownPreviewStop<CR>", desc = "preview stop"        },
+    { "<leader>m", group = "Markdown"                                   },
+    { "<leader>mo", ":MarkdownOpen<CR>",  desc = "preview open"         },
+    { "<leader>mc", ":MarkdownClose<CR>", desc = "preview close"        },
+    -- { "<leader>ms", ":MarkdownPreview<CR>",     desc = "preview start"       },
+    -- { "<leader>mx", ":MarkdownPreviewStop<CR>", desc = "preview stop"        },
 
     { "<leader>o", ":only<cr>", desc = "Pane Only" },
     { "<leader>O", ":only<cr>:Neotree toggle<cr>", desc = "Pane Only w/Explorer" },
