@@ -89,7 +89,7 @@ local opts = {
 	"tomasr/molokai",                     -- molokai
 	"morhetz/gruvbox",                    -- gruvbox
 	-- MARKDOWN / OBSIDIAN
-	require("user.lazy.md_preview"),      -- markdown preview
+	-- require("user.lazy.md_preview"),      -- markdown preview
 	require("user.lazy.md_bullets"),      -- markdown bullets
 	-- MISC
 	"chrisbra/unicode.vim",               -- :SearchUni check|C-v u2705|✅
