@@ -81,6 +81,9 @@ local opts = {
 	"andyl/vim-projectionist-elixir",     -- elixir file navigation
   -- JUST / JUSTFILES
   require("user.lazy.just_just"),       -- justfile syntax highlighting
+	-- MARKDOWN / OBSIDIAN
+	require("user.lazy.md_peek"),         -- markdown peek
+	require("user.lazy.md_bullets"),      -- markdown bullets
 	-- COLORSCHEMES
 	"junegunn/seoul256.vim",              -- seoul256
 	"NLKNguyen/papercolor-theme",         -- PaperColor
@@ -88,9 +91,6 @@ local opts = {
 	"sjl/badwolf",                        -- badwolf
 	"tomasr/molokai",                     -- molokai
 	"morhetz/gruvbox",                    -- gruvbox
-	-- MARKDOWN / OBSIDIAN
-	require("user.lazy.md_peek"),         -- markdown peek
-	require("user.lazy.md_bullets"),      -- markdown bullets
 	-- MISC
 	"chrisbra/unicode.vim",               -- :SearchUni check|C-v u2705|✅
 	"moll/vim-bbye",                      -- delete buffer w/o closing win
