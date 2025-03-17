@@ -1,0 +1,5 @@
+bin/
+cfg/+config/^nvim/ast
+cfg/+config/^nvim/dev
+cfg/+config/^nvim/lzy
+cfg/+config/^nvim/tst
