@@ -1,4 +1,5 @@
 .aider*
 !.aiderignore
+!.aider.conf.yml
 lazy-lock.json
 .env
