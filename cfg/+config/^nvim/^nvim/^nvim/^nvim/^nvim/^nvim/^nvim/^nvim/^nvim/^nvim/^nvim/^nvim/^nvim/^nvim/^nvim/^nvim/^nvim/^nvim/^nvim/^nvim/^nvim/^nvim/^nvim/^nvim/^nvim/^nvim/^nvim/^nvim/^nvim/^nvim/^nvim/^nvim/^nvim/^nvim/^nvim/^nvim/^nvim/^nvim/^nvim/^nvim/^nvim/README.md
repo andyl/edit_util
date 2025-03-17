@@ -1,3 +1,0 @@
-# Nvim Config
-
-Content TBD
