@@ -1,4 +1,0 @@
--- Add this line at the top of the file, before any other code
-function WriteHi()
-  print("HELLOWORLD")
-end
