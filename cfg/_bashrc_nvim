@@ -64,6 +64,10 @@ nvp() {
   NV_CMD=nv NV_APP=nvim/$NV_PRO nvrun $(prompt_which $1)
 }
 
+clipp() { 
+  cat $(prompt_which $1) | xclip -selection clipboard
+}
+
 
 ###########################################################################
 # CLIENT / SERVER 
