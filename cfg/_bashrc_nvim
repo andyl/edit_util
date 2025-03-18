@@ -47,6 +47,23 @@ catw() {
   cat $(which $1)
 }
 
+prompt_which() {  
+  local base=$HOME/util/code_util/prompt 
+  if [ -f "$base/$1" ]; then
+        echo "$base/$1"
+    else
+        echo ""
+    fi
+}
+  
+catp() { 
+  cat $(prompt_which $1)
+}
+
+nvp() { 
+  NV_CMD=nv NV_APP=nvim/$NV_PRO nvrun $(prompt_which $1)
+}
+
 
 ###########################################################################
 # CLIENT / SERVER 
