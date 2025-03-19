@@ -39,35 +39,7 @@ alias nva="NV_CMD=nva NV_APP=nvim/$NV_ALT nvrun"
 alias nvd="NV_CMD=nvd NV_APP=nvim/$NV_DEV nvrun"
 alias nvl="NV_CMD=nvl NV_APP=nvim/$NV_LZY nvrun"
 
-nvw() {
-  NV_CMD=nv NV_APP=nvim/$NV_PRO nvrun $(which $1)
-}
-
-catw() {
-  cat $(which $1)
-}
-
-prompt_which() {  
-  local base=$HOME/util/code_util/prompt 
-  if [ -f "$base/$1" ]; then
-        echo "$base/$1"
-    else
-        echo ""
-    fi
-}
-  
-catp() { 
-  cat $(prompt_which $1)
-}
-
-nvp() { 
-  NV_CMD=nv NV_APP=nvim/$NV_PRO nvrun $(prompt_which $1)
-}
-
-clipp() { 
-  cat $(prompt_which $1) | xclip -selection clipboard
-}
-
+# See also: nvw, catw, nvp, catp, prompt_which in ~/.bashrc_code
 
 ###########################################################################
 # CLIENT / SERVER 
