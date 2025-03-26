@@ -1,6 +1,6 @@
 -- md_peek
 --
--- Markdown peek plugin
+-- Markdown peek plugin - Markdown Preview
 --
 -- https://github.com/toppair/peek.nvim
 --
@@ -12,7 +12,12 @@ return {
     event = { "VeryLazy" },
     build = "deno task --quiet build:fast",
     config = function()
-        require("peek").setup()
+        require("peek").setup({
+          close_on_bdelete = true,
+          syntax = true,
+          theme = 'light',
+          app = 'browser',
+        })
         vim.api.nvim_create_user_command("MarkdownOpen", require("peek").open, {})
         vim.api.nvim_create_user_command("MarkdownClose", require("peek").close, {})
     end
