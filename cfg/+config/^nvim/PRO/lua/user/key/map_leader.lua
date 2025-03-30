@@ -1,8 +1,5 @@
 -- key/map_leader
 
-
--------------------------------------------------------------------------
-
 local opts1 =  {
     { "<leader>#", group = "Find Prev"                             },
     { "<leader>#e", ":#",             desc = "Open Prev in Term"   },
