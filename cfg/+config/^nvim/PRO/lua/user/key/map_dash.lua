@@ -18,10 +18,8 @@ local opts2 = {
   {
     mode = { "v" },
 
-    {"-a", group = "Avante"                                    },
-    {"-aa", ":AvanteAsk<cr>",      desc = "Avante Ask"         },
-    {"-ae", ":AvanteEdit<cr>",     desc = "Avante Edit"        },
-    {"-ar", ":AvanteRefresh<cr>",  desc = "Avante Refresh"     },
+    {"-a", group = "Avante"                              },
+    {"-ae", "<esc>:AvanteEdit<cr>", desc = "Avante Edit" },
   }
 }
 

@@ -6,14 +6,15 @@
 
 local lcl_opts = {
   'yetone/avante.nvim',
-  event = "VeryLazy",
-  lazy = false,
+  -- event = "VeryLazy",
+  -- lazy = false,
   version = false, -- always pull the latest change
+  -- version = "v0.0.12",
   opts = {
-    provider = "gemini",
-    gemini = {
-      model = "gemini-2.5-pro-exp-03-25"
-    },
+    -- provider = "gemini",
+    -- gemini = {
+    --   model = "gemini-2.5-pro-exp-03-25"
+    -- },
     behaviour = {
       auto_suggestion = false,
     },
