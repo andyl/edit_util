@@ -2,8 +2,6 @@
 
 local opts1 =  {
 
-    { "ga", ":AiderOpen<cr>",                desc = "Open Aider"             },
-
     { "gf", group = "File"                                                   },
     { "gfE", ":lua OpenCursorPath('E')<cr>", desc = "Open file and set WD"   },
     { "gfF", ":lua OpenCursorPath('F')<cr>", desc = "Open file and set WD"   },

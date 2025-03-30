@@ -4,19 +4,25 @@
 -- usage: vipat
 -- ad = align dash
 -- usage: vipad
--- ac = align character
+-- ac = align comma
 -- usage: vipac
+-- ai = align interactive
+-- usage: vipai
 -- af = align format
 -- usage: vipaf
 
-vim.cmd ":nmap at :EasyAlign *\\|<cr>"
-vim.cmd ":vmap at :EasyAlign *\\|<cr>"
-vim.cmd ":nmap ad :EasyAlign */\\-/<cr>"
-vim.cmd ":vmap ad :EasyAlign */\\-/<cr>"
-vim.cmd ":nmap ac :EasyAlign "
-vim.cmd ":vmap ac :EasyAlign "
-vim.cmd ":nmap af :MixFormat"
+local opts1 = {
+  {
+    mode = { "v" },
 
--- dash alignment isn't working properly
--- don't align on first dash
--- align -> like a single dash
+    { "ac",  group = "Align Column"                                   },
+    { "ac,", ":EasyAlign *,<cr>",   desc = "Align Column Comma"       },
+    { "aci", ":EasyAlign ",         desc = "Align Column Interactive" },
+    { "act", ":EasyAlign *\\|<cr>", desc = "Align Column Table"       },
+    { "ac|", ":EasyAlign *\\|<cr>", desc = "Align Column Table"       },
+    { "ac}", ":EasyAlign }<cr>",    desc = "Align Column Paren"       },
+
+  }
+}
+
+WhichKey.add(opts1)
