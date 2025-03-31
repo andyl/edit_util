@@ -42,6 +42,7 @@ local opts3 = {
     { "-c,", ":EasyAlign *,<cr>", desc = "Column Align Comma"       },
     { "-c|", ":EasyAlign *|<cr>", desc = "Column Align Table"       },
     { "-c}", ":EasyAlign }<cr>",  desc = "Column Align Paren"       },
+    { "-c:", ":EasyAlign :<cr>",  desc = "Column Align Colon"       },
     { "-c=", ":EasyAlign =<cr>",  desc = "Column Align Equals"      },
     { "-ci", run_interactive,     desc = "Column Align Interactive" },
 
