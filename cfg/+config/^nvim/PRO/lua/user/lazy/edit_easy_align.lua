@@ -8,4 +8,21 @@
 --
 -- See key definitions in `lua/user/key/map_a.lua` (jump using keymap `gfs`)
 
+vim.g.easy_align_delimiters = {
+
+  -- pipe
+  p = {
+    pattern      = "|>",
+    left_margin  = 1,
+    right_margin = 1,
+  },
+
+  -- arrow
+  a = {
+    pattern      = "->",
+    left_margin  = 1,
+    right_margin = 1,
+  },
+}
+
 return 'junegunn/vim-easy-align'

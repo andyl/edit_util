@@ -23,10 +23,13 @@ local opts1 = {
 
     { "ac",  group = "Align Column"                                 },
     { "ac,", ":EasyAlign *,<cr>", desc = "Align Column Comma"       },
-    { "aci", run_interactive,     desc = "Align Column Interactive" },
+    { "aca", ":EasyAlign *a<cr>", desc = "Align Column Arrow ->"    },
+    { "acp", ":EasyAlign *p<cr>", desc = "Align Column Pipe |>"     },
     { "act", ":EasyAlign *|<cr>", desc = "Align Column Table"       },
     { "ac|", ":EasyAlign *|<cr>", desc = "Align Column Table"       },
     { "ac}", ":EasyAlign }<cr>",  desc = "Align Column Paren"       },
+    { "ac=", ":EasyAlign =<cr>",  desc = "Align Column Equals"      },
+    { "aci", run_interactive,     desc = "Align Column Interactive" },
 
  }
 }

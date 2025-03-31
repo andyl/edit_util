@@ -20,3 +20,14 @@
 | Bashrc        | ~/.bashrc_nvim           |
 | Distributions | ~/.config/nvim/README.md |
 
+- asdf |> qwer |> qwer
+- a    |> b  |> c
+- bb |> cc   |> dd
+
+- asdf -> qwer -> qwer
+- a  -> b  -> c
+- bb -> cc  -> dd
+
+- a | b | c 
+- dd | ee | ff
+
