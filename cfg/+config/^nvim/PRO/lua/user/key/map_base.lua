@@ -67,14 +67,14 @@ vim.cmd "nmap <F3> :lua require('notify').dismiss()<cr>"
 vim.cmd "imap <F3> <esc>:lua require('notify').dismiss()<cr>i<right>"
 
 -- TRANSITION FROM INSERT TO NORMAL MODE
--- KmT("<esc>", "<C-\\><C-n>")         -- terminal mode
--- KmT(",q",    "<C-\\><C-n>:q<cr>")   -- terminal mode quit
-
 KmI("jk", "<esc>")
 KmI("kj", "<esc>")
-
 -- KmI(":w", "<esc>:w")
 -- KmI(":q", "<esc>:q")
+
+-- FAST CHARACTER TYPING
+KmI("pp<tab>", "|>") -- pipe
+KmI("aa<tab>", "->") -- arrow
 
 -- SNIPPET JUMPS
 KmI("<A-j>", "<esc>:lua require('luasnip').jump(1)<cr>")
