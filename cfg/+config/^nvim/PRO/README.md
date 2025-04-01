@@ -34,3 +34,7 @@
 - dd | ee | ff
 - ssss | eeee | fs
 
+- bing -> bong -> tont
+- bb   -> rr   -> gg
+- hhh  -> eee  -> fff
+

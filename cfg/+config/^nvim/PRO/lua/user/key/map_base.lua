@@ -73,8 +73,14 @@ KmI("kj", "<esc>")
 -- KmI(":q", "<esc>:q")
 
 -- FAST CHARACTER TYPING
-KmI("pp<tab>", "|>") -- pipe
-KmI("aa<tab>", "->") -- arrow
+KmI("pp ", "|> ") -- pipe
+KmI("aa ", "-> ") -- arrow
+
+-- TAB NAVIGATION
+KmN("<S-Left>",  ":tabprev<cr>")
+KmN("<S-Right>", ":tabnext<cr>")
+KmI("<S-Left>",  "<esc>:tabprev<cr>")
+KmI("<S-Right>", "<esc>:tabnext<cr>")
 
 -- SNIPPET JUMPS
 KmI("<A-j>", "<esc>:lua require('luasnip').jump(1)<cr>")
