@@ -77,10 +77,10 @@ KmI("pp ", "|> ") -- pipe
 KmI("aa ", "-> ") -- arrow
 
 -- TAB NAVIGATION
-KmN("<S-Left>",  ":tabprev<cr>")
-KmN("<S-Right>", ":tabnext<cr>")
-KmI("<S-Left>",  "<esc>:tabprev<cr>")
-KmI("<S-Right>", "<esc>:tabnext<cr>")
+KmN("<S-A-Left>",  ":tabprev<cr>")
+KmN("<S-A-Right>", ":tabnext<cr>")
+KmI("<S-A-Left>",  "<esc>:tabprev<cr>")
+KmI("<S-A-Right>", "<esc>:tabnext<cr>")
 
 -- SNIPPET JUMPS
 KmI("<A-j>", "<esc>:lua require('luasnip').jump(1)<cr>")
