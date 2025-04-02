@@ -22,19 +22,28 @@
 
 ## Column Align Test (-c)
 
+Pipes ("pp " / -cp )
+
 - asdf |> qwer |> qwer
 - a  |> b   |> c
 - bb  |> cc  |> dd
 
-- asdf -> qwer -> qwer
-- a  -> b   -> c
-- bb  -> cc  -> dd
+Arrows ("aa " / -ca) 
 
-- a  | b  | c
+- asdf -> qwer -> qwer
+- a  -> b  -> c
+- bb   -> cc   -> dd
+- gg -> hhhh -> ding
+
+Table (-ct) 
+
+- a | b  | c
 - dd | ee | ff
 - ssss | eeee | fs
 
+Arrows (-ca)
+
 - bing -> bong -> tont
-- bb   -> rr   -> gg
-- hhh  -> eee  -> fff
+- bb  -> rr   -> gg
+- hhh -> eee  -> fff
 
