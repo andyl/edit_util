@@ -19,11 +19,11 @@ local opts1 =  {
     { "<leader>5",  ":tabnext5<cr>",  desc = "Goto Tab 5"          },
     { "<leader>6",  ":tabnext6<cr>",  desc = "Goto Tab 6"          },
 
-    -- { "<leader>a", group = "Alternate File"                            },
-    -- { "<leader>ae", ":A<cr>",                  desc = "Open in Term"   },
-    -- { "<leader>as", ":AS<cr>",                 desc = "Open in Split"  },
-    -- { "<leader>at", ":AT<cr>",                 desc = "Open in Tab"    },
-    -- { "<leader>av", ":AV<cr>",                 desc = "Open in Vsplit" },
+    { "<leader>a", group = "Alternate File"                            },
+    { "<leader>ae", ":A<cr>",                  desc = "Open in Term"   },
+    { "<leader>as", ":AS<cr>",                 desc = "Open in Split"  },
+    { "<leader>at", ":AT<cr>",                 desc = "Open in Tab"    },
+    { "<leader>av", ":AV<cr>",                 desc = "Open in Vsplit" },
 
     { "<leader>b", "<cmd>BlameToggle<cr>", desc = "toggle blame window" },
 
