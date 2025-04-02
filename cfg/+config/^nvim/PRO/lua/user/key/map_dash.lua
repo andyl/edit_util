@@ -1,13 +1,19 @@
 -- key/map_dash
 
 local opts1 = {
-  {"-a", group = "Avante"                               },
-  {"-aa", ":AvanteAsk<cr>",     desc = "Avante Ask"     },
-  {"-ae", ":AvanteEdit<cr>",    desc = "Avante Edit"    },
-  {"-ar", ":AvanteRefresh<cr>", desc = "Avante Refresh" },
-  {"-at", ":AvanteToggle<cr>",  desc = "Avante Toggle"  },
+
+  {"-a", group = "Avante"                                         },
+  {"-aa", ":AvanteAsk<cr>",         desc = "Avante Ask"           },
+  {"-ac", ":AvanteChat<cr>",        desc = "Avante Chat"          },
+  {"-ae", ":AvanteEdit<cr>",        desc = "Avante Edit"          },
+  {"-af", ":AvanteFocus<cr>",       desc = "Avante Focus"         },
+  {"-am", ":AvanteModels<cr>",      desc = "Avante Models"        },
+  {"-ar", ":AvanteRefresh<cr>",     desc = "Avante Refresh"       },
+  {"-as", ":AvanteShowRepoMap<cr>", desc = "Avante Show Repo Map" },
+  {"-at", ":AvanteToggle<cr>",      desc = "Avante Toggle"        },
 
   {"-r", "<cmd>lua require('spectre').toggle()<cr>", desc = "Replace across Projects" },
+
 }
 
 WhichKey.add(opts1)
