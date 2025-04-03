@@ -10,16 +10,26 @@
 
 vim.g.easy_align_delimiters = {
 
-  -- pipe
-  p = {
+  fp = {                    -- forward pipe
     pattern      = "|>",
     left_margin  = 1,
     right_margin = 1,
   },
 
-  -- arrow
-  a = {
+  rp = {                     -- reverse pipe
+    pattern      = "<|",
+    left_margin  = 1,
+    right_margin = 1,
+  },
+
+  fa = {                     -- forward arrow
     pattern      = "->",
+    left_margin  = 1,
+    right_margin = 1,
+  },
+
+  ra = {                     -- reverse arrow
+    pattern      = "<-",
     left_margin  = 1,
     right_margin = 1,
   },

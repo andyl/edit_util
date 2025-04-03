@@ -41,16 +41,20 @@ local opts3 = {
   {
     mode = { "v" },
 
-    { "-c",  group = "Column Align"                                 },
-    { "-ca", ":EasyAlign *a<cr>", desc = "Column Align Arrow ->"    },
-    { "-cp", ":EasyAlign *p<cr>", desc = "Column Align Pipe |>"     },
-    { "-ct", ":EasyAlign *|<cr>", desc = "Column Align Table"       },
-    { "-c,", ":EasyAlign *,<cr>", desc = "Column Align Comma"       },
-    { "-c|", ":EasyAlign *|<cr>", desc = "Column Align Table"       },
-    { "-c}", ":EasyAlign }<cr>",  desc = "Column Align Paren"       },
-    { "-c:", ":EasyAlign :<cr>",  desc = "Column Align Colon"       },
-    { "-c=", ":EasyAlign =<cr>",  desc = "Column Align Equals"      },
-    { "-ci", run_interactive,     desc = "Column Align Interactive" },
+    { "-c",  group = "Column Align"                                        },
+    { "-cf",  group = "Column Align Forward"                               },
+    { "-cr",  group = "Column Align Reverse"                               },
+    { "-cfa", ":EasyAlign *fa<cr>", desc = "Column Align Forward Arrow ->" },
+    { "-cfp", ":EasyAlign *fp<cr>", desc = "Column Align Forward Pipe |>"  },
+    { "-cra", ":EasyAlign *ra<cr>", desc = "Column Align Reverse Arrow <-" },
+    { "-crp", ":EasyAlign *rp<cr>", desc = "Column Align Reverse Pipe <|"  },
+    { "-ct",  ":EasyAlign *|<cr>",  desc = "Column Align Table"            },
+    { "-c|",  ":EasyAlign *|<cr>",  desc = "Column Align Table"            },
+    { "-c}",  ":EasyAlign }<cr>",   desc = "Column Align Paren"            },
+    { "-c,",  ":EasyAlign *,<cr>",  desc = "Column Align Comma"            },
+    { "-c:",  ":EasyAlign :<cr>",   desc = "Column Align Colon"            },
+    { "-c=",  ":EasyAlign =<cr>",   desc = "Column Align Equals"           },
+    { "-ci",  run_interactive,      desc = "Column Align Interactive"      },
 
  }
 }

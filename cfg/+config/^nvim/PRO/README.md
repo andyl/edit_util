@@ -22,13 +22,13 @@
 
 ## Column Align Test (-c)
 
-Pipes ("pp " / -cp )
+Forward Pipes ("fp " / -cfp )
 
 - asdf |> qwer |> qwer
 - a  |> b   |> c
 - bb  |> cc  |> dd
 
-Arrows ("aa " / -ca) 
+Foward Arrows ("fa " / -cfa) 
 
 - asdf -> qwer -> qwer
 - a  -> b  -> c
@@ -41,9 +41,14 @@ Table (-ct)
 - dd | ee | ff
 - ssss | eeee | fs
 
-Arrows (-ca)
+Reverse Arrows (-cra)
 
 - bing -> bong -> tont
 - bb  -> rr   -> gg
 - hhh -> eee  -> fff
 
+Reverse Pipes (-crp)
+
+- bing <| bong <| tont
+- bb  <| rr  <| gg
+- hhh <| eee  <| fff
