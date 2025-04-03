@@ -43,6 +43,7 @@ local opts = {
   -- AI Agents
   require("user.lazy.aider"),           -- aider: ML / AI interface
 	require("user.lazy.avante"),          -- avante: Cursor-like ML / AI interface
+	require("user.lazy.mcp_hub"),         -- mcp_hub: Model Context Protocol
 	-- NGINX
 	"chr4/nginx.vim",                     -- nginx config files
 	-- DEBUGGING

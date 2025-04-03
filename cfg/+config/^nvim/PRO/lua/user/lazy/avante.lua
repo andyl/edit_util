@@ -14,6 +14,9 @@ local lcl_opts = {
     gemini = {
       model = "gemini-2.5-pro-exp-03-25"
     },
+    ollama = {
+      model = "mistral:latest",
+    },
     behaviour = {
       auto_suggestion = false,
     },
