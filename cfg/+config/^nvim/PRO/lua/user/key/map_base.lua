@@ -73,8 +73,10 @@ KmI("kj", "<esc>")
 -- KmI(":q", "<esc>:q")
 
 -- FAST CHARACTER TYPING
-KmI("pp ", "|> ") -- pipe
-KmI("aa ", "-> ") -- arrow
+KmI("fp ", "|> ") -- forward pipe
+KmI("rp ", "<| ") -- reverse pipe
+KmI("fa ", "-> ") -- forward arrow
+KmI("ra ", "<- ") -- reverse arrow
 
 -- TAB NAVIGATION
 KmN("<S-A-Left>",  ":tabprev<cr>")
