@@ -69,20 +69,18 @@ vim.cmd "imap <F3> <esc>:lua require('notify').dismiss()<cr>i<right>"
 -- TRANSITION FROM INSERT TO NORMAL MODE
 KmI("jk", "<esc>")
 KmI("kj", "<esc>")
--- KmI(":w", "<esc>:w")
--- KmI(":q", "<esc>:q")
 
 -- FAST CHARACTER TYPING
-KmI("fp ", "|> ") -- forward pipe
-KmI("rp ", "<| ") -- reverse pipe
-KmI("fa ", "-> ") -- forward arrow
-KmI("ra ", "<- ") -- reverse arrow
+KmI("fP", "|> ") -- forward pipe
+KmI("rP", "<| ") -- reverse pipe
+KmI("fA", "-> ") -- forward arrow
+KmI("rA", "<- ") -- reverse arrow
 
 -- TAB NAVIGATION
-KmN("<S-A-Left>",  ":tabprev<cr>")
-KmN("<S-A-Right>", ":tabnext<cr>")
-KmI("<S-A-Left>",  "<esc>:tabprev<cr>")
-KmI("<S-A-Right>", "<esc>:tabnext<cr>")
+KmN("<S-A-Left>",  ":tabprev<cr>")        -- normal mode: previous tab
+KmN("<S-A-Right>", ":tabnext<cr>")        -- normal mode: next tab
+KmI("<S-A-Left>",  "<esc>:tabprev<cr>")   -- insert mode: previous tab
+KmI("<S-A-Right>", "<esc>:tabnext<cr>")   -- insert mode: next tab
 
 -- SNIPPET JUMPS
 KmI("<A-j>", "<esc>:lua require('luasnip').jump(1)<cr>")
