@@ -33,6 +33,12 @@ vim.g.easy_align_delimiters = {
     left_margin  = 1,
     right_margin = 1,
   },
+
+  d = {                      -- dash-dash / lua comments : doesn't work...
+    pattern      = '--',
+    left_margin  = 1,
+    right_margin = 1,
+  },
 }
 
 return 'junegunn/vim-easy-align'

@@ -41,14 +41,14 @@ local opts3 = {
   {
     mode = { "v" },
 
-    { "-c",  group = "Column Align"                                        },
-    { "-cf", group = "Column Align Forward"                                },
-    { "-cr", group = "Column Align Reverse"                                },
+    { "-c",  group = "Column Align" },
+    { "-cf", group = "Column Align Forward" },
+    { "-cr", group = "Column Align Reverse" },
 
-    { "-cfa", ":EasyAlign *fa<cr>", desc = "Column Align Forward Arrow ->" },
-    { "-cfp", ":EasyAlign *fp<cr>", desc = "Column Align Forward Pipe |>"  },
-    { "-cra", ":EasyAlign *ra<cr>", desc = "Column Align Reverse Arrow <-" },
-    { "-crp", ":EasyAlign *rp<cr>", desc = "Column Align Reverse Pipe <|"  },
+    { "-cfA", ":EasyAlign *fa<cr>", desc = "Column Align Forward Arrow ->" },
+    { "-cfP", ":EasyAlign *fp<cr>", desc = "Column Align Forward Pipe |>"  },
+    { "-crA", ":EasyAlign *ra<cr>", desc = "Column Align Reverse Arrow <-" },
+    { "-crP", ":EasyAlign *rp<cr>", desc = "Column Align Reverse Pipe <|"  },
     { "-ct",  ":EasyAlign *|<cr>",  desc = "Column Align Table"            },
     { "-c|",  ":EasyAlign *|<cr>",  desc = "Column Align Table"            },
     { "-c}",  ":EasyAlign }<cr>",   desc = "Column Align Paren"            },
