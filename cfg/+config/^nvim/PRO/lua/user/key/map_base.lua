@@ -71,12 +71,15 @@ KmI("jk", "<esc>")
 KmI("kj", "<esc>")
 
 -- FAST CHARACTER TYPING
-KmI("|f", "|> ") -- forward pipe
-KmI("|r", "<| ") -- reverse pipe
-KmI("-f", "-> ") -- forward arrow
-KmI("-r", "<- ") -- reverse arrow
-KmI("~f", "~> ") -- forward arrow
-KmI("~r", "<~ ") -- reverse arrow
+KmI("|f", "|> ") -- pipe  forward
+KmI("|r", "<| ") -- pipe  reverse
+KmI("~f", "~> ") -- tilde forward
+KmI("~r", "<~ ") -- tilde reverse
+KmI("=f", ">= ") -- equal forward (GTE)
+KmI("=r", "<= ") -- equal reverse (LTE)
+KmI("-f", "-> ") -- arrow forward
+KmI("-r", "<- ") -- arrow reverse
+KmI("ff", "=> ") -- fat   forward
 
 -- TAB NAVIGATION
 KmN("<S-A-Left>",  ":tabprev<cr>")        -- normal mode: previous tab

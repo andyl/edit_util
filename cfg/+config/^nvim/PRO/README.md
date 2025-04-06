@@ -28,6 +28,13 @@ Table (-ct)
 - dd | ee | ff
 - ssss | eeee | fs
 
+Fat Forward ("=f" / -ca) 
+
+- asdf => qwer => qwer
+- a => b => c
+- bb => cc => dd
+- gg => hhhh => ding
+
 Arrow Forward ("-f" / -ca) 
 
 - asdf -> qwer -> qwer
@@ -53,7 +60,6 @@ Pipe Reverse ("|r" / -ca)
 - bb <| rr <| gg
 - hhh <| eee  <| fff
 
-
 Tilde Forward ("~f" / -ca )
 
 - asdf ~> qwer ~> qwer
@@ -65,3 +71,15 @@ Tilde Reverse ("~r" / -ca)
 - bing <~ bong <~ tont
 - bb <~ rr <~ gg
 - hhh <~ eee  <~ fff
+
+Equal Forward ("=f" / -ca )
+
+- asdf >= qwer >= qwer
+- a  >= b  >= c
+- bb >= cc >= dd
+
+Equal Reverse ("=r" / -ca)
+
+- bing <= bong <= tont
+- bb <= rr <= gg
+- hhh <= eee  <= fff
