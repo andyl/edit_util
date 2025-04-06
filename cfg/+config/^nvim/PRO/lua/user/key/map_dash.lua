@@ -42,13 +42,7 @@ local opts3 = {
     mode = { "v" },
 
     { "-c",  group = "Column Align" },
-    { "-cf", group = "Column Align Forward" },
-    { "-cr", group = "Column Align Reverse" },
-
-    { "-cfA", ":EasyAlign *fa<cr>", desc = "Column Align Forward Arrow ->" },
-    { "-cfP", ":EasyAlign *fp<cr>", desc = "Column Align Forward Pipe |>"  },
-    { "-crA", ":EasyAlign *ra<cr>", desc = "Column Align Reverse Arrow <-" },
-    { "-crP", ":EasyAlign *rp<cr>", desc = "Column Align Reverse Pipe <|"  },
+    { "-ca",  ":EasyAlign *aa<cr>", desc = "Column Align Arrows"},
     { "-ct",  ":EasyAlign *|<cr>",  desc = "Column Align Table"            },
     { "-c|",  ":EasyAlign *|<cr>",  desc = "Column Align Table"            },
     { "-c}",  ":EasyAlign }<cr>",   desc = "Column Align Paren"            },

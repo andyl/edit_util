@@ -71,10 +71,12 @@ KmI("jk", "<esc>")
 KmI("kj", "<esc>")
 
 -- FAST CHARACTER TYPING
-KmI("fP", "|> ") -- forward pipe
-KmI("rP", "<| ") -- reverse pipe
-KmI("fA", "-> ") -- forward arrow
-KmI("rA", "<- ") -- reverse arrow
+KmI("|f", "|> ") -- forward pipe
+KmI("|r", "<| ") -- reverse pipe
+KmI("-f", "-> ") -- forward arrow
+KmI("-r", "<- ") -- reverse arrow
+KmI("~f", "~> ") -- forward arrow
+KmI("~r", "<~ ") -- reverse arrow
 
 -- TAB NAVIGATION
 KmN("<S-A-Left>",  ":tabprev<cr>")        -- normal mode: previous tab

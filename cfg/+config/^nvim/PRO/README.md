@@ -22,33 +22,46 @@
 
 ## Column Align Test (-c)
 
-Forward Pipes ("fp " / -cfp )
-
-- asdf |> qwer |> qwer
-- a  |> b   |> c
-- bb  |> cc  |> dd
-
-Foward Arrows ("fa " / -cfa) 
-
-- asdf -> qwer -> qwer
-- a  -> b  -> c
-- bb   -> cc   -> dd
-- gg -> hhhh -> ding
-
 Table (-ct) 
 
 - a | b  | c
 - dd | ee | ff
 - ssss | eeee | fs
 
-Reverse Arrows (-cra)
+Arrow Forward ("-f" / -ca) 
 
-- bing -> bong -> tont
-- bb  -> rr   -> gg
-- hhh -> eee  -> fff
+- asdf -> qwer -> qwer
+- a -> b -> c
+- bb -> cc -> dd
+- gg -> hhhh -> ding
 
-Reverse Pipes (-crp)
+Arrow Reverse ("-r" / -ca)
+
+- bing <- bong <- tont
+- bb <- rr <- gg
+- hhh <- eee <- fff
+
+Pipe Forward ("|f" / -ca )
+
+- asdf |> qwer |> qwer
+- a  |> b  |> c
+- bb |> cc |> dd
+
+Pipe Reverse ("|r" / -ca)
 
 - bing <| bong <| tont
-- bb  <| rr  <| gg
+- bb <| rr <| gg
 - hhh <| eee  <| fff
+
+
+Tilde Forward ("~f" / -ca )
+
+- asdf ~> qwer ~> qwer
+- a  ~> b  ~> c
+- bb ~> cc ~> dd
+
+Tilde Reverse ("~r" / -ca)
+
+- bing <~ bong <~ tont
+- bb <~ rr <~ gg
+- hhh <~ eee  <~ fff

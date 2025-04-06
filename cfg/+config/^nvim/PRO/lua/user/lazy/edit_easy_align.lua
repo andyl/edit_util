@@ -10,35 +10,12 @@
 
 vim.g.easy_align_delimiters = {
 
-  fp = {                    -- forward pipe
-    pattern      = "|>",
+  aa = {                    -- all arrows
+    pattern      = [[->\|<-\|<|\||>\|\~>]],
     left_margin  = 1,
     right_margin = 1,
   },
 
-  rp = {                     -- reverse pipe
-    pattern      = "<|",
-    left_margin  = 1,
-    right_margin = 1,
-  },
-
-  fa = {                     -- forward arrow
-    pattern      = "->",
-    left_margin  = 1,
-    right_margin = 1,
-  },
-
-  ra = {                     -- reverse arrow
-    pattern      = "<-",
-    left_margin  = 1,
-    right_margin = 1,
-  },
-
-  d = {                      -- dash-dash / lua comments : doesn't work...
-    pattern      = '--',
-    left_margin  = 1,
-    right_margin = 1,
-  },
 }
 
 return 'junegunn/vim-easy-align'
