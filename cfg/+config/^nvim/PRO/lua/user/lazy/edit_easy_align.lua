@@ -6,12 +6,13 @@
 -- :help easy-align
 -- :EasyAlign ...
 --
--- See key definitions in `lua/user/key/map_a.lua` (jump using keymap `gfs`)
+-- See key definitions in `map_base.lua`
+-- See the WhichKey keymaps in `map_dash.lua`
 
 vim.g.easy_align_delimiters = {
 
   aa = {                    -- all arrows
-    pattern      = [[->\|<-\|<|\||>\|\~>]],
+    pattern      = [[->\|<-\|<|\||>\|<\~\|\~>]],
     left_margin  = 1,
     right_margin = 1,
   },
