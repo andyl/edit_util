@@ -28,7 +28,7 @@ Table (-ct)
 - dd | ee | ff
 - ssss | eeee | fs
 
-Fat Forward ("=f" / -ca) 
+Fat Forward ("ff" / -ca) 
 
 - asdf => qwer => qwer
 - a => b => c

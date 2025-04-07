@@ -70,7 +70,7 @@ vim.cmd "imap <F3> <esc>:lua require('notify').dismiss()<cr>i<right>"
 KmI("jk", "<esc>")
 KmI("kj", "<esc>")
 
--- FAST CHARACTER TYPING
+-- FAST ARROW TYPING
 KmI("|f", "|> ") -- pipe  forward
 KmI("|r", "<| ") -- pipe  reverse
 KmI("~f", "~> ") -- tilde forward
