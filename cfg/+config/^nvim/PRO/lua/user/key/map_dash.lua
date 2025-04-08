@@ -1,7 +1,16 @@
 -- key/map_dash
 
+local opts0 = {
+
+  {"-r", "<cmd>lua require('spectre').toggle()<cr>", desc = "Replace across Projects" },
+
+}
+
+WhichKey.add(opts0)
+
+-------------------------------------------------------------------------
+
 -- local opts1 = {
---
 --   {"-a", group = "Avante"                                         },
 --   {"-aa", ":AvanteAsk<cr>",         desc = "Avante Ask"           },
 --   {"-ac", ":AvanteChat<cr>",        desc = "Avante Chat"          },
@@ -11,15 +20,12 @@
 --   {"-ar", ":AvanteRefresh<cr>",     desc = "Avante Refresh"       },
 --   {"-as", ":AvanteShowRepoMap<cr>", desc = "Avante Show Repo Map" },
 --   {"-at", ":AvanteToggle<cr>",      desc = "Avante Toggle"        },
---
---   {"-r", "<cmd>lua require('spectre').toggle()<cr>", desc = "Replace across Projects" },
---
 -- }
 --
 -- WhichKey.add(opts1)
---
--- -------------------------------------------------------------------------
---
+
+-------------------------------------------------------------------------
+
 -- local opts2 = {
 --   {
 --     mode = { "v" },
