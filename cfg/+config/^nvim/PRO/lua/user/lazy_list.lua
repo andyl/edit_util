@@ -24,9 +24,6 @@ local opts = {
 	-- GIT
 	require("user.lazy.git_signs"),       -- git change bars
 	require("user.lazy.git_blame"),       -- git blame
-	-- WHICH-KEY
-	require("user.lazy.key_mini"),        -- utility modules for which_key
-	require("user.lazy.key_which_key"),   -- key mapper and displayer
 	-- LSP
 	require("user.lazy.lsp_config"),      -- enable LSP servers and set properties
 	require("user.lazy.lsp_mason"),       -- LSP server installer
@@ -36,6 +33,10 @@ local opts = {
 	-- CMP/COMPLETION
 	require("user.lazy.cmp.snippets"),    -- snippet configuration
 	require("user.lazy.cmp.core"),        -- plug config
+  -- require("user.lazy.bcmp.core")     -- blink.cmp / future
+	-- WHICH-KEY
+	require("user.lazy.key_mini"),        -- utility modules for which_key
+	require("user.lazy.key_which_key"),   -- key mapper and displayer
   -- SESSIONS
   require("user.lazy.auto_session"),    -- automatic sessions
 	-- TELESCOPE

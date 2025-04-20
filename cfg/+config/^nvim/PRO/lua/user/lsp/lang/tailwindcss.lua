@@ -27,46 +27,46 @@ local opts = {
       eruby   = "erb",
     },
   },
-  -- settings = {
-  --   dynamicRegistration = true,
-  --   includeLanguages = {
-  --     elixir = "html-eex",
-  --     heex   = "html-eex",
-  --     erb    = "html-eex"
-  --   },
-  --   tailwindCSS = {
-  --     lint = {
-  --       cssConflict              = "warning",
-  --       invalidApply             = "error",
-  --       invalidConfigPath        = "error",
-  --       invalidScreen            = "error",
-  --       invalidTailwindDirective = "error",
-  --       invalidVariant           = "error",
-  --       recommendedVariantOrder  = "warning",
-  --     },
-  --     experimental = {
-  --       classRegex = {
-  --         'class[:]\\s*"([^"]*)"',
-  --         'class.*"([^"]*)',
-  --         "~H\"\"\".*class=\"([^\"]*)\".*\"\"\"",
-  --       }
-  --     },
-  --     validate = true,
-  --   },
-  -- },
+  settings = {
+    dynamicRegistration = true,
+    includeLanguages = {
+      elixir = "html-eex",
+      heex   = "html-eex",
+      erb    = "html-eex"
+    },
+    tailwindCSS = {
+      lint = {
+        cssConflict              = "warning",
+        invalidApply             = "error",
+        invalidConfigPath        = "error",
+        invalidScreen            = "error",
+        invalidTailwindDirective = "error",
+        invalidVariant           = "error",
+        recommendedVariantOrder  = "warning",
+      },
+      experimental = {
+        classRegex = {
+          'class[:]\\s*"([^"]*)"',
+          'class.*"([^"]*)',
+          "~H\"\"\".*class=\"([^\"]*)\".*\"\"\"",
+        }
+      },
+      validate = true,
+    },
+  },
   filetypes = {
     "css", "scss", "sass", "html",
     "ex", "heex", "elixir", "eelixir"
   },
-  -- root_dir = root_pattern(
-  --   "./assets/tailwind.config.js",
-  --   "tailwind.config.js",
-  --   "postcss.config.js",
-  --   "package.json",
-  --   "node_modules",
-  --   ".git",
-  --   ".pbase"
-  -- ),
+  root_dir = root_pattern(
+    "./assets/tailwind.config.js",
+    "tailwind.config.js",
+    "postcss.config.js",
+    "package.json",
+    "node_modules",
+    ".git",
+    ".pbase"
+  ),
 }
 
 return opts
