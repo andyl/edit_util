@@ -5,7 +5,7 @@ local function lsp_keymaps(_)
   vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 -- local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 -- if not status_ok then return end
@@ -48,11 +48,11 @@ local opts = {
                border = "rounded", header = "", prefix = ""}
     })
 
-    local lsp = vim.lsp
-    local style = { border = "rounded" }
-    local sighelp = vim.lsp.handlers.signature_help
-    lsp.handlers["textDocument/hover"] = lsp.with(lsp.handlers.hover, style)
-    lsp.handlers["textDocument/signatureHelp"] = lsp.with(sighelp, style)
+    -- local lsp = vim.lsp
+    -- local style = { border = "rounded" }
+    -- local sighelp = vim.lsp.handlers.signature_help
+    -- lsp.handlers["textDocument/hover"] = lsp.with(lsp.handlers.hover, style)
+    -- lsp.handlers["textDocument/signatureHelp"] = lsp.with(sighelp, style)
   end,
 
   on_attach = function(client, bufnr)
@@ -64,6 +64,7 @@ local opts = {
   end,
 
   -- capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
+  -- capabilities = require('blink.cmp')
 }
 
 return opts

@@ -30,7 +30,7 @@ local opts = {
 	require("user.lazy.lsp_mason-cfg"),   -- LSP/Mason glue code
 	require("user.lazy.lsp_none_ls"),     -- for formatters and linters
   require("user.lazy.lsp_tw_tools"),    -- tailwind tools
-	-- CMP/COMPLETION
+	-- CMP/COMPLETION/SNIPPETS
 	-- require("user.lazy.cmp.snippets"),    -- snippet configuration
 	-- require("user.lazy.cmp.core"),        -- plug config
   require("user.lazy.bcmp.core"),       -- blink.cmp

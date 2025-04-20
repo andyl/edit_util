@@ -1,18 +1,12 @@
 local opts = {
   'saghen/blink.cmp',
-  -- optional: provides snippets for the snippet source
+
   -- https://github.com/rafamadriz/friendly-snippets
   dependencies = { 'rafamadriz/friendly-snippets' },
 
-  -- use a release tag to download pre-built binaries
+  -- release tag to download pre-built binaries
   version = '1.*',
-  -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
-  -- build = 'cargo build --release',
-  -- If you use nix, you can build from source using latest nightly rust with:
-  -- build = 'nix run .#build-plugin',
 
-  ---@module 'blink.cmp'
-  ---@type blink.cmp.Config
   opts = {
     -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
     -- 'super-tab' for mappings similar to vscode (tab to accept)
@@ -26,7 +20,10 @@ local opts = {
     -- C-k: Toggle signature help (if signature.enabled = true)
     --
     -- See :h blink-cmp-config-keymap for defining your own keymap
-    keymap = { preset = 'default' },
+    -- keymap = { preset = 'default' },
+    keymap = { preset = 'enter' },
+
+    signature = { enabled = true },
 
     appearance = {
       -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
@@ -40,7 +37,7 @@ local opts = {
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'snippets', 'lsp', 'path', 'buffer' },
     },
 
     -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
