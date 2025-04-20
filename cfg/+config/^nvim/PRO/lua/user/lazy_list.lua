@@ -30,13 +30,11 @@ local opts = {
 	require("user.lazy.lsp_mason-cfg"),   -- LSP/Mason glue code
 	require("user.lazy.lsp_none_ls"),     -- for formatters and linters
   require("user.lazy.lsp_tw_tools"),    -- tailwind tools
-	-- CMP/COMPLETION/SNIPPETS
-	-- require("user.lazy.cmp.snippets"),    -- snippet configuration
-	-- require("user.lazy.cmp.core"),        -- plug config
-  require("user.lazy.bcmp.core"),       -- blink.cmp
 	-- WHICH-KEY
 	require("user.lazy.key_mini"),        -- utility modules for which_key
 	require("user.lazy.key_which_key"),   -- key mapper and displayer
+	-- CMP/COMPLETION/SNIPPETS
+  require("user.lazy.bcmp.core"),       -- blink.cmp
   -- SESSIONS
   require("user.lazy.auto_session"),    -- automatic sessions
 	-- TELESCOPE
