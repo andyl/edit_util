@@ -31,8 +31,8 @@ local opts = {
 	require("user.lazy.lsp_none_ls"),     -- for formatters and linters
   require("user.lazy.lsp_tw_tools"),    -- tailwind tools
 	-- CMP/COMPLETION
-	require("user.lazy.cmp.snippets"),    -- snippet configuration
-	require("user.lazy.cmp.core"),        -- plug config
+	-- require("user.lazy.cmp.snippets"),    -- snippet configuration
+	-- require("user.lazy.cmp.core"),        -- plug config
   -- require("user.lazy.bcmp.core")     -- blink.cmp / future
 	-- WHICH-KEY
 	require("user.lazy.key_mini"),        -- utility modules for which_key
