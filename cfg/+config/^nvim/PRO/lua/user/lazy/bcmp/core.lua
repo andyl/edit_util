@@ -1,6 +1,7 @@
 local opts = {
   'saghen/blink.cmp',
   -- optional: provides snippets for the snippet source
+  -- https://github.com/rafamadriz/friendly-snippets
   dependencies = { 'rafamadriz/friendly-snippets' },
 
   -- use a release tag to download pre-built binaries

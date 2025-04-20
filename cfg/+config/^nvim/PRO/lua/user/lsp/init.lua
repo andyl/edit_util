@@ -20,6 +20,6 @@
 
 require("lspconfig")                    -- start lspconfig
 require("user.lsp.mason")               -- run mason init
--- require("user.lsp.handlers").setup()    -- run handlers
+require("user.lsp.handlers").setup()    -- run handlers
 require("user.lsp.none-ls")             -- none-ls
 
