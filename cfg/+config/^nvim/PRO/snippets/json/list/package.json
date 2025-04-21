@@ -11,7 +11,7 @@
       { "language": "javascript", "path": "../javascript.json" },
       { "language": "lua",        "path": "../lua.json"        },
       { "language": "ruby",       "path": "../ruby.json"       },
-      { "language": "sh",         "path": "../sh.json"         },
+      { "language": "sh",         "path": "../sh.json"         }
 
     ]
   }

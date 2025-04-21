@@ -1,0 +1,18 @@
+{
+  "twcfg": {
+    "prefix": "twcfg",
+    "body": [
+      "module.exports = {",
+      "  content: [",
+      "    \"./lib/**/*.{heex,ex}\",",
+      "    \"./assets/**/*.{js,css}\",",
+      "  ],",
+      "  theme: {",
+      "    extend: {},",
+      "  },",
+      "  plugins: [],",
+      "}"
+    ],
+    "description": "For assets/js/tailwind.config.js"
+  }
+}

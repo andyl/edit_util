@@ -6,6 +6,18 @@
 # and direct output to `json/<lang>.json`.
 
 cd "$(dirname "$0")" || exit # run from the script directory
-rm -f json/*json             # remove existing JSON files
+mkdir -p json                # ensure the json directory exists
+rm -f json/*.json            # remove existing JSON files
 
-# --- run the Snipcon converter on each snippet file
+# --- run the Snipcon converter on each snippet file ---
+
+for snippet_file in *.snippets; do
+    if [ -f "$snippet_file" ]; then
+        lang=$(basename "$snippet_file" .snippets)
+        output_file="json/${lang}.json"
+        echo "Converting ${snippet_file} to ${output_file}"
+        ./Snipcon "$snippet_file" > "$output_file"
+    fi
+done
+
+echo "Snippet conversion complete."
