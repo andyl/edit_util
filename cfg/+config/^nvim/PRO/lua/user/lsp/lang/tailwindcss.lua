@@ -1,5 +1,20 @@
 -- lsp/lang/tailwindcss
 --
+-- NOTE
+-- THIS WILL ONLY WORK IN A TAILWIND PROJECT (eg Phoenix Project)
+-- THIS REQUIRES A TAILWIND CONFIG FILE IN `<root>/assets/js/tailwind.config.js`
+--
+--- module.exports = {
+---  content: [
+---    "./lib/**/*.{heex,ex}",
+---    "./assets/**/*.{js,css}",
+---  ],
+---  theme: {
+---    extend: {},
+---  },
+---  plugins: [],
+---}
+--
 -- Blog and Forum Posts
 -- https://www.reddit.com/r/neovim/comments/x079oc/triggering_autocompletion_for_heex_files_tailwind/
 -- https://elixirforum.com/t/how-to-set-up-neovim-for-tailwind-intelisense-in-phoenix-files/68055
