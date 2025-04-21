@@ -1,8 +1,3 @@
-# Lua Snippets 
-
-snippet #!
-	#!/usr/bin/env lua
-	$1
 snippet local
 	local ${1:x} = ${0:1}
 snippet fun
@@ -70,5 +65,5 @@ snippet fwrs
 	io.${1:stderr}:write("$0")
 snippet fwrf
 	io.${1:stderr}:write(string.format("${2:%s}"$0))
-snippet im
+snippet im "Import File"
 	import "${1:import file}"

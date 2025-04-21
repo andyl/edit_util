@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+# SnipGen
+# This script converts snipmate-formatted snippets to VSCode formatted
+# snippets (JSON).
+
+# Check if a command-line argument is provided
+if ARGV.length != 1
+  puts "Usage: #{$PROGRAM_NAME} <path_to_snippet_file>"
+  exit(1)
+end
+
+snippet_file_path = ARGV[0]
+
+# Check if the provided file exists
+unless File.exist?(snippet_file_path)
+  puts "Error: Snippet file not found at '#{snippet_file_path}'"
+  exit(1)
+end
+
+puts "Processing snippet file: #{snippet_file_path}"
+
+# --- Conversion logic will go here ---
