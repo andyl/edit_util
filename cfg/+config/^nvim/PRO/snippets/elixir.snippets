@@ -2,7 +2,7 @@
 
 snippet do "Insert a do block"
 	do
-		${0:${VISUAL}}
+	  ${0:${VISUAL}}
 	end
 
 snippet puts "IO.puts"
@@ -16,7 +16,7 @@ snippet insl "IO.inspect with label"
 
 snippet if "if .. do .. end"
 	if ${1} do
-		${0:${VISUAL}}
+	  ${0:${VISUAL}}
 	end
 
 snippet if: "if .. do: .."
@@ -24,47 +24,29 @@ snippet if: "if .. do: .."
 
 snippet ife "if .. do .. else .. end"
 	if ${1:condition} do
-		${2:${VISUAL}}
+	  ${2:${VISUAL}}
 	else
-		${0}
+	  ${0}
 	end
 
-snippet ife: if .. do: .. else:
+snippet ife: "if .. do: .. else:"
 	if ${1:condition}, do: ${2}, else: ${0}
-
-snippet unless unless .. do .. end
-	unless ${1} do
-		${0:${VISUAL}}
-	end
-
-snippet unless: unless .. do: ..
-	unless ${1:condition}, do: ${0}
-
-snippet unlesse unless .. do .. else .. end
-	unless ${1:condition} do
-		${2:${VISUAL}}
-	else
-		${0}
-	end
-
-snippet unlesse: unless .. do: .. else:
-	unless ${1:condition}, do: ${2}, else: ${0}
 
 snippet cond
 	cond do
-		${1} ->
-		${0:${VISUAL}}
+	  ${1} ->
+	  ${0:${VISUAL}}
 	end
 
 snippet case
 	case ${1} do
-		${2} ->
-			${0}
+	  ${2} ->
+	    ${0}
 	end
 
 snippet for
 	for ${1:item} <- ${2:items} do
-		${0}
+	  ${0}
 	end
 
 snippet for:
@@ -72,22 +54,22 @@ snippet for:
 
 snippet fori
 	for ${1:item} <- ${2:items}, into: ${3} do
-		${0}
+	  ${0}
 	end
 
 snippet wi
 	with ${1:item} <- ${2:items} do
-		${0}
+	  ${0}
 	end
 
 snippet wie
 	with(
-		${1:item} <- ${2:items}
+	  ${1:item} <- ${2:items}
 	) do
-		${3}
+	  ${3}
 	else
-		${4} ->
-			${0}
+	  ${4} ->
+	    ${0}
 	end
 
 snippet sp
@@ -121,13 +103,13 @@ snippet defd
 	${1:doc string}
 	"""
 	def ${2:name} do
-		${0}
+	  ${0}
 	end
 
 snippet defs
 	@spec ${1:name}(${2:arg types}) :: ${3:no_return}
 	def $1(${4:args}) do
-		${0}
+	  ${0}
 	end
 
 snippet defsd
@@ -136,32 +118,32 @@ snippet defsd
 	"""
 	@spec ${2:name}(${3:arg types}) :: ${4:no_return}
 	def $2(${5:args}) do
-		${0}
+	  ${0}
 	end
 
 snippet defw
 	def ${1:name}(${2:args}) when ${3:guard} do
-		${0}
+	  ${0}
 	end
 
 snippet defim
 	defimpl ${1:protocol_name}, for: ${2:data_type} do
-		${0}
+	  ${0}
 	end
 
 snippet defma
 	defmacro ${1:name} do
-		${0}
+	  ${0}
 	end
 
 snippet defmo
 	defmodule ${1:`substitute(vim_snippets#Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`} do
-		${0}
+	  ${0}
 	end
 
 snippet %M
 	%__MODULE__{
-		${1:key_name}: ${2:value}
+	  ${1:key_name}: ${2:value}
 	}
 
 snippet enfk

@@ -2,7 +2,10 @@
 
 # Regen 
 # 
-# Run `Snipcon` on each `<lang>.snippet` file, and direct the output to
-# `json/<lang>.json`.
+# Run `Snipcon` on each `<lang>.snippet` file, 
+# and direct output to `json/<lang>.json`.
 
-rm -f json/*json
+cd "$(dirname "$0")" || exit # run from the script directory
+rm -f json/*json             # remove existing JSON files
+
+# --- run the Snipcon converter on each snippet file

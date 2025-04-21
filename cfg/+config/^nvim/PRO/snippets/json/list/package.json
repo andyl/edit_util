@@ -2,7 +2,17 @@
   "name": "personal-snippets",
   "contributes": {
     "snippets": [
-      { "language": "lua", "path": "../lua.json" }
+
+      { "language": "bash",       "path": "../bash.json"       },
+      { "language": "eelixir",    "path": "../eelixir.json"    },
+      { "language": "elixir",     "path": "../elixir.json"     },
+      { "language": "heex",       "path": "../heex.json"       },
+      { "language": "html",       "path": "../html.json"       },
+      { "language": "javascript", "path": "../javascript.json" },
+      { "language": "lua",        "path": "../lua.json"        },
+      { "language": "ruby",       "path": "../ruby.json"       },
+      { "language": "sh",         "path": "../sh.json"         },
+
     ]
   }
 }
