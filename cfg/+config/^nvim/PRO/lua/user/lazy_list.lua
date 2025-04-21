@@ -34,7 +34,7 @@ local opts = {
 	require("user.lazy.key_mini"),        -- utility modules for which_key
 	require("user.lazy.key_which_key"),   -- key mapper and displayer
 	-- CMP/COMPLETION/SNIPPETS
-  require("user.lazy.bcmp.core"),       -- blink.cmp
+  require("user.lazy.cmp.core"),        -- blink.cmp
   -- SESSIONS
   require("user.lazy.auto_session"),    -- automatic sessions
 	-- TELESCOPE

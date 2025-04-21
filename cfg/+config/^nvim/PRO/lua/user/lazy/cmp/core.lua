@@ -1,80 +1,85 @@
--- lazy/cmp/core
---------------------------------------------------------
-
 local opts = {
-  -- { "saadparwaiz1/cmp_luasnip" }, -- https://github.com/saadparwaiz1/cmp_luasnip | :h cmp_luasnip
-  -- { "hrsh7th/cmp-buffer"       }, -- https://github.com/hrsh7th/cmp-buffer       | :h cmp-buffer
-  -- { "hrsh7th/cmp-path"         }, -- https://github.com/hrsh7th/cmp-path         | :h cmp-path
-  -- { "hrsh7th/cmp-nvim-lua"     }, -- https://github.com/hrsh7th/cmp-nvim-lua     | :h TBD
-  -- THIS ONE BREAKS WhichKey !!!
-  -- { "hrsh7th/cmp-nvim-lsp"     }, -- https://github.com/hrsh7th/cmp-nvim-lsp     | :h cmp-nvim-lsp
-  -- {
-  --   -- https://github.com/roobert/tailwindcss-colorizer-cmp.nvim
-  --   -- https://www.youtube.com/watch?v=_NiWhZeR-MY&t=30s
-  --   "roobert/tailwindcss-colorizer-cmp.nvim"
-  -- },
-  {
-    -- https://github.com/hrsh7th/nvim-cmp
-    -- :h cmp
-    "hrsh7th/nvim-cmp",
-    -- depends_on = { "roobert/tailwindcss-colorizer-cmp.nvim" },
-    config = function()
-      local cmp = require('cmp')
-      local luasnip = require('luasnip')
-      cmp.setup({
-        -- mapping = require('user.lazy.cmp.core_mapping'),
-        -- formatting = require('user.lazy.cmp.core_formatting'),
-        snippet = {
-          expand = function(args)
-            luasnip.lsp_expand(args.body)
-          end,
-        },
-        sources = {
-          { name = "luasnip" },
-          -- { name = "nvim_lsp" },
-          { name = "buffer" },
-          { name = "path" },
-        },
-        confirm_opts = {
-          behavior = cmp.ConfirmBehavior.Replace,
-          select   = false,
-        },
-        experimental = {
-          ghost_text  = false,
-          native_menu = false,
-        },
-      })
-    end,
+  'saghen/blink.cmp',
+
+  -- https://github.com/rafamadriz/friendly-snippets
+  dependencies = {
+    "rafamadriz/friendly-snippets",
+    "moyiz/blink-emoji.nvim",
   },
-  -- {
-  --   -- https://github.com/hrsh7th/cmp-cmdline
-  --   -- :h cmp-cmdline
-  --   "hrsh7th/cmp-cmdline",
-  --   config = function()
-  --     local cmp = require('cmp')
-  --     cmp.setup.cmdline("/", {
-  --       mapping = cmp.mapping.preset.cmdline(),
-  --       sources = {
-  --         { name = 'buffer' }
-  --       },
-  --     })
-  --     cmp.setup.cmdline(':', {
-  --       mapping = cmp.mapping.preset.cmdline(),
-  --       sources = cmp.config.sources({
-  --           { name = 'path' }
-  --         },
-  --         {
-  --           {
-  --             name = 'cmdline',
-  --             option = {
-  --               ignore_cmds = { 'Man', '!' }
-  --             }
-  --           }
-  --         })
-  --     })
-  --   end
-  -- },
+
+  -- release tag to download pre-built binaries
+  version = '1.*',
+
+  opts = {
+    -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
+    -- 'super-tab' for mappings similar to vscode (tab to accept)
+    -- 'enter' for enter to accept
+    -- 'none' for no mappings
+    --
+    -- All presets have the following mappings:
+    -- C-space: Open menu or open docs if already open
+    -- C-n/C-p or Up/Down: Select next/previous item
+    -- C-e: Hide menu
+    -- C-k: Toggle signature help (if signature.enabled = true)
+    --
+    -- See :h blink-cmp-config-keymap for defining your own keymap
+    keymap = { preset = 'enter' },
+
+    signature = { enabled = true },
+
+    appearance = {
+      nerd_font_variant = 'mono'
+    },
+
+    completion = { documentation = { auto_show = true } },
+
+    sources = {
+      default = { 'snippets', 'lsp', 'path', 'emoji', 'buffer' },
+      providers = {
+        lsp = {
+          name = "LSP",
+          module = "blink.cmp.sources.lsp",
+          score_offset = 200,
+        },
+        path = {
+          name = "Path",
+          module = "blink.cmp.sources.path",
+          score_offset = 100,
+        },
+        snippets = {
+          name = "Snippets",
+          module = "blink.cmp.sources.snippets",
+          score_offset = 500,
+          opts = {
+            search_paths = {
+              "~/.config/nvim/PRO/snippets/json/list"
+            }
+          }
+        },
+        emoji = {
+          name = "emoji",
+          module = "blink-emoji",
+          score_offset = 25,
+          opts = { insert = true },
+        },
+        buffer = {
+          name = "Buffer",
+          module = "blink.cmp.sources.buffer",
+          score_offset = 0,
+        },
+      },
+    },
+
+    cmdline = {
+      enabled = true,
+      completion = {
+        menu = { auto_show = true },
+      }
+    },
+
+    fuzzy = { implementation = "prefer_rust_with_warning" }
+  },
+  opts_extend = { "sources.default" }
 }
 
 return opts
-
