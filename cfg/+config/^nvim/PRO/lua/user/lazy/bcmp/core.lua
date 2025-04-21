@@ -41,6 +41,7 @@ local opts = {
           module = "blink.cmp.sources.lsp",
           score_offset = 200,
         },
+
         path = {
           name = "Path",
           module = "blink.cmp.sources.path",
@@ -50,6 +51,11 @@ local opts = {
           name = "Snippets",
           module = "blink.cmp.sources.snippets",
           score_offset = 50,
+          opts = {
+            search_paths = {
+              "~/.config/nvim/PRO/snippets/json"
+            }
+          }
         },
         emoji = {
           name = "emoji",
