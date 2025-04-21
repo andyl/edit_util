@@ -11,6 +11,11 @@
 - Snippets     | https://cmp.saghen.dev/configuration/snippets
 - AltConverter | https://github.com/nadiamoe/snipmate-to-json
 
+## Friendly Snippets 
+
+- https://github.com/rafamadriz/friendly-snippets 
+- ~/.local/share/nvim/PRO/lazy/friendly-snippets/README.md
+
 ## Converter Scripts 
 
 - Snipcon | converts one snippet file to JSON

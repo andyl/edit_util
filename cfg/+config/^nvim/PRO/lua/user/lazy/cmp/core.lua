@@ -44,12 +44,12 @@ local opts = {
         path = {
           name = "Path",
           module = "blink.cmp.sources.path",
-          score_offset = 100,
+          score_offset = 500,
         },
         snippets = {
           name = "Snippets",
           module = "blink.cmp.sources.snippets",
-          score_offset = 500,
+          score_offset = 50,
           opts = {
             search_paths = {
               "~/.config/nvim/PRO/snippets/json/list"
