@@ -1,3 +1,4 @@
+--
 -- Project Navigation Functions
 --
 -- - change to project root under cursor
@@ -35,7 +36,7 @@
 local function clean_path(str)
   local clean = str:gsub('[%<%>%{%}%(%[%]%)]', ' ')
   local words = {}
-  for word in clean:gmatch("[%w_./~]+") do
+  for word in clean:gmatch("[%w_./~-]+") do
     words[#words + 1] = word
   end
   return words[#words]
