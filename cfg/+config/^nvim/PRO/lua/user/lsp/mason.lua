@@ -69,10 +69,7 @@ require('mason-lspconfig').setup_handlers {
   ["emmet_ls"]    = function() server_config("emmet_ls") end,
   ["jsonls"]      = function() server_config("jsonls") end,
   ["lua_ls"]      = function() server_config("lua_ls") end,
-  -- ["tailwindcss"] = function() server_config("tailwindcss") end,
+  ["tailwindcss"] = function() server_config("tailwindcss") end,
   ["yamlls"]      = function() server_config("yamlls") end,
 }
-
-----------------------------------------------------------------
-
 

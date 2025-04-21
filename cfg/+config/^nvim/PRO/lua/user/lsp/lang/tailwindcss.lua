@@ -4,19 +4,19 @@
 -- https://www.reddit.com/r/neovim/comments/x079oc/triggering_autocompletion_for_heex_files_tailwind/
 -- https://elixirforum.com/t/how-to-set-up-neovim-for-tailwind-intelisense-in-phoenix-files/68055
 
--- local function root_pattern(...)
---   local patterns  = vim.iter({ ... }):flatten():totable()
---   local lspconfig = require("lspconfig")
---
---   return function(startpath)
---     for _, pattern in ipairs(patterns) do
---       return lspconfig.util.search_ancestors(startpath, function(path)
---         local gpath = vim.fn.glob(lspconfig.util.path.join(path, pattern))
---         if lspconfig.util.path.exists(gpath) then return path end
---       end)
---     end
---   end
--- end
+local function root_pattern(...)
+  local patterns  = vim.iter({ ... }):flatten():totable()
+  local lspconfig = require("lspconfig")
+
+  return function(startpath)
+    for _, pattern in ipairs(patterns) do
+      return lspconfig.util.search_ancestors(startpath, function(path)
+        local gpath = vim.fn.glob(lspconfig.util.path.join(path, pattern))
+        if lspconfig.util.path.exists(gpath) then return path end
+      end)
+    end
+  end
+end
 
 local opts = {
   init_options = {
@@ -35,6 +35,7 @@ local opts = {
       erb    = "html-eex"
     },
     tailwindCSS = {
+      classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
       lint = {
         cssConflict              = "warning",
         invalidApply             = "error",
@@ -45,11 +46,11 @@ local opts = {
         recommendedVariantOrder  = "warning",
       },
       experimental = {
-        classRegex = {
-          'class[:]\\s*"([^"]*)"',
-          'class.*"([^"]*)',
-          "~H\"\"\".*class=\"([^\"]*)\".*\"\"\"",
-        }
+        -- classRegex = {
+        --   'class[:]\\s*"([^"]*)"',
+        --   'class.*"([^"]*)',
+        --   "~H\"\"\".*class=\"([^\"]*)\".*\"\"\"",
+        -- }
       },
       validate = true,
     },
@@ -59,11 +60,13 @@ local opts = {
     "ex", "heex", "elixir", "eelixir"
   },
   root_dir = root_pattern(
-    "./assets/tailwind.config.js",
+    "./assets/css/app.css",
+    "./assets/js/app.js",
     "tailwind.config.js",
     "postcss.config.js",
     "package.json",
     "node_modules",
+    "mix.exs",
     ".git",
     ".pbase"
   ),
