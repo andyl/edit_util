@@ -2,9 +2,11 @@
 
 require 'json'
 
-# SnipGen
+# Snipcon
 # This script converts snipmate-formatted snippets 
 # to VSCode formatted snippets (JSON).
+#
+# Usage: Snipcon <snippet file>
 
 # --- Helper Functions ---
 
@@ -37,6 +39,8 @@ unless File.exist?(snippet_file_path)
   puts "Error: Snippet file not found at '#{snippet_file_path}'"
   exit(1)
 end
+
+# --- Snippet Conversion ---
 
 # Initialize data structures
 snippets_data = {}

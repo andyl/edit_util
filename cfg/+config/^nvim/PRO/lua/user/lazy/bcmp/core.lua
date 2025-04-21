@@ -41,7 +41,6 @@ local opts = {
           module = "blink.cmp.sources.lsp",
           score_offset = 200,
         },
-
         path = {
           name = "Path",
           module = "blink.cmp.sources.path",
@@ -53,7 +52,7 @@ local opts = {
           score_offset = 50,
           opts = {
             search_paths = {
-              "~/.config/nvim/PRO/snippets/json"
+              "~/.config/nvim/PRO/snippets/json/list"
             }
           }
         },

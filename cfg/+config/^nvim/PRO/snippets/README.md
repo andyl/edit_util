@@ -8,15 +8,19 @@
 
 ## Reference 
 
-- Snippets  | https://cmp.saghen.dev/configuration/snippets
-- Converter | https://github.com/nadiamoe/snipmate-to-json
+- Snippets     | https://cmp.saghen.dev/configuration/snippets
+- AltConverter | https://github.com/nadiamoe/snipmate-to-json
 
 ## Converter 
 
-```
-$ go install go.nadia.moe/snipmate-to-json@latest
-$ asdf reshim 
-$ snipmate-to-json < markdown.snippets | jq > markdown.json
-```
+- Snipcon | converts one snippet file to JSON
+- Regen   | regenerates all snippet files
 
+## ProTip 
+
+Snippet files uses tab (\t) character.
+
+To view non-printing chars in neovim: 
+- `:set list`   | display all non-printing chars
+- `:set nolist` | disable tab display
 
