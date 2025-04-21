@@ -1,12 +1,29 @@
 #!/usr/bin/env ruby
 
+require 'json'
+
 # SnipGen
-# This script converts snipmate-formatted snippets to VSCode formatted
-# snippets (JSON).
+# This script converts snipmate-formatted snippets 
+# to VSCode formatted snippets (JSON).
+
+# --- Helper Functions ---
+
+# Adds the currently parsed snippet data to the main hash
+def add_current_snippet_to_hash(snippets_data, key, body, description)
+  return unless key # Do nothing if no key is set
+
+  snippets_data[key] = {
+    "prefix" => key,
+    "body" => body,
+    "description" => description || "" # Ensure description is always a string
+  }
+end
+
+# --- Main Script ---
 
 # Check if a command-line argument is provided
 if ARGV.length != 1
-  puts "Usage: #{$PROGRAM_NAME} <path_to_snippet_file>"
+  puts "Usage: #{File.basename($PROGRAM_NAME)} <path_to_snippet_file>"
   exit(1)
 end
 
@@ -18,6 +35,42 @@ unless File.exist?(snippet_file_path)
   exit(1)
 end
 
-puts "Processing snippet file: #{snippet_file_path}"
+# Initialize data structures
+snippets_data = {}
+current_snippet_key = nil
+current_snippet_body = []
+current_snippet_description = ""
 
-# --- Conversion logic will go here ---
+# Process the snippet file line by line
+File.foreach(snippet_file_path).with_index do |line, index|
+  # Preserve original line for body processing, strip for parsing checks
+  line_stripped = line.strip
+
+  # Skip blank lines and comments
+  next if line_stripped.empty? || line_stripped.start_with?('#')
+
+  # Check for snippet definition line
+  if (match = line_stripped.match(/^snippet\s+(\S+)(?:\s+"(.*?)")?$/))
+    # Add the previous snippet before starting a new one
+    add_current_snippet_to_hash(snippets_data, current_snippet_key, current_snippet_body, current_snippet_description)
+
+    # Start a new snippet
+    current_snippet_key = match[1]
+    current_snippet_description = match[2] # Can be nil if no description
+    current_snippet_body = []
+  # Check for snippet body line (must start with a tab)
+  elsif line.start_with?("\t") && current_snippet_key
+    # Remove the leading tab and trailing newline
+    current_snippet_body << line[1..-1].chomp
+  # Handle lines that are not comments, blank, snippet defs, or valid body lines
+  else
+    # If we are inside a snippet definition, maybe warn? For now, ignore.
+    # puts "Warning: Ignoring unexpected line #{index + 1}: #{line_stripped}" if current_snippet_key
+  end
+end
+
+# Add the last snippet after the loop finishes
+add_current_snippet_to_hash(snippets_data, current_snippet_key, current_snippet_body, current_snippet_description)
+
+# Convert the hash to JSON and print it
+puts JSON.pretty_generate(snippets_data)
