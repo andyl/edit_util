@@ -1,28 +1,28 @@
 # Elixir Snippets 
 
-snippet do
+snippet do "Insert a do block"
 	do
 		${0:${VISUAL}}
 	end
 
-snippet put IO.puts
+snippet puts "IO.puts"
 	IO.puts("${0}")
 
-snippet ins IO.inspect
+snippet ins "IO.inspect"
 	IO.inspect(${0})
 
-snippet insl IO.inspect with label
+snippet insl "IO.inspect with label"
 	IO.inspect(${1}label: "${2:label}")${0}
 
-snippet if if .. do .. end
+snippet if "if .. do .. end"
 	if ${1} do
 		${0:${VISUAL}}
 	end
 
-snippet if: if .. do: ..
+snippet if: "if .. do: .."
 	if ${1:condition}, do: ${0}
 
-snippet ife if .. do .. else .. end
+snippet ife "if .. do .. else .. end"
 	if ${1:condition} do
 		${2:${VISUAL}}
 	else
@@ -106,15 +106,15 @@ snippet cb
 	@callback ${1:name}(${2:args}) :: ${3:returns}
 
 snippet df
-	def ${1:name}, do: ${2}
+  def ${1:name}, do: ${2}
 
 snippet dfw
 	def ${1:name}(${2:args}) when ${3:guard}, do:
 
-snippet def
-	def ${1:name} do
-		${0}
-	end
+snippet def "Public function"
+  def ${1:name} do
+    ${0}
+  end
 
 snippet defd
 	@doc """
@@ -334,7 +334,7 @@ snippet cs
 		}
 	end
 
-snippet genserver basic genserver structure
+snippet genserver "basic genserver structure"
 	use GenServer
 
 	@doc false
@@ -347,7 +347,7 @@ snippet genserver basic genserver structure
 		{:ok, state}
 	end
 
-snippet genserver: basic genserver structure
+snippet genserver: "basic genserver structure"
 	use GenServer
 
 	@doc false
@@ -362,10 +362,10 @@ snippet impl
 		${0}
 	end
 
-snippet wl word list
+snippet wl "word list"
 	~w(${0})
 
-snippet al atom list
+snippet al "atom list":
 	~w(${0})a
 
 

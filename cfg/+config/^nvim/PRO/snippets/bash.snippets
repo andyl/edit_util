@@ -1,13 +1,13 @@
-extends sh
+# Bash Snippets 
 
-snippet #!
+snippet bash "Shebang line"
 	#!/usr/bin/env bash
 
-snippet s#!
+snippet s! "Shebang line"
 	#!/usr/bin/env bash
 	set -eu
 
-snippet if
+snippet if "If statement"
 	if [[ $1 ]]; then
 		${0:${VISUAL}}
 	fi
