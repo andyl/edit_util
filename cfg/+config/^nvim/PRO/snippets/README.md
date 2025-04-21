@@ -4,14 +4,14 @@
 
 - blink.cmp reads vscode-style snippets (JSON)
 - snipmate style snippets are easier to write 
-- use a converter
+- auto-convert `<lang>.snipmate` to `<lang>.json`
 
 ## Reference 
 
 - Snippets     | https://cmp.saghen.dev/configuration/snippets
 - AltConverter | https://github.com/nadiamoe/snipmate-to-json
 
-## Converter 
+## Converter Scripts 
 
 - Snipcon | converts one snippet file to JSON
 - Regen   | regenerates all snippet files
