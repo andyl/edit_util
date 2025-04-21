@@ -1,4 +1,10 @@
 -- lsp/lang/tailwindcss
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lua/lspconfig/configs/tailwindcss.lua
+--
+-- https://github.com/tailwindlabs/tailwindcss-intellisense
+--
+-- Tailwind CSS Language Server can be installed via npm:
+-- npm install -g @tailwindcss/language-server
 --
 -- NOTE
 -- THIS WILL ONLY WORK IN A TAILWIND PROJECT (eg Phoenix Project)
