@@ -12,11 +12,14 @@ require 'json'
 def add_current_snippet_to_hash(snippets_data, key, body, description)
   return unless key # Do nothing if no key is set
 
-  snippets_data[key] = {
+  snippet_entry = {
     "prefix" => key,
-    "body" => body,
-    "description" => description || "" # Ensure description is always a string
+    "body" => body
   }
+  # Only add the description key if a description was provided
+  snippet_entry["description"] = description if description
+
+  snippets_data[key] = snippet_entry
 end
 
 # --- Main Script ---
