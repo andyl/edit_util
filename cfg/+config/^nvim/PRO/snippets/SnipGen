@@ -43,11 +43,11 @@ current_snippet_description = ""
 
 # Process the snippet file line by line
 File.foreach(snippet_file_path).with_index do |line, index|
-  # Preserve original line for body processing, strip for parsing checks
+  # Preserve original line for body processing, strip for some checks
   line_stripped = line.strip
 
-  # Skip blank lines and comments
-  next if line_stripped.empty? || line_stripped.start_with?('#')
+  # Skip blank lines
+  next if line_stripped.empty?
 
   # Check for snippet definition line
   if (match = line_stripped.match(/^snippet\s+(\S+)(?:\s+"(.*?)")?$/))
@@ -60,12 +60,16 @@ File.foreach(snippet_file_path).with_index do |line, index|
     current_snippet_body = []
   # Check for snippet body line (must start with a tab)
   elsif line.start_with?("\t") && current_snippet_key
+    # Add body line (including those starting with \t#)
     # Remove the leading tab and trailing newline
     current_snippet_body << line[1..-1].chomp
-  # Handle lines that are not comments, blank, snippet defs, or valid body lines
+  # Skip top-level comments (lines starting with # after leading whitespace)
+  elsif line.lstrip.start_with?('#')
+    next # Skip this line
+  # Handle lines that are not blank, snippet defs, body lines, or top-level comments
   else
     # If we are inside a snippet definition, maybe warn? For now, ignore.
-    # puts "Warning: Ignoring unexpected line #{index + 1}: #{line_stripped}" if current_snippet_key
+    # puts "Warning: Ignoring unexpected line #{index + 1}: #{line_stripped}"
   end
 end
 
