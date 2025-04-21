@@ -38,6 +38,28 @@ local opts = {
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
       default = { 'snippets', 'lsp', 'path', 'buffer' },
+      providers = {
+        lsp = {
+          name = "LSP",
+          module = "blink.cmp.sources.lsp",
+          score_offset = 200,
+        },
+        path = {
+          name = "Path",
+          module = "blink.cmp.sources.path",
+          score_offset = 100,
+        },
+        snippets = {
+          name = "Snippets",
+          module = "blink.cmp.sources.snippets",
+          score_offset = 50,
+        },
+        buffer = {
+          name = "Buffer",
+          module = "blink.cmp.sources.buffer",
+          score_offset = 0,
+        },
+      },
     },
 
     cmdline = {
