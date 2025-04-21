@@ -71,15 +71,15 @@ KmI("jk", "<esc>")
 KmI("kj", "<esc>")
 
 -- FAST ARROW TYPING
-KmI("|f<tab>", "|> ") -- pipe  forward
-KmI("|r<tab>", "<| ") -- pipe  reverse
-KmI("~f<tab>", "~> ") -- tilde forward
-KmI("~r<tab>", "<~ ") -- tilde reverse
-KmI("=f<tab>", ">= ") -- equal forward (GTE)
-KmI("=r<tab>", "<= ") -- equal reverse (LTE)
-KmI("-f<tab>", "-> ") -- arrow forward
-KmI("-r<tab>", "<- ") -- arrow reverse
-KmI("ff<tab>", "=> ") -- fat   forward
+KmI("|fa", "|> ") -- pipe  forward arrow
+KmI("|ra", "<| ") -- pipe  reverse arrow
+KmI("~fa", "~> ") -- tilde forward arrow
+KmI("~ra", "<~ ") -- tilde reverse arrow
+KmI("=fa", ">= ") -- equal forward arrow (GTE)
+KmI("=ra", "<= ") -- equal reverse arrow (LTE)
+KmI("-fa", "-> ") -- arrow forward arrow
+KmI("-ra", "<- ") -- arrow reverse arrow
+KmI("=FA", "=> ") -- fat   forward arrow
 
 -- TAB NAVIGATION
 KmN("<S-A-Left>",  ":tabprev<cr>")        -- normal mode: previous tab
