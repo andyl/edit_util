@@ -47,12 +47,12 @@ local opts = {
 	-- NGINX
 	"chr4/nginx.vim",                     -- nginx config files
 	-- DEBUGGING
-	"mfussenegger/nvim-dap",              -- debug adapter protocol
-	"jbyuki/one-small-step-for-vimkind",  -- debugger for lua & neovim plugins
-	"rcarriga/nvim-dap-ui",               -- DAP ui
+	-- "mfussenegger/nvim-dap",              -- debug adapter protocol
+	-- "jbyuki/one-small-step-for-vimkind",  -- debugger for lua & neovim plugins
+	-- "rcarriga/nvim-dap-ui",               -- DAP ui
 	-- NEOVIM LUA DEVELOPMENT
 	"rafcamlet/nvim-luapad",              -- neovim lua repl
-	"folke/neodev.nvim",                  -- lsp autocompletion for nvim lua API
+	-- "folke/neodev.nvim",                  -- lsp autocompletion for nvim lua API
 	-- STATUS LINES
 	"nvim-lualine/lualine.nvim",          -- status line
 	"crispgm/nvim-tabline",               -- tab line
