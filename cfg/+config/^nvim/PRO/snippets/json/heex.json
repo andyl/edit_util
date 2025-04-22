@@ -1,2 +1,9 @@
 {
+  "xhw": {
+    "prefix": "xhw",
+    "body": [
+      "<HELLO WORLD>"
+    ],
+    "description": "Hello World"
+  }
 }

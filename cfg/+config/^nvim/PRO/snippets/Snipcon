@@ -8,6 +8,10 @@ require 'json'
 #
 # Usage: Snipcon <snippet file>
 
+# --- Leader Char --- 
+
+leader_char = "x"
+
 # --- Helper Functions ---
 
 # Adds the currently parsed snippet data to the main hash
@@ -62,7 +66,7 @@ File.foreach(snippet_file_path).with_index do |line, index|
     add_current_snippet_to_hash(snippets_data, current_snippet_key, current_snippet_body, current_snippet_description)
 
     # Start a new snippet
-    current_snippet_key = match[1]
+    current_snippet_key = leader_char + match[1]
     current_snippet_description = match[2] # Can be nil if no description
     current_snippet_body = []
   # Check for snippet body line (must start with a tab)

@@ -1,26 +1,26 @@
 {
-  "%": {
-    "prefix": "%",
+  "x%": {
+    "prefix": "x%",
     "body": [
       "<% ${0} %>"
     ],
     "description": "<% %>"
   },
-  "=": {
-    "prefix": "=",
+  "x=": {
+    "prefix": "x=",
     "body": [
       "<%= ${0} %>"
     ],
     "description": "<%= %>"
   },
-  "end": {
-    "prefix": "end",
+  "xend": {
+    "prefix": "xend",
     "body": [
       "<% end %>"
     ]
   },
-  "for": {
-    "prefix": "for",
+  "xfor": {
+    "prefix": "xfor",
     "body": [
       "<%= for ${1:item} <- ${2:items} ${3:@conn} do %>",
       "  ${0}",
@@ -28,8 +28,8 @@
     ],
     "description": "for loop"
   },
-  "if": {
-    "prefix": "if",
+  "xif": {
+    "prefix": "xif",
     "body": [
       "<%= if ${1} do %>",
       "  ${0:${VISUAL}}",
@@ -37,8 +37,8 @@
     ],
     "description": "if statement"
   },
-  "ife": {
-    "prefix": "ife",
+  "xife": {
+    "prefix": "xife",
     "body": [
       "<%= if ${1} do %>",
       "  ${2:${VISUAL}}",
@@ -48,8 +48,8 @@
     ],
     "description": "if/else statement"
   },
-  "cond": {
-    "prefix": "cond",
+  "xcond": {
+    "prefix": "xcond",
     "body": [
       "<%= cond do %>",
       "  <% ${1} -> %>",
@@ -59,16 +59,16 @@
       "<% end %>"
     ]
   },
-  "unless": {
-    "prefix": "unless",
+  "xunless": {
+    "prefix": "xunless",
     "body": [
       "<%= unless ${1} do %>",
       "  ${0:${VISUAL}}",
       "<% end %>"
     ]
   },
-  "ft": {
-    "prefix": "ft",
+  "xft": {
+    "prefix": "xft",
     "body": [
       "<%= form_tag(${1:\"/users\"}, method: ${2::post}) %>",
       "  ${0}",
@@ -76,70 +76,70 @@
     ],
     "description": "form_tag"
   },
-  "sl": {
-    "prefix": "sl",
+  "xsl": {
+    "prefix": "xsl",
     "body": [
       "<%= select ${1:f}, :${2:field}, ${3:[{\"key\", \"value\"}]}, prompt: ${4:\"Prompt\"} %>"
     ],
     "description": "select"
   },
-  "sb": {
-    "prefix": "sb",
+  "xsb": {
+    "prefix": "xsb",
     "body": [
       "<%= submit ${1:\"Submit\"} %>"
     ],
     "description": "submit"
   },
-  "rb": {
-    "prefix": "rb",
+  "xrb": {
+    "prefix": "xrb",
     "body": [
       "<%= radio_button ${1:f}, :${2:field},  ${3:\"value\"} %>"
     ],
     "description": "radio_button"
   },
-  "et": {
-    "prefix": "et",
+  "xet": {
+    "prefix": "xet",
     "body": [
       "<%= error_tag ${1:f}, :${2:field} %>"
     ],
     "description": "error_tag"
   },
-  "ti": {
-    "prefix": "ti",
+  "xti": {
+    "prefix": "xti",
     "body": [
       "<%= text_input ${1:f}, :${2:field} %>"
     ],
     "description": "text_input"
   },
-  "la": {
-    "prefix": "la",
+  "xla": {
+    "prefix": "xla",
     "body": [
       "<%= label ${1:f}, :${2:field}, \"${3:Label}\" %>"
     ],
     "description": "label"
   },
-  "pi": {
-    "prefix": "pi",
+  "xpi": {
+    "prefix": "xpi",
     "body": [
       "<%= password_input ${1:f}, :${2:password} %>"
     ],
     "description": "password_input"
   },
-  "render": {
-    "prefix": "render",
+  "xrender": {
+    "prefix": "xrender",
     "body": [
       "<%= render \"${1:index}.html\", ${2:var: @var} %>"
     ]
   },
-  "lin": {
-    "prefix": "lin",
+  "xlin": {
+    "prefix": "xlin",
     "body": [
       "<%= link \"${1:Submit}\", to: ${2:\"/users\"}, method: ${3::delete} %>"
     ],
     "description": "link"
   },
-  "ff": {
-    "prefix": "ff",
+  "xff": {
+    "prefix": "xff",
     "body": [
       "<%= form_for @changeset, ${1:\"/users\"}, fn f -> %>",
       "    ${0}",
@@ -148,8 +148,8 @@
     ],
     "description": "form_for"
   },
-  "pry": {
-    "prefix": "pry",
+  "xpry": {
+    "prefix": "xpry",
     "body": [
       "<% require IEx; IEx.pry %>"
     ]

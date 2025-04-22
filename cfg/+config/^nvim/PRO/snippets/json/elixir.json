@@ -1,6 +1,6 @@
 {
-  "do": {
-    "prefix": "do",
+  "xdo": {
+    "prefix": "xdo",
     "body": [
       "do",
       "  ${0:${VISUAL}}",
@@ -8,29 +8,29 @@
     ],
     "description": "Insert a do block"
   },
-  "puts": {
-    "prefix": "puts",
+  "xputs": {
+    "prefix": "xputs",
     "body": [
       "IO.puts(\"${0}\")"
     ],
     "description": "IO.puts"
   },
-  "ins": {
-    "prefix": "ins",
+  "xins": {
+    "prefix": "xins",
     "body": [
       "IO.inspect(${0})"
     ],
     "description": "IO.inspect"
   },
-  "insl": {
-    "prefix": "insl",
+  "xinsl": {
+    "prefix": "xinsl",
     "body": [
       "IO.inspect(${1}label: \"${2:label}\")${0}"
     ],
     "description": "IO.inspect with label"
   },
-  "if": {
-    "prefix": "if",
+  "xif": {
+    "prefix": "xif",
     "body": [
       "if ${1} do",
       "  ${0:${VISUAL}}",
@@ -38,15 +38,15 @@
     ],
     "description": "if .. do .. end"
   },
-  "if:": {
-    "prefix": "if:",
+  "xif:": {
+    "prefix": "xif:",
     "body": [
       "if ${1:condition}, do: ${0}"
     ],
     "description": "if .. do: .."
   },
-  "ife": {
-    "prefix": "ife",
+  "xife": {
+    "prefix": "xife",
     "body": [
       "if ${1:condition} do",
       "  ${2:${VISUAL}}",
@@ -56,15 +56,15 @@
     ],
     "description": "if .. do .. else .. end"
   },
-  "ife:": {
-    "prefix": "ife:",
+  "xife:": {
+    "prefix": "xife:",
     "body": [
       "if ${1:condition}, do: ${2}, else: ${0}"
     ],
     "description": "if .. do: .. else:"
   },
-  "cond": {
-    "prefix": "cond",
+  "xcond": {
+    "prefix": "xcond",
     "body": [
       "cond do",
       "  ${1} ->",
@@ -72,8 +72,8 @@
       "end"
     ]
   },
-  "case": {
-    "prefix": "case",
+  "xcase": {
+    "prefix": "xcase",
     "body": [
       "case ${1} do",
       "  ${2} ->",
@@ -81,38 +81,38 @@
       "end"
     ]
   },
-  "for": {
-    "prefix": "for",
+  "xfor": {
+    "prefix": "xfor",
     "body": [
       "for ${1:item} <- ${2:items} do",
       "  ${0}",
       "end"
     ]
   },
-  "for:": {
-    "prefix": "for:",
+  "xfor:": {
+    "prefix": "xfor:",
     "body": [
       "for ${1:item} <- ${2:items}, do: ${0}"
     ]
   },
-  "fori": {
-    "prefix": "fori",
+  "xfori": {
+    "prefix": "xfori",
     "body": [
       "for ${1:item} <- ${2:items}, into: ${3} do",
       "  ${0}",
       "end"
     ]
   },
-  "wi": {
-    "prefix": "wi",
+  "xwi": {
+    "prefix": "xwi",
     "body": [
       "with ${1:item} <- ${2:items} do",
       "  ${0}",
       "end"
     ]
   },
-  "wie": {
-    "prefix": "wie",
+  "xwie": {
+    "prefix": "xwie",
     "body": [
       "with(",
       "  ${1:item} <- ${2:items}",
@@ -124,57 +124,57 @@
       "end"
     ]
   },
-  "sp": {
-    "prefix": "sp",
+  "xsp": {
+    "prefix": "xsp",
     "body": [
       "@spec ${1:name}(${2:args}) :: ${3:returns}"
     ]
   },
-  "op": {
-    "prefix": "op",
+  "xop": {
+    "prefix": "xop",
     "body": [
       "@opaque ${1:type_name} :: ${2:type}"
     ]
   },
-  "ty": {
-    "prefix": "ty",
+  "xty": {
+    "prefix": "xty",
     "body": [
       "@type ${1:type_name} :: ${2:type}"
     ]
   },
-  "typ": {
-    "prefix": "typ",
+  "xtyp": {
+    "prefix": "xtyp",
     "body": [
       "@typep ${1:type_name} :: ${2:type}"
     ]
   },
-  "cb": {
-    "prefix": "cb",
+  "xcb": {
+    "prefix": "xcb",
     "body": [
       "@callback ${1:name}(${2:args}) :: ${3:returns}"
     ]
   },
-  "df": {
-    "prefix": "df",
+  "xdf": {
+    "prefix": "xdf",
     "body": [
 
     ]
   },
-  "dfw": {
-    "prefix": "dfw",
+  "xdfw": {
+    "prefix": "xdfw",
     "body": [
       "def ${1:name}(${2:args}) when ${3:guard}, do:"
     ]
   },
-  "def": {
-    "prefix": "def",
+  "xdef": {
+    "prefix": "xdef",
     "body": [
 
     ],
     "description": "Public function"
   },
-  "defd": {
-    "prefix": "defd",
+  "xdefd": {
+    "prefix": "xdefd",
     "body": [
       "@doc \"\"\"",
       "${1:doc string}",
@@ -184,8 +184,8 @@
       "end"
     ]
   },
-  "defs": {
-    "prefix": "defs",
+  "xdefs": {
+    "prefix": "xdefs",
     "body": [
       "@spec ${1:name}(${2:arg types}) :: ${3:no_return}",
       "def $1(${4:args}) do",
@@ -193,8 +193,8 @@
       "end"
     ]
   },
-  "defsd": {
-    "prefix": "defsd",
+  "xdefsd": {
+    "prefix": "xdefsd",
     "body": [
       "@doc \"\"\"",
       "${1:doc string}",
@@ -205,150 +205,150 @@
       "end"
     ]
   },
-  "defw": {
-    "prefix": "defw",
+  "xdefw": {
+    "prefix": "xdefw",
     "body": [
       "def ${1:name}(${2:args}) when ${3:guard} do",
       "  ${0}",
       "end"
     ]
   },
-  "defim": {
-    "prefix": "defim",
+  "xdefim": {
+    "prefix": "xdefim",
     "body": [
       "defimpl ${1:protocol_name}, for: ${2:data_type} do",
       "  ${0}",
       "end"
     ]
   },
-  "defma": {
-    "prefix": "defma",
+  "xdefma": {
+    "prefix": "xdefma",
     "body": [
       "defmacro ${1:name} do",
       "  ${0}",
       "end"
     ]
   },
-  "defmo": {
-    "prefix": "defmo",
+  "xdefmo": {
+    "prefix": "xdefmo",
     "body": [
       "defmodule ${1:`substitute(vim_snippets#Filename(), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')`} do",
       "  ${0}",
       "end"
     ]
   },
-  "%M": {
-    "prefix": "%M",
+  "x%M": {
+    "prefix": "x%M",
     "body": [
       "%__MODULE__{",
       "  ${1:key_name}: ${2:value}",
       "}"
     ]
   },
-  "enfk": {
-    "prefix": "enfk",
+  "xenfk": {
+    "prefix": "xenfk",
     "body": [
       "@enforce_keys [:${1:key_name}]"
     ]
   },
-  "dfp": {
-    "prefix": "dfp",
+  "xdfp": {
+    "prefix": "xdfp",
     "body": [
       "defp ${1:name}, do: ${2}"
     ]
   },
-  "dfpw": {
-    "prefix": "dfpw",
+  "xdfpw": {
+    "prefix": "xdfpw",
     "body": [
       "defp ${1:name}(${2:args}) when ${3:guard}, do: ${4}"
     ]
   },
-  "defp": {
-    "prefix": "defp",
+  "xdefp": {
+    "prefix": "xdefp",
     "body": [
       "defp ${1:name} do",
       "\t${0}",
       "end"
     ]
   },
-  "defpw": {
-    "prefix": "defpw",
+  "xdefpw": {
+    "prefix": "xdefpw",
     "body": [
       "defp ${1:name}(${2:args}) when ${3:guard} do",
       "\t${0}",
       "end"
     ]
   },
-  "defpr": {
-    "prefix": "defpr",
+  "xdefpr": {
+    "prefix": "xdefpr",
     "body": [
       "defprotocol ${1:name}, [${0:function}]"
     ]
   },
-  "defr": {
-    "prefix": "defr",
+  "xdefr": {
+    "prefix": "xdefr",
     "body": [
       "defrecord ${1:record_name}, ${0:fields}"
     ]
   },
-  "doc": {
-    "prefix": "doc",
+  "xdoc": {
+    "prefix": "xdoc",
     "body": [
       "@doc \"\"\"",
       "${0}",
       "\"\"\""
     ]
   },
-  "docs": {
-    "prefix": "docs",
+  "xdocs": {
+    "prefix": "xdocs",
     "body": [
       "@doc ~S\"\"\"",
       "${0}",
       "\"\"\""
     ]
   },
-  "docf": {
-    "prefix": "docf",
+  "xdocf": {
+    "prefix": "xdocf",
     "body": [
       "@doc false"
     ]
   },
-  "im": {
-    "prefix": "im",
+  "xim": {
+    "prefix": "xim",
     "body": [
       "@impl true"
     ]
   },
-  "fn": {
-    "prefix": "fn",
+  "xfn": {
+    "prefix": "xfn",
     "body": [
       "fn ${1:args} -> ${0} end"
     ]
   },
-  "mdoc": {
-    "prefix": "mdoc",
+  "xmdoc": {
+    "prefix": "xmdoc",
     "body": [
       "@moduledoc \"\"\"",
       "${0}",
       "\"\"\""
     ]
   },
-  "mdocs": {
-    "prefix": "mdocs",
+  "xmdocs": {
+    "prefix": "xmdocs",
     "body": [
       "@moduledoc ~S\"\"\"",
       "${0}",
       "\"\"\""
     ]
   },
-  "mdocf": {
-    "prefix": "mdocf",
+  "xmdocf": {
+    "prefix": "xmdocf",
     "body": [
       "@moduledoc false"
     ]
   },
-  "rec": {
-    "prefix": "rec",
+  "xrec": {
+    "prefix": "xrec",
     "body": [
       "receive do",
       "\t${1} ->",
@@ -356,82 +356,82 @@
       "end"
     ]
   },
-  "req": {
-    "prefix": "req",
+  "xreq": {
+    "prefix": "xreq",
     "body": [
       "require ${0:Logger}"
     ]
   },
-  "imp": {
-    "prefix": "imp",
+  "ximp": {
+    "prefix": "ximp",
     "body": [
       "import ${0:module_name}"
     ]
   },
-  "ali": {
-    "prefix": "ali",
+  "xali": {
+    "prefix": "xali",
     "body": [
       "alias ${0:module_name}"
     ]
   },
-  "test": {
-    "prefix": "test",
+  "xtest": {
+    "prefix": "xtest",
     "body": [
       "test \"${1:test name}\" do",
       "\t${0}",
       "end"
     ]
   },
-  "testc": {
-    "prefix": "testc",
+  "xtestc": {
+    "prefix": "xtestc",
     "body": [
       "test \"${1:test_name}\", ctx do",
       "\t${0}",
       "end"
     ]
   },
-  "testa": {
-    "prefix": "testa",
+  "xtesta": {
+    "prefix": "xtesta",
     "body": [
       "test \"${1:test_name}\", %{${2:arg: arg}} do",
       "\t${0}",
       "end"
     ]
   },
-  "desc": {
-    "prefix": "desc",
+  "xdesc": {
+    "prefix": "xdesc",
     "body": [
       "describe \"${1:test group subject}\" do",
       "\t${0}",
       "end"
     ]
   },
-  "destag": {
-    "prefix": "destag",
+  "xdestag": {
+    "prefix": "xdestag",
     "body": [
       "@describetag :${1:describe tag}"
     ]
   },
-  "mtag": {
-    "prefix": "mtag",
+  "xmtag": {
+    "prefix": "xmtag",
     "body": [
       "@moduletag :${1:module tag}"
     ]
   },
-  "dt": {
-    "prefix": "dt",
+  "xdt": {
+    "prefix": "xdt",
     "body": [
       "doctest ${1:filename}"
     ]
   },
-  "tp": {
-    "prefix": "tp",
+  "xtp": {
+    "prefix": "xtp",
     "body": [
       "@tag :pending"
     ]
   },
-  "exunit": {
-    "prefix": "exunit",
+  "xexunit": {
+    "prefix": "xexunit",
     "body": [
       "defmodule ${1:`substitute(vim_snippets#Filename(), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')`} do",
       "\tuse ExUnit.Case, async: true",
@@ -439,16 +439,16 @@
       "end"
     ]
   },
-  "setup": {
-    "prefix": "setup",
+  "xsetup": {
+    "prefix": "xsetup",
     "body": [
       "setup do",
       "\t${1}",
       "end"
     ]
   },
-  "setupa": {
-    "prefix": "setupa",
+  "xsetupa": {
+    "prefix": "xsetupa",
     "body": [
       "setup_all do",
       "\t${1}",
@@ -460,36 +460,36 @@
       "end"
     ]
   },
-  "pry": {
-    "prefix": "pry",
+  "xpry": {
+    "prefix": "xpry",
     "body": [
       "require IEx; IEx.pry",
       "${0}"
     ]
   },
-  "ppry": {
-    "prefix": "ppry",
+  "xppry": {
+    "prefix": "xppry",
     "body": [
       "|> (fn x -> require IEx; IEx.pry; x end).()${0}"
     ]
   },
-  "qu": {
-    "prefix": "qu",
+  "xqu": {
+    "prefix": "xqu",
     "body": [
       "quote do",
       "\t${1}",
       "end"
     ]
   },
-  "beh": {
-    "prefix": "beh",
+  "xbeh": {
+    "prefix": "xbeh",
     "body": [
       "@behaviour ${1:Mix.Task}",
       "${0}"
     ]
   },
-  "p": {
-    "prefix": "p",
+  "xp": {
+    "prefix": "xp",
     "body": [
       "|> ${0}",
       "|> Enum.each(fn ${1} -> ${0} end)",
@@ -500,8 +500,8 @@
       "|> IO.inspect(label: \"${1:label}\")"
     ]
   },
-  "cs": {
-    "prefix": "cs",
+  "xcs": {
+    "prefix": "xcs",
     "body": [
       "@doc false",
       "def child_spec(${1:_opts}) do",
@@ -515,8 +515,8 @@
       "end"
     ]
   },
-  "genserver": {
-    "prefix": "genserver",
+  "xgenserver": {
+    "prefix": "xgenserver",
     "body": [
       "use GenServer",
       "@doc false",
@@ -530,8 +530,8 @@
     ],
     "description": "basic genserver structure"
   },
-  "genserver:": {
-    "prefix": "genserver:",
+  "xgenserver:": {
+    "prefix": "xgenserver:",
     "body": [
       "use GenServer",
       "@doc false",
@@ -541,8 +541,8 @@
     ],
     "description": "basic genserver structure"
   },
-  "impl": {
-    "prefix": "impl",
+  "ximpl": {
+    "prefix": "ximpl",
     "body": [
       "@impl true",
       "def ${1:name} do",
@@ -550,8 +550,8 @@
       "end"
     ]
   },
-  "wl": {
-    "prefix": "wl",
+  "xwl": {
+    "prefix": "xwl",
     "body": [
       "~w(${0})",
       "~w(${0})a"

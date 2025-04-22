@@ -1,13 +1,13 @@
 {
-  "bash": {
-    "prefix": "bash",
+  "xbash": {
+    "prefix": "xbash",
     "body": [
       "#!/usr/bin/env bash"
     ],
     "description": "shebang line"
   },
-  "if": {
-    "prefix": "if",
+  "xif": {
+    "prefix": "xif",
     "body": [
       "if [[ $1 ]]; then",
       "  ${0:${VISUAL}}",
@@ -15,16 +15,16 @@
     ],
     "description": "if statement"
   },
-  "elif": {
-    "prefix": "elif",
+  "xelif": {
+    "prefix": "xelif",
     "body": [
       "elif [[ $1 ]]; then",
       "  ${0:${VISUAL}}"
     ],
     "description": "else if statement"
   },
-  "wh": {
-    "prefix": "wh",
+  "xwh": {
+    "prefix": "xwh",
     "body": [
       "while [[ $1 ]]; do",
       "  ${0:${VISUAL}}",
@@ -32,8 +32,8 @@
     ],
     "description": "while loop"
   },
-  "until": {
-    "prefix": "until",
+  "xuntil": {
+    "prefix": "xuntil",
     "body": [
       "until [[ $1 ]]; do",
       "  ${0:${VISUAL}}",

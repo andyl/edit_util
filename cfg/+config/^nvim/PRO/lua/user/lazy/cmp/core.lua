@@ -1,3 +1,5 @@
+local trigger_char = ";"
+
 local opts = {
   'saghen/blink.cmp',
 
@@ -39,7 +41,9 @@ local opts = {
         lsp = {
           name = "LSP",
           module = "blink.cmp.sources.lsp",
-          score_offset = 200,
+          max_items = 3,
+          min_keyword_length = 3,
+          score_offset = 100,
         },
         path = {
           name = "Path",
@@ -50,11 +54,27 @@ local opts = {
           name = "Snippets",
           module = "blink.cmp.sources.snippets",
           score_offset = 50,
+          max_items = 5,
           opts = {
             search_paths = {
               "~/.config/nvim/PRO/snippets/json/list"
             }
-          }
+          },
+          -- should_show_items = function()
+          --   local col = vim.api.nvim_win_get_cursor(0)[2]
+          --   local line = vim.api.nvim_get_current_line():sub(1, col)
+          --   local words = vim.split(line, '%s+')
+          --   local word = words[#words] or ''
+          --   return word:sub(1,1) == trigger_char
+          -- end,
+          -- transform_items = function(ctx, items)
+          --   local _ = ctx
+          --   for idx, item in ipairs(items) do
+          --     AppendLog(tostring(idx))
+          --     AppendTbl(item)
+          --   end
+          --   return items
+          -- end,
         },
         emoji = {
           name = "emoji",
