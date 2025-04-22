@@ -222,22 +222,6 @@
       "end"
     ]
   },
-  "x-defmo": {
-    "prefix": "x-defmo",
-    "body": [
-      "defmodule ${1:`substitute(vim_snippets#Filename(), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')`} do",
-      "  ${0}",
-      "end"
-    ]
-  },
-  "x-%M": {
-    "prefix": "x-%M",
-    "body": [
-      "%__MODULE__{",
-      "  ${1:key_name}: ${2:value}",
-      "}"
-    ]
-  },
   "x-enfk": {
     "prefix": "x-enfk",
     "body": [
