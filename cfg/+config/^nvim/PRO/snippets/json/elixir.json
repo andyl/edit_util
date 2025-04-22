@@ -166,13 +166,6 @@
       "def ${1:name}(${2:args}) when ${3:guard}, do:"
     ]
   },
-  "x-def": {
-    "prefix": "x-def",
-    "body": [
-
-    ],
-    "description": "Public function"
-  },
   "x-defd": {
     "prefix": "x-defd",
     "body": [

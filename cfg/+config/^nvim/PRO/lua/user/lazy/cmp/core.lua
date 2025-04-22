@@ -3,10 +3,9 @@ local trigger_char = ";"
 local opts = {
   'saghen/blink.cmp',
 
-  -- https://github.com/rafamadriz/friendly-snippets
   dependencies = {
-    "rafamadriz/friendly-snippets",
-    "moyiz/blink-emoji.nvim",
+    -- "rafamadriz/friendly-snippets", -- https://github.com/rafamadriz/friendly-snippets
+    "moyiz/blink-emoji.nvim",       -- https://github.com/moyiz/blink-emoji.nvim
   },
 
   -- release tag to download pre-built binaries
