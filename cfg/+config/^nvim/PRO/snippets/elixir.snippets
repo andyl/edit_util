@@ -131,16 +131,6 @@ snippet defma
 	  ${0}
 	end
 
-snippet defmo
-	defmodule ${1:`substitute(vim_snippets#Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`} do
-	  ${0}
-	end
-
-snippet %M
-	%__MODULE__{
-	  ${1:key_name}: ${2:value}
-	}
-
 snippet enfk
 	@enforce_keys [:${1:key_name}]
 

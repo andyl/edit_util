@@ -40,7 +40,7 @@ local opts = {
         lsp = {
           name = "LSP",
           module = "blink.cmp.sources.lsp",
-          max_items = 3,
+          max_items = 5,
           min_keyword_length = 3,
           score_offset = 100,
         },
@@ -53,7 +53,7 @@ local opts = {
           name = "Snippets",
           module = "blink.cmp.sources.snippets",
           score_offset = 50,
-          max_items = 5,
+          max_items = 8,
           opts = {
             search_paths = {
               "~/.config/nvim/PRO/snippets/json/list"
