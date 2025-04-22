@@ -15,3 +15,4 @@ require "user.key"           -- keymap setup
 require "user.debug"         -- dap configuration
 require "user.conf"          -- filetype detection and customization
 
+vim.deprecate = function() end
