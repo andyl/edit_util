@@ -1,6 +1,6 @@
 {
-  "xtwcfg": {
-    "prefix": "xtwcfg",
+  "x-twcfg": {
+    "prefix": "x-twcfg",
     "body": [
       "module.exports = {",
       "  content: [",

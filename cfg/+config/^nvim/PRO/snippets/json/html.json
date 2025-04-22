@@ -1,545 +1,545 @@
 {
-  "xnbs": {
-    "prefix": "xnbs",
+  "x-nbs": {
+    "prefix": "x-nbs",
     "body": [
       "&nbsp;"
     ]
   },
-  "xleft": {
-    "prefix": "xleft",
+  "x-left": {
+    "prefix": "x-left",
     "body": [
       "&#x2190;"
     ]
   },
-  "xright": {
-    "prefix": "xright",
+  "x-right": {
+    "prefix": "x-right",
     "body": [
       "&#x2192;"
     ]
   },
-  "xup": {
-    "prefix": "xup",
+  "x-up": {
+    "prefix": "x-up",
     "body": [
       "&#x2191;"
     ]
   },
-  "xdown": {
-    "prefix": "xdown",
+  "x-down": {
+    "prefix": "x-down",
     "body": [
       "&#x2193;"
     ]
   },
-  "xreturn": {
-    "prefix": "xreturn",
+  "x-return": {
+    "prefix": "x-return",
     "body": [
       "&#x21A9;"
     ]
   },
-  "xbacktab": {
-    "prefix": "xbacktab",
+  "x-backtab": {
+    "prefix": "x-backtab",
     "body": [
       "&#x21E4;"
     ]
   },
-  "xtab": {
-    "prefix": "xtab",
+  "x-tab": {
+    "prefix": "x-tab",
     "body": [
       "&#x21E5;"
     ]
   },
-  "xshift": {
-    "prefix": "xshift",
+  "x-shift": {
+    "prefix": "x-shift",
     "body": [
       "&#x21E7;"
     ]
   },
-  "xctrl": {
-    "prefix": "xctrl",
+  "x-ctrl": {
+    "prefix": "x-ctrl",
     "body": [
       "&#x2303;"
     ]
   },
-  "xenter": {
-    "prefix": "xenter",
+  "x-enter": {
+    "prefix": "x-enter",
     "body": [
       "&#x2305;"
     ]
   },
-  "xcmd": {
-    "prefix": "xcmd",
+  "x-cmd": {
+    "prefix": "x-cmd",
     "body": [
       "&#x2318;"
     ]
   },
-  "xoption": {
-    "prefix": "xoption",
+  "x-option": {
+    "prefix": "x-option",
     "body": [
       "&#x2325;"
     ]
   },
-  "xdelete": {
-    "prefix": "xdelete",
+  "x-delete": {
+    "prefix": "x-delete",
     "body": [
       "&#x2326;"
     ]
   },
-  "xbackspace": {
-    "prefix": "xbackspace",
+  "x-backspace": {
+    "prefix": "x-backspace",
     "body": [
       "&#x232B;"
     ]
   },
-  "xesc": {
-    "prefix": "xesc",
+  "x-esc": {
+    "prefix": "x-esc",
     "body": [
       "&#x238B;"
     ]
   },
-  "x//": {
-    "prefix": "x//",
+  "x-//": {
+    "prefix": "x-//",
     "body": [
       "<!-- ${1} -->${0}"
     ]
   },
-  "xdocts": {
-    "prefix": "xdocts",
+  "x-docts": {
+    "prefix": "x-docts",
     "body": [
       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"",
       "\"http://www.w3.org/TR/html4/strict.dtd\">"
     ]
   },
-  "xdoct": {
-    "prefix": "xdoct",
+  "x-doct": {
+    "prefix": "x-doct",
     "body": [
       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"",
       "\"http://www.w3.org/TR/html4/loose.dtd\">"
     ]
   },
-  "xdoct5": {
-    "prefix": "xdoct5",
+  "x-doct5": {
+    "prefix": "x-doct5",
     "body": [
       "<!DOCTYPE HTML>"
     ]
   },
-  "xdocxf": {
-    "prefix": "xdocxf",
+  "x-docxf": {
+    "prefix": "x-docxf",
     "body": [
       "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Frameset//EN\"",
       "\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd\">"
     ]
   },
-  "xdocxs": {
-    "prefix": "xdocxs",
+  "x-docxs": {
+    "prefix": "x-docxs",
     "body": [
       "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"",
       "\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">"
     ]
   },
-  "xdocxt": {
-    "prefix": "xdocxt",
+  "x-docxt": {
+    "prefix": "x-docxt",
     "body": [
       "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"",
       "\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">"
     ]
   },
-  "xdocx": {
-    "prefix": "xdocx",
+  "x-docx": {
+    "prefix": "x-docx",
     "body": [
       "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\"",
       "\"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">"
     ]
   },
-  "xattr": {
-    "prefix": "xattr",
+  "x-attr": {
+    "prefix": "x-attr",
     "body": [
       "${1:attribute}=\"${0:property}\""
     ]
   },
-  "xattr+": {
-    "prefix": "xattr+",
+  "x-attr+": {
+    "prefix": "x-attr+",
     "body": [
       "${1:attribute}=\"${2:property}\" attr+"
     ]
   },
-  "x.": {
-    "prefix": "x.",
+  "x-.": {
+    "prefix": "x-.",
     "body": [
       "class=\"${1}\""
     ]
   },
-  "x#": {
-    "prefix": "x#",
+  "x-#": {
+    "prefix": "x-#",
     "body": [
       "id=\"${1}\""
     ]
   },
-  "xalt": {
-    "prefix": "xalt",
+  "x-alt": {
+    "prefix": "x-alt",
     "body": [
       "alt=\"${1}\""
     ]
   },
-  "xcharset": {
-    "prefix": "xcharset",
+  "x-charset": {
+    "prefix": "x-charset",
     "body": [
       "charset=\"${1:utf-8}\""
     ]
   },
-  "xdata": {
-    "prefix": "xdata",
+  "x-data": {
+    "prefix": "x-data",
     "body": [
       "data-${1}=\"${2:$1}\""
     ]
   },
-  "xfor": {
-    "prefix": "xfor",
+  "x-for": {
+    "prefix": "x-for",
     "body": [
       "for=\"${1}\""
     ]
   },
-  "xheight": {
-    "prefix": "xheight",
+  "x-height": {
+    "prefix": "x-height",
     "body": [
       "height=\"${1}\""
     ]
   },
-  "xhref": {
-    "prefix": "xhref",
+  "x-href": {
+    "prefix": "x-href",
     "body": [
       "href=\"${1:#}\""
     ]
   },
-  "xlang": {
-    "prefix": "xlang",
+  "x-lang": {
+    "prefix": "x-lang",
     "body": [
       "lang=\"${1:en}\""
     ]
   },
-  "xmedia": {
-    "prefix": "xmedia",
+  "x-media": {
+    "prefix": "x-media",
     "body": [
       "media=\"${1}\""
     ]
   },
-  "xname": {
-    "prefix": "xname",
+  "x-name": {
+    "prefix": "x-name",
     "body": [
       "name=\"${1}\""
     ]
   },
-  "xrel": {
-    "prefix": "xrel",
+  "x-rel": {
+    "prefix": "x-rel",
     "body": [
       "rel=\"${1}\""
     ]
   },
-  "xscope": {
-    "prefix": "xscope",
+  "x-scope": {
+    "prefix": "x-scope",
     "body": [
       "scope=\"${1:row}\""
     ]
   },
-  "xsrc": {
-    "prefix": "xsrc",
+  "x-src": {
+    "prefix": "x-src",
     "body": [
       "src=\"${1}\""
     ]
   },
-  "xtitle=": {
-    "prefix": "xtitle=",
+  "x-title=": {
+    "prefix": "x-title=",
     "body": [
       "title=\"${1}\""
     ]
   },
-  "xtype": {
-    "prefix": "xtype",
+  "x-type": {
+    "prefix": "x-type",
     "body": [
       "type=\"${1}\""
     ]
   },
-  "xvalue": {
-    "prefix": "xvalue",
+  "x-value": {
+    "prefix": "x-value",
     "body": [
       "value=\"${1}\""
     ]
   },
-  "xwidth": {
-    "prefix": "xwidth",
+  "x-width": {
+    "prefix": "x-width",
     "body": [
       "width=\"${1}\""
     ]
   },
-  "xa": {
-    "prefix": "xa",
+  "x-a": {
+    "prefix": "x-a",
     "body": [
       "<a href=\"${1:#}\">${0:$1}</a>"
     ]
   },
-  "xa.": {
-    "prefix": "xa.",
+  "x-a.": {
+    "prefix": "x-a.",
     "body": [
       "<a class=\"${1}\" href=\"${2:#}\">${0:$1}</a>"
     ]
   },
-  "xa#": {
-    "prefix": "xa#",
+  "x-a#": {
+    "prefix": "x-a#",
     "body": [
       "<a id=\"${1}\" href=\"${2:#}\">${0:$1}</a>"
     ]
   },
-  "xa:ext": {
-    "prefix": "xa:ext",
+  "x-a:ext": {
+    "prefix": "x-a:ext",
     "body": [
       "<a href=\"http://${1:example.com}\">${0:$1}</a>"
     ]
   },
-  "xa:mail": {
-    "prefix": "xa:mail",
+  "x-a:mail": {
+    "prefix": "x-a:mail",
     "body": [
       "<a href=\"mailto:${1:joe@example.com}?subject=${2:feedback}\">${0:email me}</a>"
     ]
   },
-  "xac": {
-    "prefix": "xac",
+  "x-ac": {
+    "prefix": "x-ac",
     "body": [
       "<a href=\"`@+`\">${0:`@+`}</a>"
     ]
   },
-  "xabbr": {
-    "prefix": "xabbr",
+  "x-abbr": {
+    "prefix": "x-abbr",
     "body": [
       "<abbr title=\"${1}\">${0}</abbr>"
     ]
   },
-  "xaddress": {
-    "prefix": "xaddress",
+  "x-address": {
+    "prefix": "x-address",
     "body": [
       "<address>",
       "\t${0}",
       "</address>"
     ]
   },
-  "xarea": {
-    "prefix": "xarea",
+  "x-area": {
+    "prefix": "x-area",
     "body": [
       "<area shape=\"${1:rect}\" coords=\"${2}\" href=\"${3}\" alt=\"${0}\">"
     ]
   },
-  "xarea+": {
-    "prefix": "xarea+",
+  "x-area+": {
+    "prefix": "x-area+",
     "body": [
       "<area shape=\"${1:rect}\" coords=\"${2}\" href=\"${3}\" alt=\"${4}\">",
       "area+"
     ]
   },
-  "xarea:c": {
-    "prefix": "xarea:c",
+  "x-area:c": {
+    "prefix": "x-area:c",
     "body": [
       "<area shape=\"circle\" coords=\"${1}\" href=\"${2}\" alt=\"${0}\">"
     ]
   },
-  "xarea:d": {
-    "prefix": "xarea:d",
+  "x-area:d": {
+    "prefix": "x-area:d",
     "body": [
       "<area shape=\"default\" coords=\"${1}\" href=\"${2}\" alt=\"${0}\">"
     ]
   },
-  "xarea:p": {
-    "prefix": "xarea:p",
+  "x-area:p": {
+    "prefix": "x-area:p",
     "body": [
       "<area shape=\"poly\" coords=\"${1}\" href=\"${2}\" alt=\"${0}\">"
     ]
   },
-  "xarea:r": {
-    "prefix": "xarea:r",
+  "x-area:r": {
+    "prefix": "x-area:r",
     "body": [
       "<area shape=\"rect\" coords=\"${1}\" href=\"${2}\" alt=\"${0}\">"
     ]
   },
-  "xarticle": {
-    "prefix": "xarticle",
+  "x-article": {
+    "prefix": "x-article",
     "body": [
       "<article>",
       "\t${0}",
       "</article>"
     ]
   },
-  "xarticle.": {
-    "prefix": "xarticle.",
+  "x-article.": {
+    "prefix": "x-article.",
     "body": [
       "<article class=\"${1}\">",
       "\t${0}",
       "</article>"
     ]
   },
-  "xarticle#": {
-    "prefix": "xarticle#",
+  "x-article#": {
+    "prefix": "x-article#",
     "body": [
       "<article id=\"${1}\">",
       "\t${0}",
       "</article>"
     ]
   },
-  "xaside": {
-    "prefix": "xaside",
+  "x-aside": {
+    "prefix": "x-aside",
     "body": [
       "<aside>",
       "\t${0}",
       "</aside>"
     ]
   },
-  "xaside.": {
-    "prefix": "xaside.",
+  "x-aside.": {
+    "prefix": "x-aside.",
     "body": [
       "<aside class=\"${1}\">",
       "\t${0}",
       "</aside>"
     ]
   },
-  "xaside#": {
-    "prefix": "xaside#",
+  "x-aside#": {
+    "prefix": "x-aside#",
     "body": [
       "<aside id=\"${1}\">",
       "\t${0}",
       "</aside>"
     ]
   },
-  "xaudio": {
-    "prefix": "xaudio",
+  "x-audio": {
+    "prefix": "x-audio",
     "body": [
       "<audio src=\"${1}\">${0}</audio>"
     ]
   },
-  "xb": {
-    "prefix": "xb",
+  "x-b": {
+    "prefix": "x-b",
     "body": [
       "<b>${0}</b>"
     ]
   },
-  "xbase": {
-    "prefix": "xbase",
+  "x-base": {
+    "prefix": "x-base",
     "body": [
       "<base href=\"${1}\" target=\"${0}\">"
     ]
   },
-  "xbdi": {
-    "prefix": "xbdi",
+  "x-bdi": {
+    "prefix": "x-bdi",
     "body": [
       "<bdi>${0}</bdo>"
     ]
   },
-  "xbdo": {
-    "prefix": "xbdo",
+  "x-bdo": {
+    "prefix": "x-bdo",
     "body": [
       "<bdo dir=\"${1}\">${0}</bdo>"
     ]
   },
-  "xbdo:l": {
-    "prefix": "xbdo:l",
+  "x-bdo:l": {
+    "prefix": "x-bdo:l",
     "body": [
       "<bdo dir=\"ltr\">${0}</bdo>"
     ]
   },
-  "xbdo:r": {
-    "prefix": "xbdo:r",
+  "x-bdo:r": {
+    "prefix": "x-bdo:r",
     "body": [
       "<bdo dir=\"rtl\">${0}</bdo>"
     ]
   },
-  "xblockquote": {
-    "prefix": "xblockquote",
+  "x-blockquote": {
+    "prefix": "x-blockquote",
     "body": [
       "<blockquote>",
       "\t${0}",
       "</blockquote>"
     ]
   },
-  "xbody": {
-    "prefix": "xbody",
+  "x-body": {
+    "prefix": "x-body",
     "body": [
       "<body>",
       "\t${0}",
       "</body>"
     ]
   },
-  "xbr": {
-    "prefix": "xbr",
+  "x-br": {
+    "prefix": "x-br",
     "body": [
       "<br>"
     ]
   },
-  "xbutton": {
-    "prefix": "xbutton",
+  "x-button": {
+    "prefix": "x-button",
     "body": [
       "<button type=\"${1:submit}\">${0}</button>"
     ]
   },
-  "xbutton.": {
-    "prefix": "xbutton.",
+  "x-button.": {
+    "prefix": "x-button.",
     "body": [
       "<button class=\"${1:button}\" type=\"${2:submit}\">${0}</button>"
     ]
   },
-  "xbutton#": {
-    "prefix": "xbutton#",
+  "x-button#": {
+    "prefix": "x-button#",
     "body": [
       "<button id=\"${1}\" type=\"${2:submit}\">${0}</button>"
     ]
   },
-  "xbutton:s": {
-    "prefix": "xbutton:s",
+  "x-button:s": {
+    "prefix": "x-button:s",
     "body": [
       "<button type=\"submit\">${0}</button>"
     ]
   },
-  "xbutton:r": {
-    "prefix": "xbutton:r",
+  "x-button:r": {
+    "prefix": "x-button:r",
     "body": [
       "<button type=\"reset\">${0}</button>"
     ]
   },
-  "xcanvas": {
-    "prefix": "xcanvas",
+  "x-canvas": {
+    "prefix": "x-canvas",
     "body": [
       "<canvas>",
       "\t${0}",
       "</canvas>"
     ]
   },
-  "xcaption": {
-    "prefix": "xcaption",
+  "x-caption": {
+    "prefix": "x-caption",
     "body": [
       "<caption>${0}</caption>"
     ]
   },
-  "xcite": {
-    "prefix": "xcite",
+  "x-cite": {
+    "prefix": "x-cite",
     "body": [
       "<cite>${0}</cite>"
     ]
   },
-  "xcode": {
-    "prefix": "xcode",
+  "x-code": {
+    "prefix": "x-code",
     "body": [
       "<code>${0}</code>"
     ]
   },
-  "xcol": {
-    "prefix": "xcol",
+  "x-col": {
+    "prefix": "x-col",
     "body": [
       "<col>"
     ]
   },
-  "xcolgroup": {
-    "prefix": "xcolgroup",
+  "x-colgroup": {
+    "prefix": "x-colgroup",
     "body": [
       "<colgroup>",
       "\t${0}",
       "</colgroup>"
     ]
   },
-  "xcolgroup+": {
-    "prefix": "xcolgroup+",
+  "x-colgroup+": {
+    "prefix": "x-colgroup+",
     "body": [
       "<colgroup>",
       "\t<col>",
@@ -547,142 +547,142 @@
       "</colgroup>"
     ]
   },
-  "xcommand": {
-    "prefix": "xcommand",
+  "x-command": {
+    "prefix": "x-command",
     "body": [
       "<command type=\"command\" label=\"${1}\" icon=\"${0}\">"
     ]
   },
-  "xcommand:c": {
-    "prefix": "xcommand:c",
+  "x-command:c": {
+    "prefix": "x-command:c",
     "body": [
       "<command type=\"checkbox\" label=\"${1}\" icon=\"${0}\">"
     ]
   },
-  "xcommand:r": {
-    "prefix": "xcommand:r",
+  "x-command:r": {
+    "prefix": "x-command:r",
     "body": [
       "<command type=\"radio\" radiogroup=\"${1}\" label=\"${2}\" icon=\"${0}\">"
     ]
   },
-  "xdatagrid": {
-    "prefix": "xdatagrid",
+  "x-datagrid": {
+    "prefix": "x-datagrid",
     "body": [
       "<datagrid>",
       "\t${0}",
       "</datagrid>"
     ]
   },
-  "xdatalist": {
-    "prefix": "xdatalist",
+  "x-datalist": {
+    "prefix": "x-datalist",
     "body": [
       "<datalist>",
       "\t${0}",
       "</datalist>"
     ]
   },
-  "xdatatemplate": {
-    "prefix": "xdatatemplate",
+  "x-datatemplate": {
+    "prefix": "x-datatemplate",
     "body": [
       "<datatemplate>",
       "\t${0}",
       "</datatemplate>"
     ]
   },
-  "xdd": {
-    "prefix": "xdd",
+  "x-dd": {
+    "prefix": "x-dd",
     "body": [
       "<dd>${0}</dd>"
     ]
   },
-  "xdd.": {
-    "prefix": "xdd.",
+  "x-dd.": {
+    "prefix": "x-dd.",
     "body": [
       "<dd class=\"${1}\">${0}</dd>"
     ]
   },
-  "xdd#": {
-    "prefix": "xdd#",
+  "x-dd#": {
+    "prefix": "x-dd#",
     "body": [
       "<dd id=\"${1}\">${0}</dd>"
     ]
   },
-  "xdel": {
-    "prefix": "xdel",
+  "x-del": {
+    "prefix": "x-del",
     "body": [
       "<del>${0}</del>"
     ]
   },
-  "xdetails": {
-    "prefix": "xdetails",
+  "x-details": {
+    "prefix": "x-details",
     "body": [
       "<details>${0}</details>"
     ]
   },
-  "xdfn": {
-    "prefix": "xdfn",
+  "x-dfn": {
+    "prefix": "x-dfn",
     "body": [
       "<dfn>${0}</dfn>"
     ]
   },
-  "xdialog": {
-    "prefix": "xdialog",
+  "x-dialog": {
+    "prefix": "x-dialog",
     "body": [
       "<dialog>",
       "\t${0}",
       "</dialog>"
     ]
   },
-  "xdiv": {
-    "prefix": "xdiv",
+  "x-div": {
+    "prefix": "x-div",
     "body": [
       "<div>",
       "\t${0}",
       "</div>"
     ]
   },
-  "xdiv.": {
-    "prefix": "xdiv.",
+  "x-div.": {
+    "prefix": "x-div.",
     "body": [
       "<div class=\"${1}\">",
       "\t${0}",
       "</div>"
     ]
   },
-  "xdiv#": {
-    "prefix": "xdiv#",
+  "x-div#": {
+    "prefix": "x-div#",
     "body": [
       "<div id=\"${1}\">",
       "\t${0}",
       "</div>"
     ]
   },
-  "xdl": {
-    "prefix": "xdl",
+  "x-dl": {
+    "prefix": "x-dl",
     "body": [
       "<dl>",
       "\t${0}",
       "</dl>"
     ]
   },
-  "xdl.": {
-    "prefix": "xdl.",
+  "x-dl.": {
+    "prefix": "x-dl.",
     "body": [
       "<dl class=\"${1}\">",
       "\t${0}",
       "</dl>"
     ]
   },
-  "xdl#": {
-    "prefix": "xdl#",
+  "x-dl#": {
+    "prefix": "x-dl#",
     "body": [
       "<dl id=\"${1}\">",
       "\t${0}",
       "</dl>"
     ]
   },
-  "xdl+": {
-    "prefix": "xdl+",
+  "x-dl+": {
+    "prefix": "x-dl+",
     "body": [
       "<dl>",
       "\t<dt>${1}</dt>",
@@ -691,70 +691,70 @@
       "</dl>"
     ]
   },
-  "xdt": {
-    "prefix": "xdt",
+  "x-dt": {
+    "prefix": "x-dt",
     "body": [
       "<dt>${0}</dt>"
     ]
   },
-  "xdt.": {
-    "prefix": "xdt.",
+  "x-dt.": {
+    "prefix": "x-dt.",
     "body": [
       "<dt class=\"${1}\">${0}</dt>"
     ]
   },
-  "xdt#": {
-    "prefix": "xdt#",
+  "x-dt#": {
+    "prefix": "x-dt#",
     "body": [
       "<dt id=\"${1}\">${0}</dt>"
     ]
   },
-  "xdt+": {
-    "prefix": "xdt+",
+  "x-dt+": {
+    "prefix": "x-dt+",
     "body": [
       "<dt>${1}</dt>",
       "<dd>${2}</dd>",
       "dt+${0}"
     ]
   },
-  "xem": {
-    "prefix": "xem",
+  "x-em": {
+    "prefix": "x-em",
     "body": [
       "<em>${0}</em>"
     ]
   },
-  "xembed": {
-    "prefix": "xembed",
+  "x-embed": {
+    "prefix": "x-embed",
     "body": [
       "<embed src=\"${1}\" type=\"${0}\">"
     ]
   },
-  "xfieldset": {
-    "prefix": "xfieldset",
+  "x-fieldset": {
+    "prefix": "x-fieldset",
     "body": [
       "<fieldset>",
       "\t${0}",
       "</fieldset>"
     ]
   },
-  "xfieldset.": {
-    "prefix": "xfieldset.",
+  "x-fieldset.": {
+    "prefix": "x-fieldset.",
     "body": [
       "<fieldset class=\"${1}\">",
       "\t${0}",
       "</fieldset>"
     ]
   },
-  "xfieldset#": {
-    "prefix": "xfieldset#",
+  "x-fieldset#": {
+    "prefix": "x-fieldset#",
     "body": [
       "<fieldset id=\"${1}\">",
       "\t${0}",
       "</fieldset>"
     ]
   },
-  "xfieldset+": {
-    "prefix": "xfieldset+",
+  "x-fieldset+": {
+    "prefix": "x-fieldset+",
     "body": [
       "<fieldset>",
       "\t<legend><span>${1}</span></legend>",
@@ -763,192 +763,192 @@
       "fieldset+${0}"
     ]
   },
-  "xfigcaption": {
-    "prefix": "xfigcaption",
+  "x-figcaption": {
+    "prefix": "x-figcaption",
     "body": [
       "<figcaption>${0}</figcaption>"
     ]
   },
-  "xfigure": {
-    "prefix": "xfigure",
+  "x-figure": {
+    "prefix": "x-figure",
     "body": [
       "<figure>${0}</figure>"
     ]
   },
-  "xfigure#": {
-    "prefix": "xfigure#",
+  "x-figure#": {
+    "prefix": "x-figure#",
     "body": [
       "<figure id=\"${1}\">",
       "\t${0}",
       "</figure>"
     ]
   },
-  "xfigure.": {
-    "prefix": "xfigure.",
+  "x-figure.": {
+    "prefix": "x-figure.",
     "body": [
       "<figure class=\"${1}\">",
       "\t${0}",
       "</figure>"
     ]
   },
-  "xfooter": {
-    "prefix": "xfooter",
+  "x-footer": {
+    "prefix": "x-footer",
     "body": [
       "<footer>",
       "\t${0}",
       "</footer>"
     ]
   },
-  "xfooter.": {
-    "prefix": "xfooter.",
+  "x-footer.": {
+    "prefix": "x-footer.",
     "body": [
       "<footer class=\"${1}\">",
       "\t${0}",
       "</footer>"
     ]
   },
-  "xfooter#": {
-    "prefix": "xfooter#",
+  "x-footer#": {
+    "prefix": "x-footer#",
     "body": [
       "<footer id=\"${1}\">",
       "\t${0}",
       "</footer>"
     ]
   },
-  "xform": {
-    "prefix": "xform",
+  "x-form": {
+    "prefix": "x-form",
     "body": [
       "<form action=\"${1}\" method=\"${2:post}\">",
       "\t${0}",
       "</form>"
     ]
   },
-  "xform.": {
-    "prefix": "xform.",
+  "x-form.": {
+    "prefix": "x-form.",
     "body": [
       "<form class=\"${1}\" action=\"${2}\" method=\"${3:post}\">",
       "\t${0}",
       "</form>"
     ]
   },
-  "xform#": {
-    "prefix": "xform#",
+  "x-form#": {
+    "prefix": "x-form#",
     "body": [
       "<form id=\"${1}\" action=\"${2}\" method=\"${3:post}\">",
       "\t${0}",
       "</form>"
     ]
   },
-  "xh1": {
-    "prefix": "xh1",
+  "x-h1": {
+    "prefix": "x-h1",
     "body": [
       "<h1>${0}</h1>"
     ]
   },
-  "xh1.": {
-    "prefix": "xh1.",
+  "x-h1.": {
+    "prefix": "x-h1.",
     "body": [
       "<h1 class=\"${1}\">${0}</h1>"
     ]
   },
-  "xh1#": {
-    "prefix": "xh1#",
+  "x-h1#": {
+    "prefix": "x-h1#",
     "body": [
       "<h1 id=\"${1}\">${0}</h1>"
     ]
   },
-  "xh2": {
-    "prefix": "xh2",
+  "x-h2": {
+    "prefix": "x-h2",
     "body": [
       "<h2>${0}</h2>"
     ]
   },
-  "xh2.": {
-    "prefix": "xh2.",
+  "x-h2.": {
+    "prefix": "x-h2.",
     "body": [
       "<h2 class=\"${1}\">${0}</h2>"
     ]
   },
-  "xh2#": {
-    "prefix": "xh2#",
+  "x-h2#": {
+    "prefix": "x-h2#",
     "body": [
       "<h2 id=\"${1}\">${0}</h2>"
     ]
   },
-  "xh3": {
-    "prefix": "xh3",
+  "x-h3": {
+    "prefix": "x-h3",
     "body": [
       "<h3>${0}</h3>"
     ]
   },
-  "xh3.": {
-    "prefix": "xh3.",
+  "x-h3.": {
+    "prefix": "x-h3.",
     "body": [
       "<h3 class=\"${1}\">${0}</h3>"
     ]
   },
-  "xh3#": {
-    "prefix": "xh3#",
+  "x-h3#": {
+    "prefix": "x-h3#",
     "body": [
       "<h3 id=\"${1}\">${0}</h3>"
     ]
   },
-  "xh4": {
-    "prefix": "xh4",
+  "x-h4": {
+    "prefix": "x-h4",
     "body": [
       "<h4>${0}</h4>"
     ]
   },
-  "xh4.": {
-    "prefix": "xh4.",
+  "x-h4.": {
+    "prefix": "x-h4.",
     "body": [
       "<h4 class=\"${1}\">${0}</h4>"
     ]
   },
-  "xh4#": {
-    "prefix": "xh4#",
+  "x-h4#": {
+    "prefix": "x-h4#",
     "body": [
       "<h4 id=\"${1}\">${0}</h4>"
     ]
   },
-  "xh5": {
-    "prefix": "xh5",
+  "x-h5": {
+    "prefix": "x-h5",
     "body": [
       "<h5>${0}</h5>"
     ]
   },
-  "xh5.": {
-    "prefix": "xh5.",
+  "x-h5.": {
+    "prefix": "x-h5.",
     "body": [
       "<h5 class=\"${1}\">${0}</h5>"
     ]
   },
-  "xh5#": {
-    "prefix": "xh5#",
+  "x-h5#": {
+    "prefix": "x-h5#",
     "body": [
       "<h5 id=\"${1}\">${0}</h5>"
     ]
   },
-  "xh6": {
-    "prefix": "xh6",
+  "x-h6": {
+    "prefix": "x-h6",
     "body": [
       "<h6>${0}</h6>"
     ]
   },
-  "xh6.": {
-    "prefix": "xh6.",
+  "x-h6.": {
+    "prefix": "x-h6.",
     "body": [
       "<h6 class=\"${1}\">${0}</h6>"
     ]
   },
-  "xh6#": {
-    "prefix": "xh6#",
+  "x-h6#": {
+    "prefix": "x-h6#",
     "body": [
       "<h6 id=\"${1}\">${0}</h6>"
     ]
   },
-  "xhead": {
-    "prefix": "xhead",
+  "x-head": {
+    "prefix": "x-head",
     "body": [
       "<head>",
       "\t<meta charset=\"utf-8\">",
@@ -957,70 +957,70 @@
       "</head>"
     ]
   },
-  "xheader": {
-    "prefix": "xheader",
+  "x-header": {
+    "prefix": "x-header",
     "body": [
       "<header>",
       "\t${0}",
       "</header>"
     ]
   },
-  "xheader.": {
-    "prefix": "xheader.",
+  "x-header.": {
+    "prefix": "x-header.",
     "body": [
       "<header class=\"${1}\">",
       "\t${0}",
       "</header>"
     ]
   },
-  "xheader#": {
-    "prefix": "xheader#",
+  "x-header#": {
+    "prefix": "x-header#",
     "body": [
       "<header id=\"${1}\">",
       "\t${0}",
       "</header>"
     ]
   },
-  "xhgroup": {
-    "prefix": "xhgroup",
+  "x-hgroup": {
+    "prefix": "x-hgroup",
     "body": [
       "<hgroup>",
       "\t${0}",
       "</hgroup>"
     ]
   },
-  "xhgroup.": {
-    "prefix": "xhgroup.",
+  "x-hgroup.": {
+    "prefix": "x-hgroup.",
     "body": [
       "<hgroup class=\"${1}>",
       "\t${0}",
       "</hgroup>"
     ]
   },
-  "xhr": {
-    "prefix": "xhr",
+  "x-hr": {
+    "prefix": "x-hr",
     "body": [
       "<hr>"
     ]
   },
-  "xhtml": {
-    "prefix": "xhtml",
+  "x-html": {
+    "prefix": "x-html",
     "body": [
       "<html>",
       "${0}",
       "</html>"
     ]
   },
-  "xxhtml": {
-    "prefix": "xxhtml",
+  "x-xhtml": {
+    "prefix": "x-xhtml",
     "body": [
       "<html xmlns=\"http://www.w3.org/1999/xhtml\">",
       "${0}",
       "</html>"
     ]
   },
-  "xhtml5": {
-    "prefix": "xhtml5",
+  "x-html5": {
+    "prefix": "x-html5",
     "body": [
       "<!DOCTYPE html>",
       "<html>",
@@ -1035,8 +1035,8 @@
       "</html>"
     ]
   },
-  "xhtml5l": {
-    "prefix": "xhtml5l",
+  "x-html5l": {
+    "prefix": "x-html5l",
     "body": [
       "<!DOCTYPE html>",
       "<html lang=\"${1:en}\">",
@@ -1052,219 +1052,219 @@
       "</html>"
     ]
   },
-  "xi": {
-    "prefix": "xi",
+  "x-i": {
+    "prefix": "x-i",
     "body": [
       "<i>${0}</i>"
     ]
   },
-  "xiframe": {
-    "prefix": "xiframe",
+  "x-iframe": {
+    "prefix": "x-iframe",
     "body": [
       "<iframe src=\"${1}\" frameborder=\"0\"></iframe>"
     ]
   },
-  "xiframe.": {
-    "prefix": "xiframe.",
+  "x-iframe.": {
+    "prefix": "x-iframe.",
     "body": [
       "<iframe class=\"${1}\" src=\"${2}\" frameborder=\"0\"></iframe>"
     ]
   },
-  "xiframe#": {
-    "prefix": "xiframe#",
+  "x-iframe#": {
+    "prefix": "x-iframe#",
     "body": [
       "<iframe id=\"${1}\" src=\"${2}\" frameborder=\"0\"></iframe>"
     ]
   },
-  "ximg": {
-    "prefix": "ximg",
+  "x-img": {
+    "prefix": "x-img",
     "body": [
       "<img src=\"${1}\" alt=\"${2}\">"
     ]
   },
-  "ximg.": {
-    "prefix": "ximg.",
+  "x-img.": {
+    "prefix": "x-img.",
     "body": [
       "<img class=\"${1}\" src=\"${2}\" alt=\"${3}\">"
     ]
   },
-  "ximg#": {
-    "prefix": "ximg#",
+  "x-img#": {
+    "prefix": "x-img#",
     "body": [
       "<img id=\"${1}\" src=\"${2}\" alt=\"${3}\">"
     ]
   },
-  "xinput": {
-    "prefix": "xinput",
+  "x-input": {
+    "prefix": "x-input",
     "body": [
       "<input type=\"${1:text/submit/hidden/button/image}\" name=\"${2}\" id=\"${3:$2}\" value=\"${4}\">"
     ]
   },
-  "xinput.": {
-    "prefix": "xinput.",
+  "x-input.": {
+    "prefix": "x-input.",
     "body": [
       "<input class=\"${1}\" type=\"${2:text/submit/hidden/button/image}\" name=\"${3}\" id=\"${4:$3}\" value=\"${5}\">"
     ]
   },
-  "xinput:text": {
-    "prefix": "xinput:text",
+  "x-input:text": {
+    "prefix": "x-input:text",
     "body": [
       "<input type=\"text\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:submit": {
-    "prefix": "xinput:submit",
+  "x-input:submit": {
+    "prefix": "x-input:submit",
     "body": [
       "<input type=\"submit\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:hidden": {
-    "prefix": "xinput:hidden",
+  "x-input:hidden": {
+    "prefix": "x-input:hidden",
     "body": [
       "<input type=\"hidden\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:button": {
-    "prefix": "xinput:button",
+  "x-input:button": {
+    "prefix": "x-input:button",
     "body": [
       "<input type=\"button\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:image": {
-    "prefix": "xinput:image",
+  "x-input:image": {
+    "prefix": "x-input:image",
     "body": [
       "<input type=\"image\" name=\"${1}\" id=\"${2:$1}\" src=\"${3}\" alt=\"${4}\">"
     ]
   },
-  "xinput:checkbox": {
-    "prefix": "xinput:checkbox",
+  "x-input:checkbox": {
+    "prefix": "x-input:checkbox",
     "body": [
       "<input type=\"checkbox\" name=\"${1}\" id=\"${2:$1}\">"
     ]
   },
-  "xinput:radio": {
-    "prefix": "xinput:radio",
+  "x-input:radio": {
+    "prefix": "x-input:radio",
     "body": [
       "<input type=\"radio\" name=\"${1}\" id=\"${2:$1}\">"
     ]
   },
-  "xinput:color": {
-    "prefix": "xinput:color",
+  "x-input:color": {
+    "prefix": "x-input:color",
     "body": [
       "<input type=\"color\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:date": {
-    "prefix": "xinput:date",
+  "x-input:date": {
+    "prefix": "x-input:date",
     "body": [
       "<input type=\"date\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:datetime": {
-    "prefix": "xinput:datetime",
+  "x-input:datetime": {
+    "prefix": "x-input:datetime",
     "body": [
       "<input type=\"datetime\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:datetime-local": {
-    "prefix": "xinput:datetime-local",
+  "x-input:datetime-local": {
+    "prefix": "x-input:datetime-local",
     "body": [
       "<input type=\"datetime-local\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:email": {
-    "prefix": "xinput:email",
+  "x-input:email": {
+    "prefix": "x-input:email",
     "body": [
       "<input type=\"email\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:file": {
-    "prefix": "xinput:file",
+  "x-input:file": {
+    "prefix": "x-input:file",
     "body": [
       "<input type=\"file\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:month": {
-    "prefix": "xinput:month",
+  "x-input:month": {
+    "prefix": "x-input:month",
     "body": [
       "<input type=\"month\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:number": {
-    "prefix": "xinput:number",
+  "x-input:number": {
+    "prefix": "x-input:number",
     "body": [
       "<input type=\"number\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:password": {
-    "prefix": "xinput:password",
+  "x-input:password": {
+    "prefix": "x-input:password",
     "body": [
       "<input type=\"password\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:range": {
-    "prefix": "xinput:range",
+  "x-input:range": {
+    "prefix": "x-input:range",
     "body": [
       "<input type=\"range\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:reset": {
-    "prefix": "xinput:reset",
+  "x-input:reset": {
+    "prefix": "x-input:reset",
     "body": [
       "<input type=\"reset\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:search": {
-    "prefix": "xinput:search",
+  "x-input:search": {
+    "prefix": "x-input:search",
     "body": [
       "<input type=\"search\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:time": {
-    "prefix": "xinput:time",
+  "x-input:time": {
+    "prefix": "x-input:time",
     "body": [
       "<input type=\"time\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:url": {
-    "prefix": "xinput:url",
+  "x-input:url": {
+    "prefix": "x-input:url",
     "body": [
       "<input type=\"url\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xinput:week": {
-    "prefix": "xinput:week",
+  "x-input:week": {
+    "prefix": "x-input:week",
     "body": [
       "<input type=\"week\" name=\"${1}\" id=\"${2:$1}\" value=\"${3}\">"
     ]
   },
-  "xins": {
-    "prefix": "xins",
+  "x-ins": {
+    "prefix": "x-ins",
     "body": [
       "<ins>${0}</ins>"
     ]
   },
-  "xkbd": {
-    "prefix": "xkbd",
+  "x-kbd": {
+    "prefix": "x-kbd",
     "body": [
       "<kbd>${0}</kbd>"
     ]
   },
-  "xlabel": {
-    "prefix": "xlabel",
+  "x-label": {
+    "prefix": "x-label",
     "body": [
       "<label for=\"${0:$1}\">${1}</label>"
     ]
   },
-  "xlabel:i": {
-    "prefix": "xlabel:i",
+  "x-label:i": {
+    "prefix": "x-label:i",
     "body": [
       "<label for=\"${2:$1}\">${1}</label>",
       "<input type=\"${3:text/submit/hidden/button}\" name=\"${4:$2}\" id=\"${5:$2}\" value=\"${6}\" />"
     ]
   },
-  "xlabel:s": {
-    "prefix": "xlabel:s",
+  "x-label:s": {
+    "prefix": "x-label:s",
     "body": [
       "<label for=\"${2:$1}\">${1}</label>",
       "<select name=\"${3:$2}\" id=\"${4:$2}\">",
@@ -1272,252 +1272,252 @@
       "</select>"
     ]
   },
-  "xlegend": {
-    "prefix": "xlegend",
+  "x-legend": {
+    "prefix": "x-legend",
     "body": [
       "<legend>${0}</legend>"
     ]
   },
-  "xlegend+": {
-    "prefix": "xlegend+",
+  "x-legend+": {
+    "prefix": "x-legend+",
     "body": [
       "<legend><span>${0}</span></legend>"
     ]
   },
-  "xli": {
-    "prefix": "xli",
+  "x-li": {
+    "prefix": "x-li",
     "body": [
       "<li>${0}</li>"
     ]
   },
-  "xli.": {
-    "prefix": "xli.",
+  "x-li.": {
+    "prefix": "x-li.",
     "body": [
       "<li class=\"${1}\">${0}</li>"
     ]
   },
-  "xli+": {
-    "prefix": "xli+",
+  "x-li+": {
+    "prefix": "x-li+",
     "body": [
       "<li>${1}</li>",
       "li+"
     ]
   },
-  "xlia": {
-    "prefix": "xlia",
+  "x-lia": {
+    "prefix": "x-lia",
     "body": [
       "<li><a href=\"${0:#}\">${1}</a></li>"
     ]
   },
-  "xlia+": {
-    "prefix": "xlia+",
+  "x-lia+": {
+    "prefix": "x-lia+",
     "body": [
       "<li><a href=\"${2:#}\">${1}</a></li>",
       "lia+"
     ]
   },
-  "xlink": {
-    "prefix": "xlink",
+  "x-link": {
+    "prefix": "x-link",
     "body": [
       "<link rel=\"${1}\" href=\"${2}\" title=\"${3}\" type=\"${4}\">"
     ]
   },
-  "xlink:atom": {
-    "prefix": "xlink:atom",
+  "x-link:atom": {
+    "prefix": "x-link:atom",
     "body": [
       "<link rel=\"alternate\" href=\"${1:atom.xml}\" title=\"Atom\" type=\"application/atom+xml\">"
     ]
   },
-  "xlink:s": {
-    "prefix": "xlink:s",
+  "x-link:s": {
+    "prefix": "x-link:s",
     "body": [
       "<link rel=\"stylesheet\" href=\"${1:style.css}\">"
     ]
   },
-  "xlink:css": {
-    "prefix": "xlink:css",
+  "x-link:css": {
+    "prefix": "x-link:css",
     "body": [
       "<link rel=\"stylesheet\" href=\"${1:style.css}\" type=\"text/css\" media=\"${2:all}\">"
     ]
   },
-  "xlink:favicon": {
-    "prefix": "xlink:favicon",
+  "x-link:favicon": {
+    "prefix": "x-link:favicon",
     "body": [
       "<link rel=\"shortcut icon\" href=\"${1:favicon.ico}\" type=\"image/x-icon\">"
     ]
   },
-  "xlink:rss": {
-    "prefix": "xlink:rss",
+  "x-link:rss": {
+    "prefix": "x-link:rss",
     "body": [
       "<link rel=\"alternate\" href=\"${1:rss.xml}\" title=\"RSS\" type=\"application/atom+xml\">"
     ]
   },
-  "xlink:touch": {
-    "prefix": "xlink:touch",
+  "x-link:touch": {
+    "prefix": "x-link:touch",
     "body": [
       "<link rel=\"apple-touch-icon\" href=\"${1:favicon.png}\">"
     ]
   },
-  "xmain": {
-    "prefix": "xmain",
+  "x-main": {
+    "prefix": "x-main",
     "body": [
       "<main role=\"main\">",
       "\t${0}",
       "</main>"
     ]
   },
-  "xmap": {
-    "prefix": "xmap",
+  "x-map": {
+    "prefix": "x-map",
     "body": [
       "<map name=\"${1}\">",
       "\t${0}",
       "</map>"
     ]
   },
-  "xmap.": {
-    "prefix": "xmap.",
+  "x-map.": {
+    "prefix": "x-map.",
     "body": [
       "<map class=\"${1}\" name=\"${2}\">",
       "\t${0}",
       "</map>"
     ]
   },
-  "xmap#": {
-    "prefix": "xmap#",
+  "x-map#": {
+    "prefix": "x-map#",
     "body": [
       "<map name=\"${1}\" id=\"${2:$1}>",
       "\t${0}",
       "</map>"
     ]
   },
-  "xmap+": {
-    "prefix": "xmap+",
+  "x-map+": {
+    "prefix": "x-map+",
     "body": [
       "<map name=\"${1}\">",
       "\t<area shape=\"${2}\" coords=\"${3}\" href=\"${4}\" alt=\"${5}\" />${6}",
       "</map>"
     ]
   },
-  "xmark": {
-    "prefix": "xmark",
+  "x-mark": {
+    "prefix": "x-mark",
     "body": [
       "<mark>${0}</mark>"
     ]
   },
-  "xmenu": {
-    "prefix": "xmenu",
+  "x-menu": {
+    "prefix": "x-menu",
     "body": [
       "<menu>",
       "\t${0}",
       "</menu>"
     ]
   },
-  "xmenu:c": {
-    "prefix": "xmenu:c",
+  "x-menu:c": {
+    "prefix": "x-menu:c",
     "body": [
       "<menu type=\"context\">",
       "\t${0}",
       "</menu>"
     ]
   },
-  "xmenu:t": {
-    "prefix": "xmenu:t",
+  "x-menu:t": {
+    "prefix": "x-menu:t",
     "body": [
       "<menu type=\"toolbar\">",
       "\t${0}",
       "</menu>"
     ]
   },
-  "xmeta": {
-    "prefix": "xmeta",
+  "x-meta": {
+    "prefix": "x-meta",
     "body": [
       "<meta http-equiv=\"${1}\" content=\"${2}\">"
     ]
   },
-  "xmeta:s": {
-    "prefix": "xmeta:s",
+  "x-meta:s": {
+    "prefix": "x-meta:s",
     "body": [
       "<meta ${0}>"
     ]
   },
-  "xmeta:d": {
-    "prefix": "xmeta:d",
+  "x-meta:d": {
+    "prefix": "x-meta:d",
     "body": [
       "<meta name=\"description\" content=\"${0}\">"
     ]
   },
-  "xmeta:compat": {
-    "prefix": "xmeta:compat",
+  "x-meta:compat": {
+    "prefix": "x-meta:compat",
     "body": [
       "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=${1:7,8,edge}\">"
     ]
   },
-  "xmeta:refresh": {
-    "prefix": "xmeta:refresh",
+  "x-meta:refresh": {
+    "prefix": "x-meta:refresh",
     "body": [
       "<meta http-equiv=\"refresh\" content=\"3;url=${0}\">"
     ]
   },
-  "xmeta:utf5": {
-    "prefix": "xmeta:utf5",
+  "x-meta:utf5": {
+    "prefix": "x-meta:utf5",
     "body": [
       "<meta charset=\"utf-8\">"
     ]
   },
-  "xmeta:utf": {
-    "prefix": "xmeta:utf",
+  "x-meta:utf": {
+    "prefix": "x-meta:utf",
     "body": [
       "<meta http-equiv=\"content-type\" content=\"text/html;charset=UTF-8\">"
     ]
   },
-  "xmeter": {
-    "prefix": "xmeter",
+  "x-meter": {
+    "prefix": "x-meter",
     "body": [
       "<meter>${0}</meter>"
     ]
   },
-  "xnav": {
-    "prefix": "xnav",
+  "x-nav": {
+    "prefix": "x-nav",
     "body": [
       "<nav>",
       "\t${0}",
       "</nav>"
     ]
   },
-  "xnav.": {
-    "prefix": "xnav.",
+  "x-nav.": {
+    "prefix": "x-nav.",
     "body": [
       "<nav class=\"${1}\">",
       "\t${0}",
       "</nav>"
     ]
   },
-  "xnav#": {
-    "prefix": "xnav#",
+  "x-nav#": {
+    "prefix": "x-nav#",
     "body": [
       "<nav id=\"${1}\">",
       "\t${0}",
       "</nav>"
     ]
   },
-  "xnoscript": {
-    "prefix": "xnoscript",
+  "x-noscript": {
+    "prefix": "x-noscript",
     "body": [
       "<noscript>",
       "\t${0}",
       "</noscript>"
     ]
   },
-  "xobject": {
-    "prefix": "xobject",
+  "x-object": {
+    "prefix": "x-object",
     "body": [
       "<object data=\"${1}\" type=\"${2}\">",
       "\t${3}",
       "</object>"
     ]
   },
-  "xmovie": {
-    "prefix": "xmovie",
+  "x-movie": {
+    "prefix": "x-movie",
     "body": [
       "<object width=\"$2\" height=\"$3\" classid=\"clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B\"",
       "codebase=\"http://www.apple.com/qtactivex/qtplugin.cab\">",
@@ -1532,32 +1532,32 @@
       "</object>"
     ]
   },
-  "xol": {
-    "prefix": "xol",
+  "x-ol": {
+    "prefix": "x-ol",
     "body": [
       "<ol>",
       "\t${0}",
       "</ol>"
     ]
   },
-  "xol.": {
-    "prefix": "xol.",
+  "x-ol.": {
+    "prefix": "x-ol.",
     "body": [
       "<ol class=\"${1}\">",
       "\t${0}",
       "</ol>"
     ]
   },
-  "xol#": {
-    "prefix": "xol#",
+  "x-ol#": {
+    "prefix": "x-ol#",
     "body": [
       "<ol id=\"${1}\">",
       "\t${0}",
       "</ol>"
     ]
   },
-  "xol+": {
-    "prefix": "xol+",
+  "x-ol+": {
+    "prefix": "x-ol+",
     "body": [
       "<ol>",
       "\t<li>${1}</li>",
@@ -1565,27 +1565,27 @@
       "</ol>"
     ]
   },
-  "xopt": {
-    "prefix": "xopt",
+  "x-opt": {
+    "prefix": "x-opt",
     "body": [
       "<option value=\"${1}\">${0:$1}</option>"
     ]
   },
-  "xopt+": {
-    "prefix": "xopt+",
+  "x-opt+": {
+    "prefix": "x-opt+",
     "body": [
       "<option value=\"${1}\">${2:$1}</option>",
       "opt+${0}"
     ]
   },
-  "xoptt": {
-    "prefix": "xoptt",
+  "x-optt": {
+    "prefix": "x-optt",
     "body": [
       "<option>${0}</option>"
     ]
   },
-  "xoptgroup": {
-    "prefix": "xoptgroup",
+  "x-optgroup": {
+    "prefix": "x-optgroup",
     "body": [
       "<optgroup>",
       "\t<option value=\"${1}\">${2:$1}</option>",
@@ -1593,160 +1593,160 @@
       "</optgroup>"
     ]
   },
-  "xoutput": {
-    "prefix": "xoutput",
+  "x-output": {
+    "prefix": "x-output",
     "body": [
       "<output>${0}</output>"
     ]
   },
-  "xp": {
-    "prefix": "xp",
+  "x-p": {
+    "prefix": "x-p",
     "body": [
       "<p>${0}</p>"
     ]
   },
-  "xp.": {
-    "prefix": "xp.",
+  "x-p.": {
+    "prefix": "x-p.",
     "body": [
       "<p class=\"${1}\">${0}</p>"
     ]
   },
-  "xp#": {
-    "prefix": "xp#",
+  "x-p#": {
+    "prefix": "x-p#",
     "body": [
       "<p id=\"${1}\">${0}</p>"
     ]
   },
-  "xparam": {
-    "prefix": "xparam",
+  "x-param": {
+    "prefix": "x-param",
     "body": [
       "<param name=\"${1}\" value=\"${2}\">"
     ]
   },
-  "xpre": {
-    "prefix": "xpre",
+  "x-pre": {
+    "prefix": "x-pre",
     "body": [
       "<pre>",
       "\t${0}",
       "</pre>"
     ]
   },
-  "xprogress": {
-    "prefix": "xprogress",
+  "x-progress": {
+    "prefix": "x-progress",
     "body": [
       "<progress>${0}</progress>"
     ]
   },
-  "xq": {
-    "prefix": "xq",
+  "x-q": {
+    "prefix": "x-q",
     "body": [
       "<q>${0}</q>"
     ]
   },
-  "xrp": {
-    "prefix": "xrp",
+  "x-rp": {
+    "prefix": "x-rp",
     "body": [
       "<rp>${0}</rp>"
     ]
   },
-  "xrt": {
-    "prefix": "xrt",
+  "x-rt": {
+    "prefix": "x-rt",
     "body": [
       "<rt>${0}</rt>"
     ]
   },
-  "xruby": {
-    "prefix": "xruby",
+  "x-ruby": {
+    "prefix": "x-ruby",
     "body": [
       "<ruby>",
       "\t<rp><rt>${0}</rt></rp>",
       "</ruby>"
     ]
   },
-  "xs": {
-    "prefix": "xs",
+  "x-s": {
+    "prefix": "x-s",
     "body": [
       "<s>${0}</s>"
     ]
   },
-  "xsamp": {
-    "prefix": "xsamp",
+  "x-samp": {
+    "prefix": "x-samp",
     "body": [
       "<samp>",
       "\t${0}",
       "</samp>"
     ]
   },
-  "xscript": {
-    "prefix": "xscript",
+  "x-script": {
+    "prefix": "x-script",
     "body": [
       "<script>",
       "\t${0}",
       "</script>"
     ]
   },
-  "xscripts": {
-    "prefix": "xscripts",
+  "x-scripts": {
+    "prefix": "x-scripts",
     "body": [
       "<script src=\"${0}.js\"></script>"
     ]
   },
-  "xscriptt": {
-    "prefix": "xscriptt",
+  "x-scriptt": {
+    "prefix": "x-scriptt",
     "body": [
       "<script type=\"${1}\" id=\"${2}\">",
       "\t${0}",
       "</script>"
     ]
   },
-  "xscriptsrc": {
-    "prefix": "xscriptsrc",
+  "x-scriptsrc": {
+    "prefix": "x-scriptsrc",
     "body": [
       "<script src=\"${0}.js\" charset=\"utf-8\"></script>"
     ]
   },
-  "xsection": {
-    "prefix": "xsection",
+  "x-section": {
+    "prefix": "x-section",
     "body": [
       "<section>",
       "\t${0}",
       "</section>"
     ]
   },
-  "xsection.": {
-    "prefix": "xsection.",
+  "x-section.": {
+    "prefix": "x-section.",
     "body": [
       "<section class=\"${1}\">",
       "\t${0}",
       "</section>"
     ]
   },
-  "xsection#": {
-    "prefix": "xsection#",
+  "x-section#": {
+    "prefix": "x-section#",
     "body": [
       "<section id=\"${1}\">",
       "\t${0}",
       "</section>"
     ]
   },
-  "xselect": {
-    "prefix": "xselect",
+  "x-select": {
+    "prefix": "x-select",
     "body": [
       "<select name=\"${1}\" id=\"${2:$1}\">",
       "\t${0}",
       "</select>"
     ]
   },
-  "xselect.": {
-    "prefix": "xselect.",
+  "x-select.": {
+    "prefix": "x-select.",
     "body": [
       "<select name=\"${1}\" id=\"${2:$1}\" class=\"${3}>",
       "\t${0}",
       "</select>"
     ]
   },
-  "xselect+": {
-    "prefix": "xselect+",
+  "x-select+": {
+    "prefix": "x-select+",
     "body": [
       "<select name=\"${1}\" id=\"${2:$1}\">",
       "\t<option value=\"${3}\">${4:$3}</option>",
@@ -1754,196 +1754,196 @@
       "</select>"
     ]
   },
-  "xsmall": {
-    "prefix": "xsmall",
+  "x-small": {
+    "prefix": "x-small",
     "body": [
       "<small>${0}</small>"
     ]
   },
-  "xsource": {
-    "prefix": "xsource",
+  "x-source": {
+    "prefix": "x-source",
     "body": [
       "<source src=\"${1}\" type=\"${2}\" media=\"${0}\">"
     ]
   },
-  "xspan": {
-    "prefix": "xspan",
+  "x-span": {
+    "prefix": "x-span",
     "body": [
       "<span>${0}</span>"
     ]
   },
-  "xspan.": {
-    "prefix": "xspan.",
+  "x-span.": {
+    "prefix": "x-span.",
     "body": [
       "<span class=\"${1}\">${0}</span>"
     ]
   },
-  "xspan#": {
-    "prefix": "xspan#",
+  "x-span#": {
+    "prefix": "x-span#",
     "body": [
       "<span id=\"${1}\">${0}</span>"
     ]
   },
-  "xstrong": {
-    "prefix": "xstrong",
+  "x-strong": {
+    "prefix": "x-strong",
     "body": [
       "<strong>${0}</strong>"
     ]
   },
-  "xstyle": {
-    "prefix": "xstyle",
+  "x-style": {
+    "prefix": "x-style",
     "body": [
       "<style type=\"text/css\" media=\"${1:all}\">",
       "\t${0}",
       "</style>"
     ]
   },
-  "xsub": {
-    "prefix": "xsub",
+  "x-sub": {
+    "prefix": "x-sub",
     "body": [
       "<sub>${0}</sub>"
     ]
   },
-  "xsummary": {
-    "prefix": "xsummary",
+  "x-summary": {
+    "prefix": "x-summary",
     "body": [
       "<summary>",
       "\t${0}",
       "</summary>"
     ]
   },
-  "xsup": {
-    "prefix": "xsup",
+  "x-sup": {
+    "prefix": "x-sup",
     "body": [
       "<sup>${0}</sup>"
     ]
   },
-  "xtable": {
-    "prefix": "xtable",
+  "x-table": {
+    "prefix": "x-table",
     "body": [
       "<table>",
       "\t${0}",
       "</table>"
     ]
   },
-  "xtable.": {
-    "prefix": "xtable.",
+  "x-table.": {
+    "prefix": "x-table.",
     "body": [
       "<table class=\"${1}\">",
       "\t${0}",
       "</table>"
     ]
   },
-  "xtable#": {
-    "prefix": "xtable#",
+  "x-table#": {
+    "prefix": "x-table#",
     "body": [
       "<table id=\"${1}\">",
       "\t${0}",
       "</table>"
     ]
   },
-  "xtbody": {
-    "prefix": "xtbody",
+  "x-tbody": {
+    "prefix": "x-tbody",
     "body": [
       "<tbody>",
       "\t${0}",
       "</tbody>"
     ]
   },
-  "xtd": {
-    "prefix": "xtd",
+  "x-td": {
+    "prefix": "x-td",
     "body": [
       "<td>${0}</td>"
     ]
   },
-  "xtd.": {
-    "prefix": "xtd.",
+  "x-td.": {
+    "prefix": "x-td.",
     "body": [
       "<td class=\"${1}\">${0}</td>"
     ]
   },
-  "xtd#": {
-    "prefix": "xtd#",
+  "x-td#": {
+    "prefix": "x-td#",
     "body": [
       "<td id=\"${1}\">${0}</td>"
     ]
   },
-  "xtd+": {
-    "prefix": "xtd+",
+  "x-td+": {
+    "prefix": "x-td+",
     "body": [
       "<td>${1}</td>",
       "td+${0}"
     ]
   },
-  "xtextarea": {
-    "prefix": "xtextarea",
+  "x-textarea": {
+    "prefix": "x-textarea",
     "body": [
       "<textarea name=\"${1}\" id=\"${2:$1}\" rows=\"${3:8}\" cols=\"${4:40}\">${5}</textarea>"
     ]
   },
-  "xtfoot": {
-    "prefix": "xtfoot",
+  "x-tfoot": {
+    "prefix": "x-tfoot",
     "body": [
       "<tfoot>",
       "\t${0}",
       "</tfoot>"
     ]
   },
-  "xth": {
-    "prefix": "xth",
+  "x-th": {
+    "prefix": "x-th",
     "body": [
       "<th>${0}</th>"
     ]
   },
-  "xth.": {
-    "prefix": "xth.",
+  "x-th.": {
+    "prefix": "x-th.",
     "body": [
       "<th class=\"${1}\">${0}</th>"
     ]
   },
-  "xth#": {
-    "prefix": "xth#",
+  "x-th#": {
+    "prefix": "x-th#",
     "body": [
       "<th id=\"${1}\">${0}</th>"
     ]
   },
-  "xth+": {
-    "prefix": "xth+",
+  "x-th+": {
+    "prefix": "x-th+",
     "body": [
       "<th>${1}</th>",
       "th+${0}"
     ]
   },
-  "xthead": {
-    "prefix": "xthead",
+  "x-thead": {
+    "prefix": "x-thead",
     "body": [
       "<thead>",
       "\t${0}",
       "</thead>"
     ]
   },
-  "xtime": {
-    "prefix": "xtime",
+  "x-time": {
+    "prefix": "x-time",
     "body": [
       "<time datetime=\"${1}\" pubdate=\"${2:$1}\">${0:$1}</time>"
     ]
   },
-  "xtitle": {
-    "prefix": "xtitle",
+  "x-title": {
+    "prefix": "x-title",
     "body": [
       "<title>${0:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\\u&', '')`}</title>"
     ]
   },
-  "xtr": {
-    "prefix": "xtr",
+  "x-tr": {
+    "prefix": "x-tr",
     "body": [
       "<tr>",
       "\t${0}",
       "</tr>"
     ]
   },
-  "xtr+": {
-    "prefix": "xtr+",
+  "x-tr+": {
+    "prefix": "x-tr+",
     "body": [
       "<tr>",
       "\t<td>${1}</td>",
@@ -1951,38 +1951,38 @@
       "</tr>"
     ]
   },
-  "xtrack": {
-    "prefix": "xtrack",
+  "x-track": {
+    "prefix": "x-track",
     "body": [
       "<track src=\"${1}\" srclang=\"${2}\" label=\"${3}\" default=\"${4:default}>${5}"
     ]
   },
-  "xul": {
-    "prefix": "xul",
+  "x-ul": {
+    "prefix": "x-ul",
     "body": [
       "<ul>",
       "\t${0}",
       "</ul>"
     ]
   },
-  "xul.": {
-    "prefix": "xul.",
+  "x-ul.": {
+    "prefix": "x-ul.",
     "body": [
       "<ul class=\"${1}\">",
       "\t${0}",
       "</ul>"
     ]
   },
-  "xul#": {
-    "prefix": "xul#",
+  "x-ul#": {
+    "prefix": "x-ul#",
     "body": [
       "<ul id=\"${1}\">",
       "\t${0}",
       "</ul>"
     ]
   },
-  "xul+": {
-    "prefix": "xul+",
+  "x-ul+": {
+    "prefix": "x-ul+",
     "body": [
       "<ul>",
       "\t<li>${1}</li>",
@@ -1990,32 +1990,32 @@
       "</ul>"
     ]
   },
-  "xvar": {
-    "prefix": "xvar",
+  "x-var": {
+    "prefix": "x-var",
     "body": [
       "<var>${0}</var>"
     ]
   },
-  "xvideo": {
-    "prefix": "xvideo",
+  "x-video": {
+    "prefix": "x-video",
     "body": [
       "<video src=\"${1}\" height=\"${2}\" width=\"${3}\" preload=\"${4:none}\" autoplay=\"${5:autoplay}\">${6}</video>"
     ]
   },
-  "xvideo.": {
-    "prefix": "xvideo.",
+  "x-video.": {
+    "prefix": "x-video.",
     "body": [
       "<video class=\"${1}\" src=\"${2}\" height=\"${3}\" width=\"${4}\" preload=\"${5:none}\" autoplay=\"${6:autoplay}\">${7}</video>"
     ]
   },
-  "xwbr": {
-    "prefix": "xwbr",
+  "x-wbr": {
+    "prefix": "x-wbr",
     "body": [
       "<wbr>"
     ]
   },
-  "xviewport": {
-    "prefix": "xviewport",
+  "x-viewport": {
+    "prefix": "x-viewport",
     "body": [
       "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
     ]

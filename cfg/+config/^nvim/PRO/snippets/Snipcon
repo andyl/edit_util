@@ -10,7 +10,7 @@ require 'json'
 
 # --- Leader Char --- 
 
-leader_char = "x"
+leader_char = "x-"
 
 # --- Helper Functions ---
 

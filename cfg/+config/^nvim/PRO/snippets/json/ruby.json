@@ -1,58 +1,58 @@
 {
-  "xenc": {
-    "prefix": "xenc",
+  "x-enc": {
+    "prefix": "x-enc",
     "body": [
       "# encoding: utf-8"
     ]
   },
-  "xfrozen": {
-    "prefix": "xfrozen",
+  "x-frozen": {
+    "prefix": "x-frozen",
     "body": [
       "# frozen_string_literal: true"
     ]
   },
-  "x#!": {
-    "prefix": "x#!",
+  "x-#!": {
+    "prefix": "x-#!",
     "body": [
       "#!/usr/bin/env ruby"
     ]
   },
-  "x=b": {
-    "prefix": "x=b",
+  "x-=b": {
+    "prefix": "x-=b",
     "body": [
       "=begin rdoc",
       "\t${0}",
       "=end"
     ]
   },
-  "xprot": {
-    "prefix": "xprot",
+  "x-prot": {
+    "prefix": "x-prot",
     "body": [
       "protected",
       "${0}"
     ]
   },
-  "xpriv": {
-    "prefix": "xpriv",
+  "x-priv": {
+    "prefix": "x-priv",
     "body": [
       "private",
       "${0}"
     ]
   },
-  "xy": {
-    "prefix": "xy",
+  "x-y": {
+    "prefix": "x-y",
     "body": [
       ":yields: ${0:arguments}"
     ]
   },
-  "xrb": {
-    "prefix": "xrb",
+  "x-rb": {
+    "prefix": "x-rb",
     "body": [
       "#!/usr/bin/env ruby -wKU"
     ]
   },
-  "xbeg": {
-    "prefix": "xbeg",
+  "x-beg": {
+    "prefix": "x-beg",
     "body": [
       "begin",
       "\t${0}",
@@ -61,20 +61,20 @@
       "require '${1}'"
     ]
   },
-  "xreqr": {
-    "prefix": "xreqr",
+  "x-reqr": {
+    "prefix": "x-reqr",
     "body": [
       "require_relative '${1}'"
     ]
   },
-  "x#": {
-    "prefix": "x#",
+  "x-#": {
+    "prefix": "x-#",
     "body": [
       "# =>"
     ]
   },
-  "xcase": {
-    "prefix": "xcase",
+  "x-case": {
+    "prefix": "x-case",
     "body": [
       "case ${1:object}",
       "when ${2:condition}",
@@ -82,31 +82,31 @@
       "end"
     ]
   },
-  "xwhen": {
-    "prefix": "xwhen",
+  "x-when": {
+    "prefix": "x-when",
     "body": [
       "when ${1:condition}",
       "\t${0:${VISUAL}}"
     ]
   },
-  "xdef": {
-    "prefix": "xdef",
+  "x-def": {
+    "prefix": "x-def",
     "body": [
       "def ${1:method_name}",
       "\t${0}",
       "end"
     ]
   },
-  "xdeft": {
-    "prefix": "xdeft",
+  "x-deft": {
+    "prefix": "x-deft",
     "body": [
       "def test_${1:case_name}",
       "\t${0}",
       "end"
     ]
   },
-  "xdescendants": {
-    "prefix": "xdescendants",
+  "x-descendants": {
+    "prefix": "x-descendants",
     "body": [
       "class Class",
       "\tdef descendants",
@@ -115,16 +115,16 @@
       "end"
     ]
   },
-  "xif": {
-    "prefix": "xif",
+  "x-if": {
+    "prefix": "x-if",
     "body": [
       "if ${1:condition}",
       "\t${0:${VISUAL}}",
       "end"
     ]
   },
-  "xife": {
-    "prefix": "xife",
+  "x-ife": {
+    "prefix": "x-ife",
     "body": [
       "if ${1:condition}",
       "\t${2:${VISUAL}}",
@@ -133,15 +133,15 @@
       "end"
     ]
   },
-  "xeif": {
-    "prefix": "xeif",
+  "x-eif": {
+    "prefix": "x-eif",
     "body": [
       "elsif ${1:condition}",
       "\t${0:${VISUAL}}"
     ]
   },
-  "xifee": {
-    "prefix": "xifee",
+  "x-ifee": {
+    "prefix": "x-ifee",
     "body": [
       "if ${1:condition}",
       "\t$2",
@@ -152,16 +152,16 @@
       "end"
     ]
   },
-  "xunless": {
-    "prefix": "xunless",
+  "x-unless": {
+    "prefix": "x-unless",
     "body": [
       "unless ${1:condition}",
       "\t${0:${VISUAL}}",
       "end"
     ]
   },
-  "xunlesse": {
-    "prefix": "xunlesse",
+  "x-unlesse": {
+    "prefix": "x-unlesse",
     "body": [
       "unless ${1:condition}",
       "\t$2",
@@ -170,8 +170,8 @@
       "end"
     ]
   },
-  "xunlesee": {
-    "prefix": "xunlesee",
+  "x-unlesee": {
+    "prefix": "x-unlesee",
     "body": [
       "unless ${1:condition}",
       "\t$2",
@@ -182,24 +182,24 @@
       "end"
     ]
   },
-  "xwh": {
-    "prefix": "xwh",
+  "x-wh": {
+    "prefix": "x-wh",
     "body": [
       "while ${1:condition}",
       "\t${0:${VISUAL}}",
       "end"
     ]
   },
-  "xfor": {
-    "prefix": "xfor",
+  "x-for": {
+    "prefix": "x-for",
     "body": [
       "for ${1:e} in ${2:c}",
       "\t${0}",
       "end"
     ]
   },
-  "xuntil": {
-    "prefix": "xuntil",
+  "x-until": {
+    "prefix": "x-until",
     "body": [
       "until ${1:condition}",
       "\t${0:${VISUAL}}",
@@ -225,8 +225,8 @@
       "end"
     ]
   },
-  "xcla-": {
-    "prefix": "xcla-",
+  "x-cla-": {
+    "prefix": "x-cla-",
     "body": [
       "class ${1:`substitute(vim_snippets#Filename(), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')`} < DelegateClass(${2:ParentClass})",
       "\tdef initialize(${3:args})",
@@ -239,50 +239,50 @@
       "end"
     ]
   },
-  "xr": {
-    "prefix": "xr",
+  "x-r": {
+    "prefix": "x-r",
     "body": [
       "attr_reader :${0:attr_names}"
     ]
   },
-  "xw": {
-    "prefix": "xw",
+  "x-w": {
+    "prefix": "x-w",
     "body": [
       "attr_writer :${0:attr_names}"
     ]
   },
-  "xrw": {
-    "prefix": "xrw",
+  "x-rw": {
+    "prefix": "x-rw",
     "body": [
       "attr_accessor :${0:attr_names}"
     ]
   },
-  "xatp": {
-    "prefix": "xatp",
+  "x-atp": {
+    "prefix": "x-atp",
     "body": [
       "attr_protected :${0:attr_names}"
     ]
   },
-  "xata": {
-    "prefix": "xata",
+  "x-ata": {
+    "prefix": "x-ata",
     "body": [
       "attr_accessible :${0:attr_names}"
     ]
   },
-  "xana": {
-    "prefix": "xana",
+  "x-ana": {
+    "prefix": "x-ana",
     "body": [
       "accepts_nested_attributes_for :${0:association}"
     ]
   },
-  "xivc": {
-    "prefix": "xivc",
+  "x-ivc": {
+    "prefix": "x-ivc",
     "body": [
       "@${1:variable_name} ||= ${0:cached_value}"
     ]
   },
-  "xEnum": {
-    "prefix": "xEnum",
+  "x-Enum": {
+    "prefix": "x-Enum",
     "body": [
       "include Enumerable",
       "def each(&block)",
@@ -290,8 +290,8 @@
       "end"
     ]
   },
-  "xComp": {
-    "prefix": "xComp",
+  "x-Comp": {
+    "prefix": "x-Comp",
     "body": [
       "include Comparable",
       "def <=>(other)",
@@ -299,86 +299,86 @@
       "end"
     ]
   },
-  "xForw-": {
-    "prefix": "xForw-",
+  "x-Forw-": {
+    "prefix": "x-Forw-",
     "body": [
       "extend Forwardable"
     ]
   },
-  "xdefs": {
-    "prefix": "xdefs",
+  "x-defs": {
+    "prefix": "x-defs",
     "body": [
       "def self.${1:class_method_name}",
       "\t${0}",
       "end"
     ]
   },
-  "xdefinit": {
-    "prefix": "xdefinit",
+  "x-definit": {
+    "prefix": "x-definit",
     "body": [
       "def initialize(${1:args})",
       "\t${0}",
       "end"
     ]
   },
-  "xdefmm": {
-    "prefix": "xdefmm",
+  "x-defmm": {
+    "prefix": "x-defmm",
     "body": [
       "def method_missing(meth, *args, &blk)",
       "\t${0}",
       "end"
     ]
   },
-  "xdefd": {
-    "prefix": "xdefd",
+  "x-defd": {
+    "prefix": "x-defd",
     "body": [
       "def_delegator :${1:@del_obj}, :${2:del_meth}, :${0:new_name}"
     ]
   },
-  "xdefds": {
-    "prefix": "xdefds",
+  "x-defds": {
+    "prefix": "x-defds",
     "body": [
       "def_delegators :${1:@del_obj}, :${0:del_methods}"
     ]
   },
-  "xam": {
-    "prefix": "xam",
+  "x-am": {
+    "prefix": "x-am",
     "body": [
       "alias_method :${1:new_name}, :${0:old_name}"
     ]
   },
-  "xapp": {
-    "prefix": "xapp",
+  "x-app": {
+    "prefix": "x-app",
     "body": [
       "if __FILE__ == $PROGRAM_NAME",
       "\t${0}",
       "end"
     ]
   },
-  "xusai": {
-    "prefix": "xusai",
+  "x-usai": {
+    "prefix": "x-usai",
     "body": [
       "if ARGV.${1}",
       "\tabort \"Usage: #{$PROGRAM_NAME} ${2:ARGS_GO_HERE}\"${0}",
       "end"
     ]
   },
-  "xusau": {
-    "prefix": "xusau",
+  "x-usau": {
+    "prefix": "x-usau",
     "body": [
       "unless ARGV.${1}",
       "\tabort \"Usage: #{$PROGRAM_NAME} ${2:ARGS_GO_HERE}\"${0}",
       "end"
     ]
   },
-  "xarray": {
-    "prefix": "xarray",
+  "x-array": {
+    "prefix": "x-array",
     "body": [
       "Array.new(${1:10}) { |${2:i}| ${0} }"
     ]
   },
-  "xhash": {
-    "prefix": "xhash",
+  "x-hash": {
+    "prefix": "x-hash",
     "body": [
       "Hash.new { |${1:hash}, ${2:key}| $1[$2] = ${0} }",
       "File.foreach(${1:'path/to/file'}) { |${2:line}| ${0} }",
@@ -387,502 +387,502 @@
       "Dir[${1:'glob/**/*.rb'}]"
     ]
   },
-  "xdir": {
-    "prefix": "xdir",
+  "x-dir": {
+    "prefix": "x-dir",
     "body": [
       "Filename.dirname(__FILE__)"
     ]
   },
-  "xdeli": {
-    "prefix": "xdeli",
+  "x-deli": {
+    "prefix": "x-deli",
     "body": [
       "delete_if { |${1:e}| ${0} }"
     ]
   },
-  "xfil": {
-    "prefix": "xfil",
+  "x-fil": {
+    "prefix": "x-fil",
     "body": [
       "fill(${1:range}) { |${2:i}| ${0} }"
     ]
   },
-  "xflao": {
-    "prefix": "xflao",
+  "x-flao": {
+    "prefix": "x-flao",
     "body": [
       "reduce(Array.new) { |${1:arr}, ${2:a}| $1.push(*$2) }"
     ]
   },
-  "xzip": {
-    "prefix": "xzip",
+  "x-zip": {
+    "prefix": "x-zip",
     "body": [
       "zip(${1:enums}) { |${2:row}| ${0} }"
     ]
   },
-  "xdow": {
-    "prefix": "xdow",
+  "x-dow": {
+    "prefix": "x-dow",
     "body": [
       "downto(${1:0}) { |${2:n}| ${0} }"
     ]
   },
-  "xste": {
-    "prefix": "xste",
+  "x-ste": {
+    "prefix": "x-ste",
     "body": [
       "step(${1:2}) { |${2:n}| ${0} }"
     ]
   },
-  "xtim": {
-    "prefix": "xtim",
+  "x-tim": {
+    "prefix": "x-tim",
     "body": [
       "times { |${1:n}| ${0} }"
     ]
   },
-  "xupt": {
-    "prefix": "xupt",
+  "x-upt": {
+    "prefix": "x-upt",
     "body": [
       "upto(${1:1.0/0.0}) { |${2:n}| ${0} }"
     ]
   },
-  "xloo": {
-    "prefix": "xloo",
+  "x-loo": {
+    "prefix": "x-loo",
     "body": [
       "loop { ${0} }"
     ]
   },
-  "xea": {
-    "prefix": "xea",
+  "x-ea": {
+    "prefix": "x-ea",
     "body": [
       "each { |${1:e}| ${0} }"
     ]
   },
-  "xead": {
-    "prefix": "xead",
+  "x-ead": {
+    "prefix": "x-ead",
     "body": [
       "each do |${1:e}|",
       "\t${0}",
       "end"
     ]
   },
-  "xeab": {
-    "prefix": "xeab",
+  "x-eab": {
+    "prefix": "x-eab",
     "body": [
       "each_byte { |${1:byte}| ${0} }",
       "each_char { |${1:chr}| ${0} }",
       "each_cons(${1:2}) { |${2:group}| ${0} }"
     ]
   },
-  "xeai": {
-    "prefix": "xeai",
+  "x-eai": {
+    "prefix": "x-eai",
     "body": [
       "each_index { |${1:i}| ${0} }"
     ]
   },
-  "xeaid": {
-    "prefix": "xeaid",
+  "x-eaid": {
+    "prefix": "x-eaid",
     "body": [
       "each_index do |${1:i}|",
       "\t${0}",
       "end"
     ]
   },
-  "xeak": {
-    "prefix": "xeak",
+  "x-eak": {
+    "prefix": "x-eak",
     "body": [
       "each_key { |${1:key}| ${0} }"
     ]
   },
-  "xeakd": {
-    "prefix": "xeakd",
+  "x-eakd": {
+    "prefix": "x-eakd",
     "body": [
       "each_key do |${1:key}|",
       "\t${0}",
       "end"
     ]
   },
-  "xeal": {
-    "prefix": "xeal",
+  "x-eal": {
+    "prefix": "x-eal",
     "body": [
       "each_line { |${1:line}| ${0} }"
     ]
   },
-  "xeald": {
-    "prefix": "xeald",
+  "x-eald": {
+    "prefix": "x-eald",
     "body": [
       "each_line do |${1:line}|",
       "\t${0}",
       "end"
     ]
   },
-  "xeap": {
-    "prefix": "xeap",
+  "x-eap": {
+    "prefix": "x-eap",
     "body": [
       "each_pair { |${1:name}, ${2:val}| ${0} }"
     ]
   },
-  "xeapd": {
-    "prefix": "xeapd",
+  "x-eapd": {
+    "prefix": "x-eapd",
     "body": [
       "each_pair do |${1:name}, ${2:val}|",
       "\t${0}",
       "end"
     ]
   },
-  "xeas-": {
-    "prefix": "xeas-",
+  "x-eas-": {
+    "prefix": "x-eas-",
     "body": [
       "each_slice(${1:2}) { |${2:group}| ${0} }"
     ]
   },
-  "xeasd-": {
-    "prefix": "xeasd-",
+  "x-easd-": {
+    "prefix": "x-easd-",
     "body": [
       "each_slice(${1:2}) do |${2:group}|",
       "\t${0}",
       "end"
     ]
   },
-  "xeav": {
-    "prefix": "xeav",
+  "x-eav": {
+    "prefix": "x-eav",
     "body": [
       "each_value { |${1:val}| ${0} }"
     ]
   },
-  "xeavd": {
-    "prefix": "xeavd",
+  "x-eavd": {
+    "prefix": "x-eavd",
     "body": [
       "each_value do |${1:val}|",
       "\t${0}",
       "end"
     ]
   },
-  "xeawi": {
-    "prefix": "xeawi",
+  "x-eawi": {
+    "prefix": "x-eawi",
     "body": [
       "each_with_index { |${1:e}, ${2:i}| ${0} }"
     ]
   },
-  "xeawid": {
-    "prefix": "xeawid",
+  "x-eawid": {
+    "prefix": "x-eawid",
     "body": [
       "each_with_index do |${1:e}, ${2:i}|",
       "\t${0}",
       "end"
     ]
   },
-  "xeawo": {
-    "prefix": "xeawo",
+  "x-eawo": {
+    "prefix": "x-eawo",
     "body": [
       "each_with_object(${1:init}) { |${2:e}, ${3:var}| ${0} }"
     ]
   },
-  "xeawod": {
-    "prefix": "xeawod",
+  "x-eawod": {
+    "prefix": "x-eawod",
     "body": [
       "each_with_object(${1:init}) do |${2:e}, ${3:var}|",
       "\t${0}",
       "end"
     ]
   },
-  "xreve": {
-    "prefix": "xreve",
+  "x-reve": {
+    "prefix": "x-reve",
     "body": [
       "reverse_each { |${1:e}| ${0} }"
     ]
   },
-  "xreved": {
-    "prefix": "xreved",
+  "x-reved": {
+    "prefix": "x-reved",
     "body": [
       "reverse_each do |${1:e}|",
       "\t${0}",
       "end"
     ]
   },
-  "xinj": {
-    "prefix": "xinj",
+  "x-inj": {
+    "prefix": "x-inj",
     "body": [
       "inject(${1:init}) { |${2:mem}, ${3:var}| ${0} }"
     ]
   },
-  "xinjd": {
-    "prefix": "xinjd",
+  "x-injd": {
+    "prefix": "x-injd",
     "body": [
       "inject(${1:init}) do |${2:mem}, ${3:var}|",
       "\t${0}",
       "end"
     ]
   },
-  "xred": {
-    "prefix": "xred",
+  "x-red": {
+    "prefix": "x-red",
     "body": [
       "reduce(${1:init}) { |${2:mem}, ${3:var}| ${0} }"
     ]
   },
-  "xredd": {
-    "prefix": "xredd",
+  "x-redd": {
+    "prefix": "x-redd",
     "body": [
       "reduce(${1:init}) do |${2:mem}, ${3:var}|",
       "\t${0}",
       "end"
     ]
   },
-  "xmap": {
-    "prefix": "xmap",
+  "x-map": {
+    "prefix": "x-map",
     "body": [
       "map { |${1:e}| ${0} }"
     ]
   },
-  "xmapd": {
-    "prefix": "xmapd",
+  "x-mapd": {
+    "prefix": "x-mapd",
     "body": [
       "map do |${1:e}|",
       "\t${0}",
       "end"
     ]
   },
-  "xmapwi-": {
-    "prefix": "xmapwi-",
+  "x-mapwi-": {
+    "prefix": "x-mapwi-",
     "body": [
       "enum_with_index.map { |${1:e}, ${2:i}| ${0} }"
     ]
   },
-  "xsor": {
-    "prefix": "xsor",
+  "x-sor": {
+    "prefix": "x-sor",
     "body": [
       "sort { |a, b| ${0} }"
     ]
   },
-  "xsorb": {
-    "prefix": "xsorb",
+  "x-sorb": {
+    "prefix": "x-sorb",
     "body": [
       "sort_by { |${1:e}| ${0} }"
     ]
   },
-  "xran": {
-    "prefix": "xran",
+  "x-ran": {
+    "prefix": "x-ran",
     "body": [
       "sort_by { rand }"
     ]
   },
-  "xall": {
-    "prefix": "xall",
+  "x-all": {
+    "prefix": "x-all",
     "body": [
       "all? { |${1:e}| ${0} }"
     ]
   },
-  "xany": {
-    "prefix": "xany",
+  "x-any": {
+    "prefix": "x-any",
     "body": [
       "any? { |${1:e}| ${0} }"
     ]
   },
-  "xcl": {
-    "prefix": "xcl",
+  "x-cl": {
+    "prefix": "x-cl",
     "body": [
       "classify { |${1:e}| ${0} }"
     ]
   },
-  "xcol": {
-    "prefix": "xcol",
+  "x-col": {
+    "prefix": "x-col",
     "body": [
       "collect { |${1:e}| ${0} }"
     ]
   },
-  "xcold": {
-    "prefix": "xcold",
+  "x-cold": {
+    "prefix": "x-cold",
     "body": [
       "collect do |${1:e}|",
       "\t${0}",
       "end"
     ]
   },
-  "xdet": {
-    "prefix": "xdet",
+  "x-det": {
+    "prefix": "x-det",
     "body": [
       "detect { |${1:e}| ${0} }"
     ]
   },
-  "xdetd": {
-    "prefix": "xdetd",
+  "x-detd": {
+    "prefix": "x-detd",
     "body": [
       "detect do |${1:e}|",
       "\t${0}",
       "end"
     ]
   },
-  "xfet": {
-    "prefix": "xfet",
+  "x-fet": {
+    "prefix": "x-fet",
     "body": [
       "fetch(${1:name}) { |${2:key}| ${0} }"
     ]
   },
-  "xfin": {
-    "prefix": "xfin",
+  "x-fin": {
+    "prefix": "x-fin",
     "body": [
       "find { |${1:e}| ${0} }"
     ]
   },
-  "xfind": {
-    "prefix": "xfind",
+  "x-find": {
+    "prefix": "x-find",
     "body": [
       "find do |${1:e}|",
       "\t${0}",
       "end"
     ]
   },
-  "xfina": {
-    "prefix": "xfina",
+  "x-fina": {
+    "prefix": "x-fina",
     "body": [
       "find_all { |${1:e}| ${0} }"
     ]
   },
-  "xfinad": {
-    "prefix": "xfinad",
+  "x-finad": {
+    "prefix": "x-finad",
     "body": [
       "find_all do |${1:e}|",
       "\t${0}",
       "end"
     ]
   },
-  "xgre": {
-    "prefix": "xgre",
+  "x-gre": {
+    "prefix": "x-gre",
     "body": [
       "grep(${1:/pattern/}) { |${2:match}| ${0} }"
     ]
   },
-  "xsub": {
-    "prefix": "xsub",
+  "x-sub": {
+    "prefix": "x-sub",
     "body": [
       "${1:g}sub(${2:/pattern/}) { |${3:match}| ${0} }"
     ]
   },
-  "xsca": {
-    "prefix": "xsca",
+  "x-sca": {
+    "prefix": "x-sca",
     "body": [
       "scan(${1:/pattern/}) { |${2:match}| ${0} }"
     ]
   },
-  "xscad": {
-    "prefix": "xscad",
+  "x-scad": {
+    "prefix": "x-scad",
     "body": [
       "scan(${1:/pattern/}) do |${2:match}|",
       "\t${0}",
       "end"
     ]
   },
-  "xmax": {
-    "prefix": "xmax",
+  "x-max": {
+    "prefix": "x-max",
     "body": [
       "max { |a, b| ${0} }"
     ]
   },
-  "xmin": {
-    "prefix": "xmin",
+  "x-min": {
+    "prefix": "x-min",
     "body": [
       "min { |a, b| ${0} }"
     ]
   },
-  "xpar": {
-    "prefix": "xpar",
+  "x-par": {
+    "prefix": "x-par",
     "body": [
       "partition { |${1:e}| ${0} }"
     ]
   },
-  "xpard": {
-    "prefix": "xpard",
+  "x-pard": {
+    "prefix": "x-pard",
     "body": [
       "partition do |${1:e}|",
       "\t${0}",
       "end"
     ]
   },
-  "xrej": {
-    "prefix": "xrej",
+  "x-rej": {
+    "prefix": "x-rej",
     "body": [
       "reject { |${1:e}| ${0} }"
     ]
   },
-  "xrejd": {
-    "prefix": "xrejd",
+  "x-rejd": {
+    "prefix": "x-rejd",
     "body": [
       "reject do |${1:e}|",
       "\t${0}",
       "end"
     ]
   },
-  "xsel": {
-    "prefix": "xsel",
+  "x-sel": {
+    "prefix": "x-sel",
     "body": [
       "select { |${1:e}| ${0} }"
     ]
   },
-  "xseld": {
-    "prefix": "xseld",
+  "x-seld": {
+    "prefix": "x-seld",
     "body": [
       "select do |${1:e}|",
       "\t${0}",
       "end"
     ]
   },
-  "xlam": {
-    "prefix": "xlam",
+  "x-lam": {
+    "prefix": "x-lam",
     "body": [
       "lambda { |${1:args}| ${0} }"
     ]
   },
-  "x->": {
-    "prefix": "x->",
+  "x-->": {
+    "prefix": "x-->",
     "body": [
       "-> { ${0} }"
     ]
   },
-  "x->a": {
-    "prefix": "x->a",
+  "x-->a": {
+    "prefix": "x-->a",
     "body": [
       "->(${1:args}) { ${0} }"
     ]
   },
-  "xdo": {
-    "prefix": "xdo",
+  "x-do": {
+    "prefix": "x-do",
     "body": [
       "do",
       "\t${0}",
       "end"
     ]
   },
-  "xdov": {
-    "prefix": "xdov",
+  "x-dov": {
+    "prefix": "x-dov",
     "body": [
       "do |${1:v}|",
       "\t${2}",
       "end"
     ]
   },
-  "x:": {
-    "prefix": "x:",
+  "x-:": {
+    "prefix": "x-:",
     "body": [
       "${1:key}: ${2:'value'}"
     ]
   },
-  "xope": {
-    "prefix": "xope",
+  "x-ope": {
+    "prefix": "x-ope",
     "body": [
       "open('${1:path/or/url/or/pipe}', '${2:w}') { |${3:io}| ${0} }"
     ]
   },
-  "xfpath": {
-    "prefix": "xfpath",
+  "x-fpath": {
+    "prefix": "x-fpath",
     "body": [
       "File.join(File.dirname(__FILE__), *['${1:rel path here}'])"
     ]
   },
-  "xunif": {
-    "prefix": "xunif",
+  "x-unif": {
+    "prefix": "x-unif",
     "body": [
       "ARGF.each_line${1} do |${2:line}|",
       "\t${0}",
       "end"
     ]
   },
-  "xoptp": {
-    "prefix": "xoptp",
+  "x-optp": {
+    "prefix": "x-optp",
     "body": [
       "require 'optparse'",
       "options = { ${0:default: 'args'} }",
@@ -891,16 +891,16 @@
       "end"
     ]
   },
-  "xopt": {
-    "prefix": "xopt",
+  "x-opt": {
+    "prefix": "x-opt",
     "body": [
       "opts.on('-${1:o}', '--${2:long-option-name}', ${3:String}, '${4:Option description.}') do |${5:opt}|",
       "\t${0}",
       "end"
     ]
   },
-  "xtc": {
-    "prefix": "xtc",
+  "x-tc": {
+    "prefix": "x-tc",
     "body": [
       "require 'test/unit'",
       "require '${1:library_file_name}'",
@@ -911,218 +911,218 @@
       "end"
     ]
   },
-  "xts": {
-    "prefix": "xts",
+  "x-ts": {
+    "prefix": "x-ts",
     "body": [
       "require 'test/unit'",
       "require 'tc_${1:test_case_file}'",
       "require 'tc_${2:test_case_file}'"
     ]
   },
-  "xas": {
-    "prefix": "xas",
+  "x-as": {
+    "prefix": "x-as",
     "body": [
       "assert ${1:test}, '${2:Failure message.}'"
     ]
   },
-  "xase": {
-    "prefix": "xase",
+  "x-ase": {
+    "prefix": "x-ase",
     "body": [
       "assert_equal ${1:expected}, ${2:actual}"
     ]
   },
-  "xasne": {
-    "prefix": "xasne",
+  "x-asne": {
+    "prefix": "x-asne",
     "body": [
       "assert_not_equal ${1:unexpected}, ${2:actual}"
     ]
   },
-  "xasid": {
-    "prefix": "xasid",
+  "x-asid": {
+    "prefix": "x-asid",
     "body": [
       "assert_in_delta ${1:expected_float}, ${2:actual_float}, ${3:2**-20}"
     ]
   },
-  "xasi": {
-    "prefix": "xasi",
+  "x-asi": {
+    "prefix": "x-asi",
     "body": [
       "assert_includes ${1:collection}, ${2:object}"
     ]
   },
-  "xasio": {
-    "prefix": "xasio",
+  "x-asio": {
+    "prefix": "x-asio",
     "body": [
       "assert_instance_of ${1:ExpectedClass}, ${2:actual_instance}"
     ]
   },
-  "xasko": {
-    "prefix": "xasko",
+  "x-asko": {
+    "prefix": "x-asko",
     "body": [
       "assert_kind_of ${1:ExpectedKind}, ${2:actual_instance}"
     ]
   },
-  "xasn": {
-    "prefix": "xasn",
+  "x-asn": {
+    "prefix": "x-asn",
     "body": [
       "assert_nil ${1:instance}"
     ]
   },
-  "xasnn": {
-    "prefix": "xasnn",
+  "x-asnn": {
+    "prefix": "x-asnn",
     "body": [
       "assert_not_nil ${1:instance}"
     ]
   },
-  "xasm": {
-    "prefix": "xasm",
+  "x-asm": {
+    "prefix": "x-asm",
     "body": [
       "assert_match(/${1:expected_pattern}/, ${2:actual_string})"
     ]
   },
-  "xasnm": {
-    "prefix": "xasnm",
+  "x-asnm": {
+    "prefix": "x-asnm",
     "body": [
       "assert_no_match(/${1:unexpected_pattern}/, ${2:actual_string})"
     ]
   },
-  "xaso": {
-    "prefix": "xaso",
+  "x-aso": {
+    "prefix": "x-aso",
     "body": [
       "assert_operator ${1:left}, :${2:operator}, ${3:right}"
     ]
   },
-  "xasr": {
-    "prefix": "xasr",
+  "x-asr": {
+    "prefix": "x-asr",
     "body": [
       "assert_raises(${1:StandardError}) { ${0} }"
     ]
   },
-  "xasrd": {
-    "prefix": "xasrd",
+  "x-asrd": {
+    "prefix": "x-asrd",
     "body": [
       "assert_raises ${1:StandardError} do",
       "\t${0}",
       "end"
     ]
   },
-  "xasnr": {
-    "prefix": "xasnr",
+  "x-asnr": {
+    "prefix": "x-asnr",
     "body": [
       "assert_nothing_raised(${1:StandardError}) { ${0} }"
     ]
   },
-  "xasnrd": {
-    "prefix": "xasnrd",
+  "x-asnrd": {
+    "prefix": "x-asnrd",
     "body": [
       "assert_nothing_raised ${1:StandardError} do",
       "\t${0}",
       "end"
     ]
   },
-  "xasrt": {
-    "prefix": "xasrt",
+  "x-asrt": {
+    "prefix": "x-asrt",
     "body": [
       "assert_respond_to ${1:object}, :${2:method}",
       "assert_same ${1:expected}, ${2:actual}",
       "assert_send [${1:object}, :${2:message}, ${3:args}]"
     ]
   },
-  "xasns": {
-    "prefix": "xasns",
+  "x-asns": {
+    "prefix": "x-asns",
     "body": [
       "assert_not_same ${1:unexpected}, ${2:actual}"
     ]
   },
-  "xast": {
-    "prefix": "xast",
+  "x-ast": {
+    "prefix": "x-ast",
     "body": [
       "assert_throws :${1:expected}, -> { ${0} }"
     ]
   },
-  "xastd": {
-    "prefix": "xastd",
+  "x-astd": {
+    "prefix": "x-astd",
     "body": [
       "assert_throws :${1:expected} do",
       "\t${0}",
       "end"
     ]
   },
-  "xasnt": {
-    "prefix": "xasnt",
+  "x-asnt": {
+    "prefix": "x-asnt",
     "body": [
       "assert_nothing_thrown { ${0} }"
     ]
   },
-  "xasntd": {
-    "prefix": "xasntd",
+  "x-asntd": {
+    "prefix": "x-asntd",
     "body": [
       "assert_nothing_thrown do",
       "\t${0}",
       "end"
     ]
   },
-  "xfl": {
-    "prefix": "xfl",
+  "x-fl": {
+    "prefix": "x-fl",
     "body": [
       "flunk '${1:Failure message.}'"
     ]
   },
-  "xrf": {
-    "prefix": "xrf",
+  "x-rf": {
+    "prefix": "x-rf",
     "body": [
       "refute ${1:test}, '${2:Failure message.}'"
     ]
   },
-  "xrfe": {
-    "prefix": "xrfe",
+  "x-rfe": {
+    "prefix": "x-rfe",
     "body": [
       "refute_equal ${1:unexpected}, ${2:actual}"
     ]
   },
-  "xrfko": {
-    "prefix": "xrfko",
+  "x-rfko": {
+    "prefix": "x-rfko",
     "body": [
       "refute_kind_of ${1:UnexpectedKind}, ${2:actual_instance}"
     ]
   },
-  "xrfn": {
-    "prefix": "xrfn",
+  "x-rfn": {
+    "prefix": "x-rfn",
     "body": [
       "refute_nil ${1:instance}"
     ]
   },
-  "xrfo": {
-    "prefix": "xrfo",
+  "x-rfo": {
+    "prefix": "x-rfo",
     "body": [
       "refute_operator ${1:left}, :${2:operator}, ${3:right}"
     ]
   },
-  "xrfi": {
-    "prefix": "xrfi",
+  "x-rfi": {
+    "prefix": "x-rfi",
     "body": [
       "refute_includes ${1:collection}, ${2:object}"
     ]
   },
-  "xrfid": {
-    "prefix": "xrfid",
+  "x-rfid": {
+    "prefix": "x-rfid",
     "body": [
       "refute_in_delta ${1:unexpected_float}, ${2:actual_float}, ${3:2**-20}"
     ]
   },
-  "xrfio": {
-    "prefix": "xrfio",
+  "x-rfio": {
+    "prefix": "x-rfio",
     "body": [
       "refute_instance_of ${1:UnexpectedClass}, ${2:actual_instance}"
     ]
   },
-  "xrfs": {
-    "prefix": "xrfs",
+  "x-rfs": {
+    "prefix": "x-rfs",
     "body": [
       "refute_same ${1:unexpected}, ${2:actual}"
     ]
   },
-  "xbm-": {
-    "prefix": "xbm-",
+  "x-bm-": {
+    "prefix": "x-bm-",
     "body": [
       "TESTS = ${1:10_000}",
       "Benchmark.bmbm do |results|",
@@ -1130,78 +1130,78 @@
       "end"
     ]
   },
-  "xrep": {
-    "prefix": "xrep",
+  "x-rep": {
+    "prefix": "x-rep",
     "body": [
       "results.report('${1:name}:') { TESTS.times { ${0} } }"
     ]
   },
-  "xMd": {
-    "prefix": "xMd",
+  "x-Md": {
+    "prefix": "x-Md",
     "body": [
       "File.open('${1:path/to/file.dump}', 'wb') { |${2:file}| Marshal.dump(${3:obj}, $2) }"
     ]
   },
-  "xMl": {
-    "prefix": "xMl",
+  "x-Ml": {
+    "prefix": "x-Ml",
     "body": [
       "File.open('${1:path/to/file.dump}', 'rb') { |${2:file}| Marshal.load($2) }"
     ]
   },
-  "xdeec": {
-    "prefix": "xdeec",
+  "x-deec": {
+    "prefix": "x-deec",
     "body": [
       "Marshal.load(Marshal.dump(${1:obj_to_copy}))"
     ]
   },
-  "xPn-": {
-    "prefix": "xPn-",
+  "x-Pn-": {
+    "prefix": "x-Pn-",
     "body": [
       "PStore.new('${1:file_name.pstore}')"
     ]
   },
-  "xtra": {
-    "prefix": "xtra",
+  "x-tra": {
+    "prefix": "x-tra",
     "body": [
       "transaction(${1:true}) { ${0} }"
     ]
   },
-  "xxml-": {
-    "prefix": "xxml-",
+  "x-xml-": {
+    "prefix": "x-xml-",
     "body": [
       "REXML::Document.new(File.read('${1:path/to/file}'))"
     ]
   },
-  "xxpa": {
-    "prefix": "xxpa",
+  "x-xpa": {
+    "prefix": "x-xpa",
     "body": [
       "elements.each('${1://Xpath}') do |${2:node}|",
       "\t${0}",
       "end"
     ]
   },
-  "xclafn": {
-    "prefix": "xclafn",
+  "x-clafn": {
+    "prefix": "x-clafn",
     "body": [
       "split('::').inject(Object) { |par, const| par.const_get(const) }"
     ]
   },
-  "xsinc": {
-    "prefix": "xsinc",
+  "x-sinc": {
+    "prefix": "x-sinc",
     "body": [
       "class << self; self end"
     ]
   },
-  "xnam": {
-    "prefix": "xnam",
+  "x-nam": {
+    "prefix": "x-nam",
     "body": [
       "namespace :${1:`vim_snippets#Filename()`} do",
       "\t${0}",
       "end"
     ]
   },
-  "xtas": {
-    "prefix": "xtas",
+  "x-tas": {
+    "prefix": "x-tas",
     "body": [
       "desc '${1:Task description}'",
       "task ${2:task_name: [:dependent, :tasks]} do",
@@ -1209,14 +1209,14 @@
       "end"
     ]
   },
-  "xb": {
-    "prefix": "xb",
+  "x-b": {
+    "prefix": "x-b",
     "body": [
       "{ |${1:var}| ${0} }"
     ]
   },
-  "xbegin": {
-    "prefix": "xbegin",
+  "x-begin": {
+    "prefix": "x-begin",
     "body": [
       "begin",
       "\tfail 'A test exception.'",
@@ -1230,382 +1230,382 @@
       "end"
     ]
   },
-  "xdebug": {
-    "prefix": "xdebug",
+  "x-debug": {
+    "prefix": "x-debug",
     "body": [
       "require 'byebug'; byebug"
     ]
   },
-  "xdbg": {
-    "prefix": "xdbg",
+  "x-dbg": {
+    "prefix": "x-dbg",
     "body": [
       "require 'debug'; debugger"
     ]
   },
-  "xdebug19": {
-    "prefix": "xdebug19",
+  "x-debug19": {
+    "prefix": "x-debug19",
     "body": [
       "require 'debugger'; debugger"
     ]
   },
-  "xdebug18": {
-    "prefix": "xdebug18",
+  "x-debug18": {
+    "prefix": "x-debug18",
     "body": [
       "require 'ruby-debug'; debugger"
     ]
   },
-  "xpry": {
-    "prefix": "xpry",
+  "x-pry": {
+    "prefix": "x-pry",
     "body": [
       "require 'pry'; binding.pry"
     ]
   },
-  "xstrf": {
-    "prefix": "xstrf",
+  "x-strf": {
+    "prefix": "x-strf",
     "body": [
       "strftime('${1:%Y-%m-%d %H:%M:%S %z}')${0}"
     ]
   },
-  "xmb": {
-    "prefix": "xmb",
+  "x-mb": {
+    "prefix": "x-mb",
     "body": [
       "must_be ${0}"
     ]
   },
-  "xwb": {
-    "prefix": "xwb",
+  "x-wb": {
+    "prefix": "x-wb",
     "body": [
       "wont_be ${0}"
     ]
   },
-  "xmbe": {
-    "prefix": "xmbe",
+  "x-mbe": {
+    "prefix": "x-mbe",
     "body": [
       "must_be_empty"
     ]
   },
-  "xwbe": {
-    "prefix": "xwbe",
+  "x-wbe": {
+    "prefix": "x-wbe",
     "body": [
       "wont_be_empty"
     ]
   },
-  "xmbio": {
-    "prefix": "xmbio",
+  "x-mbio": {
+    "prefix": "x-mbio",
     "body": [
       "must_be_instance_of ${0:Class}"
     ]
   },
-  "xwbio": {
-    "prefix": "xwbio",
+  "x-wbio": {
+    "prefix": "x-wbio",
     "body": [
       "wont_be_instance_of ${0:Class}"
     ]
   },
-  "xmbko": {
-    "prefix": "xmbko",
+  "x-mbko": {
+    "prefix": "x-mbko",
     "body": [
       "must_be_kind_of ${0:Class}"
     ]
   },
-  "xwbko": {
-    "prefix": "xwbko",
+  "x-wbko": {
+    "prefix": "x-wbko",
     "body": [
       "wont_be_kind_of ${0:Class}"
     ]
   },
-  "xmbn": {
-    "prefix": "xmbn",
+  "x-mbn": {
+    "prefix": "x-mbn",
     "body": [
       "must_be_nil"
     ]
   },
-  "xwbn": {
-    "prefix": "xwbn",
+  "x-wbn": {
+    "prefix": "x-wbn",
     "body": [
       "wont_be_nil"
     ]
   },
-  "xmbsa": {
-    "prefix": "xmbsa",
+  "x-mbsa": {
+    "prefix": "x-mbsa",
     "body": [
       "must_be_same_as ${0:other}"
     ]
   },
-  "xwbsa": {
-    "prefix": "xwbsa",
+  "x-wbsa": {
+    "prefix": "x-wbsa",
     "body": [
       "wont_be_same_as ${0:other}"
     ]
   },
-  "xmbsi": {
-    "prefix": "xmbsi",
+  "x-mbsi": {
+    "prefix": "x-mbsi",
     "body": [
       "-> { ${0} }.must_be_silent"
     ]
   },
-  "xmbwd": {
-    "prefix": "xmbwd",
+  "x-mbwd": {
+    "prefix": "x-mbwd",
     "body": [
       "must_be_within_delta ${1:0.1}, ${2:0.1}"
     ]
   },
-  "xwbwd": {
-    "prefix": "xwbwd",
+  "x-wbwd": {
+    "prefix": "x-wbwd",
     "body": [
       "wont_be_within_delta ${1:0.1}, ${2:0.1}"
     ]
   },
-  "xmbwe": {
-    "prefix": "xmbwe",
+  "x-mbwe": {
+    "prefix": "x-mbwe",
     "body": [
       "must_be_within_epsilon ${1:0.1}, ${2:0.1}"
     ]
   },
-  "xwbwe": {
-    "prefix": "xwbwe",
+  "x-wbwe": {
+    "prefix": "x-wbwe",
     "body": [
       "wont_be_within_epsilon ${1:0.1}, ${2:0.1}"
     ]
   },
-  "xme": {
-    "prefix": "xme",
+  "x-me": {
+    "prefix": "x-me",
     "body": [
       "must_equal ${0:other}"
     ]
   },
-  "xwe": {
-    "prefix": "xwe",
+  "x-we": {
+    "prefix": "x-we",
     "body": [
       "wont_equal ${0:other}"
     ]
   },
-  "xmi": {
-    "prefix": "xmi",
+  "x-mi": {
+    "prefix": "x-mi",
     "body": [
       "must_include ${0:what}"
     ]
   },
-  "xwi": {
-    "prefix": "xwi",
+  "x-wi": {
+    "prefix": "x-wi",
     "body": [
       "wont_include ${0:what}"
     ]
   },
-  "xmm": {
-    "prefix": "xmm",
+  "x-mm": {
+    "prefix": "x-mm",
     "body": [
       "must_match /${0:regex}/"
     ]
   },
-  "xwm": {
-    "prefix": "xwm",
+  "x-wm": {
+    "prefix": "x-wm",
     "body": [
       "wont_match /${0:regex}/"
     ]
   },
-  "xmout": {
-    "prefix": "xmout",
+  "x-mout": {
+    "prefix": "x-mout",
     "body": [
       "-> { ${1} }.must_output '${0}'"
     ]
   },
-  "xmra": {
-    "prefix": "xmra",
+  "x-mra": {
+    "prefix": "x-mra",
     "body": [
       "-> { ${1} }.must_raise ${0:StandardError}"
     ]
   },
-  "xmrt": {
-    "prefix": "xmrt",
+  "x-mrt": {
+    "prefix": "x-mrt",
     "body": [
       "must_respond_to :${0:method}"
     ]
   },
-  "xwrt": {
-    "prefix": "xwrt",
+  "x-wrt": {
+    "prefix": "x-wrt",
     "body": [
       "wont_respond_to :${0:method}"
     ]
   },
-  "xmsend": {
-    "prefix": "xmsend",
+  "x-msend": {
+    "prefix": "x-msend",
     "body": [
       "must_send [ ${1:what}, :${2:method}, ${3:args} ]"
     ]
   },
-  "xmthrow": {
-    "prefix": "xmthrow",
+  "x-mthrow": {
+    "prefix": "x-mthrow",
     "body": [
       "-> { throw :${1:error} }.must_throw :${2:error}"
     ]
   },
-  "xdesc": {
-    "prefix": "xdesc",
+  "x-desc": {
+    "prefix": "x-desc",
     "body": [
       "describe ${1:`substitute(substitute(vim_snippets#Filename(), '_spec$', '', ''), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')`} do",
       "\t${0}",
       "end"
     ]
   },
-  "xrdesc": {
-    "prefix": "xrdesc",
+  "x-rdesc": {
+    "prefix": "x-rdesc",
     "body": [
       "RSpec.describe ${1:`substitute(substitute(vim_snippets#Filename(), '_spec$', '', ''), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')`} do",
       "\t${0}",
       "end"
     ]
   },
-  "xdescm": {
-    "prefix": "xdescm",
+  "x-descm": {
+    "prefix": "x-descm",
     "body": [
       "describe '${1:#method}' do",
       "\t${0:pending 'Not implemented'}",
       "end"
     ]
   },
-  "xcont": {
-    "prefix": "xcont",
+  "x-cont": {
+    "prefix": "x-cont",
     "body": [
       "context '${1:message}' do",
       "\t${0}",
       "end"
     ]
   },
-  "xbef": {
-    "prefix": "xbef",
+  "x-bef": {
+    "prefix": "x-bef",
     "body": [
       "before :${1:each} do",
       "\t${0}",
       "end"
     ]
   },
-  "xaft": {
-    "prefix": "xaft",
+  "x-aft": {
+    "prefix": "x-aft",
     "body": [
       "after :${1:each} do",
       "\t${0}",
       "end"
     ]
   },
-  "xlet": {
-    "prefix": "xlet",
+  "x-let": {
+    "prefix": "x-let",
     "body": [
       "let(:${1:object}) { ${0} }"
     ]
   },
-  "xlet!": {
-    "prefix": "xlet!",
+  "x-let!": {
+    "prefix": "x-let!",
     "body": [
       "let!(:${1:object}) { ${0} }"
     ]
   },
-  "xsubj": {
-    "prefix": "xsubj",
+  "x-subj": {
+    "prefix": "x-subj",
     "body": [
       "subject { ${0} }"
     ]
   },
-  "xs.": {
-    "prefix": "xs.",
+  "x-s.": {
+    "prefix": "x-s.",
     "body": [
       "subject.${0:method}"
     ]
   },
-  "xspec": {
-    "prefix": "xspec",
+  "x-spec": {
+    "prefix": "x-spec",
     "body": [
       "specify { subject.${0} }"
     ]
   },
-  "xexp": {
-    "prefix": "xexp",
+  "x-exp": {
+    "prefix": "x-exp",
     "body": [
       "expect(${1:object}).to ${0}"
     ]
   },
-  "xexpb": {
-    "prefix": "xexpb",
+  "x-expb": {
+    "prefix": "x-expb",
     "body": [
       "expect { ${1:object} }.to ${0}"
     ]
   },
-  "xexperr": {
-    "prefix": "xexperr",
+  "x-experr": {
+    "prefix": "x-experr",
     "body": [
       "expect { ${1:object} }.to raise_error ${2:StandardError}, /${0:message_regex}/"
     ]
   },
-  "xallow": {
-    "prefix": "xallow",
+  "x-allow": {
+    "prefix": "x-allow",
     "body": [
       "allow(${1:object}).to ${0}"
     ]
   },
-  "xshared": {
-    "prefix": "xshared",
+  "x-shared": {
+    "prefix": "x-shared",
     "body": [
       "shared_examples ${0:'shared examples name'}"
     ]
   },
-  "xibl": {
-    "prefix": "xibl",
+  "x-ibl": {
+    "prefix": "x-ibl",
     "body": [
       "it_behaves_like ${0:'shared examples name'}"
     ]
   },
-  "xit": {
-    "prefix": "xit",
+  "x-it": {
+    "prefix": "x-it",
     "body": [
       "it '${1:spec_name}' do",
       "\t${0}",
       "end"
     ]
   },
-  "xits": {
-    "prefix": "xits",
+  "x-its": {
+    "prefix": "x-its",
     "body": [
       "its(:${1:method}) { should ${0} }"
     ]
   },
-  "xis": {
-    "prefix": "xis",
+  "x-is": {
+    "prefix": "x-is",
     "body": [
       "it { should ${0} }"
     ]
   },
-  "xisn": {
-    "prefix": "xisn",
+  "x-isn": {
+    "prefix": "x-isn",
     "body": [
       "it { should_not ${0} }"
     ]
   },
-  "xiexp": {
-    "prefix": "xiexp",
+  "x-iexp": {
+    "prefix": "x-iexp",
     "body": [
       "it { expect(${1:object}).${2} ${0} }"
     ]
   },
-  "xiexpb": {
-    "prefix": "xiexpb",
+  "x-iexpb": {
+    "prefix": "x-iexpb",
     "body": [
       "it { expect { ${1:object} }.${2} ${0} }"
     ]
   },
-  "xiiexp": {
-    "prefix": "xiiexp",
+  "x-iiexp": {
+    "prefix": "x-iiexp",
     "body": [
       "it { is_expected.to ${0} }"
     ]
   },
-  "xiiexpn": {
-    "prefix": "xiiexpn",
+  "x-iiexpn": {
+    "prefix": "x-iiexpn",
     "body": [
       "it { is_expected.not_to ${0} }"
     ]
   },
-  "xagg": {
-    "prefix": "xagg",
+  "x-agg": {
+    "prefix": "x-agg",
     "body": [
       "aggregate_failures '${1:message}' do",
       "\t${0}",

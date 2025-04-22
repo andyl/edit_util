@@ -1,6 +1,6 @@
 {
-  "xhw": {
-    "prefix": "xhw",
+  "x-hw": {
+    "prefix": "x-hw",
     "body": [
       "<HELLO WORLD>"
     ],

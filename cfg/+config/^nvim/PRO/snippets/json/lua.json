@@ -1,52 +1,52 @@
 {
-  "xlocal": {
-    "prefix": "xlocal",
+  "x-local": {
+    "prefix": "x-local",
     "body": [
       "local ${1:x} = ${0:1}"
     ]
   },
-  "xfun": {
-    "prefix": "xfun",
+  "x-fun": {
+    "prefix": "x-fun",
     "body": [
       "function ${1:fname}(${2:...})",
       "\t$0",
       "end"
     ]
   },
-  "xfor": {
-    "prefix": "xfor",
+  "x-for": {
+    "prefix": "x-for",
     "body": [
       "for ${1:i}=${2:1},${3:10} do",
       "\t${0:print(i)}",
       "end"
     ]
   },
-  "xforp": {
-    "prefix": "xforp",
+  "x-forp": {
+    "prefix": "x-forp",
     "body": [
       "for ${1:i},${2:v} in pairs(${3:table_name}) do",
       "\t$0",
       "end"
     ]
   },
-  "xfori": {
-    "prefix": "xfori",
+  "x-fori": {
+    "prefix": "x-fori",
     "body": [
       "for ${1:i},${2:v} in ipairs(${3:table_name}) do",
       "\t$0",
       "end"
     ]
   },
-  "xif": {
-    "prefix": "xif",
+  "x-if": {
+    "prefix": "x-if",
     "body": [
       "if $1 then",
       "\t$2",
       "end"
     ]
   },
-  "xife": {
-    "prefix": "xife",
+  "x-ife": {
+    "prefix": "x-ife",
     "body": [
       "if $1 then",
       "\t${2:-- if condition}",
@@ -55,107 +55,107 @@
       "end"
     ]
   },
-  "xelif": {
-    "prefix": "xelif",
+  "x-elif": {
+    "prefix": "x-elif",
     "body": [
       "elseif $1 then",
       "\t$0"
     ]
   },
-  "xrepeat": {
-    "prefix": "xrepeat",
+  "x-repeat": {
+    "prefix": "x-repeat",
     "body": [
       "repeat",
       "\t$1",
       "until $0"
     ]
   },
-  "xwhile": {
-    "prefix": "xwhile",
+  "x-while": {
+    "prefix": "x-while",
     "body": [
       "while $1 do",
       "\t$0",
       "end"
     ]
   },
-  "xwh": {
-    "prefix": "xwh",
+  "x-wh": {
+    "prefix": "x-wh",
     "body": [
       "while ${1:true} do",
       "\t${0}",
       "end"
     ]
   },
-  "xwht": {
-    "prefix": "xwht",
+  "x-wht": {
+    "prefix": "x-wht",
     "body": [
       "while true do",
       "\t${0}",
       "end"
     ]
   },
-  "xprint": {
-    "prefix": "xprint",
+  "x-print": {
+    "prefix": "x-print",
     "body": [
       "print(\"${1:string}\")"
     ]
   },
-  "xpr": {
-    "prefix": "xpr",
+  "x-pr": {
+    "prefix": "x-pr",
     "body": [
       "print($0)"
     ]
   },
-  "xprs": {
-    "prefix": "xprs",
+  "x-prs": {
+    "prefix": "x-prs",
     "body": [
       "print(\"$0\")"
     ]
   },
-  "xprf": {
-    "prefix": "xprf",
+  "x-prf": {
+    "prefix": "x-prf",
     "body": [
       "print(string.format(\"${1:%s}\"$0))"
     ]
   },
-  "xwr": {
-    "prefix": "xwr",
+  "x-wr": {
+    "prefix": "x-wr",
     "body": [
       "io.write($0)"
     ]
   },
-  "xwrs": {
-    "prefix": "xwrs",
+  "x-wrs": {
+    "prefix": "x-wrs",
     "body": [
       "io.write(\"$0\")"
     ]
   },
-  "xwrf": {
-    "prefix": "xwrf",
+  "x-wrf": {
+    "prefix": "x-wrf",
     "body": [
       "io.write(string.format(\"${1:%s}\"$0))"
     ]
   },
-  "xfwr": {
-    "prefix": "xfwr",
+  "x-fwr": {
+    "prefix": "x-fwr",
     "body": [
       "io.${1:stderr}:write($0)"
     ]
   },
-  "xfwrs": {
-    "prefix": "xfwrs",
+  "x-fwrs": {
+    "prefix": "x-fwrs",
     "body": [
       "io.${1:stderr}:write(\"$0\")"
     ]
   },
-  "xfwrf": {
-    "prefix": "xfwrf",
+  "x-fwrf": {
+    "prefix": "x-fwrf",
     "body": [
       "io.${1:stderr}:write(string.format(\"${2:%s}\"$0))"
     ]
   },
-  "xim": {
-    "prefix": "xim",
+  "x-im": {
+    "prefix": "x-im",
     "body": [
       "import \"${1:import file}\""
     ],

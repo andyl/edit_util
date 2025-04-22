@@ -1,96 +1,96 @@
 {
-  "xsh": {
-    "prefix": "xsh",
+  "x-sh": {
+    "prefix": "x-sh",
     "body": [
       "#!/bin/sh"
     ],
     "description": "Shebang line"
   },
-  "xs#!": {
-    "prefix": "xs#!",
+  "x-s#!": {
+    "prefix": "x-s#!",
     "body": [
       "#!/bin/sh",
       "set -eu"
     ],
     "description": "Shebang line"
   },
-  "xsafe": {
-    "prefix": "xsafe",
+  "x-safe": {
+    "prefix": "x-safe",
     "body": [
       "set -eu"
     ]
   },
-  "xbash": {
-    "prefix": "xbash",
+  "x-bash": {
+    "prefix": "x-bash",
     "body": [
       "#!/usr/bin/env bash"
     ]
   },
-  "xsbash": {
-    "prefix": "xsbash",
+  "x-sbash": {
+    "prefix": "x-sbash",
     "body": [
       "#!/usr/bin/env bash",
       "set -euo pipefail",
       "IFS=$'\\n\\t'"
     ]
   },
-  "xif": {
-    "prefix": "xif",
+  "x-if": {
+    "prefix": "x-if",
     "body": [
       "if [ $1 ]; then",
       "\t${0:${VISUAL}}",
       "fi"
     ]
   },
-  "xelif": {
-    "prefix": "xelif",
+  "x-elif": {
+    "prefix": "x-elif",
     "body": [
       "elif [ $1 ]; then",
       "\t${0:${VISUAL}}"
     ]
   },
-  "xfor": {
-    "prefix": "xfor",
+  "x-for": {
+    "prefix": "x-for",
     "body": [
       "for (( ${2:i} = 0; $2 < ${1:count}; $2++ )); do",
       "\t${0:${VISUAL}}",
       "done"
     ]
   },
-  "xfori": {
-    "prefix": "xfori",
+  "x-fori": {
+    "prefix": "x-fori",
     "body": [
       "for ${1:needle} in ${2:haystack} ; do",
       "\t${0:${VISUAL}}",
       "done"
     ]
   },
-  "xwh": {
-    "prefix": "xwh",
+  "x-wh": {
+    "prefix": "x-wh",
     "body": [
       "while [ $1 ]; do",
       "\t${0:${VISUAL}}",
       "done"
     ]
   },
-  "xwht": {
-    "prefix": "xwht",
+  "x-wht": {
+    "prefix": "x-wht",
     "body": [
       "while true; do",
       "\t${0:${VISUAL}}",
       "done"
     ]
   },
-  "xuntil": {
-    "prefix": "xuntil",
+  "x-until": {
+    "prefix": "x-until",
     "body": [
       "until [ $1 ]; do",
       "\t${0:${VISUAL}}",
       "done"
     ]
   },
-  "xcase": {
-    "prefix": "xcase",
+  "x-case": {
+    "prefix": "x-case",
     "body": [
       "case ${1:word} in",
       "\t${2:pattern})",
@@ -98,8 +98,8 @@
       "esac"
     ]
   },
-  "xgo": {
-    "prefix": "xgo",
+  "x-go": {
+    "prefix": "x-go",
     "body": [
       "while getopts '${1:o}' ${2:opts}",
       "do",
@@ -110,14 +110,14 @@
       "done"
     ]
   },
-  "xsdir": {
-    "prefix": "xsdir",
+  "x-sdir": {
+    "prefix": "x-sdir",
     "body": [
       "SCRIPT_DIR=\"\\$( cd \"\\$( dirname \"\\${BASH_SOURCE[0]}\" )\" && pwd )\""
     ]
   },
-  "xgetopt": {
-    "prefix": "xgetopt",
+  "x-getopt": {
+    "prefix": "x-getopt",
     "body": [
       "__ScriptVersion=\"${1:version}\"",
       "#===  FUNCTION  ================================================================",
@@ -146,22 +146,22 @@
       "shift \\$(($OPTIND-1))"
     ]
   },
-  "xroot": {
-    "prefix": "xroot",
+  "x-root": {
+    "prefix": "x-root",
     "body": [
       "if [ \\$(id -u) -ne 0 ]; then exec sudo \\$0; fi"
     ]
   },
-  "xfun-sh": {
-    "prefix": "xfun-sh",
+  "x-fun-sh": {
+    "prefix": "x-fun-sh",
     "body": [
       "${1:function_name}() {",
       "\t$0",
       "}"
     ]
   },
-  "xfun": {
-    "prefix": "xfun",
+  "x-fun": {
+    "prefix": "x-fun",
     "body": [
       "function ${1:function_name}() {",
       "\t$0",
