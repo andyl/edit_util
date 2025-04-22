@@ -40,8 +40,8 @@ local opts = {
         lsp = {
           name = "LSP",
           module = "blink.cmp.sources.lsp",
-          max_items = 5,
-          min_keyword_length = 3,
+          max_items = 10,
+          min_keyword_length = 2,
           score_offset = 100,
         },
         path = {
