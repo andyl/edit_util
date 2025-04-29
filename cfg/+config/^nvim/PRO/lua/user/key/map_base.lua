@@ -48,9 +48,9 @@ local function zdir(direction)
   return { desc = text }
 end
 
-keymap("n", "<C-f>", "g_<C-x>",       zdir("decrement")) -- move date forward
+keymap("n", "<C-i>", "g_<C-x>",       zdir("decrement")) -- move date in
 keymap("n", "<C-o>", "g_<C-a>",       zdir("increment")) -- move date out
-keymap("i", "<C-f>", "<esc>g_<C-x>a", zdir("decrement")) -- move date forward
+keymap("i", "<C-i>", "<esc>g_<C-x>a", zdir("decrement")) -- move date in
 keymap("i", "<C-o>", "<esc>g_<C-a>a", zdir("increment")) -- move date out
 
 -- SEARCH HIGHLIGHT
