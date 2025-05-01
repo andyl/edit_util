@@ -34,7 +34,7 @@ local opts1 =   {
     { "\\g", group = "GoTo Definition"                                                  },
     { "\\ge", ":lua vim.lsp.buf.definition()<cr>",                desc = "Current Pane" },
     { "\\gs", ":split | lua vim.lsp.buf.definition()<cr>",        desc = "Split"        },
-    { "\\gt", ":vsplit | lua vim.lsp.buf.definition()<cr><C-W>T", desc = "Tab"          },
+    { "\\gt", ":TabnewWithCursorAndJump<cr>",                     desc = "Tab"          },
     { "\\gv", ":vsplit | lua vim.lsp.buf.definition()<cr>",       desc = "Vsplit"       },
 
     { "\\i", group = "Insert"                                       },

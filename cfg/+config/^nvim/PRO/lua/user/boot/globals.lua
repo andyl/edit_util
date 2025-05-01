@@ -89,6 +89,22 @@ Timestamp = function()
   return os.date("%Y-%m-%d_%H:%M:%S")
 end
 
+-- HELPER
+
+-- in vim, use `:TabnewWithCursor<cr>`
+vim.api.nvim_create_user_command('TabnewWithCursor', function()
+  local save_pos = vim.api.nvim_win_get_cursor(0)
+  vim.cmd('tabnew %')
+  vim.api.nvim_win_set_cursor(0, save_pos)
+end, {})
+
+vim.api.nvim_create_user_command('TabnewWithCursorAndJump', function()
+  local save_pos = vim.api.nvim_win_get_cursor(0)
+  vim.cmd('tabnew %')
+  vim.api.nvim_win_set_cursor(0, save_pos)
+  vim.lsp.buf.definition()
+end, {})
+
 -- YAML SCHEMA
 
 -- GetSchema = function()

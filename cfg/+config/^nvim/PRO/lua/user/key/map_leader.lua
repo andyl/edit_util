@@ -99,7 +99,7 @@ local opts1 =  {
     { "<leader>th", ":tabprev<cr>",                     desc = "Jump Left"                       },
     { "<leader>tl", ":tabnext<cr>",                     desc = "Jump Right"                      },
     { "<leader>tn", ":tabnew<cr>",                      desc = "New"                             },
-    { "<leader>to", ":tabnew %<cr>",                    desc = "Open pane in New Tab"            },
+    { "<leader>to", ":TabnewWithCursor<cr>",            desc = "Open pane in New Tab"            },
     { "<leader>tx", ":tabclose<cr>",                    desc = "Close"                           },
 
     { "<leader>v", ":vsp<cr>", desc = "Pane Vsplit" },
