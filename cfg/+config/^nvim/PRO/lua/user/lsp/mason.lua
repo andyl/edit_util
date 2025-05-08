@@ -64,7 +64,7 @@ end
 local function cfg_servers()
   local configured = {}
   for _, server in ipairs(server_list) do
-    if server.config then
+    if server.cfg then
       table.insert(configured, server.name)
     end
   end
@@ -74,7 +74,7 @@ end
 local function apply_server_config(server_name)
   local tgt  = "user.lsp.lang." .. server_name
   local opts = require(tgt)
-  vim.lsp.config(server_name, opts)
+  require('lspconfig')[server_name].setup(opts)
 end
 
 require('mason').setup()
@@ -84,5 +84,4 @@ for _, server in ipairs(cfg_servers()) do
 end
 
 require('mason-lspconfig').setup { ensure_installed = all_servers() }
-require('mason-lspconfig').setup()
 
