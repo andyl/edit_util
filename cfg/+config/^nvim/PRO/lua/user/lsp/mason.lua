@@ -1,4 +1,5 @@
 -- mason
+--
 
 -- :help mason-commands
 -- :help lsp-config
@@ -32,43 +33,56 @@
 -- SERVER NAMES
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 
-local servers = {
-  "bashls",        -- bash
-  "dockerls",      -- dockerfile
-  "elixirls",      -- elixir
-  "emmet_ls",      -- emmet
-  "gopls",         -- golang
-  "html",          -- html
-  "jsonls",        -- json
-  "lua_ls",        -- lua
-  "marksman",      -- markdown
-  "rust_analyzer", -- rust
-  "solargraph",    -- ruby
-  "sqlls",         -- sql
-  "terraformls",   -- hashicorp terraform/hcl
-  "tailwindcss",   -- tailwind
-  "ts_ls",         -- javascript and typescript (does this work?)
-  "yamlls",        -- yaml
-  "zls",           -- zig
+local server_list = {
+  { name = "bashls",        cfg = false }, -- bash
+  { name = "dockerls",      cfg = false }, -- dockerfile
+  { name = "elixirls",      cfg = true  }, -- elixir
+  { name = "emmet_ls",      cfg = true  }, -- emmet
+  { name = "gopls",         cfg = false }, -- golang
+  { name = "html",          cfg = false }, -- html
+  { name = "jsonls",        cfg = true  }, -- json
+  { name = "lua_ls",        cfg = true  }, -- lua
+  { name = "marksman",      cfg = false }, -- markdown
+  { name = "rust_analyzer", cfg = false }, -- rust
+  { name = "solargraph",    cfg = false }, -- ruby
+  { name = "sqlls",         cfg = false }, -- sql
+  { name = "terraformls",   cfg = false }, -- hashicorp terraform/hcl
+  { name = "tailwindcss",   cfg = true  }, -- tailwind
+  { name = "ts_ls",         cfg = false }, -- javascript and typescript (does this work?)
+  { name = "yamlls",        cfg = true  }, -- yaml
+  { name = "zls",           cfg = false }, -- zig
 }
 
-local function server_config(server)
-  local tgt  = "user.lsp.lang." .. server
+local function all_servers()
+  local names = {}
+  for _, server in ipairs(server_list) do
+    table.insert(names, server.name)
+  end
+  return names
+end
+
+local function cfg_servers()
+  local configured = {}
+  for _, server in ipairs(server_list) do
+    if server.config then
+      table.insert(configured, server.name)
+    end
+  end
+  return configured
+end
+
+local function apply_server_config(server_name)
+  local tgt  = "user.lsp.lang." .. server_name
   local opts = require(tgt)
-  require("lspconfig")[server].setup(opts)
+  vim.lsp.config(server_name, opts)
 end
 
 require('mason').setup()
-require('mason-lspconfig').setup { ensure_installed = servers }
-require('mason-lspconfig').setup_handlers {
-  function(server_name)  -- default handler sets up all servers
-    require("lspconfig")[server_name].setup({})
-  end,
-  ["elixirls"]    = function() server_config("elixirls") end,
-  ["emmet_ls"]    = function() server_config("emmet_ls") end,
-  ["jsonls"]      = function() server_config("jsonls") end,
-  ["lua_ls"]      = function() server_config("lua_ls") end,
-  ["tailwindcss"] = function() server_config("tailwindcss") end,
-  ["yamlls"]      = function() server_config("yamlls") end,
-}
+
+for _, server in ipairs(cfg_servers()) do
+  apply_server_config(server)
+end
+
+require('mason-lspconfig').setup { ensure_installed = all_servers() }
+require('mason-lspconfig').setup()
 
