@@ -41,20 +41,6 @@ KmT("<C-Down>", "<C-\\><C-n>:call BarDown(2)<cr>A")
 KmT("<C-Left>", "<C-\\><C-n>:call BarLeft(2)<cr>")
 KmT("<C-Right>", "<C-\\><C-n>:call BarRight(2)<cr>A")
 
--- DATE INCREMENT/DECREMENT (SPEEDDATING)
-
-local function zdir(direction)
-  local text = "Move to last non-blank and " .. direction
-  return { desc = text }
-end
-
--- 2025 May 26 Mon
-
-keymap("n", "<M-u>", "g_<C-x>",       zdir("decrement")) -- move date up
-keymap("n", "<M-o>", "g_<C-a>",       zdir("increment")) -- move date out
-keymap("i", "<M-u>", "<esc>g_<C-x>a", zdir("decrement")) -- move date up
-keymap("i", "<M-o>", "<esc>g_<C-a>a", zdir("increment")) -- move date out
-
 -- SEARCH HIGHLIGHT
 
 -- turn off hlsearch
