@@ -48,6 +48,8 @@ local function zdir(direction)
   return { desc = text }
 end
 
+-- 2025 May 26 Mon
+
 keymap("n", "<M-u>", "g_<C-x>",       zdir("decrement")) -- move date up
 keymap("n", "<M-o>", "g_<C-a>",       zdir("increment")) -- move date out
 keymap("i", "<M-u>", "<esc>g_<C-x>a", zdir("decrement")) -- move date up

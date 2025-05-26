@@ -26,9 +26,6 @@ endfunction
 " call function before saving
 autocmd BufWritePre *.lua,*.ex,*.exs,*.rb,*.erb :call StripTrailingWhitespaces()
 
-" " === SPEED DATING
-" autocmd BufRead,BufNewFile *.md      1SpeedDatingFormat %Y %h %d %i
-
 " === FILE MODES
 autocmd BufRead,BufNewFile *.thor    set filetype=ruby
 autocmd BufRead,BufNewFile *.gtd     set filetype=gtd
