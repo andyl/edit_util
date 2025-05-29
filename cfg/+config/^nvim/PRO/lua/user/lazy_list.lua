@@ -58,7 +58,7 @@ local opts = {
 	"crispgm/nvim-tabline",               -- tab line
 	-- INCREMENT/DECREMENT (C-a/C-x)
 	"tpope/vim-speeddating",              -- increment/decrement dates
-	"triglav/vim-visual-increment",       -- visual selection - block of numbers
+	-- "triglav/vim-visual-increment",       -- visual selection - block of numbers
 	-- EDITING UTILS
 	require("user.lazy.edit_table_mode"), -- vim table mode
 	require("user.lazy.edit_easy_align"), -- column alignment

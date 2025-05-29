@@ -23,4 +23,4 @@ keymap("i", "<M-u>", "<esc>g_<C-x>a", zdir("decrement")) -- move date up
 keymap("i", "<M-o>", "<esc>g_<C-a>a", zdir("increment")) -- move date out
 
 -- try it!
--- 2025 May 28 Wed
+-- 2025 May 29 Thu
