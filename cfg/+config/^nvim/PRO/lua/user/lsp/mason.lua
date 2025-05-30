@@ -83,5 +83,5 @@ for _, server in ipairs(cfg_servers()) do
   apply_server_config(server)
 end
 
--- require('mason-lspconfig').setup { ensure_installed = all_servers() }
+require('mason-lspconfig').setup { ensure_installed = all_servers() }
 
