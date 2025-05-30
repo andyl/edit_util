@@ -40,7 +40,8 @@ local opts1 =   {
     { "\\i", group = "Insert"                                       },
     { "\\id", ":r !w_date_tag<cr>kJA",   desc = "Date"              },
     { "\\iq", ":r !w_time_qhour<cr>kJA", desc = "Quarter-hour Time" },
-    { "\\it", ":r !w_time_exact<cr>kJA", desc = "Exact Time"        },
+    { "\\is", ":r !w_time_stamp<cr>kJA", desc = "Time stamp"        },
+    { "\\it", ":r !w_time_exact<cr>kJA", desc = "Second Time"       },
 
     { "\\o", group = "Obsidian"                 },
     { "\\oo", ":! obs %<cr><cr>", desc = "Open" },
@@ -71,7 +72,8 @@ local opts2 =  {
       { "\\i", group = "Insert"                                            },
       { "\\id", "<esc>:r !w_date_tag<cr>kJA",   desc = "Date"              },
       { "\\iq", "<esc>:r !w_time_qhour<cr>kJA", desc = "Quarter-hour Time" },
-      { "\\it", "<esc>:r !w_time_exact<cr>kJA", desc = "Exact Time"        },
+      { "\\is", "<esc>:r !w_time_stamp<cr>kJA", desc = "Time stamp"        },
+      { "\\it", "<esc>:r !w_time_exact<cr>kJA", desc = "Second Time"       },
     },
   }
 
