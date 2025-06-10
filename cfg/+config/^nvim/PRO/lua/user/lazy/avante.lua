@@ -10,12 +10,13 @@ local lcl_opts = {
   lazy = false,
   version = false, -- pull the latest change
   opts = {
-    provider = "gemini",
-    gemini = {
-      model = "gemini-2.5-pro-exp-03-25"
-    },
-    ollama = {
-      model = "mistral:latest",
+    providers = {
+      gemini = {
+        model = "gemini-2.5-pro-exp-03-25"
+      },
+      ollama = {
+        model = "mistral:latest",
+      },
     },
     behaviour = {
       auto_suggestion = false,
