@@ -12,5 +12,10 @@ augroup rust_shebang
   autocmd!
   autocmd BufRead * if getline(1) =~ '^#!.*\vrust-script' | setfiletype rust | endif
 augroup END
+
+augroup python_uv_shebang
+  autocmd!
+  autocmd BufRead * if getline(1) =~ '^#!.*uv run.*--script' | setfiletype python | endif
+augroup END
 ]])
 
