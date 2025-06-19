@@ -43,7 +43,7 @@ local server_list = {
   { name = "jsonls",        cfg = true  }, -- json
   { name = "lua_ls",        cfg = true  }, -- lua
   { name = "marksman",      cfg = false }, -- markdown
-  -- { name = "rust_analyzer", cfg = false }, -- rust
+  { name = "pyright",       cfg = false }, -- pyright
   { name = "solargraph",    cfg = false }, -- ruby
   { name = "sqlls",         cfg = false }, -- sql
   { name = "terraformls",   cfg = false }, -- hashicorp terraform/hcl
