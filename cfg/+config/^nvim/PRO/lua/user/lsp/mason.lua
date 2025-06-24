@@ -38,7 +38,7 @@ local server_list = {
   { name = "dockerls",      cfg = false }, -- dockerfile
   { name = "elixirls",      cfg = false }, -- elixir
   { name = "emmet_ls",      cfg = true  }, -- emmet
-  { name = "gopls",         cfg = false }, -- golang
+  -- { name = "gopls",         cfg = false }, -- golang
   { name = "html",          cfg = false }, -- html
   { name = "jsonls",        cfg = true  }, -- json
   { name = "lua_ls",        cfg = true  }, -- lua
