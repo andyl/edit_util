@@ -36,9 +36,12 @@ local opts = {
   require("user.lazy.cmp.core"),        -- blink.cmp
   -- SESSIONS
   require("user.lazy.auto_session"),    -- automatic sessions
+  -- AI Tooling
+  require("user.lazy.aider"),           -- aider
 	-- TELESCOPE
   "nvim-telescope/telescope.nvim",      -- fuzzy finder
 	"axkirillov/easypick.nvim",           -- simple custom telescope pickers
+  -- AI Agents
 	-- NGINX
 	"chr4/nginx.vim",                     -- nginx config files
 	-- DEBUGGING
