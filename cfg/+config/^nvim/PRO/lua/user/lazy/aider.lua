@@ -32,7 +32,7 @@
 -- :bd <number> or :bdelete <number> to close a specific buffer. Replace <number> with the buffer number.
 -- :bufdo bd to close all buffers.
 
-local lcl_opts = {
+local aider_opts = {
   "joshuavial/aider.nvim",
   opts = {
     auto_manage_context = true, -- automatically manage buffer context
@@ -42,4 +42,4 @@ local lcl_opts = {
   },
 }
 
-return lcl_opts
+return aider_opts
