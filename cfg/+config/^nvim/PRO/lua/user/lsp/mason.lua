@@ -44,7 +44,7 @@ local server_list = {
   { name = "lua_ls",        cfg = true  }, -- lua
   { name = "marksman",      cfg = false }, -- markdown
   { name = "pyright",       cfg = true  }, -- python
-  { name = "solargraph",    cfg = false }, -- ruby
+  -- { name = "solargraph",    cfg = false }, -- ruby
   { name = "sqlls",         cfg = false }, -- sql
   { name = "terraformls",   cfg = false }, -- hashicorp terraform/hcl
   { name = "tailwindcss",   cfg = true  }, -- tailwind
