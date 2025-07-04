@@ -8,6 +8,7 @@ local opts = {
     includeLanguages = {
       ["html-eex"] = "html",
       ["phoenix-heex"] = "html",
+      -- ["elixir"] = "html",
       eruby = "html",
     },
   },
@@ -16,6 +17,7 @@ local opts = {
     "scss",
     "sass",
     "html",
+
     -- "elixir",
     -- "eelixir",
     -- "html.heex",
@@ -24,6 +26,7 @@ local opts = {
     -- "html_eex",
     -- "phoenix-heex",
     -- "phoenix_heex",
+
     "javascriptreact",
     "typescriptreact",
     "eruby",
