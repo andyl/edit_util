@@ -49,7 +49,7 @@ local server_list = {
   { name = "terraformls",   cfg = false }, -- hashicorp terraform/hcl
   { name = "tailwindcss",   cfg = true  }, -- tailwind
   { name = "ts_ls",         cfg = false }, -- javascript and typescript (does this work?)
-  { name = "yamlls",        cfg = true  }, -- yaml
+  -- { name = "yamlls",        cfg = true  }, -- yaml
   { name = "zls",           cfg = false }, -- zig
 }
 
