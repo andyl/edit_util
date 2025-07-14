@@ -39,6 +39,7 @@ local opts1 =   {
 
     { "\\i", group = "Insert"                                       },
     { "\\id", ":r !w_date_tag<cr>kJA",   desc = "Date"              },
+    { "\\im", ":r !w_time_min<cr>kJA",   desc = "Minute Time"       },
     { "\\iq", ":r !w_time_qhour<cr>kJA", desc = "Quarter-hour Time" },
     { "\\is", ":r !w_time_stamp<cr>kJA", desc = "Time stamp"        },
     { "\\it", ":r !w_time_exact<cr>kJA", desc = "Second Time"       },
@@ -71,6 +72,7 @@ local opts2 =  {
       mode = { "i" },
       { "\\i", group = "Insert"                                            },
       { "\\id", "<esc>:r !w_date_tag<cr>kJA",   desc = "Date"              },
+      { "\\im", "<esc>:r !w_time_min<cr>kJA",   desc = "Minute Time"       },
       { "\\iq", "<esc>:r !w_time_qhour<cr>kJA", desc = "Quarter-hour Time" },
       { "\\is", "<esc>:r !w_time_stamp<cr>kJA", desc = "Time stamp"        },
       { "\\it", "<esc>:r !w_time_exact<cr>kJA", desc = "Second Time"       },
