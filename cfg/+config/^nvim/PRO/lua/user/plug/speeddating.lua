@@ -32,6 +32,7 @@ keymap("i", "<M-o>", "<esc>g_<C-a>a", zdir("increment")) -- move date out
 -- Fri Dec 31 23:59:59 UTC 2001
 -- 2008-01-05T04:59:59Z
 -- 1865-04-14
+-- 1999-12-31
 -- 11/Sep/01
 -- January 14th, 1983
 -- 11:55 AM

@@ -1,5 +1,7 @@
 -- lsp_tw_tools.lua
 -- https://github.com/luckasRanarison/tailwind-tools.nvim
+--
+-- 2025 Jul 23 Wed - This conflicts with the 'speeddating.nvim' plugin
 
 local opts = {
   "luckasRanarison/tailwind-tools.nvim",
