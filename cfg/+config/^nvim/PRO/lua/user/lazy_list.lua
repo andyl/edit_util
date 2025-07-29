@@ -41,7 +41,6 @@ local opts = {
 	-- TELESCOPE
   "nvim-telescope/telescope.nvim",      -- fuzzy finder
 	"axkirillov/easypick.nvim",           -- simple custom telescope pickers
-  -- AI Agents
 	-- NGINX
 	"chr4/nginx.vim",                     -- nginx config files
 	-- DEBUGGING
@@ -61,6 +60,7 @@ local opts = {
 	require("user.lazy.edit_table_mode"), -- vim table mode
 	require("user.lazy.edit_easy_align"), -- column alignment
 	require("user.lazy.edit_spectre"),    -- project-wide search/replace
+	require("user.lazy.edit_grug"),       -- project-wide search/replace
 	-- SEARCH AND NAV
 	"mileszs/ack.vim",                    -- ACK file search
 	"tpope/vim-projectionist",            -- alternate file nav

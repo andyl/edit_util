@@ -3,39 +3,11 @@
 local opts0 = {
 
   {"-r", "<cmd>lua require('spectre').toggle()<cr>", desc = "Replace across Projects" },
+  {"-g", "<cmd>GrugFar<cr>",                         desc = "Replace across Projects/GF" },
 
 }
 
 WhichKey.add(opts0)
-
--------------------------------------------------------------------------
-
--- local opts1 = {
---   {"-a", group = "Avante"                                         },
---   {"-aa", ":AvanteAsk<cr>",         desc = "Avante Ask"           },
---   {"-ac", ":AvanteChat<cr>",        desc = "Avante Chat"          },
---   {"-ae", ":AvanteEdit<cr>",        desc = "Avante Edit"          },
---   {"-af", ":AvanteFocus<cr>",       desc = "Avante Focus"         },
---   {"-am", ":AvanteModels<cr>",      desc = "Avante Models"        },
---   {"-ar", ":AvanteRefresh<cr>",     desc = "Avante Refresh"       },
---   {"-as", ":AvanteShowRepoMap<cr>", desc = "Avante Show Repo Map" },
---   {"-at", ":AvanteToggle<cr>",      desc = "Avante Toggle"        },
--- }
---
--- WhichKey.add(opts1)
-
--------------------------------------------------------------------------
-
--- local opts2 = {
---   {
---     mode = { "v" },
---
---     {"-a", group = "Avante"                         },
---     {"-ae", ":AvanteEdit<cr>", desc = "Avante Edit" },
---   }
--- }
---
--- WhichKey.add(opts2)
 
 -------------------------------------------------------------------------
 
@@ -47,7 +19,7 @@ end
 -- "aa" defined in `edit_easy_align.lua`
 -- Also see the key definitions in `map_base.lua`
 
-local opts3 = {
+local opts1 = {
   {
     mode = { "v" },
 
@@ -65,5 +37,5 @@ local opts3 = {
  }
 }
 
-WhichKey.add(opts3)
+WhichKey.add(opts1)
 
