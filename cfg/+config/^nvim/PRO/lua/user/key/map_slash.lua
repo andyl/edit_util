@@ -11,12 +11,13 @@ local opts1 =   {
     { "\\ap", ":lua vim.diagnostic.goto_prev()<cr>",         desc = "GotoPrev Diagnostic"      },
     { "\\ar", ":lua vim.lsp.buf.rename()<cr>",               desc = "Rename"                   },
 
+    { "\\d", ":echo expand('%:p:h')<cr>", desc = "Show File Directory" },
+
     { "\\e", group = "Extensions"                         },
     { "\\el", ":Lazy<cr>",  desc = "Lazy Package Manager" },
     { "\\em", ":Mason<cr>", desc = "Mason LSP Manager"    },
 
     { "\\f", group = "LSP Find" },
-
     { "\\fc", group = "Calls"                                                                       },
     { "\\fca", ":lua require'telescope.builtin'.lsp_outgoing_calls()<cr>", desc = "Outgoing"        },
     { "\\fci", ":lua require'telescope.builtin'.lsp_incoming_calls()<cr>", desc = "Incoming"        },
