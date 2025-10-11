@@ -74,7 +74,9 @@ end
 local function apply_server_config(server_name)
   local tgt  = "user.lsp.lang." .. server_name
   local opts = require(tgt)
-  require('lspconfig')[server_name].setup(opts)
+  -- require('lspconfig')[server_name].setup(opts)
+  -- Changed in vim 0.11 (:h lspconfig-nvim-0.11)
+  vim.lsp.config(server_name, opts)
 end
 
 require('mason').setup()
