@@ -35,7 +35,7 @@ local opts = {
 	-- CMP/COMPLETION/SNIPPETS
   require("user.lazy.cmp.core"),        -- blink.cmp
   -- SESSIONS
-  require("user.lazy.auto_session"),    -- automatic sessions
+  -- require("user.lazy.auto_session"),    -- automatic sessions
   -- AI Tooling
   require("user.lazy.aider"),           -- aider
 	-- TELESCOPE
