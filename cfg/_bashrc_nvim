@@ -44,29 +44,37 @@ alias nvl="NV_CMD=nvl NV_APP=nvim/$NV_LZY nvrun"
 ###########################################################################
 # CLIENT / SERVER 
 
-export NVIM_PIPE=/tmp/nvim-server.pipe
+export NVIM_SERVER_PIPE=/tmp/nvim-server-pipe
+export NVIM_SERVER_CWD=/tmp/nvim-server-cwd
 
 nvserver() {
-    local pipe="$NVIM_PIPE"
+    local server_pipe="$NVIM_SERVER_PIPE"
+    local server_cwd="$NVIM_SERVER_CWD"
 
     # Kill any existing nvim server using this pipe (if any)
-    if nvim --server "$pipe" --remote-send '<C-\><C-n>:qall<CR>' 2>/dev/null; then
+    if nvim --server "$server_pipe" --remote-send '<C-\><C-n>:qall<CR>' 2>/dev/null; then
         echo "Closed previous nvim server gracefully"
         sleep 0.2   # give it a moment to release the pipe
     fi
 
     # Force-remove the pipe file if it still exists (stale socket)
-    rm -f "$pipe"
+    rm -f "$server_pipe" "$server_cwd"
 
     # Start fresh headless server in the background
-    nvim --headless --listen "$pipe" &>/dev/null &
+    pwd > "$server_cwd"
+    local LPWD=$(printf %q "$PWD")
+    nvim --headless --listen "$pipe" -c "cd $LPWD" &>/dev/null &
     disown
 
     echo "New shared nvim server started → $pipe"
+    echo "CWD: $PWD"
     echo "Connect with: nvclient"
 }
 
-alias nvclient="nv --server $NVIM_PIPE"
+nvclient() { 
+  test -f "$NVIM_SERVER_CWD" && cd "$(cat "$NVIM_SERVER_CWD")";
+  nv --server $NVIM_SERVER_PIPE
+}
 
 ###########################################################################
 # GOTO
