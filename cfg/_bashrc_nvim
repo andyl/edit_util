@@ -44,8 +44,29 @@ alias nvl="NV_CMD=nvl NV_APP=nvim/$NV_LZY nvrun"
 ###########################################################################
 # CLIENT / SERVER 
 
-alias nvserver="nv --listen /tmp/nvim-server"
-alias nvclient="nv --remote-ui"
+export NVIM_PIPE=/tmp/nvim-server.pipe
+
+nvserver() {
+    local pipe="$NVIM_PIPE"
+
+    # Kill any existing nvim server using this pipe (if any)
+    if nvim --server "$pipe" --remote-send '<C-\><C-n>:qall<CR>' 2>/dev/null; then
+        echo "Closed previous nvim server gracefully"
+        sleep 0.2   # give it a moment to release the pipe
+    fi
+
+    # Force-remove the pipe file if it still exists (stale socket)
+    rm -f "$pipe"
+
+    # Start fresh headless server in the background
+    nvim --headless --listen "$pipe" &>/dev/null &
+    disown
+
+    echo "New shared nvim server started → $pipe"
+    echo "Connect with: nvclient"
+}
+
+alias nvclient="nv --server $NVIM_PIPE"
 
 ###########################################################################
 # GOTO
