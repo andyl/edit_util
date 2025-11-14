@@ -80,17 +80,17 @@ local opts = {
     "css", "scss", "sass", "html",
     "ex", "heex", "elixir", "eelixir"
   },
-  root_dir = root_pattern(
-    "./assets/css/app.css",
-    "./assets/js/app.js",
-    "tailwind.config.js",
-    "postcss.config.js",
-    "package.json",
-    "node_modules",
-    "mix.exs",
-    ".git",
-    ".pbase"
-  ),
+  -- root_dir = root_pattern(
+  --   "./assets/css/app.css",
+  --   "./assets/js/app.js",
+  --   "tailwind.config.js",
+  --   "postcss.config.js",
+  --   "package.json",
+  --   "node_modules",
+  --   "mix.exs",
+  --   ".git",
+  --   ".pbase"
+  -- ),
 }
 
 return opts
