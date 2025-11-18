@@ -65,6 +65,7 @@ local opts = {
         invalidTailwindDirective = "error",
         invalidVariant           = "error",
         recommendedVariantOrder  = "warning",
+        suggestCanonicalClasses  = "ignore",
       },
       experimental = {
         -- classRegex = {
