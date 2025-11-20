@@ -37,7 +37,8 @@ local opts = {
   -- SESSIONS
   -- require("user.lazy.auto_session"),    -- automatic sessions
   -- AI Tooling
-  require("user.lazy.aider"),           -- aider
+  require("user.lazy.ai_aider"),       -- aider
+  require("user.lazy.ai_claude"),      -- claude code
 	-- TELESCOPE
   "nvim-telescope/telescope.nvim",      -- fuzzy finder
 	"axkirillov/easypick.nvim",           -- simple custom telescope pickers

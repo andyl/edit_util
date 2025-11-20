@@ -27,11 +27,21 @@ local opts1 =  {
 
     { "<leader>b", "<cmd>BlameToggle<cr>", desc = "toggle blame window" },
 
-    { "<leader>c", group = "Commands"                                     },
-    { "<leader>cd", ":lua TermCmd('lazydocker')<cr>", desc = "lazydocker" },
-    { "<leader>cg", ":LazyGit<cr>",                   desc = "lazygit"    },
-    { "<leader>ch", ":lua TermCmd('htop')<cr>",       desc = "htop"       },
-    { "<leader>cn", ":lua TermCmd('ncdu')<cr>",       desc = "ncdu"       },
+    { "<leader>c", group = "Claude"                                                       },
+    { "<leader>cc", "<cmd>ClaudeCode<cr>",            desc = "Toggle"                     },
+    { "<leader>cf", "<cmd>ClaudeCodeFocus<cr>",       desc = "Focus"                      },
+    { "<leader>cr", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume"                     },
+    { "<leader>cC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue"                   },
+    { "<leader>cm", "<cmd>ClaudeCodeSelectModel<cr>", desc = "Select model"               },
+    { "<leader>cb", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer"         },
+    { "<leader>cs", "<cmd>ClaudeCodeSend<cr>",        desc = "Send to Claude", mode = "v" },
+    -- diff mgmt
+    { "<leader>ca", "<cmd>ClaudeCodeDiffAccept<cr>",  desc = "Accept diff"                },
+    { "<leader>cd", "<cmd>ClaudeCodeDiffDeny<cr>",    desc = "Deny diff"                  },
+    -- tree mgmt
+    -- { "<leader>cs", "<cmd>ClaudeCodeTreeAdd<cr>",     desc = "Add file",
+    --   ft = { "NvimTree", "neo-tree", "oil", "minifiles", "netrw" },
+    -- },
 
     { "<leader>d", group = "Debugger"                                                             },
     { "<leader>db", ":lua require('dap').toggle_breakpoint()<cr>",     desc = "toggle breakpoint" },
@@ -89,6 +99,12 @@ local opts1 =  {
     { "<leader>ps", ":! a2ps -c --highlight-level=none --sides=duplex -T 2 --line-numbers=1 --landscape --columns=1 --font-size=9 %<cr>", desc = "Single Landscape" },
 
     { "<leader>q", ":q<cr>", desc = "Pane Quit" },
+
+    { "<leader>r", group = "Run"                                     },
+    { "<leader>rd", ":lua TermCmd('lazydocker')<cr>", desc = "lazydocker" },
+    { "<leader>rg", ":LazyGit<cr>",                   desc = "lazygit"    },
+    { "<leader>rh", ":lua TermCmd('htop')<cr>",       desc = "htop"       },
+    { "<leader>rn", ":lua TermCmd('ncdu')<cr>",       desc = "ncdu"       },
 
     { "<leader>s", ":sp<cr>", desc = "Pane Split" },
 
