@@ -41,6 +41,10 @@ alias nvl="NV_CMD=nvl NV_APP=nvim/$NV_LZY nvrun"
 
 # See also: nvw, catw, nvp, catp, prompt_which in ~/.bashrc_code
 
+alias nv_ide="IDE_MODE=true nv" 
+
+# See also: claude_ide
+
 ###########################################################################
 # CLIENT / SERVER 
 

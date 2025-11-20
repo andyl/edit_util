@@ -15,10 +15,27 @@
 -- :ClaudeCodeSend
 -- etc...
 
+-- Use "IDE Mode" to run claude in a standalone session.
+-- This is useful for working on large 'monolith' projects.
+-- The script `nv_ide` sets `IDE_MODE=true`.
+-- Then you launch claude using `claude --ide`
+-- (use the alias `claude_ide`)
+-- see https://github.com/coder/claudecode.nvim?tab=readme-ov-file#none-no-op-provider
+
+local ide_opts = {
+  terminal = {
+    provider = "none", -- no UI actions; server + tools remain available
+  },
+}
+
+local opts = (os.getenv("IDE_MODE") == "true") and ide_opts or {}
+
 local claude_opts = {
   "coder/claudecode.nvim",
   dependencies = { "folke/snacks.nvim" },
   config = true,
+  opts = opts,
+
   --
   -- KEYS DEFINED IN `map_leader.lua`
   --
