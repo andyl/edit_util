@@ -1,5 +1,9 @@
 -- key/map_leader
 
+local function claudeLabel()
+  return os.getenv("IDE_MODE") == "true" and "ClaudeIDE" or "Claude"
+end
+
 local opts1 =  {
     { "<leader>#", group = "Find Prev"                             },
     { "<leader>#e", ":#",             desc = "Open Prev in Term"   },
@@ -27,21 +31,15 @@ local opts1 =  {
 
     { "<leader>b", "<cmd>BlameToggle<cr>", desc = "toggle blame window" },
 
-    { "<leader>c", group = "Claude"                                                       },
+    { "<leader>c" , group = claudeLabel()                                                 },
     { "<leader>cc", "<cmd>ClaudeCode<cr>",            desc = "Toggle"                     },
     { "<leader>cf", "<cmd>ClaudeCodeFocus<cr>",       desc = "Focus"                      },
     { "<leader>cr", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume"                     },
     { "<leader>cC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue"                   },
-    { "<leader>cm", "<cmd>ClaudeCodeSelectModel<cr>", desc = "Select model"               },
     { "<leader>cb", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer"         },
     { "<leader>cs", "<cmd>ClaudeCodeSend<cr>",        desc = "Send to Claude", mode = "v" },
-    -- diff mgmt
     { "<leader>ca", "<cmd>ClaudeCodeDiffAccept<cr>",  desc = "Accept diff"                },
     { "<leader>cd", "<cmd>ClaudeCodeDiffDeny<cr>",    desc = "Deny diff"                  },
-    -- tree mgmt
-    -- { "<leader>cs", "<cmd>ClaudeCodeTreeAdd<cr>",     desc = "Add file",
-    --   ft = { "NvimTree", "neo-tree", "oil", "minifiles", "netrw" },
-    -- },
 
     { "<leader>d", group = "Debugger"                                                             },
     { "<leader>db", ":lua require('dap').toggle_breakpoint()<cr>",     desc = "toggle breakpoint" },
