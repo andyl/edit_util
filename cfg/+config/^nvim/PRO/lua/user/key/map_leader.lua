@@ -1,8 +1,8 @@
 -- key/map_leader
 
-local function claude_label()
-  return os.getenv("IDE_MODE") == "true" and "ClaudeIDE" or "Claude"
-end
+local is_ide_mode  = function() return os.getenv("IDE_MODE") == "true" end
+local not_ide_mode = function() return not is_ide_mode()              end
+local claude_label = function() return is_ide_mode() and "ClaudeIDE" or "Claude" end
 
 local opts1 =  {
     { "<leader>#", group = "Find Prev"                             },
@@ -31,15 +31,15 @@ local opts1 =  {
 
     { "<leader>b", "<cmd>BlameToggle<cr>", desc = "toggle blame window" },
 
-    { "<leader>c" , group = claude_label()                                                },
-    { "<leader>cc", "<cmd>ClaudeCode<cr>",            desc = "Toggle"                     },
-    { "<leader>cf", "<cmd>ClaudeCodeFocus<cr>",       desc = "Focus"                      },
-    { "<leader>cr", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume"                     },
-    { "<leader>cC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue"                   },
-    { "<leader>cb", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer"         },
-    { "<leader>cs", "<cmd>ClaudeCodeSend<cr>",        desc = "Send to Claude", mode = "v" },
-    { "<leader>ca", "<cmd>ClaudeCodeDiffAccept<cr>",  desc = "Accept diff"                },
-    { "<leader>cd", "<cmd>ClaudeCodeDiffDeny<cr>",    desc = "Deny diff"                  },
+    { "<leader>c" , group = claude_label()                                                 },
+    not_ide_mode() and { "<leader>cc", "<cmd>ClaudeCode<cr>",      desc = "Toggle"         } or nil,
+    not_ide_mode() and { "<leader>cf", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus"          } or nil,
+    not_ide_mode() and { "<leader>cr", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume"   } or nil,
+    not_ide_mode() and { "<leader>cC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue" } or nil,
+    { "<leader>cb", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer"          },
+    { "<leader>cs", "<cmd>ClaudeCodeSend<cr>",        desc = "Send to Claude", mode = "v"  },
+    { "<leader>ca", "<cmd>ClaudeCodeDiffAccept<cr>",  desc = "Accept diff"                 },
+    { "<leader>cd", "<cmd>ClaudeCodeDiffDeny<cr>",    desc = "Deny diff"                   },
 
     { "<leader>d", group = "Debugger"                                                             },
     { "<leader>db", ":lua require('dap').toggle_breakpoint()<cr>",     desc = "toggle breakpoint" },
