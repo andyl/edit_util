@@ -1,7 +1,7 @@
 -- key/map_leader
 
 local is_ide_mode  = function() return os.getenv("IDE_MODE") == "true" end
-local not_ide_mode = function() return not is_ide_mode()              end
+local not_ide_mode = function() return not is_ide_mode() end
 local claude_label = function() return is_ide_mode() and "ClaudeIDE" or "Claude" end
 
 local opts1 =  {
@@ -37,7 +37,6 @@ local opts1 =  {
     not_ide_mode() and { "<leader>cr", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume"   } or nil,
     not_ide_mode() and { "<leader>cC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue" } or nil,
     { "<leader>cb", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer"          },
-    { "<leader>cs", "<cmd>ClaudeCodeSend<cr>",        desc = "Send to Claude", mode = "v"  },
     { "<leader>ca", "<cmd>ClaudeCodeDiffAccept<cr>",  desc = "Accept diff"                 },
     { "<leader>cd", "<cmd>ClaudeCodeDiffDeny<cr>",    desc = "Deny diff"                   },
 
@@ -132,10 +131,12 @@ local opts2 =  {
     {
       mode = { "v" },
 
-      { "<leader>x", group = "CrossCopy", mode = { "v" },                                      },
+      { "<leader>x", group = "CrossCopy", mode = { "v" },                                     },
       { "<leader>xd", 'd:call writefile(split(@1,"\\n"), "/tmp/vimtmp")<cr>', desc = "delete" },
       { "<leader>xy", 'y:call writefile(split(@0,"\\n"), "/tmp/vimtmp")<cr>', desc = "yank"   },
 
+      { "<leader>c" , group = claude_label(), mode = { "v" }              },
+      { "<leader>cs", "<cmd>ClaudeCodeSend<cr>", desc = "Send to Claude"  },
     },
   }
 
