@@ -1,6 +1,6 @@
 -- key/map_leader
 
-local function claudeLabel()
+local function claude_label()
   return os.getenv("IDE_MODE") == "true" and "ClaudeIDE" or "Claude"
 end
 
@@ -31,7 +31,7 @@ local opts1 =  {
 
     { "<leader>b", "<cmd>BlameToggle<cr>", desc = "toggle blame window" },
 
-    { "<leader>c" , group = claudeLabel()                                                 },
+    { "<leader>c" , group = claude_label()                                                },
     { "<leader>cc", "<cmd>ClaudeCode<cr>",            desc = "Toggle"                     },
     { "<leader>cf", "<cmd>ClaudeCodeFocus<cr>",       desc = "Focus"                      },
     { "<leader>cr", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume"                     },
