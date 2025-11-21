@@ -28,13 +28,21 @@ local diff_cfg = {
   }
 }
 
-local ide_cfg = {
+-- Config for IDE usage.  Claude runs in separate terminal.
+local terminal_ide_cfg = {
   terminal = {
     provider = "none", -- no UI actions; server + tools remain available
   },
 }
 
-local terminal_cfg = (os.getenv("IDE_MODE") == "true") and ide_cfg or {}
+-- Config for IDE usage.  Claude runs in nvim session.
+local terminal_inline_cfg = {
+  terminal = {
+    split_width_percentage = 0.50 -- Claude takes 50% of screen width
+  }
+}
+
+local terminal_cfg = (os.getenv("IDE_MODE") == "true") and terminal_ide_cfg or terminal_inline_cfg
 
 local opts = vim.tbl_deep_extend("force", diff_cfg, terminal_cfg)
 
