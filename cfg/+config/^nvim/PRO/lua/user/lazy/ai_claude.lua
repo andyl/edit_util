@@ -22,13 +22,21 @@
 -- (use the alias `claude_ide`)
 -- see https://github.com/coder/claudecode.nvim?tab=readme-ov-file#none-no-op-provider
 
-local ide_opts = {
+local diff_cfg = {
+  diff_opts = {
+    open_in_current_tab = false
+  }
+}
+
+local ide_cfg = {
   terminal = {
     provider = "none", -- no UI actions; server + tools remain available
   },
 }
 
-local opts = (os.getenv("IDE_MODE") == "true") and ide_opts or {}
+local terminal_cfg = (os.getenv("IDE_MODE") == "true") and ide_cfg or {}
+
+local opts = vim.tbl_deep_extend("force", diff_cfg, terminal_cfg)
 
 local claude_opts = {
   "coder/claudecode.nvim",
