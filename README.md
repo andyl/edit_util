@@ -1,4 +1,4 @@
- # Neovim Utilities                                                                                    
+ # Edit Utilities                                                                                    
                                                                                                        
  This repository contains a collection of useful Neovim plugins and configurations, organized into     
  separate directories for each plugin or configuration. The `edit_util` directory contains a number of 
