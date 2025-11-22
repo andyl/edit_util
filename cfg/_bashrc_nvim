@@ -83,9 +83,9 @@ nvclient() {
 ###########################################################################
 # GOTO
 
-alias   gun="pushdp ~/util/nvim_util"
-alias  gunc="pushdp ~/util/nvim_util/cfg"
-alias  gunb="pushdp ~/util/nvim_util/bin"
+alias   gun="pushdp ~/util/edit_util"
+alias  gunc="pushdp ~/util/edit_util/cfg"
+alias  gunb="pushdp ~/util/edit_util/bin"
 
 alias  gnc="pushdp $NV_BASE_CONF/$NV_PRO"
 alias gnca="pushdp $NV_BASE_CONF/$NV_AST"
