@@ -34,10 +34,10 @@ nvrun() {
   TERM=xterm-256color NVIM_APPNAME=$NV_APP nvim $@
 }
 
-alias  nv="NV_CMD=nv  NV_APP=nvim/$NV_PRO nvrun"
-alias nva="NV_CMD=nva NV_APP=nvim/$NV_ALT nvrun"
-alias nvd="NV_CMD=nvd NV_APP=nvim/$NV_DEV nvrun"
-alias nvl="NV_CMD=nvl NV_APP=nvim/$NV_LZY nvrun"
+alias  nv="NV_CMD=nv  NV_APP=edit/$NV_PRO nvrun"
+alias nva="NV_CMD=nva NV_APP=edit/$NV_ALT nvrun"
+alias nvd="NV_CMD=nvd NV_APP=edit/$NV_DEV nvrun"
+alias nvl="NV_CMD=nvl NV_APP=edit/$NV_LZY nvrun"
 
 # See also: nvw, catw, nvp, catp, prompt_which in ~/.bashrc_code
 
