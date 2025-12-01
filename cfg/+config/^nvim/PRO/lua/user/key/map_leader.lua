@@ -39,6 +39,7 @@ local opts1 =  {
     { "<leader>cb", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer"          },
     { "<leader>ca", "<cmd>ClaudeCodeDiffAccept<cr>",  desc = "Accept diff"                 },
     { "<leader>cd", "<cmd>ClaudeCodeDiffDeny<cr>",    desc = "Deny diff"                   },
+    { "<leader>cg", ":echo 'USE <leader>rg'<cr>",     desc = "Run Lazygit"                 },
 
     { "<leader>d", group = "Debugger"                                                             },
     { "<leader>db", ":lua require('dap').toggle_breakpoint()<cr>",     desc = "toggle breakpoint" },
