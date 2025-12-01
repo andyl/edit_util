@@ -17,7 +17,7 @@
 
 | File          | Path                     |
 |---------------|--------------------------|
-| Bashrc        | ~/.bashrc_nvim           |
+| Bashrc        | ~/.bashrc_edit           |
 | Distributions | ~/.config/nvim/README.md |
 
 ## Column Align Test (-c)

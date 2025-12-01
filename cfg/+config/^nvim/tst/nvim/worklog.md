@@ -25,7 +25,7 @@
 
 ## 2022 Jan 30 Sun
 
-- [x] Create `.bashrc_nvim`
+- [x] Create `.bashrc_edit`
 - [x] Found Packer Bug (plugin directory)
 
 ## 2022 Jan 30 Sun

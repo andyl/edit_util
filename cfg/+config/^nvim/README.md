@@ -11,6 +11,6 @@ Alternative neovim configurations.
 
 | File          | Path                       |
 |---------------|----------------------------|
-| Bashrc        | ~/.bashrc_nvim             |
+| Bashrc        | ~/.bashrc_edit             |
 | Distributions | ~/util/nvim_conf/README.md |
 
