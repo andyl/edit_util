@@ -30,7 +30,7 @@ local opts1 = {
     { "-c}", ":EasyAlign }<cr>",   desc = "Column Align Paren"       },
     { "-c,", ":EasyAlign *,<cr>",  desc = "Column Align Comma"       },
     { "-c:", ":EasyAlign :<cr>",   desc = "Column Align Colon"       },
-    { "-c#", ":EasyAlign #<cr>",   desc = "Column Align Hash"        },
+    { "-c#", ":EasyAlign /#/<cr>", desc = "Column Align Hash"        },
     { "-c=", ":EasyAlign =<cr>",   desc = "Column Align Equals"      },
     { "-ci", run_interactive,      desc = "Column Align Interactive" },
 
