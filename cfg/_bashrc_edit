@@ -18,6 +18,8 @@ export NV_AST=ast
 export NV_DEV=dev
 export NV_LZY=lzy
 
+export NVIM_APPNAME=nvim/$NV_PRO
+
 ###########################################################################
 # RUN
 
