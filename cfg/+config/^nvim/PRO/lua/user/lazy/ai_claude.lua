@@ -22,6 +22,7 @@
 -- (use the alias `claude_ide`)
 -- see https://github.com/coder/claudecode.nvim?tab=readme-ov-file#none-no-op-provider
 
+-- Show diffs inline in the claude window, rather than open a neovim diff window
 local diff_cfg = {
   diff_opts = {
     open_in_current_tab = false
