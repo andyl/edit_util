@@ -31,6 +31,10 @@ autocmd BufRead,BufNewFile *.thor    set filetype=ruby
 autocmd BufRead,BufNewFile *.gtd     set filetype=gtd
 autocmd BufRead,BufNewFile *.gta     set filetype=gtd
 
+" === IEx Helper (<esc><enter> to open NVIM session)
+" see https://www.youtube.com/watch?v=nVrH_fhS3cs
+autocmd BufRead tmp.*.erl set filetype=elixir
+
 " === TABLE MODE
 let g:table_mode_corner = '|'
 let g:table_mode_corner_corner = '|'
