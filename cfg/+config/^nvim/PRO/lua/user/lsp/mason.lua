@@ -36,7 +36,8 @@
 local server_list = {
   { name = "bashls",        cfg = false }, -- bash
   { name = "dockerls",      cfg = false }, -- dockerfile
-  { name = "elixirls",      cfg = false }, -- elixir
+  -- { name = "elixirls",      cfg = false }, -- elixir
+  { name = "expert",        cfg = false }, -- elixir | https://expert-lsp.org
   { name = "emmet_ls",      cfg = true  }, -- emmet
   -- { name = "gopls",         cfg = false }, -- golang
   { name = "html",          cfg = false }, -- html
