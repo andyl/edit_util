@@ -4,11 +4,10 @@ local opts = {
   'saghen/blink.cmp',
 
   dependencies = {
-    -- "rafamadriz/friendly-snippets", -- https://github.com/rafamadriz/friendly-snippets
     "moyiz/blink-emoji.nvim",       -- https://github.com/moyiz/blink-emoji.nvim
+    'dbernheisel/hex-cmp',          -- https://github.com/dbernheisel/hex-cmp
   },
 
-  -- release tag to download pre-built binaries
   version = '1.*',
 
   opts = {
@@ -36,7 +35,11 @@ local opts = {
 
     sources = {
       default = { 'snippets', 'lsp', 'path', 'emoji', 'buffer' },
+      per_filetype = {
+        elixir = { inherit_defaults = true, 'hex' },
+      },
       providers = {
+        hex = { name = "hex", module = "hex_cmp", async = true },
         lsp = {
           name = "LSP",
           module = "blink.cmp.sources.lsp",
