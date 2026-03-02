@@ -5,7 +5,6 @@ local opts = {
 
   dependencies = {
     "moyiz/blink-emoji.nvim",       -- https://github.com/moyiz/blink-emoji.nvim
-    'dbernheisel/hex-cmp',          -- https://github.com/dbernheisel/hex-cmp
   },
 
   version = '1.*',
@@ -35,11 +34,7 @@ local opts = {
 
     sources = {
       default = { 'snippets', 'lsp', 'path', 'emoji', 'buffer' },
-      per_filetype = {
-        elixir = { inherit_defaults = true, 'hex' },
-      },
       providers = {
-        hex = { name = "hex", module = "hex_cmp", async = true },
         lsp = {
           name = "LSP",
           module = "blink.cmp.sources.lsp",
