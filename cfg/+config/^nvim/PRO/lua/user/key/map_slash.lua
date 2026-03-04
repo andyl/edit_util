@@ -88,6 +88,9 @@ local opts3 =  {
     {
       mode = { "v" },
 
+      { "\\a", group = "LSP Actions"                                                             },
+      { "\\ac", ":lua vim.lsp.buf.code_action()<cr>",          desc = "Code Action"              },
+
       { "\\s", group = "Sort" },
 
       { "\\sa", group = "Ascending" },
