@@ -82,6 +82,10 @@ end
 
 require('mason').setup()
 
+-- apply on_attach to all servers
+local handlers = require("user.lsp.handlers")
+vim.lsp.config('*', { on_attach = handlers.on_attach })
+
 for _, server in ipairs(cfg_servers()) do
   apply_server_config(server)
 end
