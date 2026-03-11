@@ -69,10 +69,8 @@ local opts = {
 
     -- see https://github.com/dbernheisel/hex-cmp
 
-    vim.notify("OUTER")
     local bufname = vim.api.nvim_buf_get_name(bufnr)
     if bufname:match('mix%.exs$') then
-      vim.notify("INNER")
       require('hex_cmp.hover').attach(bufnr)
     end
 
