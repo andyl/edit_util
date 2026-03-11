@@ -28,13 +28,13 @@ local opts = {
   setup = function()
     local signs = {
       { name = "DiagnosticSignError", text = "" },
-      { name = "DiagnosticSignWarn",  text = "" },
-      { name = "DiagnosticSignHint",  text = "" },
-      { name = "DiagnosticSignInfo",  text = "" },
+      { name = "DiagnosticSignWarn", text = "" },
+      { name = "DiagnosticSignHint", text = "" },
+      { name = "DiagnosticSignInfo", text = "" },
     }
 
     for _, sign in ipairs(signs) do
-      local values = {texthl = sign.name, text = sign.text, numhl = ""}
+      local values = { texthl = sign.name, text = sign.text, numhl = "" }
       vim.fn.sign_define(sign.name, values)
     end
 
@@ -44,8 +44,13 @@ local opts = {
       update_in_insert = true,
       underline = true,
       severity_sort = true,
-      float = {focusable = false, style = "minimal",
-               border = "rounded", header = "", prefix = ""}
+      float = {
+        focusable = false,
+        style = "minimal",
+        border = "rounded",
+        header = "",
+        prefix = ""
+      }
     })
 
     -- local lsp = vim.lsp
@@ -61,6 +66,16 @@ local opts = {
     end
     lsp_keymaps(bufnr)
     lsp_highlight_document(client)
+
+    -- see https://github.com/dbernheisel/hex-cmp
+
+    vim.notify("OUTER")
+    local bufname = vim.api.nvim_buf_get_name(bufnr)
+    if bufname:match('mix%.exs$') then
+      vim.notify("INNER")
+      require('hex_cmp.hover').attach(bufnr)
+    end
+
   end,
 
   -- capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
