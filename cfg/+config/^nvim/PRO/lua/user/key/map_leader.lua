@@ -75,9 +75,11 @@ local opts1 =  {
     { "<leader>fW", "<cmd>Telescope lsp_workplace_symbols<cr>",               desc = "Workplace Symbols"  },
 
     { "<leader>g", group = "Git" },
-    { "<leader>gb", "<cmd>BlameToggle<cr>",                      desc = "toggle blame window" },
-    { "<leader>gr", ":lua require('gitsigns').reset_hunk()<cr>", desc = "reset hunk" },
-    { "<leader>gs", ":lua require('gitsigns').stage_hunk()<cr>", desc = "stage hunk" },
+    { "<leader>gb", "<cmd>BlameToggle<cr>",                          desc = "toggle blame window" },
+    { "<leader>gr", ":lua require('gitsigns').reset_hunk()<cr>",     desc = "reset hunk"          },
+    { "<leader>gs", ":lua require('gitsigns').stage_hunk()<cr>",     desc = "stage hunk"          },
+    { "<leader>gn", ":lua require('gitsigns').nav_hunk('next')<cr>", desc = "next hunk"           },
+    { "<leader>gp", ":lua require('gitsigns').nav_hunk('prev')<cr>", desc = "prev hunk"           },
 
     { "<leader>l", group = "Layout"                                                 },
     { "<leader>le", "<C-w>=",                              desc = "layout equalize" },
