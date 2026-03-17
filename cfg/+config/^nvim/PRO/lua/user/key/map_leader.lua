@@ -4,6 +4,25 @@ local is_ide_mode  = function() return os.getenv("IDE_MODE") == "true" end
 local not_ide_mode = function() return not is_ide_mode() end
 local claude_label = function() return is_ide_mode() and "ClaudeIDE" or "Claude" end
 
+local toggle_split_layout = function()
+  local wins = vim.api.nvim_tabpage_list_wins(0)
+  if #wins ~= 2 then
+    vim.notify("Toggle only works with exactly 2 windows", vim.log.levels.WARN)
+    return
+  end
+
+  -- Simple heuristic: if first window is already full width → it's horizontal
+  local is_horizontal = vim.api.nvim_win_get_width(wins[1]) >= vim.o.columns - 2
+
+  if is_horizontal then
+    -- horizontal → vertical
+    vim.cmd("wincmd t | wincmd H")
+  else
+    -- vertical → horizontal
+    vim.cmd("wincmd t | wincmd K")
+  end
+end
+
 local opts1 =  {
     { "<leader>#", group = "Find Prev"                             },
     { "<leader>#e", ":#",             desc = "Open Prev in Term"   },
@@ -81,12 +100,12 @@ local opts1 =  {
     { "<leader>gn", ":lua require('gitsigns').nav_hunk('next')<cr>", desc = "next hunk"           },
     { "<leader>gp", ":lua require('gitsigns').nav_hunk('prev')<cr>", desc = "prev hunk"           },
 
-    { "<leader>l", group = "Layout"                                                 },
-    { "<leader>le", "<C-w>=",                              desc = "layout equalize" },
-    { "<leader>lr", "<C-w>r",                              desc = "layout rotate"   },
-    { "<leader>ls", "<C-w>J",                              desc = "layout split"    },
-    { "<leader>lv", "<C-w>L",                              desc = "layout vertical" },
-    { "<leader>lw", ":silent !kill -s SIGWINCH $PPID<cr>", desc = "window change"   },
+    { "<leader>l", group = "Layout"                                 },
+    { "<leader>le", "<C-w>=",            desc = "layout equalize"   },
+    { "<leader>lr", "<C-w>r",            desc = "layout rotate"     },
+    { "<leader>ls", "<C-w>J",            desc = "split orientation" },
+    { "<leader>lv", "<C-w>L",            desc = "vert orientation"  },
+    { "<leader>lf", toggle_split_layout, desc = "vert/split flip"   },
 
     { "<leader>m", group = "Markdown"                                   },
     { "<leader>mo", ":MarkdownOpen<CR>",  desc = "preview open"         },
@@ -132,6 +151,8 @@ local opts1 =  {
   }
 
 WhichKey.add(opts1)
+
+
 
 -------------------------------------------------------------------------
 
