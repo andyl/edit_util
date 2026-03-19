@@ -1,9 +1,11 @@
 -- key/map_leader
 
+-- support for Claude integration...
 local is_ide_mode  = function() return os.getenv("IDE_MODE") == "true" end
 local not_ide_mode = function() return not is_ide_mode() end
 local claude_label = function() return is_ide_mode() and "ClaudeIDE" or "Claude" end
 
+-- support for Layout management...
 local toggle_split_layout = function()
   local wins = vim.api.nvim_tabpage_list_wins(0)
   if #wins ~= 2 then
@@ -51,8 +53,8 @@ local opts1 =  {
     { "<leader>b", "<cmd>BlameToggle<cr>", desc = "toggle blame window" },
 
     { "<leader>c" , group = claude_label()                                                 },
-    not_ide_mode() and { "<leader>cc", "<cmd>ClaudeCode<cr>",      desc = "Toggle"         } or nil,
-    not_ide_mode() and { "<leader>cf", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus"          } or nil,
+    not_ide_mode() and { "<leader>cc", "<cmd>ClaudeCode<cr>",            desc = "Toggle"   } or nil,
+    not_ide_mode() and { "<leader>cf", "<cmd>ClaudeCodeFocus<cr>",       desc = "Focus"    } or nil,
     not_ide_mode() and { "<leader>cr", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume"   } or nil,
     not_ide_mode() and { "<leader>cC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue" } or nil,
     { "<leader>cb", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer"          },
