@@ -29,6 +29,7 @@ local opts1 = {
     { "-c|", ":EasyAlign *|<cr>",  desc = "Column Align Table"       },
     { "-c}", ":EasyAlign }<cr>",   desc = "Column Align Paren"       },
     { "-c,", ":EasyAlign *,<cr>",  desc = "Column Align Comma"       },
+    { "-cs", ":EasyAlign*\\ <cr>", desc = "Column Align Space"       },
     { "-c:", ":EasyAlign :<cr>",   desc = "Column Align Colon"       },
     { "-c#", ":EasyAlign /#/<cr>", desc = "Column Align Hash"        },
     { "-c=", ":EasyAlign =<cr>",   desc = "Column Align Equals"      },
