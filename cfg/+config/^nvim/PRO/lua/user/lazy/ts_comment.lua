@@ -4,4 +4,8 @@
 --
 -- https://github.com/folke/ts-comments.nvim
 
-return 'folke/ts-comments.nvim'
+return {
+  "folke/ts-comments.nvim",
+  event = "VeryLazy",
+  opts = {},  -- or your custom config
+}
