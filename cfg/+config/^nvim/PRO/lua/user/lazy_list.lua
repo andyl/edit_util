@@ -19,7 +19,7 @@ local opts = {
 	require("user.lazy.term_tmux"),       -- tmux integration
 	require("user.lazy.term_toggle"),     -- terminal toggle
 	-- NOICE
-	require("user.lazy.msg_noice"),       -- command line & notifications
+	require("user.lazy.msg_noice"),       -- command line & notification wrapper
 	-- GIT
 	require("user.lazy.git_signs"),       -- git change bars
 	require("user.lazy.git_blame"),       -- git blame
@@ -37,7 +37,6 @@ local opts = {
   -- SESSIONS
   -- require("user.lazy.auto_session"),    -- automatic sessions
   -- AI Tooling
-  -- require("user.lazy.ai_aider"),       -- aider
   require("user.lazy.ai_claude"),      -- claude code
 	-- TELESCOPE
   "nvim-telescope/telescope.nvim",      -- fuzzy finder
