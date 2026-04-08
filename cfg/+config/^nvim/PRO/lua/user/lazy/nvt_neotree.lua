@@ -35,6 +35,26 @@ local opts = {
     },
     window = {
       mappings = {
+        ["<cr>"] = {
+          function(state)
+            local node = state.tree:get_node()
+            if node.type == "file" and require("user.util.pdf").is_pdf(node.path) then
+              require("user.util.pdf").open(node.path)
+            else
+              require("neo-tree.sources.filesystem.commands").open(state)
+            end
+          end,
+          desc = "Open (PDF via gopen / SSH)",
+        },
+        ["p"] = {
+          function(state)
+            local node = state.tree:get_node()
+            if node.type == "file" then
+              require("user.util.pdf").open(node.path)
+            end
+          end,
+          desc = "Open PDF via gopen",
+        },
         ["o"] = "open_with_window_picker",
         ["v"] = "vsplit_with_window_picker",
         ["s"] = "split_with_window_picker",

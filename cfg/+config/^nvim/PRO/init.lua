@@ -14,6 +14,7 @@ require "user.lsp"           -- lsp configuration
 require "user.key"           -- keymap setup
 require "user.debug"         -- dap configuration
 require "user.conf"          -- filetype detection and customization
+require "user.util.pdf"      -- :PdfOpen command (SSH-aware)
 
 -- silence all deprecation warnings in neovim
 ---@diagnostic disable-next-line: duplicate-set-field
