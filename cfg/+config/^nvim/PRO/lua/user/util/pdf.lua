@@ -80,6 +80,34 @@ local function run(cmd)
   })
 end
 
+local function ssh_failure_message(target)
+  local host = vim.fn.hostname()
+  return table.concat({
+    "Problem ssh'ing to " .. target .. " from " .. host .. ".",
+    "The remote host cannot reach your workstation over SSH.",
+    "",
+    "To fix, from the " .. host .. " command line run:",
+    "    ssh " .. target,
+    "and accept any host-key / authorization prompt. Then retry :PdfOpen.",
+    "",
+    "(If your workstation is not running sshd or is unreachable at that",
+    "address, set vim.g.pdf_ssh_target to a reachable user@host instead.)",
+  }, "\n")
+end
+
+-- Run `ssh -o BatchMode=yes target true` to verify we can connect without
+-- a password/approval prompt. Calls on_ok() if reachable, on_fail() otherwise.
+local function ssh_preflight(target, on_ok, on_fail)
+  vim.fn.jobstart(
+    { "ssh", "-o", "BatchMode=yes", "-o", "ConnectTimeout=5", target, "true" },
+    {
+      on_exit = function(_, code)
+        if code == 0 then on_ok() else on_fail() end
+      end,
+    }
+  )
+end
+
 -- Open a PDF from the remote side over SSH:
 --   scp the file to <target>:/tmp/nvim-pdf/<basename>
 --   then ssh <target> <opener> <that path>
@@ -94,17 +122,21 @@ local function open_over_ssh(path)
   local remote_dir = "/tmp/nvim-pdf"
   local remote_path = remote_dir .. "/" .. base
 
-  local sh = string.format(
-    "ssh -o BatchMode=yes %s 'mkdir -p %s' && "
-    .. "scp -o BatchMode=yes -q %s %s:%s && "
-    .. "ssh -o BatchMode=yes %s %s",
-    vim.fn.shellescape(target), vim.fn.shellescape(remote_dir),
-    vim.fn.shellescape(path), vim.fn.shellescape(target), vim.fn.shellescape(remote_path),
-    vim.fn.shellescape(target),
-    vim.fn.shellescape(opener_shell(remote_path) .. " >/dev/null 2>&1 &")
-  )
-  notify("opening on " .. target .. ": " .. base)
-  run({ "sh", "-c", sh })
+  ssh_preflight(target, function()
+    local sh = string.format(
+      "ssh %s 'mkdir -p %s' && "
+      .. "scp -q %s %s:%s && "
+      .. "ssh %s %s",
+      vim.fn.shellescape(target), vim.fn.shellescape(remote_dir),
+      vim.fn.shellescape(path), vim.fn.shellescape(target), vim.fn.shellescape(remote_path),
+      vim.fn.shellescape(target),
+      vim.fn.shellescape(opener_shell(remote_path) .. " >/dev/null 2>&1 &")
+    )
+    notify("opening on " .. target .. ": " .. base)
+    run({ "sh", "-c", sh })
+  end, function()
+    notify(ssh_failure_message(target), vim.log.levels.ERROR)
+  end)
 end
 
 function M.open(path)
