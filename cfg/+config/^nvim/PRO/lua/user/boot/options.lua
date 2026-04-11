@@ -1,6 +1,28 @@
 -- neovim options
 --------------------------------------------------------
 
+-- Kill any stale process on port 51700 before starting Neovim
+vim.api.nvim_create_autocmd("VimEnter", {
+  group = vim.api.nvim_create_augroup("ClaudePortCleanup", { clear = true }),
+  once = true,                    -- Run only once at startup
+  callback = function()
+    local port = 51700
+    local cmd = string.format([[
+      if command -v lsof >/dev/null 2>&1; then
+        pid=$(lsof -t -i:%d 2>/dev/null) && kill -9 "$pid" 2>/dev/null || true
+      elif command -v ss >/dev/null 2>&1; then
+        pid=$(ss -tlnp 2>/dev/null | grep ':%d ' | awk '{print $6}' | cut -d, -f2 | cut -d= -f2) && kill -9 "$pid" 2>/dev/null || true
+      fi
+    ]], port, port)
+
+    vim.fn.system(cmd)
+
+    -- Optional: also remove the lock file (recommended)
+    vim.fn.system(string.format("rm -f ~/.claude/ide/%d.lock 2>/dev/null || true", port))
+    vim.fn.system(string.format("rm -f ${XDG_CONFIG_HOME:-$HOME/.config}/claude/ide/%d.lock 2>/dev/null || true", port))
+  end,
+})
+
 -- :options      | interactive sandbox
 -- :help options | help
 

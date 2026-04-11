@@ -44,6 +44,7 @@ local opts = vim.tbl_deep_extend("force", diff_cfg, terminal_cfg)
 local claude_opts = {
   "coder/claudecode.nvim",
   dependencies = { "folke/snacks.nvim" },
+  port = 51700,
   config = true,
   opts = opts,
 }
