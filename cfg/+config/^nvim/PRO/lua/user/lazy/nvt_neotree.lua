@@ -46,7 +46,7 @@ local opts = {
           end,
           desc = "Open (PDF via gopen / SSH)",
         },
-        ["p"] = {
+        ["g"] = {
           function(state)
             local node = state.tree:get_node()
             if node.type == "file" then
