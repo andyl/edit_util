@@ -2,9 +2,9 @@
 
 ## Reference 
 
-| Item             | Path                                           |
-|------------------|------------------------------------------------|
-| Neovim TechTools | ~/util/org/notes/TechTools/Neovim/NeovimMOC.md |
+| Item             | Path                                            |
+|------------------|-------------------------------------------------|
+| Neovim TechTools | ~/vault/org/notes/TechTools/Neovim/NeovimMOC.md |
 
 ## Plugins / Lazy.nvim 
 

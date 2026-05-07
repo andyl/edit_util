@@ -3,13 +3,13 @@
 ~/src/feedex
 ~/src/datacat
 
-~/util/org 
+~/vault/org 
 
 /home/aleak/.config/nvim 
 /home/aleak/.config/nvim/README.md
 
-(~/util/org)
-{~/util/org}
+(~/vault/org)
+{~/vault/org}
 
 ~/.config/nvim 
 
