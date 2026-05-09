@@ -6,6 +6,30 @@ local not_ide_mode = function() return not is_ide_mode() end
 local claude_label = function() return is_ide_mode() and "ClaudeIDE" or "Claude" end
 
 -- support for Layout management...
+local exchange_panes = function()
+  -- Track PaneB (rightmost window) so cursor lands on it after the swap
+  local wins = vim.api.nvim_tabpage_list_wins(0)
+  local target_win = wins[1]
+  local max_col = -1
+  for _, win in ipairs(wins) do
+    local col = vim.api.nvim_win_get_position(win)[2]
+    if col > max_col then
+      max_col = col
+      target_win = win
+    end
+  end
+  local target_buf = vim.api.nvim_win_get_buf(target_win)
+
+  vim.cmd("wincmd x")
+
+  for _, win in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
+    if vim.api.nvim_win_get_buf(win) == target_buf then
+      vim.api.nvim_set_current_win(win)
+      return
+    end
+  end
+end
+
 local toggle_split_layout = function()
   local wins = vim.api.nvim_tabpage_list_wins(0)
   if #wins ~= 2 then
@@ -105,6 +129,7 @@ local opts1 =  {
     { "<leader>l", group = "Layout"                                 },
     { "<leader>le", "<C-w>=",            desc = "layout equalize"   },
     { "<leader>lr", "<C-w>r",            desc = "layout rotate"     },
+    { "<leader>lx", exchange_panes,      desc = "pane exchange"     },
     { "<leader>ls", "<C-w>J",            desc = "split orientation" },
     { "<leader>lv", "<C-w>L",            desc = "vert orientation"  },
     { "<leader>lf", toggle_split_layout, desc = "vert/split flip"   },
