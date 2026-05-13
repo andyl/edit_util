@@ -135,8 +135,8 @@ local opts1 =  {
     { "<leader>lf", toggle_split_layout, desc = "vert/split flip"   },
 
     { "<leader>m", group = "Markdown"                                   },
-    { "<leader>mo", ":MarkdownOpen<CR>",  desc = "preview open"         },
-    { "<leader>mc", ":MarkdownClose<CR>", desc = "preview close"        },
+    { "<leader>mb", ":MarkdownOpen<CR>",  desc = "browser open"         },
+    { "<leader>mo", ":ObsidianOpen<CR>",  desc = "obsidian open"        },
 
     { "<leader>o", ":only<cr>", desc = "Pane Only" },
     { "<leader>O", ":only<cr>:Neotree toggle<cr>", desc = "Pane Only w/Explorer" },
