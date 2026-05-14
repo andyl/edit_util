@@ -134,9 +134,12 @@ local opts1 =  {
     { "<leader>lv", "<C-w>L",            desc = "vert orientation"  },
     { "<leader>lf", toggle_split_layout, desc = "vert/split flip"   },
 
-    { "<leader>m", group = "Markdown"                                   },
-    { "<leader>mb", ":MarkdownOpen<CR>",  desc = "browser open"         },
-    { "<leader>mo", ":ObsidianOpen<CR>",  desc = "obsidian open"        },
+    { "<leader>m",  group = "Markdown"                                            },
+    { "<leader>mb", ":MarkdownOpen<CR>",            desc = "browser open"         },
+    { "<leader>mo", ":ObsidianOpen<CR>",            desc = "obsidian open"        },
+    { "<leader>md", ":RenderMarkdown disable<CR>",  desc = "disable rendering"    },
+    { "<leader>me", ":RenderMarkdown enable<CR>",   desc = "enable rendering"     },
+    { "<leader>mt", ":RenderMarkdown toggle<CR>",   desc = "toggle rendering"     },
 
     { "<leader>o", ":only<cr>", desc = "Pane Only" },
     { "<leader>O", ":only<cr>:Neotree toggle<cr>", desc = "Pane Only w/Explorer" },

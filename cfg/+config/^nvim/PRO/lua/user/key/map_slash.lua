@@ -45,9 +45,6 @@ local opts1 =   {
     { "\\is", ":r !w_time_stamp<cr>kJA", desc = "Time stamp"        },
     { "\\it", ":r !w_time_exact<cr>kJA", desc = "Second Time"       },
 
-    { "\\o", group = "Obsidian"                 },
-    { "\\oo", ":! obs %<cr><cr>", desc = "Open" },
-
     { "\\t", group = "Terminal"                                      },
     { "\\tf", "<cmd>ToggleTerm direction=float<cr>", desc = "Float"  },
     { "\\ts", ":split | terminal<cr>A",              desc = "Split"  },

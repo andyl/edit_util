@@ -83,6 +83,7 @@ local opts = {
 	-- MARKDOWN / OBSIDIAN
 	require("user.lazy.md_peek"),         -- markdown peek
 	require("user.lazy.md_bullets"),      -- markdown bullets
+  require("user.lazy.md_render"),       -- polished markdown rendering
 	-- COLORSCHEMES
 	"junegunn/seoul256.vim",              -- seoul256
 	"NLKNguyen/papercolor-theme",         -- PaperColor
