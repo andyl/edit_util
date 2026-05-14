@@ -5,6 +5,23 @@ local is_ide_mode  = function() return os.getenv("IDE_MODE") == "true" end
 local not_ide_mode = function() return not is_ide_mode() end
 local claude_label = function() return is_ide_mode() and "ClaudeIDE" or "Claude" end
 
+-- support for toggling markdown quote functions
+
+local toggle_quote_line = function()
+-- use in normal mode (see the keymap below)
+-- operates on just a single line
+-- if the line begins with "> ", remove the leading "> "
+-- if the line does not begin with "> ", add a leading "> "
+end
+
+local toggle_quote_block = function()
+-- use in visual mode (see the keymap below)
+-- operates on the visual block (one or more lines)
+-- if the first line begins with "> ", remove the leading from all lines "> "
+-- if the first line does not begin with "> "
+-- add a leading "> " to all lines that do not have a leading "> "
+end
+
 -- support for Layout management...
 local exchange_panes = function()
   -- Track PaneB (rightmost window) so cursor lands on it after the swap
@@ -134,12 +151,15 @@ local opts1 =  {
     { "<leader>lv", "<C-w>L",            desc = "vert orientation"  },
     { "<leader>lf", toggle_split_layout, desc = "vert/split flip"   },
 
-    { "<leader>m",  group = "Markdown"                                            },
-    { "<leader>mb", ":MarkdownOpen<CR>",            desc = "browser open"         },
-    { "<leader>mo", ":ObsidianOpen<CR>",            desc = "obsidian open"        },
-    { "<leader>md", ":RenderMarkdown disable<CR>",  desc = "disable rendering"    },
-    { "<leader>me", ":RenderMarkdown enable<CR>",   desc = "enable rendering"     },
-    { "<leader>mt", ":RenderMarkdown toggle<CR>",   desc = "toggle rendering"     },
+    { "<leader>m",  group = "Markdown"                                                },
+    { "<leader>mb", ":MarkdownOpen<CR>",               desc = "browser open"          },
+    { "<leader>mo", ":ObsidianOpen<CR>",               desc = "obsidian open"         },
+    { "<leader>md", ":RenderMarkdown disable<CR>",     desc = "disable rendering"     },
+    { "<leader>mD", ":RenderMarkdown buf_disable<CR>", desc = "disable BUF rendering" },
+    { "<leader>me", ":RenderMarkdown enable<CR>",      desc = "enable rendering"      },
+    { "<leader>mE", ":RenderMarkdown buf_enable<CR>",  desc = "enable BUF rendering"  },
+    { "<leader>mt", ":RenderMarkdown toggle<CR>",      desc = "toggle rendering"      },
+    { "<leader>mq", toggle_quote_line,                 desc = "toggle quote"          },
 
     { "<leader>o", ":only<cr>", desc = "Pane Only" },
     { "<leader>O", ":only<cr>:Neotree toggle<cr>", desc = "Pane Only w/Explorer" },
@@ -196,6 +216,9 @@ local opts2 =  {
 
       { "<leader>c" , group = claude_label(), mode = { "v" }              },
       { "<leader>cs", "<cmd>ClaudeCodeSend<cr>", desc = "Send to Claude"  },
+
+      { "<leader>m",  group = "Markdown", mode= { "v" },
+      { "<leader>mq", toggle_quote_block, desc = "toggle quote"          },
     },
   }
 
