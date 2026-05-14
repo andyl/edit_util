@@ -8,18 +8,34 @@ local claude_label = function() return is_ide_mode() and "ClaudeIDE" or "Claude"
 -- support for toggling markdown quote functions
 
 local toggle_quote_line = function()
--- use in normal mode (see the keymap below)
--- operates on just a single line
--- if the line begins with "> ", remove the leading "> "
--- if the line does not begin with "> ", add a leading "> "
+  local line = vim.api.nvim_get_current_line()
+  if line:sub(1, 2) == "> " then
+    vim.api.nvim_set_current_line(line:sub(3))
+  else
+    vim.api.nvim_set_current_line("> " .. line)
+  end
 end
 
 local toggle_quote_block = function()
--- use in visual mode (see the keymap below)
--- operates on the visual block (one or more lines)
--- if the first line begins with "> ", remove the leading from all lines "> "
--- if the first line does not begin with "> "
--- add a leading "> " to all lines that do not have a leading "> "
+  local start_line = vim.fn.line("'<")
+  local end_line = vim.fn.line("'>")
+  local lines = vim.api.nvim_buf_get_lines(0, start_line - 1, end_line, false)
+  if #lines == 0 then return end
+
+  local remove = lines[1]:sub(1, 2) == "> "
+  for i, line in ipairs(lines) do
+    if remove then
+      if line:sub(1, 2) == "> " then
+        lines[i] = line:sub(3)
+      end
+    else
+      if line:sub(1, 2) ~= "> " then
+        lines[i] = "> " .. line
+      end
+    end
+  end
+
+  vim.api.nvim_buf_set_lines(0, start_line - 1, end_line, false, lines)
 end
 
 -- support for Layout management...
