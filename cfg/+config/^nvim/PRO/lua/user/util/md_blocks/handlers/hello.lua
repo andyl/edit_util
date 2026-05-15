@@ -52,7 +52,7 @@ function M.parse(block)
     end
 
     -- Body row: "HELLO <name>" in orange, padded to first-content-line width.
-    local body = 'HELLO ' .. name
+    local body = 'HELLO THERE ' .. name
     local content_line = vim.api.nvim_buf_get_lines(block.buf, content_row, content_row + 1, false)[1] or ''
     local content_width = vim.fn.strdisplaywidth(content_line)
     local body_width = vim.fn.strdisplaywidth(body)
