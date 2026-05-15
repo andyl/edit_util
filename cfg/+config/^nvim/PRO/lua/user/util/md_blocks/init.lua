@@ -7,7 +7,8 @@ local M = { registry = {} }
 
 local query = vim.treesitter.query.parse('markdown', [[
     (fenced_code_block
-        (info_string (language) @lang)
+        (info_string
+            (language) @lang) @info
         (code_fence_content) @content) @block
 ]])
 
@@ -19,8 +20,10 @@ end
 
 ---@class render.md.block_handler.Block
 ---@field buf integer
----@field lang string
----@field content string
+---@field lang string                       language name (first word of info_string)
+---@field info string                       full info_string text (e.g. "hello BingBong")
+---@field ext string                        info_string text after the language, trimmed
+---@field content string                    body text between fences
 ---@field block_node TSNode
 ---@field content_node TSNode
 
@@ -30,16 +33,21 @@ function M.parse(ctx)
     local marks = {}
     for _, match in query:iter_matches(ctx.root, ctx.buf, 0, -1, { all = true }) do
         local lang_node = match[1] and match[1][1]
-        local content_node = match[2] and match[2][1]
-        local block_node = match[3] and match[3][1]
-        if lang_node and content_node and block_node then
+        local info_node = match[2] and match[2][1]
+        local content_node = match[3] and match[3][1]
+        local block_node = match[4] and match[4][1]
+        if lang_node and info_node and content_node and block_node then
             local lang = vim.treesitter.get_node_text(lang_node, ctx.buf)
             local fn = M.registry[lang]
             if fn then
+                local info = vim.treesitter.get_node_text(info_node, ctx.buf)
+                local ext = info:sub(#lang + 1):match('^%s*(.-)%s*$') or ''
                 local content = vim.treesitter.get_node_text(content_node, ctx.buf)
                 local extra = fn({
                     buf = ctx.buf,
                     lang = lang,
+                    info = info,
+                    ext = ext,
                     content = content,
                     block_node = block_node,
                     content_node = content_node,
