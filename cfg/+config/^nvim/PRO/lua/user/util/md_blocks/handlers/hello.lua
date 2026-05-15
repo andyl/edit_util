@@ -3,7 +3,8 @@ local M = {}
 local ICON = '\xef\x81\xb5'      -- nerd-font speech-bubble glyph (U+F075)
 local COLOR_LANG = '#FFA500'     -- orange: icon + language
 local COLOR_EXT = '#FB4934'      -- red: info_string extension
-local COLOR_BODY = '#B8BB26'     -- light green (gruvbox): body text
+local COLOR_BODY = '#8EC07C'     -- gruvbox aqua: body text (matches other code blocks)
+local CTERM_BODY = 108
 local HL_LANG = 'MdBlockHello'
 local HL_EXT = 'MdBlockHelloExt'
 local HL_BODY = 'MdBlockHelloBody'
@@ -17,7 +18,7 @@ function M.parse(block)
     local code_bg = vim.api.nvim_get_hl(0, { name = 'RenderMarkdownCode', link = false }).bg
     vim.api.nvim_set_hl(0, HL_LANG, { fg = COLOR_LANG, bg = code_bg })
     vim.api.nvim_set_hl(0, HL_EXT, { fg = COLOR_EXT, bg = code_bg })
-    vim.api.nvim_set_hl(0, HL_BODY, { fg = COLOR_BODY, bg = code_bg })
+    vim.api.nvim_set_hl(0, HL_BODY, { fg = COLOR_BODY, ctermfg = CTERM_BODY, bg = code_bg })
 
     local name = ''
     for line in (block.content .. '\n'):gmatch('([^\n]*)\n') do
