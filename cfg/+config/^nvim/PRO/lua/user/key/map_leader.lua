@@ -17,19 +17,36 @@ local toggle_quote_line = function()
 end
 
 local toggle_quote_block = function()
+  -- Exit visual mode synchronously so '<' and '>' point at the selection
+  -- we were just on, not a stale prior one.
+  local esc = vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
+  vim.api.nvim_feedkeys(esc, "x", false)
+
   local start_line = vim.fn.line("'<")
   local end_line = vim.fn.line("'>")
   local lines = vim.api.nvim_buf_get_lines(0, start_line - 1, end_line, false)
   if #lines == 0 then return end
 
-  local remove = lines[1]:sub(1, 2) == "> "
+  local all_quoted = true
+  local any_content = false
+  for _, line in ipairs(lines) do
+    if line ~= "" then
+      any_content = true
+      if line:sub(1, 2) ~= "> " then
+        all_quoted = false
+        break
+      end
+    end
+  end
+  local remove = any_content and all_quoted
+
   for i, line in ipairs(lines) do
     if remove then
       if line:sub(1, 2) == "> " then
         lines[i] = line:sub(3)
       end
     else
-      if line:sub(1, 2) ~= "> " then
+      if line ~= "" and line:sub(1, 2) ~= "> " then
         lines[i] = "> " .. line
       end
     end
@@ -219,7 +236,6 @@ local opts1 =  {
 WhichKey.add(opts1)
 
 
-
 -------------------------------------------------------------------------
 
 local opts2 =  {
@@ -233,8 +249,8 @@ local opts2 =  {
       { "<leader>c" , group = claude_label(), mode = { "v" }              },
       { "<leader>cs", "<cmd>ClaudeCodeSend<cr>", desc = "Send to Claude"  },
 
-      { "<leader>m",  group = "Markdown", mode= { "v" },
-      { "<leader>mq", toggle_quote_block, desc = "toggle quote"          },
+      { "<leader>m",  group = "Markdown", mode= { "v" }             },
+      { "<leader>mq", toggle_quote_block, desc = "toggle quote"     },
     },
   }
 
