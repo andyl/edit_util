@@ -17,7 +17,10 @@ local function patch_info_string_directive()
 end
 
 local md_blocks = require('user.util.md_blocks')
-md_blocks.register('hello', require('user.util.md_blocks.handlers.hello').parse)
+md_blocks.register('hello', require('user.util.md_blocks.handlers.hello').new({
+    icon = '\xef\x81\xb5', -- nerd-font speech-bubble glyph (U+F075)
+    color = '#FFA500',
+}))
 
 return {
     'MeanderingProgrammer/render-markdown.nvim',
