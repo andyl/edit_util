@@ -6,11 +6,11 @@ Test of custom_handlers for code blocks.
 plain text block 
 ``` 
 
-```hello 
+```hello BingBong
 bingo 
 ``` 
 
-```alt 
+```alt CinderCone
 alt text block 
 ```
 
@@ -22,7 +22,7 @@ BING=bong
 x = 1 
 ```
 
-```python 
+```python SuperPy!
 y = 2 
 ``` 
 
