@@ -3,16 +3,21 @@ local M = {}
 local ICON = '\xef\x81\xb5'      -- nerd-font speech-bubble glyph (U+F075)
 local COLOR_LANG = '#FFA500'     -- orange: icon + language
 local COLOR_EXT = '#FB4934'      -- red: info_string extension
+local COLOR_BODY = '#B8BB26'     -- light green (gruvbox): body text
 local HL_LANG = 'MdBlockHello'
 local HL_EXT = 'MdBlockHelloExt'
+local HL_BODY = 'MdBlockHelloBody'
 
 ---@param block render.md.block_handler.Block
 ---@return render.md.Mark[]
 function M.parse(block)
     -- (Re-)apply highlights at render time so a late-loading colorscheme
-    -- can't strip them.
-    vim.api.nvim_set_hl(0, HL_LANG, { fg = COLOR_LANG })
-    vim.api.nvim_set_hl(0, HL_EXT, { fg = COLOR_EXT })
+    -- can't strip them. Background tracks render-markdown's code-block bg
+    -- so our overlay cells blend into the rest of the painted row.
+    local code_bg = vim.api.nvim_get_hl(0, { name = 'RenderMarkdownCode', link = false }).bg
+    vim.api.nvim_set_hl(0, HL_LANG, { fg = COLOR_LANG, bg = code_bg })
+    vim.api.nvim_set_hl(0, HL_EXT, { fg = COLOR_EXT, bg = code_bg })
+    vim.api.nvim_set_hl(0, HL_BODY, { fg = COLOR_BODY, bg = code_bg })
 
     local name = ''
     for line in (block.content .. '\n'):gmatch('([^\n]*)\n') do
@@ -72,7 +77,7 @@ function M.parse(block)
         start_row = content_row,
         start_col = 0,
         opts = {
-            virt_text = { { body, HL_LANG } },
+            virt_text = { { body, HL_BODY } },
             virt_text_pos = 'overlay',
             priority = 10000,
         },
