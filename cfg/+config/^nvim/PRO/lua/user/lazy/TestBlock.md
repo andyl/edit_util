@@ -2,6 +2,10 @@
 
 Test of custom_handlers for code blocks.
 
+```
+plain text block 
+``` 
+
 ```hello 
 bingo 
 ``` 

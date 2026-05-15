@@ -16,6 +16,9 @@ local function patch_info_string_directive()
     end, { force = true })
 end
 
+local md_blocks = require('user.util.md_blocks')
+md_blocks.register('hello', require('user.util.md_blocks.handlers.hello').parse)
+
 return {
     'MeanderingProgrammer/render-markdown.nvim',
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' },
@@ -23,6 +26,9 @@ return {
     ---@type render.md.UserConfig
     opts = {
       enabled = false,
+      custom_handlers = {
+        markdown = { extends = true, parse = md_blocks.parse },
+      },
     },
     config = function(_, opts)
         patch_info_string_directive()
