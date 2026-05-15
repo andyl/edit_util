@@ -10,6 +10,10 @@ plain text block
 bingo 
 ``` 
 
+```alt 
+alt text block 
+```
+
 ```bash TangoBob
 BING=bong 
 ``` 
