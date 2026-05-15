@@ -2,7 +2,7 @@
 
 Test of custom_handlers for code blocks.
 
-```
+``` Dingdong
 plain text block 
 ``` 
 

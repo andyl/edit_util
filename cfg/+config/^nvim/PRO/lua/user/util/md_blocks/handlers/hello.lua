@@ -8,6 +8,7 @@ local CTERM_BODY = 108
 local HL_LANG = 'MdBlockHello'
 local HL_EXT = 'MdBlockHelloExt'
 local HL_BODY = 'MdBlockHelloBody'
+local HL_SIGN = 'MdBlockHelloSign'
 
 ---@param block render.md.block_handler.Block
 ---@return render.md.Mark[]
@@ -19,6 +20,7 @@ function M.parse(block)
     vim.api.nvim_set_hl(0, HL_LANG, { fg = COLOR_LANG, bg = code_bg })
     vim.api.nvim_set_hl(0, HL_EXT, { fg = COLOR_EXT, bg = code_bg })
     vim.api.nvim_set_hl(0, HL_BODY, { fg = COLOR_BODY, ctermfg = CTERM_BODY, bg = code_bg })
+    vim.api.nvim_set_hl(0, HL_SIGN, { fg = COLOR_LANG })
 
     local name = ''
     for line in (block.content .. '\n'):gmatch('([^\n]*)\n') do
@@ -68,6 +70,20 @@ function M.parse(block)
         opts = {
             virt_text = title_parts,
             virt_text_pos = 'overlay',
+            priority = 10000,
+        },
+    }
+
+    -- Sign column icon. Priority must exceed render-markdown's built-in
+    -- sign (priority 4096), which falls back to the generic file glyph
+    -- when the language has no registered icon.
+    marks[#marks + 1] = {
+        conceal = false,
+        start_row = start_row,
+        start_col = 0,
+        opts = {
+            sign_text = ICON .. ' ',
+            sign_hl_group = HL_SIGN,
             priority = 10000,
         },
     }
