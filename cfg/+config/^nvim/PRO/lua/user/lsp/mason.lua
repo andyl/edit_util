@@ -44,6 +44,7 @@ local server_list = {
   { name = "lua_ls",        cfg = true  }, -- lua
   { name = "marksman",      cfg = false }, -- markdown
   { name = "pyright",       cfg = true  }, -- python
+  { name = "rust-analyzer", cfg = false }, -- rust
   { name = "solargraph",    cfg = false }, -- ruby
   { name = "sqlls",         cfg = false }, -- sql
   { name = "terraformls",   cfg = false }, -- hashicorp terraform/hcl
@@ -51,7 +52,6 @@ local server_list = {
   { name = "ts_ls",         cfg = false }, -- javascript and typescript (does this work?)
   { name = "yamlls",        cfg = true  }, -- yaml
   { name = "zls",           cfg = false }, -- zig
-  -- { name = "elixirls",      cfg = false }, -- elixir
 }
 
 local function all_servers()
