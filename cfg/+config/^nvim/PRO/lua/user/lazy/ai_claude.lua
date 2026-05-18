@@ -49,10 +49,40 @@ local port_opts = {
 
 local opts = vim.tbl_deep_extend("force", diff_cfg, terminal_cfg, port_opts)
 
+-- Workaround for upstream EADDRINUSE bug: claudecode.nvim's port picker only
+-- tests bind(), but libuv's SO_REUSEADDR lets bind succeed against an actively
+-- listening socket. We replace it with a bind+listen probe so concurrent nvim
+-- instances each get a free port.
+local function patch_port_finder()
+  local tcp = require("claudecode.server.tcp")
+  local utils = require("claudecode.server.utils")
+  tcp.find_available_port = function(min_port, max_port)
+    if min_port > max_port then return nil end
+    local ports = {}
+    for i = min_port, max_port do table.insert(ports, i) end
+    utils.shuffle_array(ports)
+    for _, port in ipairs(ports) do
+      local s = vim.loop.new_tcp()
+      if s then
+        local bind_ok = s:bind("127.0.0.1", port)
+        local listen_ok = bind_ok and s:listen(1, function() end)
+        s:close()
+        if bind_ok and listen_ok then
+          return port
+        end
+      end
+    end
+    return nil
+  end
+end
+
 local claude_opts = {
   "coder/claudecode.nvim",
   dependencies = { "folke/snacks.nvim" },
-  config = true,
+  config = function(_, o)
+    patch_port_finder()
+    require("claudecode").setup(o)
+  end,
   opts = opts,
 }
 
