@@ -1,15 +1,33 @@
 -- key/map_slash
 
+local function open_and_focus_diagnostic()
+  -- First, open the float (without stealing focus yet)
+  local float_buf, float_win = vim.diagnostic.open_float(nil, {
+    focusable = true,
+    focus = false,        -- important
+    scope = "cursor",     -- or "line" if you prefer
+    border = "rounded",
+  })
+
+  -- If we got a window, focus it
+  if float_win then
+    vim.api.nvim_set_current_win(float_win)
+  else
+    vim.notify("No diagnostics on this line", vim.log.levels.WARN)
+  end
+end
+
 local opts1 =   {
-    { "\\a", group = "LSP Actions"                                                             },
-    { "\\ac", ":lua vim.lsp.buf.code_action()<cr>",          desc = "Code Action"              },
-    { "\\ad", ":lua vim.lsp.buf.references()<cr>",           desc = "Display References"       },
-    { "\\af", ":lua vim.lsp.buf.format({async = true})<cr>", desc = "Reformat"                 },
-    { "\\ak", ":lua vim.lsp.buf.hover()<cr>",                desc = "Doc Hover"                },
-    { "\\al", ":lua vim.diagnostic.open_float()<cr>",        desc = "Current Line Diagnostics" },
-    { "\\an", ":lua vim.diagnostic.goto_next()<cr>",         desc = "GotoNext Diagnostic"      },
-    { "\\ap", ":lua vim.diagnostic.goto_prev()<cr>",         desc = "GotoPrev Diagnostic"      },
-    { "\\ar", ":lua vim.lsp.buf.rename()<cr>",               desc = "Rename"                   },
+    { "\\a", group = "LSP Actions"                                                                     },
+    { "\\ac", ":lua vim.lsp.buf.code_action()<cr>",          desc = "Code Action"                      },
+    { "\\ad", ":lua vim.lsp.buf.references()<cr>",           desc = "Display References"               },
+    { "\\af", ":lua vim.lsp.buf.format({async = true})<cr>", desc = "Reformat"                         },
+    { "\\ak", ":lua vim.lsp.buf.hover()<cr>",                desc = "Doc Hover"                        },
+    { "\\al", ":lua vim.diagnostic.open_float()<cr>",        desc = "Current Line Diagnostics"         },
+    { "\\aL", open_and_focus_diagnostic,                     desc = "Current Diagnostics w/focus"      },
+    { "\\an", ":lua vim.diagnostic.goto_next()<cr>",         desc = "GotoNext Diagnostic"              },
+    { "\\ap", ":lua vim.diagnostic.goto_prev()<cr>",         desc = "GotoPrev Diagnostic"              },
+    { "\\ar", ":lua vim.lsp.buf.rename()<cr>",               desc = "Rename"                           },
 
     { "\\d", ":echo expand('%:p:h')<cr>", desc = "Show File Directory" },
 
