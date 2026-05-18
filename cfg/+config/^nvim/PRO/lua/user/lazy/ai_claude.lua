@@ -44,7 +44,7 @@ local terminal_inline_cfg = {
 local terminal_cfg = (os.getenv("IDE_MODE") == "true") and terminal_ide_cfg or terminal_inline_cfg
 
 local port_opts = {
-  port_range = { min = 51700, max = 51510 }
+  port_range = { min = 51510, max = 51700 }
 }
 
 local opts = vim.tbl_deep_extend("force", diff_cfg, terminal_cfg, port_opts)
