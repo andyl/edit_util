@@ -34,7 +34,7 @@ vim.api.nvim_create_user_command('LazyGit', function()
   vim.wo.winfixheight = true     -- Set fixheight
   vim.cmd('wincmd o')            -- Set buffer to full width
 
-  vim.fn.termopen('lazygit', {                  -- Open terminal and run lazygit
+  vim.fn.termopen('run_lazygit', {                  -- Open terminal and run lazygit
     on_exit = function(_, _, _)                 -- Define exit handler
       local events = require("neo-tree.events") -- Reset git/neo-tree
       events.fire_event(events.GIT_EVENT)       -- Reset git/neo-tree
