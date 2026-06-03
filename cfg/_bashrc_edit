@@ -21,6 +21,13 @@ export NV_LZY=lzy
 export NVIM_APPNAME=nvim/$NV_PRO
 
 ###########################################################################
+# EDITOR
+
+export EDITOR="$HOME/util/code_util/bin/nvexec"
+export VISUAL="$HOME/util/code_util/bin/nvexec"
+export TERMINAL="xterm-256color"
+
+###########################################################################
 # RUN
 
 pwd_short() {
