@@ -19,3 +19,10 @@ augroup python_uv_shebang
 augroup END
 ]])
 
+vim.filetype.add({
+  extension = {
+    bean = "beancount",
+    beancount = "beancount",
+  },
+})
+

@@ -22,6 +22,7 @@ vim.api.nvim_create_autocmd("FileType", {
 require('nvim-treesitter.configs').setup{
   ensure_installed = {
     "bash",
+    "beancount",
     "css",
     "csv",
     "eex",

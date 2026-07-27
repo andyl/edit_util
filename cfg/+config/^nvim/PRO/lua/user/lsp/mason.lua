@@ -35,6 +35,7 @@
 
 local server_list = {
   { name = "bashls",        cfg = false }, -- bash
+  { name = "beancount",     cfg = false }, -- beancount
   { name = "dockerls",      cfg = false }, -- dockerfile
   { name = "expert",        cfg = false }, -- elixir | https://expert-lsp.org
   { name = "emmet_ls",      cfg = true  }, -- emmet
