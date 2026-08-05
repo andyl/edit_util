@@ -9,8 +9,8 @@
 
 ## Other Notes
 
-| Note    | Path                                                |
-|---------|-----------------------------------------------------|
+| Note    | Path                                                 |
+|---------|------------------------------------------------------|
 | MOC     | ~/vault/org/notes/Infra/Edit/Neovim/NeovimMOC.md     |
 | Roadmap | ~/vault/org/notes/Infra/Edit/Neovim/NeovimRoadmap.md |
 | Worklog | ~/vault/org/notes/Infra/Edit/Neovim/NeovimWorklog.md |
