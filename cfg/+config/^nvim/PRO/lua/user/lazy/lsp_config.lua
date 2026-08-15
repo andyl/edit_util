@@ -15,20 +15,22 @@ return {
     'NvChad/nvim-colorizer.lua',
     config = function()
       require("colorizer").setup({
+        filetypes = {
+          '*',
+          '!md',
+          '!markdown'
+        },
         options = {
           parsers = {
-            css         = true,
-            css_fn      = true,
-            RGB         = { enable = true },
-            RRGGBB      = { enable = true },
-            tailwind    = { enable = true },
-            virtualtext = "■",
+            names    = { enable = false },  -- don't highlight words like 'blue'
+            css      = true,
+            css_fn   = true,
+            hex      = { rgb = true, rrggbb = true },
+            tailwind = { enable = true },
           },
-          filetypes = {
-            '*',
-            '!md',
-            '!markdown'
-          }
+          display = {
+            virtualtext = { char = "■" },
+          },
         },
       })
       -- require("colorizer").setup({
