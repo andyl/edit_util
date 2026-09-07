@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/aleak/.local/share/nvim/lazy/**)",
+      "Read(//home/aleak/.local/share/nvim/lazy/nvim-colorizer.lua/lua/colorizer/**)",
+      "Read(//tmp/**)",
+      "Bash(NVIM_APPNAME=nvim/PRO timeout 120 nvim --headless -c 'lua vim.defer_fn\\(function\\(\\) print\\(\"colorizer ok: \"..vim.inspect\\(require\\(\"colorizer\"\\).get_setup_options and \"loaded\" or \"loaded\"\\)\\) vim.cmd\\(\"qa!\"\\) end, 500\\)')",
+      "Bash(NVIM_APPNAME=nvim/PRO timeout 120 nvim --headless -c 'lua vim.defer_fn\\(function\\(\\) local c=require\\(\"colorizer.config\"\\) print\\(vim.inspect\\(c.get_setup_options and c.get_setup_options\\(\\).display or \"n/a\"\\)\\) vim.cmd\\(\"qa!\"\\) end, 500\\)')"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "sqlite",
+    "filesystem"
+  ]
+}
