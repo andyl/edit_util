@@ -17,6 +17,17 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+-- treesitter highlighting is disabled globally (see `highlight` below), and
+-- there is no vim regex syntax file for heex, so start it explicitly.
+-- covers *.heex and *.astral (mapped to heex in conf/filetypes.lua)
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "heex",
+    callback = function()
+        vim.treesitter.start()
+    end,
+})
+
 -- https://github.com/nvim-treesitter/nvim-treesitter/wiki/List-of-parsers
 
 require('nvim-treesitter.configs').setup{
