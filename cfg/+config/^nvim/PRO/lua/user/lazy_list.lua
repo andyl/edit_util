@@ -61,6 +61,7 @@ local opts = {
 	require("user.lazy.edit_easy_align"), -- column alignment
 	require("user.lazy.edit_spectre"),    -- project-wide search/replace
 	require("user.lazy.edit_grug"),       -- project-wide search/replace
+  require("user.lazy.edit_color"),      -- color picker
 	-- SEARCH AND NAV
 	"mileszs/ack.vim",                    -- ACK file search
 	"tpope/vim-projectionist",            -- alternate file nav

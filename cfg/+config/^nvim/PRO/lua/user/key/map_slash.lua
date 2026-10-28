@@ -29,6 +29,8 @@ local opts1 =   {
     { "\\ap", ":lua vim.diagnostic.goto_prev()<cr>",         desc = "GotoPrev Diagnostic"              },
     { "\\ar", ":lua vim.lsp.buf.rename()<cr>",               desc = "Rename"                           },
 
+    { "\\c", ":CccPick<cr>", desc = "Start Color Picker" },
+
     { "\\d", ":echo expand('%:p:h')<cr>", desc = "Show File Directory" },
 
     { "\\e", group = "Extensions"                         },
