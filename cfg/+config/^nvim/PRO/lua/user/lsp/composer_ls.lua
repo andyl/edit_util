@@ -43,7 +43,8 @@ vim.lsp.config("composer_ls", {
     local local_dir = vim.fn.resolve(vim.fn.expand("~/.config/composer/recipes")) .. "/"
     if name:match("/composer/recipes/[^/]+%.exs$")
       or vim.startswith(name, local_dir)
-      or name:match("/lib/composer/[^/]+/recipes/[^/]+%.exs$")
+      -- Chapters may be nested (recipes/astral/ui.exs), so allow subdirs.
+      or (name:match("/lib/composer/[^/]+/recipes/.+%.exs$") and not name:match("/deps/"))
     then
       local root = find_host_root()
       if root then
