@@ -8,10 +8,12 @@
 --   {:composer, "~> 0.1", only: :dev},
 --   {:gen_lsp, "~> 0.11.4", only: :dev}
 --
--- Runs alongside expert; only attaches to recipe files.
--- The root is the host Mix project: the nearest mix.exs above nvim's cwd when
--- the first recipe is opened. It stays pinned after that, so you can :cd into
--- a recipes or steps dir (eg via nvim-tree) and keep using the same server.
+-- Runs alongside expert; only attaches to recipe files and build logs.
+-- For a recipe, the root is the host Mix project: the nearest mix.exs above
+-- nvim's cwd when the first recipe is opened. It stays pinned after that, so you
+-- can :cd into a recipes or steps dir (eg via nvim-tree) and keep using the same
+-- server. For a .composer_build.txt, the root is the nearest mix.exs above the
+-- log, since its addresses resolve against that app's cookbooks.
 --
 -- :checkhealth vim.lsp     | confirm the client is attached
 -- :ComposerReload          | recompile + rediscover cookbooks after editing step code
@@ -34,11 +36,17 @@ vim.lsp.config("composer_ls", {
       env = { MIX_QUIET = "1" },
     })
   end,
-  filetypes = { "elixir" },
-  -- Attach to recipe files only: local recipes and a cookbook's recipes.
+  filetypes = { "elixir", "composer_build" },
+  -- Attach to build logs, rooted at their own app.
+  -- Otherwise recipe files only: local recipes and a cookbook's recipes.
   -- ~/.config/composer is a symlink (to .../%composer) and nvim names the
   -- buffer by the resolved path, so also match the resolved recipes dir.
   root_dir = function(bufnr, on_dir)
+    if vim.bo[bufnr].filetype == "composer_build" then
+      local root = vim.fs.root(bufnr, "mix.exs")
+      if root then on_dir(root) end
+      return
+    end
     local name = vim.api.nvim_buf_get_name(bufnr)
     local local_dir = vim.fn.resolve(vim.fn.expand("~/.config/composer/recipes")) .. "/"
     if name:match("/composer/recipes/[^/]+%.exs$")

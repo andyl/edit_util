@@ -25,5 +25,8 @@ vim.filetype.add({
     beancount = "beancount",
     astral = "heex",
   },
+  filename = {
+    [".composer_build.txt"] = "composer_build",
+  },
 })
 
