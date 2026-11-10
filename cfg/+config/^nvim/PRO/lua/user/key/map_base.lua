@@ -30,16 +30,16 @@ KmT("<C-j>", "<C-\\><C-n><C-w>j")
 KmT("<C-k>", "<C-\\><C-n><C-w>k")
 KmT("<C-l>", "<C-\\><C-n><C-w>l")
 
--- PANE RESIZING
-KmN("<C-Up>", ":call BarUp(2)<cr>")
-KmN("<C-Down>", ":call BarDown(2)<cr>")
-KmN("<C-Left>", ":call BarLeft(2)<cr>")
-KmN("<C-Right>", ":call BarRight(2)<cr>")
+-- PANE RESIZING (disabled: C-Left/C-Right now used by tmux for tab nav)
+-- KmN("<C-Up>", ":call BarUp(2)<cr>")
+-- KmN("<C-Down>", ":call BarDown(2)<cr>")
+-- KmN("<C-Left>", ":call BarLeft(2)<cr>")
+-- KmN("<C-Right>", ":call BarRight(2)<cr>")
 
-KmT("<C-Up>", "<C-\\><C-n>:call BarUp(2)<cr>")
-KmT("<C-Down>", "<C-\\><C-n>:call BarDown(2)<cr>A")
-KmT("<C-Left>", "<C-\\><C-n>:call BarLeft(2)<cr>")
-KmT("<C-Right>", "<C-\\><C-n>:call BarRight(2)<cr>A")
+-- KmT("<C-Up>", "<C-\\><C-n>:call BarUp(2)<cr>")
+-- KmT("<C-Down>", "<C-\\><C-n>:call BarDown(2)<cr>A")
+-- KmT("<C-Left>", "<C-\\><C-n>:call BarLeft(2)<cr>")
+-- KmT("<C-Right>", "<C-\\><C-n>:call BarRight(2)<cr>A")
 
 -- SEARCH HIGHLIGHT
 
