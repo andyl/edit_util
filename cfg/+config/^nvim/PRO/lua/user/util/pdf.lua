@@ -53,7 +53,7 @@ local function opener_argv(path)
   if type(tmpl) == "table" then
     local out = {}
     for _, a in ipairs(tmpl) do
-      out[#out + 1] = a:gsub("%%s", path)
+      out[#out + 1] = a:gsub("%%s", (path:gsub("%%", "%%%%")))
     end
     return out
   end

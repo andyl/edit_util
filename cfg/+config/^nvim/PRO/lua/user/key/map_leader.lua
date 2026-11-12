@@ -101,13 +101,13 @@ end
 
 local opts1 =  {
     { "<leader>#", group = "Find Prev"                             },
-    { "<leader>#e", ":#",             desc = "Open Prev in Term"   },
+    { "<leader>#e", "#",              desc = "Open Prev in Term"   },
     { "<leader>#s", ":sp<cr>#",       desc = "Open Prev in Split"  },
     { "<leader>#t", ":tabnew %<cr>#", desc = "Open Prev in Tab"    },
     { "<leader>#v", ":vsp<cr>#",      desc = "Open Prev in Vsplit" },
 
     { "<leader>*", group = "Find Next"                             },
-    { "<leader>*e", ":*",             desc = "Open Next in Term"   },
+    { "<leader>*e", "*",              desc = "Open Next in Term"   },
     { "<leader>*s", ":sp<cr>*",       desc = "Open Next in Split"  },
     { "<leader>*t", ":tabnew %<cr>*", desc = "Open Next in Tab"    },
     { "<leader>*v", ":vsp<cr>*",      desc = "Open Next in Vsplit" },
@@ -144,7 +144,7 @@ local opts1 =  {
     { "<leader>dl", ":lua require('dap').continue()<cr>",              desc = "link client"       },
     { "<leader>dn", ":lua require('dap').step_over()<cr>",             desc = "step over next"    },
     { "<leader>do", ":lua require('dap').step_out()<cr>",              desc = "step out"          },
-    { "<leader>dr", ":lua require('dap.ui').repl()<cr>",               desc = "toggle repl"       },
+    { "<leader>dr", ":lua require('dap').repl.toggle()<cr>",            desc = "toggle repl"       },
     { "<leader>ds", ":lua require('osv').launch({ port = 8096 })<cr>", desc = "start server"      },
 
     { "<leader>e", "<cmd>Neotree toggle<cr>",                          desc = "Explorer Neotree" },
@@ -167,7 +167,7 @@ local opts1 =  {
     { "<leader>fv", "<cmd>Telescope vim_options<cr>",                         desc = "Vim Opts"           },
     { "<leader>fy", "<cmd>Telescope yaml_schema<cr>",                         desc = "Select YAML schema" },
     { "<leader>fD", "<cmd>Telescope lsp_document_symbols<cr>",                desc = "Document Symbols"   },
-    { "<leader>fW", "<cmd>Telescope lsp_workplace_symbols<cr>",               desc = "Workplace Symbols"  },
+    { "<leader>fW", "<cmd>Telescope lsp_workspace_symbols<cr>",               desc = "Workspace Symbols"  },
 
     { "<leader>g", group = "Git" },
     { "<leader>gb", "<cmd>BlameToggle<cr>",                                          desc = "toggle blame window" },
@@ -198,9 +198,9 @@ local opts1 =  {
     { "<leader>O", ":only<cr>:Neotree toggle<cr>", desc = "Pane Only w/Explorer" },
 
     { "<leader>p", group = "Print"                                                                                                                                  },
-    { "<leader>pl", ":! a2ps -c --highlight-level=none --sides=duplex -T 2 --line-numbers=1 --portrait --columns=1 --font-size=9 %<cr>",  desc = "Landscape"        },
-    { "<leader>pp", ":! a2ps -c --highlight-level=none --sides=duplex -T 2 --line-numbers=1 %<cr>",                                       desc = "Portrait"         },
-    { "<leader>ps", ":! a2ps -c --highlight-level=none --sides=duplex -T 2 --line-numbers=1 --landscape --columns=1 --font-size=9 %<cr>", desc = "Single Landscape" },
+    { "<leader>pl", ":! a2ps -c --highlight-level=none --sides=duplex -T 2 --line-numbers=1 --portrait --columns=1 --font-size=9 %:S<cr>",  desc = "Landscape"        },
+    { "<leader>pp", ":! a2ps -c --highlight-level=none --sides=duplex -T 2 --line-numbers=1 %:S<cr>",                                       desc = "Portrait"         },
+    { "<leader>ps", ":! a2ps -c --highlight-level=none --sides=duplex -T 2 --line-numbers=1 --landscape --columns=1 --font-size=9 %:S<cr>", desc = "Single Landscape" },
 
     { "<leader>q", ":q<cr>", desc = "Pane Quit" },
 
@@ -225,9 +225,9 @@ local opts1 =  {
     { "<leader>v", ":vsp<cr>", desc = "Pane Vsplit" },
 
     { "<leader>x", group = "CrossCopy"                                                      },
-    { "<leader>xd", 'd:call writefile(split(@1,"\\n"), "/tmp/vimtmp")<cr>', desc = "delete" },
-    { "<leader>xp", ":r /tmp/vimtmp<cr>",                                   desc = "paste"  },
-    { "<leader>xy", 'y:call writefile(split(@0,"\\n"), "/tmp/vimtmp")<cr>', desc = "yank"   },
+    { "<leader>xd", 'dd:call writefile(split(@","\\n"), "/tmp/vimtmp")<cr>', desc = "delete line" },
+    { "<leader>xp", ":r /tmp/vimtmp<cr>",                                    desc = "paste"       },
+    { "<leader>xy", 'yy:call writefile(split(@","\\n"), "/tmp/vimtmp")<cr>', desc = "yank line"   },
 
     { "<leader>z", group = "Lazygit"                      },
     { "<leader>zg", ":LazyGit<cr>",  desc = "Run Lazygit" },
@@ -243,8 +243,8 @@ local opts2 =  {
       mode = { "v" },
 
       { "<leader>x", group = "CrossCopy", mode = { "v" },                                     },
-      { "<leader>xd", 'd:call writefile(split(@1,"\\n"), "/tmp/vimtmp")<cr>', desc = "delete" },
-      { "<leader>xy", 'y:call writefile(split(@0,"\\n"), "/tmp/vimtmp")<cr>', desc = "yank"   },
+      { "<leader>xd", 'd:call writefile(split(@","\\n"), "/tmp/vimtmp")<cr>', desc = "delete" },
+      { "<leader>xy", 'y:call writefile(split(@","\\n"), "/tmp/vimtmp")<cr>', desc = "yank"   },
 
       { "<leader>c" , group = claude_label(), mode = { "v" }              },
       { "<leader>cs", "<cmd>ClaudeCodeSend<cr>", desc = "Send to Claude"  },

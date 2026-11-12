@@ -1,7 +1,7 @@
 local easypick = require("easypick")
 
--- only required for the example to work
-local base_branch = "develop"
+-- the remote's default branch (origin/main, origin/master, ...)
+local base_branch = "origin/HEAD"
 
 easypick.setup({
 	pickers = {

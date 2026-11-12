@@ -13,7 +13,7 @@ local opts = {
   build = false,
   cmd = "Spectre",
   dependencies = {
-    "folke/trouble.nvim",
+    "nvim-lua/plenary.nvim",
   },
   opts = { open_cmd = "noswapfile vnew" },
 }

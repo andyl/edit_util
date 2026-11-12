@@ -44,7 +44,11 @@ local function geturl(url)
     print("Failed to run the curl command.")
   end
 
-  local sections = vim.fn.json_decode(result)
+  -- empty or invalid output (e.g. search server down) yields no results
+  local ok, sections = pcall(vim.fn.json_decode, result)
+  if not ok then
+    return {}
+  end
 
   return sections
 end
@@ -83,9 +87,8 @@ M.search_md = function()
       actions.select_default:replace(function()
         actions.close(prompt_bufnr)
         local selection = action_state.get_selected_entry()
-        print(vim.inspect(selection.path))
         if selection then
-          vim.cmd('edit +' .. selection.lnum .. ' ' .. selection.path)
+          vim.cmd('edit +' .. selection.lnum .. ' ' .. vim.fn.fnameescape(selection.path))
         end
       end)
       return true

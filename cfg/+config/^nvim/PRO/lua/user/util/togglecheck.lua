@@ -12,10 +12,17 @@ M.vtoggle = function()
     start_line, end_line = end_line, start_line
   end
 
+  -- toggle each line on its own; nested mode would cascade a parent's toggle
+  -- to its children, which then get toggled again by this loop
+  local nested = vim.g.bullets_nested_checkboxes
+  vim.g.bullets_nested_checkboxes = 0
+
   for line = start_line, end_line do
     vim.fn.cursor(line, 1)                -- Move the cursor to the beginning of the line
     vim.cmd('ToggleCheckbox')             -- Toggle the checkbox
   end
+
+  vim.g.bullets_nested_checkboxes = nested
 end
 
 return M

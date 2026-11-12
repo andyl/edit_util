@@ -84,8 +84,16 @@ end
 require('mason').setup()
 
 -- apply on_attach to all servers
+-- (an LspAttach autocmd, because servers like ts_ls and pyright ship their own
+-- on_attach in nvim-lspconfig, which overrides vim.lsp.config('*', ...))
 local handlers = require("user.lsp.handlers")
-vim.lsp.config('*', { on_attach = handlers.on_attach })
+vim.api.nvim_create_autocmd("LspAttach", {
+  group = vim.api.nvim_create_augroup("UserLspAttach", { clear = true }),
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client then handlers.on_attach(client, args.buf) end
+  end,
+})
 
 for _, server in ipairs(cfg_servers()) do
   apply_server_config(server)

@@ -2,7 +2,7 @@
 
 local function lsp_keymaps(_)
   -- keymaps defined with WhichKey
-  vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
+  vim.cmd [[ command! Format lua vim.lsp.buf.format() ]]
 end
 
 -- local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -11,7 +11,7 @@ end
 -- if not status_ok then return end
 
 local function lsp_highlight_document(client)
-  if client.server_capabilities.document_highlight then
+  if client.server_capabilities.documentHighlightProvider then
     vim.api.nvim_exec2(
       [[
       augroup lsp_document_highlight
@@ -26,21 +26,19 @@ end
 
 local opts = {
   setup = function()
+    local severity = vim.diagnostic.severity
     local signs = {
-      { name = "DiagnosticSignError", text = "" },
-      { name = "DiagnosticSignWarn", text = "" },
-      { name = "DiagnosticSignHint", text = "" },
-      { name = "DiagnosticSignInfo", text = "" },
+      text = {
+        [severity.ERROR] = "",
+        [severity.WARN]  = "",
+        [severity.HINT]  = "",
+        [severity.INFO]  = "",
+      },
     }
-
-    for _, sign in ipairs(signs) do
-      local values = { texthl = sign.name, text = sign.text, numhl = "" }
-      vim.fn.sign_define(sign.name, values)
-    end
 
     vim.diagnostic.config({
       virtual_text = false,
-      signs = { active = signs },
+      signs = signs,
       update_in_insert = true,
       underline = true,
       severity_sort = true,
@@ -62,7 +60,7 @@ local opts = {
 
   on_attach = function(client, bufnr)
     if client.name == "ts_ls" then
-      client.server_capabilities.document_formatting = false
+      client.server_capabilities.documentFormattingProvider = false
     end
     lsp_keymaps(bufnr)
     lsp_highlight_document(client)

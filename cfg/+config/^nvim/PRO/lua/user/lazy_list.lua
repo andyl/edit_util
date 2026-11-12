@@ -1,6 +1,6 @@
 -- lazy_list - define list of Lazy Plugins
 
-LazyOk, Lazy = pcall(require, "lazy")
+local LazyOk, Lazy = pcall(require, "lazy")
 if not LazyOk then return end
 
 local opts = {
@@ -49,7 +49,6 @@ local opts = {
 	"rcarriga/nvim-dap-ui",               -- DAP ui
 	-- NEOVIM LUA DEVELOPMENT
 	"rafcamlet/nvim-luapad",              -- neovim lua repl
-	"folke/neodev.nvim",                  -- lsp autocompletion for nvim lua API
 	-- STATUS LINES
 	"nvim-lualine/lualine.nvim",          -- status line
 	"crispgm/nvim-tabline",               -- tab line
@@ -95,8 +94,6 @@ local opts = {
 	-- MISC
 	"chrisbra/unicode.vim",               -- :SearchUni check|C-v u2705|✅
 	"moll/vim-bbye",                      -- delete buffer w/o closing win
-	"lewis6991/impatient.nvim",           -- fast startup
-	"antoinemadec/FixCursorHold.nvim",    -- needed to fix lsp doc highlight
 	"kshenoy/vim-signature",              -- show marks in gutter
 	"terryma/vim-multiple-cursors",       -- multiple cursors
 	-- GIST

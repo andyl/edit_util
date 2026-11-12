@@ -10,12 +10,12 @@ telescope.setup({
   defaults = {
 
     file_ignore_patterns = {
-      "~./.git/",
+      "%.git/",
       "hero_icons",
       "heroicons",
       "node_modules",
       "gettext",
-      "*.svg",
+      "%.svg$",
     },
 
     prompt_prefix = " ",

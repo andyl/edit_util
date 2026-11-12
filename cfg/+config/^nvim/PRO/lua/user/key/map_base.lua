@@ -7,17 +7,13 @@ local keymap = vim.api.nvim_set_keymap
 local function km(mode, key, cmd) keymap(mode, key, cmd, opts) end
 
 -- Remap Functions
-function KmN(key, cmd) km("n", key, cmd) end -- normal_mode
+local function KmN(key, cmd) km("n", key, cmd) end -- normal_mode
 
-function KmI(key, cmd) km("i", key, cmd) end -- insert_mode
+local function KmI(key, cmd) km("i", key, cmd) end -- insert_mode
 
-function KmV(key, cmd) km("v", key, cmd) end -- visual_mode
+local function KmV(key, cmd) km("v", key, cmd) end -- visual_mode
 
-function KmT(key, cmd) km("t", key, cmd) end -- terminal_mode
-
--- LEADER KEY
-vim.g.mapleader      = ","
-vim.g.maplocalleader = ","
+local function KmT(key, cmd) km("t", key, cmd) end -- terminal_mode
 
 -- PANE NAVIGATION
 KmN("<C-h>", "<C-w>h")
@@ -76,5 +72,5 @@ KmI("<S-A-Left>",  "<esc>:tabprev<cr>")   -- insert mode: previous tab
 KmI("<S-A-Right>", "<esc>:tabnext<cr>")   -- insert mode: next tab
 
 -- SNIPPET JUMPS
-KmI("<A-j>", "<esc>:lua require('luasnip').jump(1)<cr>")
-KmI("<A-k>", "<esc>:lua require('luasnip').jump(-1)<cr>")
+KmI("<A-j>", "<cmd>lua vim.snippet.jump(1)<cr>")
+KmI("<A-k>", "<cmd>lua vim.snippet.jump(-1)<cr>")

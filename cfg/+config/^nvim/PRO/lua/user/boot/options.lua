@@ -1,6 +1,12 @@
 -- neovim options
 --------------------------------------------------------
 
+-- LEADER KEY
+-- must be set before lazy.nvim loads plugins, so their <leader> maps use ","
+vim.g.mapleader      = ","
+vim.g.maplocalleader = ","
+vim.g.no_cecutil_maps = 1 -- AnsiEsc's ,swp / ,rwp would make ,s (split) wait
+
 -- Kill any stale process on port 51700 before starting Neovim
 vim.api.nvim_create_autocmd("VimEnter", {
   group = vim.api.nvim_create_augroup("ClaudePortCleanup", { clear = true }),
@@ -9,7 +15,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
     local port = 51700
     local cmd = string.format([[
       if command -v lsof >/dev/null 2>&1; then
-        pid=$(lsof -t -i:%d 2>/dev/null) && kill -9 "$pid" 2>/dev/null || true
+        pid=$(lsof -t -sTCP:LISTEN -i:%d 2>/dev/null) && kill -9 $pid 2>/dev/null || true
       elif command -v ss >/dev/null 2>&1; then
         pid=$(ss -tlnp 2>/dev/null | grep ':%d ' | awk '{print $6}' | cut -d, -f2 | cut -d= -f2) && kill -9 "$pid" 2>/dev/null || true
       fi

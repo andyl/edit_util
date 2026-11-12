@@ -49,7 +49,7 @@ end
 local function home_path(path)
   local comp = full_path(path)
   local home = full_path('$HOME')
-  local fini = string.gsub(comp, home, "~")
+  local fini = string.gsub(comp, "^" .. vim.pesc(home), "~")
   return fini
 end
 
@@ -58,7 +58,7 @@ local function is_dir(path)
     path = full_path(path)
   end
 
-  local stat = vim.loop.fs_stat(path)
+  local stat = vim.uv.fs_stat(path)
 
   if stat and stat.type == "directory" then
     return true
@@ -72,7 +72,7 @@ local function is_file(path)
     path = full_path(path)
   end
 
-  local stat = vim.loop.fs_stat(path)
+  local stat = vim.uv.fs_stat(path)
 
   if stat and stat.type == "file" then
     return true
@@ -83,7 +83,7 @@ end
 
 local function get_directory_path(input_path)
   if is_file(input_path) then
-    return vim.fn.fnamemodify(input_path, ':p')
+    return vim.fn.fnamemodify(input_path, ':p:h')
   else
     return input_path
   end
@@ -93,11 +93,10 @@ end
 
 -- return the path under the cursor
 local function cursor_path()
-  vim.cmd([[normal! yiW]])
-  local filepath = vim.fn.getreg('')
+  local filepath = vim.fn.expand('<cWORD>')
   local corepath = clean_path(filepath)
 
-  if filepath then
+  if corepath then
     return corepath
   else
     return ""
@@ -159,8 +158,8 @@ end
 
 local history_file = full_path("~/.local/share/nvim/projhist.txt")
 
-local function nospace(string)
-  string.gsub(string, "%s+", "")
+local function nospace(str)
+  return (string.gsub(str, "%s+", ""))
 end
 
 local function clear_history_line(lineToRemove)
@@ -225,17 +224,16 @@ end
 
 ----- set working directory and tree root
 
-local function opentree()
-  vim.cmd("NvimTreeOpen")
+local function opentree(path)
+  vim.cmd("Neotree dir=" .. vim.fn.fnameescape(full_path(path)))
 end
 
 local function setwd(path)
   if path ~= "" then
     print("New project root (" .. path .. ")")
     vim.fn.chdir(path)
-    require("nvim-tree.api").tree.change_root(path)
     write_history(path)
-    opentree()
+    opentree(path)
   end
 end
 
@@ -244,38 +242,38 @@ end
 local function open_file(filepath, mode)
   local opts = {
     ["f"] = function()
-      vim.cmd(":e " .. filepath)
+      vim.cmd(":e " .. vim.fn.fnameescape(filepath))
     end,
     ["e"] = function()
-      vim.cmd(":e " .. filepath)
+      vim.cmd(":e " .. vim.fn.fnameescape(filepath))
     end,
     ["v"] = function()
-      vim.cmd(":vsplit " .. filepath)
+      vim.cmd(":vsplit " .. vim.fn.fnameescape(filepath))
     end,
     ["s"] = function()
-      vim.cmd(":split " .. filepath)
+      vim.cmd(":split " .. vim.fn.fnameescape(filepath))
     end,
     ["t"] = function()
-      vim.cmd(":tabnew " .. filepath)
+      vim.cmd(":tabnew " .. vim.fn.fnameescape(filepath))
     end,
     ["F"] = function()
-      vim.cmd(":e " .. filepath)
+      vim.cmd(":e " .. vim.fn.fnameescape(filepath))
       setwd(project_root(filepath))
     end,
     ["E"] = function()
-      vim.cmd(":e " .. filepath)
+      vim.cmd(":e " .. vim.fn.fnameescape(filepath))
       setwd(project_root(filepath))
     end,
     ["V"] = function()
-      vim.cmd(":vsplit " .. filepath)
+      vim.cmd(":vsplit " .. vim.fn.fnameescape(filepath))
       setwd(project_root(filepath))
     end,
     ["S"] = function()
-      vim.cmd(":split " .. filepath)
+      vim.cmd(":split " .. vim.fn.fnameescape(filepath))
       setwd(project_root(filepath))
     end,
     ["T"] = function()
-      vim.cmd(":tabnew " .. filepath)
+      vim.cmd(":tabnew " .. vim.fn.fnameescape(filepath))
       setwd(project_root(filepath))
     end,
   }
@@ -293,10 +291,10 @@ local action_state = require("telescope.actions.state")
 
 -- display the telescope project picker
 function ShowProjectPicker()
-  local opts = history_to_table()
+  local history = history_to_table()
 
-  pickers.new(opts, {
-    finder = finders.new_table({ results = opts }),
+  pickers.new({}, {
+    finder = finders.new_table({ results = history }),
     attach_mappings = function(bufnr, _)
       actions.select_default:replace(function()
         actions.close(bufnr)

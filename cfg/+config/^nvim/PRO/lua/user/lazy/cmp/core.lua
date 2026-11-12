@@ -33,16 +33,6 @@ local opts = {
 
     completion = { documentation = { auto_show = true } },
 
-    hex = {
-      name = "hex",
-      module = "hex_cmp",
-      async = true,
-      opts = {
-        cache_ttl = 1800, -- seconds (default: 1800 - 30 minutes)
-        max_results = 50, -- max search results (default: 50)
-      },
-    },
-
     sources = {
       default = { 'snippets', 'lsp', 'path', 'emoji', 'buffer' },
       per_filetype = {

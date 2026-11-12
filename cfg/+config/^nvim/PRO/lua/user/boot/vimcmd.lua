@@ -23,6 +23,9 @@ function! StripTrailingWhitespaces()
   call cursor(l,c)
 endfunction
 
+augroup UserVimcmd
+autocmd!
+
 " call function before saving
 autocmd BufWritePre *.lua,*.ex,*.exs,*.rb,*.erb :call StripTrailingWhitespaces()
 
@@ -44,8 +47,8 @@ let g:bullets_checkbox_markers = ' .-x'
 
 " === MARKDOWN FOLDING
 let g:markdown_folding = 1
-autocmd BufRead,BufNewFile *.md set filetype=markdown
-autocmd BufRead,BufNewFile *.md set syntax=markdown
 autocmd FileType markdown setlocal foldlevel=99
+
+augroup END
 ]]
 

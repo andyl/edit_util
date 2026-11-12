@@ -26,8 +26,6 @@ local opts1 =  {
 
     { "gx", "<Cmd>call jobstart(['xdg-open', expand('<cfile>')], {'detach': v:true})<CR>", desc = "Open URL in browser" },
 
-    { "gy", ":lua require('yazi').yazi(nil, vim.fn.getcwd())<cr>"},
-
   }
 
 WhichKey.add(opts1)

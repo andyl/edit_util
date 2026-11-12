@@ -71,13 +71,6 @@ local opts1 =   {
     { "\\tt", ":vsplit | terminal<cr><C-W>T",        desc = "Tab"    },
     { "\\tv", ":vsplit | terminal<cr>A",             desc = "Vsplit" },
 
-    { "\\u", group = "UnitTest"                                                                  },
-    { "\\uf", ":lua require('neotest').run.run(vim.fn.expand('%'))<cr>", desc = "Current File"   },
-    { "\\up", ":lua require('neotest').output_panel.toggle()<cr>",       desc = "Toggle Panel"   },
-    { "\\us", ":lua require('neotest').output_summary.toggle()<cr>",     desc = "Toggle Summary" },
-    { "\\ut", ":lua require('neotest').run.run()<cr>",                   desc = "Nearest Test"   },
-    { "\\uw", ":lua require('neotest').watch.toggle()<cr>",              desc = "Toggle Watcher" },
-
     { "\\x", ":ToggleCheckbox<cr>", desc = "Toggle Checkbox" },
   }
 
@@ -106,7 +99,7 @@ local opts3 =  {
       mode = { "v" },
 
       { "\\a", group = "LSP Actions"                                                             },
-      { "\\ac", ":lua vim.lsp.buf.code_action()<cr>",          desc = "Code Action"              },
+      { "\\ac", "<cmd>lua vim.lsp.buf.code_action()<cr>",     desc = "Code Action"              },
 
       { "\\s", group = "Sort" },
 

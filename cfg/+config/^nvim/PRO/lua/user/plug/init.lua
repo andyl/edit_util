@@ -11,6 +11,5 @@ require("user.plug.comment")
 require("user.plug.treesitter")
 require("user.plug.easypick")
 require("user.plug.nvim-tree")   -- deprecated file explorer - replaced by neotree
-require("user.plug.neodev")      -- dev utilities
 require("user.plug.speeddating") -- date increment/decrement with C-a and C-x
 

@@ -49,13 +49,12 @@ local opts = {
     },
   },
   settings = {
-    dynamicRegistration = true,
-    includeLanguages = {
-      elixir = "html-eex",
-      heex   = "html-eex",
-      erb    = "html-eex"
-    },
     tailwindCSS = {
+      includeLanguages = {
+        elixir = "html-eex",
+        heex   = "html-eex",
+        erb    = "html-eex"
+      },
       classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
       lint = {
         cssConflict              = "warning",
@@ -79,7 +78,7 @@ local opts = {
   },
   filetypes = {
     "css", "scss", "sass", "html",
-    "ex", "heex", "elixir", "eelixir"
+    "heex", "elixir", "eelixir"
   },
   -- root_dir = root_pattern(
   --   "./assets/css/app.css",

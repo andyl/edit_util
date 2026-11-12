@@ -10,7 +10,7 @@
 
 return {
   'folke/which-key.nvim',
-  depends_on = {
-    'echasnovski/mini.nvim'
+  dependencies = {
+    'nvim-mini/mini.nvim'
   }
 }

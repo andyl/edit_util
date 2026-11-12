@@ -3,7 +3,6 @@
 -- https://github.com/aca/emmet-ls
 
 local opts = {
-  capabilities = vim.lsp.protocol.make_client_capabilities(),
   settings = {
     includeLanguages = {
       ["html-eex"] = "html",

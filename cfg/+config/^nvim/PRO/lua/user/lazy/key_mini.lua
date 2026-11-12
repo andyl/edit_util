@@ -2,21 +2,15 @@
 --
 -- Utility modules for which_key
 --
--- https://github.com/echasnovski/mini.nvim
+-- https://github.com/nvim-mini/mini.nvim
 
 return {
   {
-    'echasnovski/mini.icons',
-    version = false,
+    'nvim-mini/mini.nvim',
+    version = '*', -- stable branch (for 'main' branch, use 'false')
     config = function()
       require('mini.icons').setup()
-    end
-  },
 
-  {
-    'echasnovski/mini.test',
-    version = '*',
-    config = function()
       require('mini.test').setup({
         -- Options for collection of test cases. See `:h MiniTest.collect()`.
         collect = {
@@ -52,13 +46,4 @@ return {
       })
     end
   },
-
-  {
-    'echasnovski/mini.nvim',
-    version = '*', -- stable branch (for 'main' branch, use 'false')
-    depends_on = {
-      'echasnovski/mini.icons',
-      'echasnovski/mini.test',
-    },
-  }
 }
