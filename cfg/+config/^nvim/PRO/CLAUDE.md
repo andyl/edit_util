@@ -20,6 +20,7 @@ The configuration loads in strict order:
 9. `user.key` - Keymap definitions
 10. `user.debug` - DAP debugger configuration
 11. `user.conf` - Filetype detection, pane utils, terminal navigation
+12. `user.util.pdf` - `:PdfOpen` command (SSH-aware)
 
 ## Key Architectural Patterns
 
@@ -47,10 +48,18 @@ To add a new LSP server: add an entry to `server_list` in `mason.lua`. If it nee
 ### Keymap Organization
 
 All keymaps are in `lua/user/key/`, split by prefix:
-- `map_leader.lua` - Primary interface (`<leader>` groups: c=Claude, d=DAP, e=Explorer, f=Find, g=Git, l=Layout, m=Markdown, a=Alternate)
+- `map_leader.lua` - Primary interface (`<leader>` groups: a=Alternate, c=Claude, d=DAP, f=Find, g=Git, l=Layout, m=Markdown, p=Print, r=Run, t=Tab, x=CrossCopy, z=Lazygit; `<leader>e` toggles Neotree)
 - `map_base.lua` - Non-leader keymaps
 - `map_bracket.lua`, `map_slash.lua`, `map_dash.lua`, `map_a.lua`, `map_g.lua`, `map_z.lua` - Prefix-specific mappings
 - `conf.lua` - WhichKey group registration
+
+### Utility Modules
+
+`lua/user/util/` holds standalone helper modules required on demand from keymaps and plugin specs:
+- `pdf.lua` - PDF opening (`:PdfOpen`), also used by Neotree
+- `search_org.lua` - Telescope picker for org/markdown files (`<leader>fo`)
+- `togglecheck.lua` - Toggle checkboxes in a visual block (`\x`)
+- `md_blocks/` - Custom markdown block handler registry used by `md_render.lua`
 
 ### Safety Pattern
 
