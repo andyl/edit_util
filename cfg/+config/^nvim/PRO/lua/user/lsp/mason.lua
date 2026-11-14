@@ -34,7 +34,7 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 
 local server_list = {
-  { name = "bashls",        cfg = false }, -- bash
+  { name = "bashls",        cfg = true  }, -- bash
   { name = "beancount",     cfg = false }, -- beancount
   { name = "dockerls",      cfg = false }, -- dockerfile
   { name = "expert",        cfg = false }, -- elixir | https://expert-lsp.org
