@@ -37,7 +37,10 @@ local vg = vim.g
 
 -- MISC OPTIONS
 vo.clipboard      = "unnamedplus"           -- allows neovim to access the system clipboard
-vo.cmdheight      = 1                       -- more space in the neovim command line for displaying messages
+-- cmdheight=0: noice draws the cmdline/messages, so no row is reserved for it.
+-- Neovim forces 0 while noice is attached; a value of 1 here resurfaces as a
+-- blank line below the statusline whenever noice detaches or isn't loaded yet.
+vo.cmdheight      = 0
 vo.completeopt    = {"menuone", "noselect"} -- mostly just for cmp
 vo.conceallevel   = 0                       -- so that `` is visible in markdown files
 vo.fileencoding   = "utf-8"                 -- the encoding written to a file
